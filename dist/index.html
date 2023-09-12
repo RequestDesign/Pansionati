@@ -1,20 +1,235 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Главная</title>
-    <link rel="stylesheet" href="css/style.min.css" />
-  </head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Главная</title>
+  <link rel="stylesheet" href="css/style.min.css?_v=20230912211217" />
+</head>
 
   <body>
-    <header>
-      <span> Headline1 </span>
-    </header>
+    <header class="header">
+  <div class="container">
+    <div class="header__container">
+      <div class="header__logo logo">
+        <a href="#">Пансионаты</a>
+      </div>
+      <div class="header__region region">
+        <div class="region__title">Ваш регион:</div>
+        <div class="region__select-icon">
+          <img src="img/icons/location-orange.svg" alt="" />
+        </div>
 
-    <main></main>
-    <footer></footer>
+        <form action="#" method="#">
+          <div class="region__select js-dropdown">
+            <div class="region__select-header js-dropdown-inner">
+              <div class="region__select-value js-dropdown-value">Москва</div>
+              <button type="button" class="region__select-btn">
+                <img src="img/icons/arrow-down.svg" alt="" />
+              </button>
+            </div>
+            <div class="region__select-content js-dropdown-content">
+              <div class="region__select-list">
+                <input
+                  id="citySelect0"
+                  class="region__select-input js-dropdown-input"
+                  type="radio"
+                  name="citySelect"
+                  value="Москва"
+                  checked
+                />
+                <label for="citySelect0" class="region__select-label js-dropdown-label">Москва</label>
+                <input
+                  id="citySelect1"
+                  class="region__select-input js-dropdown-input"
+                  type="radio"
+                  name="citySelect"
+                  value="Ростов"
+                />
+                <label for="citySelect1" class="region__select-label js-dropdown-label">Ростов</label>
+                <input
+                  id="citySelect2"
+                  class="region__select-input js-dropdown-input"
+                  type="radio"
+                  name="citySelect"
+                  value="Санкт-Петербург"
+                />
+                <label for="citySelect2" class="region__select-label js-dropdown-label">Санкт-Петербург</label>
+                <input
+                  id="citySelect3"
+                  class="region__select-input js-dropdown-input"
+                  type="radio"
+                  name="citySelect"
+                  value="Сочи"
+                />
+                <label for="citySelect3" class="region__select-label js-dropdown-label">Сочи</label>
+                <input
+                  id="citySelect4"
+                  class="region__select-input js-dropdown-input"
+                  type="radio"
+                  name="citySelect"
+                  value="Самара"
+                />
+                <label for="citySelect4" class="region__select-label js-dropdown-label">Самара</label>
+                <input
+                  id="citySelect5"
+                  class="region__select-input js-dropdown-input"
+                  type="radio"
+                  name="citySelect"
+                  value="Орел"
+                />
+                <label for="citySelect5" class="region__select-label js-dropdown-label">Орел</label>
+                <input
+                  id="citySelect6"
+                  class="region__select-input js-dropdown-input"
+                  type="radio"
+                  name="citySelect"
+                  value="Екатеринбург"
+                />
+                <label for="citySelect6" class="region__select-label js-dropdown-label">Екатеринбург</label>
+                <input
+                  id="citySelect7"
+                  class="region__select-input js-dropdown-input"
+                  type="radio"
+                  name="citySelect"
+                  value="Краснодар"
+                />
+                <label for="citySelect7" class="region__select-label js-dropdown-label">Краснодар</label>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <nav class="header__menu">
+        <ul class="header__list">
+          <li class="header__item">
+            <a href="#" class="header__link">Каталог</a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="header__link">О нас</a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="header__link">Контакты</a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="header__link">Статьи</a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="header__link">Избранное</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__phones phones">
+        <button type="button" class="btn btn-primary">
+          <span>Заказать звонок</span>
+        </button>
+        <div class="phones__phone">
+          <div class="phones__phone-numbers">
+            <div>8 495 567 45 05</div>
+            <div>9:00 - 21:00</div>
+          </div>
+          <a href="tel:84955674505" class="btn btn-round">
+            <img src="img/icons/phone.svg" alt="" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+ <main>
+  <section class="main">
+    <div class="container">
+      <div class="main__container"></div>
+    </div>
+  </section>
+</main>
+ <footer class="footer">
+  <div class="container">
+    <div class="footer__container">
+      <div class="footer__left">
+        <div class="footer__logo logo">
+          <a href="#">Пансионаты</a>
+        </div>
+        <button type="button" class="btn btn-tertiary">
+          <span>Добавить пансионат</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="2.6rem" height="2.6rem" viewBox="0 0 26 26" fill="none">
+            <path
+              d="M9.5 19.5L15.5 13L9.5 6.5"
+              stroke="#1A1A1A"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <a href="#" class="footer__link"> Карта сайта </a>
+      </div>
+      <ul class="footer__menu">
+        <li class="footer__item">
+          <a href="#" class="footer__link">Каталог</a>
+        </li>
+        <li class="footer__item">
+          <a href="#" class="footer__link">Рассчитать стоимость услуг</a>
+        </li>
+        <li class="footer__item">
+          <a href="#" class="footer__link">Лучшие предложения</a>
+        </li>
+        <li class="footer__item">
+          <a href="#" class="footer__link">О нас</a>
+        </li>
+        <li class="footer__item">
+          <a href="#" class="footer__link">Награды</a>
+        </li>
+        <li class="footer__item">
+          <a href="#" class="footer__link">Подбор пансионата по рейтингу</a>
+        </li>
+        <li class="footer__item">
+          <a href="#" class="footer__link">Блог</a>
+        </li>
+        <li class="footer__item">
+          <a href="#" class="footer__link">Пансионаты рядом с вами</a>
+        </li>
+        <li class="footer__item">
+          <a href="#" class="footer__link">Подбор пансионата по заболеванию</a>
+        </li>
+        <li class="footer__item">
+          <a href="#" class="footer__link">Контакты</a>
+        </li>
+        <li class="footer__item">
+          <a href="#" class="footer__link">Проверенные пансионаты</a>
+        </li>
+        <li class="footer__item">
+          <a href="#" class="footer__link">Подбор пансионата по особенности</a>
+        </li>
+        <li class="footer__item">
+          <a href="#" class="footer__link">Избранное</a>
+        </li>
+        <li class="footer__item">
+          <a href="#" class="footer__link">Услуги по транспортировке больных</a>
+        </li>
+        <li class="footer__item">
+          <a href="#" class="footer__link">Подбор пансионата по городу</a>
+        </li>
+      </ul>
+      <div class="footer__phones phones">
+        <button type="button" class="btn btn-primary">
+          <span>Заказать звонок</span>
+        </button>
+        <div class="phones__phone">
+          <div class="phones__phone-numbers">
+            <div>8 495 567 45 05</div>
+            <div>9:00 - 21:00</div>
+          </div>
+          <a href="tel:84955674505" class="btn btn-round">
+            <img src="img/icons/phone.svg" alt="" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
 
-    <script src="js/app.min.js"></script>
+
+    <script src="js/app.min.js?_v=20230912211217"></script>
   </body>
 </html>

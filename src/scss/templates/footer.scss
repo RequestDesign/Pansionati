@@ -1,0 +1,49 @@
+.footer {
+  border-radius: 4rem 4rem 0 0;
+  background: $lightGrey;
+  backdrop-filter: blur(2rem);
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 8.6rem 0;
+  }
+
+  &__menu {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, auto));
+    column-gap: 12rem;
+    row-gap: 1.5rem;
+    grid-auto-columns: min-content;
+  }
+
+  &__item {
+    width: fit-content;
+  }
+
+  &__link {
+    color: $grey;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.4rem;
+
+    &:hover {
+      color: $black;
+      transition: $transition;
+    }
+  }
+
+  .btn-tertiary {
+    margin: 3rem 0 6rem 0;
+  }
+
+  &__phones {
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    .phones__phone-numbers {
+      text-align: start;
+    }
+  }
+}

@@ -1,0 +1,117 @@
+.region {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__title {
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+    margin-right: 1.2rem;
+  }
+
+  &__select {
+    position: relative;
+    &.active {
+      .region__select-content {
+        opacity: 1;
+      }
+      .region__select-btn {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__select-label {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    transition: $transition;
+    cursor: pointer;
+    overflow: hidden;
+
+    &:not(:last-child) {
+      margin-bottom: 0.8rem;
+    }
+  }
+
+  &__select-label,
+  &__select-value {
+    color: $black;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 2.4rem;
+  }
+
+  &__select-input {
+    display: none;
+    &:checked + label {
+      color: $orange;
+    }
+  }
+
+  &__select-content {
+    display: flex;
+    flex-direction: column;
+    transition: $transition;
+    opacity: 0;
+    z-index: 8;
+    position: absolute;
+    z-index: 2;
+    top: 3rem;
+    right: -3rem;
+    padding: 3rem 1rem 3rem 3rem;
+    border-radius: 3rem;
+    background: $background;
+    box-shadow: 0.5rem 1.5rem 7rem 0 rgba(143, 155, 205, 0.25);
+  }
+
+  &__select-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 2rem;
+    position: relative;
+    cursor: pointer;
+
+    &.active {
+      button {
+        transform: rotate(180deg);
+        transition: $transition;
+      }
+    }
+  }
+
+  &__select-btn {
+    transition: $transition;
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+
+  &__select-icon {
+    width: 2rem;
+    height: 2.2rem;
+    margin-right: 0.6rem;
+  }
+
+  &__select-list {
+    max-height: 15rem;
+    overflow-y: scroll;
+    width: max-content;
+    padding-right: 2rem;
+
+    &::-webkit-scrollbar {
+      width: 0.5rem;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: #e8edf2;
+      border-radius: 0.5rem;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $orange;
+      border-radius: 0.5rem;
+    }
+  }
+}

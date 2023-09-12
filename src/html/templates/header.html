@@ -1,3 +1,128 @@
-<header>
-  <span> Headline1 </span>
+<header class="header">
+  <div class="container">
+    <div class="header__container">
+      <div class="header__logo logo">
+        <a href="#">Пансионаты</a>
+      </div>
+      <div class="header__region region">
+        <div class="region__title">Ваш регион:</div>
+        <div class="region__select-icon">
+          <img src="@img/icons/location-orange.svg" alt="" />
+        </div>
+
+        <form action="#" method="#">
+          <div class="region__select js-dropdown">
+            <div class="region__select-header js-dropdown-inner">
+              <div class="region__select-value js-dropdown-value">Москва</div>
+              <button type="button" class="region__select-btn">
+                <img src="@img/icons/arrow-down.svg" alt="" />
+              </button>
+            </div>
+            <div class="region__select-content js-dropdown-content">
+              <div class="region__select-list">
+                <input
+                  id="citySelect0"
+                  class="region__select-input js-dropdown-input"
+                  type="radio"
+                  name="citySelect"
+                  value="Москва"
+                  checked
+                />
+                <label for="citySelect0" class="region__select-label js-dropdown-label">Москва</label>
+                <input
+                  id="citySelect1"
+                  class="region__select-input js-dropdown-input"
+                  type="radio"
+                  name="citySelect"
+                  value="Ростов"
+                />
+                <label for="citySelect1" class="region__select-label js-dropdown-label">Ростов</label>
+                <input
+                  id="citySelect2"
+                  class="region__select-input js-dropdown-input"
+                  type="radio"
+                  name="citySelect"
+                  value="Санкт-Петербург"
+                />
+                <label for="citySelect2" class="region__select-label js-dropdown-label">Санкт-Петербург</label>
+                <input
+                  id="citySelect3"
+                  class="region__select-input js-dropdown-input"
+                  type="radio"
+                  name="citySelect"
+                  value="Сочи"
+                />
+                <label for="citySelect3" class="region__select-label js-dropdown-label">Сочи</label>
+                <input
+                  id="citySelect4"
+                  class="region__select-input js-dropdown-input"
+                  type="radio"
+                  name="citySelect"
+                  value="Самара"
+                />
+                <label for="citySelect4" class="region__select-label js-dropdown-label">Самара</label>
+                <input
+                  id="citySelect5"
+                  class="region__select-input js-dropdown-input"
+                  type="radio"
+                  name="citySelect"
+                  value="Орел"
+                />
+                <label for="citySelect5" class="region__select-label js-dropdown-label">Орел</label>
+                <input
+                  id="citySelect6"
+                  class="region__select-input js-dropdown-input"
+                  type="radio"
+                  name="citySelect"
+                  value="Екатеринбург"
+                />
+                <label for="citySelect6" class="region__select-label js-dropdown-label">Екатеринбург</label>
+                <input
+                  id="citySelect7"
+                  class="region__select-input js-dropdown-input"
+                  type="radio"
+                  name="citySelect"
+                  value="Краснодар"
+                />
+                <label for="citySelect7" class="region__select-label js-dropdown-label">Краснодар</label>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <nav class="header__menu">
+        <ul class="header__list">
+          <li class="header__item">
+            <a href="#" class="header__link">Каталог</a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="header__link">О нас</a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="header__link">Контакты</a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="header__link">Статьи</a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="header__link">Избранное</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__phones phones">
+        <button type="button" class="btn btn-primary">
+          <span>Заказать звонок</span>
+        </button>
+        <div class="phones__phone">
+          <div class="phones__phone-numbers">
+            <div>8 495 567 45 05</div>
+            <div>9:00 - 21:00</div>
+          </div>
+          <a href="tel:84955674505" class="btn btn-round">
+            <img src="@img/icons/phone.svg" alt="" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 </header>

@@ -1,0 +1,45 @@
+.header {
+  position: relative;
+  padding: 3rem 0;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 2rem;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 3rem;
+    flex-wrap: wrap;
+  }
+
+  &__link {
+    color: $black;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 2.4rem;
+
+    &:hover {
+      transition: $transition;
+      cursor: pointer;
+      color: $blue;
+    }
+  }
+
+  &__phones {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 7.4rem;
+    flex-wrap: wrap;
+  }
+
+  &__region {
+    width: 33rem;
+  }
+}
