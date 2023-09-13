@@ -59,14 +59,17 @@
   border: none;
   background: none;
   padding: 0.7rem 0.4rem;
+  backdrop-filter: none;
 
   &:hover {
     span {
       color: $orange;
+      transition: $transition;
     }
     svg {
       path {
         stroke: $orange;
+        transition: $transition;
       }
     }
   }

@@ -50,6 +50,7 @@ export const scss = () => {
       // Раскомментировать если нужен не сжайтый дубль файла стилей
       .pipe(app.gulp.dest(app.path.build.css))
       .pipe(app.plugins.if(app.isBuild, cleanCss()))
+      .pipe(app.plugins.replace(/@img\//g, '../img/'))
       .pipe(
         rename({
           extname: '.min.css',

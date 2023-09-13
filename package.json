@@ -36,7 +36,7 @@
     "gulp-notify": "latest",
     "gulp-plumber": "latest",
     "gulp-rename": "latest",
-    "gulp-replace": "latest",
+    "gulp-replace": "^1.1.4",
     "gulp-sass": "latest",
     "gulp-svg-sprite": "latest",
     "gulp-ttf2woff2": "latest",

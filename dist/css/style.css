@@ -611,6 +611,12 @@ fieldset {
   line-height: 105%;
 }
 
+.title-h3 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 2.8rem;
+}
+
 .text {
   font-size: 2rem;
   font-weight: 400;
@@ -636,7 +642,7 @@ fieldset {
 }
 
 .btn:hover {
-  transition: all 0.2s ease-out;
+  transition: all 0.3s ease-out;
   cursor: pointer;
 }
 
@@ -651,7 +657,7 @@ fieldset {
 .btn-primary:hover,
 .btn-primary-sm:hover {
   background: #2ecdf0;
-  transition: all 0.2s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 .btn-primary {
@@ -682,14 +688,18 @@ fieldset {
   border: none;
   background: none;
   padding: 0.7rem 0.4rem;
+  -webkit-backdrop-filter: none;
+          backdrop-filter: none;
 }
 
 .btn-tertiary:hover span {
   color: #ffa41c;
+  transition: all 0.3s ease-out;
 }
 
 .btn-tertiary:hover svg path {
   stroke: #ffa41c;
+  transition: all 0.3s ease-out;
 }
 
 .btn-round {
@@ -774,7 +784,7 @@ fieldset {
   display: flex;
   align-items: center;
   width: 100%;
-  transition: all 0.2s ease-out;
+  transition: all 0.3s ease-out;
   cursor: pointer;
   overflow: hidden;
 }
@@ -802,7 +812,7 @@ fieldset {
 .region__select-content {
   display: flex;
   flex-direction: column;
-  transition: all 0.2s ease-out;
+  transition: all 0.3s ease-out;
   opacity: 0;
   z-index: 8;
   position: absolute;
@@ -827,11 +837,11 @@ fieldset {
 
 .region__select-header.active button {
   transform: rotate(180deg);
-  transition: all 0.2s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 .region__select-btn {
-  transition: all 0.2s ease-out;
+  transition: all 0.3s ease-out;
   width: 2.4rem;
   height: 2.4rem;
 }
@@ -869,7 +879,7 @@ fieldset {
 }
 
 .header-bg {
-  background-color: #f6f8fb;
+  background-color: rgba(246, 248, 251, 0.7215686275);
   width: 100%;
   height: 13rem;
   position: absolute;
@@ -905,7 +915,7 @@ fieldset {
 }
 
 .header__link:hover {
-  transition: all 0.2s ease-out;
+  transition: all 0.3s ease-out;
   cursor: pointer;
   color: #2ecdf0;
 }
@@ -961,7 +971,7 @@ fieldset {
 
 .footer__link:hover {
   color: #1a1a1a;
-  transition: all 0.2s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 .footer .btn-tertiary {
@@ -979,12 +989,11 @@ fieldset {
 
 .baner {
   position: relative;
-  margin-bottom: 20rem;
-  background-color: #f6f8fb;
+  background-color: rgba(246, 248, 251, 0.7215686275);
 }
 
 .no-webp .baner-bg {
-  background: url("../../../img/main/baner.jpg") no-repeat center; }
+  background: url("../../../img/main/baner.png") no-repeat center; }
 
 .baner-bg {
   background-size: cover;
@@ -1134,6 +1143,429 @@ fieldset {
   height: 12rem;
 }
 
+.baner__btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  -moz-column-gap: 12rem;
+       column-gap: 12rem;
+}
+
+.baner__form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  -moz-column-gap: 3rem;
+       column-gap: 3rem;
+}
+
+.awards .title {
+  margin-bottom: 5rem;
+}
+
+.awards__container {
+  padding-top: 23rem;
+}
+
+.awards__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  -moz-column-gap: 3rem;
+       column-gap: 3rem;
+}
+
+.awards__item {
+  border-radius: 4rem;
+  background: rgba(182, 194, 207, 0.15);
+  -webkit-backdrop-filter: blur(19px);
+          backdrop-filter: blur(19px);
+  -webkit-backdrop-filter: blur(2rem);
+          backdrop-filter: blur(2rem);
+  padding: 3.5rem 5rem 0 4rem;
+  width: 40.3rem;
+  height: 29.3rem;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s ease-out;
+}
+
+.awards__item:hover {
+  background: linear-gradient(151deg, #2ecdf0 9.04%, rgba(46, 205, 240, 0.24) 116.35%), rgba(156, 171, 189, 0.15);
+}
+
+.awards__item:hover .awards__circle {
+  background: #ffffff;
+}
+
+.awards__item:hover .awards__circle-img {
+  display: none;
+}
+
+.awards__item:hover .awards__circle-img-hover {
+  display: block;
+}
+
+.awards__item:hover .btn-tertiary span {
+  color: #ffffff;
+  transition: all 0.3s ease-out;
+}
+
+.awards__item:hover .btn-tertiary svg path {
+  stroke: #ffffff;
+  transition: all 0.3s ease-out;
+}
+
+.awards__circle {
+  width: 19.5rem;
+  height: 19.5rem;
+  border-radius: 50%;
+  background: linear-gradient(124deg, #2ecdf0 25.14%, rgba(46, 205, 240, 0.24) 90.92%);
+  position: absolute;
+  right: -3rem;
+  bottom: -4.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-out;
+}
+
+.awards__circle-img,
+.awards__circle-img-hover {
+  width: 5rem;
+  height: 5rem;
+  position: relative;
+  right: -2.3rem;
+  bottom: -1.3rem;
+  transition: all 0.3s ease-out;
+}
+
+.awards__circle-img-hover {
+  display: none;
+}
+
+.awards .btn-tertiary {
+  white-space: normal;
+  text-align: start;
+  display: inline;
+  padding: 0;
+}
+
+.awards .btn-tertiary svg {
+  vertical-align: middle;
+  margin-top: -0.5rem;
+}
+
+.cost {
+  padding-top: 17rem;
+}
+
+.cost__container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  -moz-column-gap: 9.4rem;
+       column-gap: 9.4rem;
+  border-radius: 3rem;
+  background: rgba(182, 194, 207, 0.15);
+  -webkit-backdrop-filter: blur(2rem);
+          backdrop-filter: blur(2rem);
+  padding: 9rem;
+  position: relative;
+}
+
+.no-webp .cost__container::after {
+  background: url("../../../img/main/baner-bg-2.png"); }
+
+.cost__container::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 3rem;
+  z-index: -1;
+}
+
+.cost .title {
+  margin-bottom: 2rem;
+}
+
+.cost__desc-text {
+  margin-bottom: 3rem;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+}
+
+.cost__form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  -moz-column-gap: 3rem;
+       column-gap: 3rem;
+}
+
+.cost__img {
+  position: absolute;
+  bottom: 0;
+  right: 9rem;
+  width: 51rem;
+  height: 45rem;
+}
+
+.services__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  -moz-column-gap: 4.8rem;
+       column-gap: 4.8rem;
+  width: 144.8rem;
+  margin: 0 auto;
+  padding-top: 17rem;
+}
+
+.services__img {
+  width: 65.6rem;
+  height: 64.7rem;
+  flex-shrink: 0;
+}
+
+.services__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.services .title {
+  margin-bottom: 2rem;
+}
+
+.services__desc {
+  padding: 4.5rem 0 1.4rem 0;
+}
+
+.services__text {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 130%;
+  margin-bottom: 3rem;
+}
+
+.services__items {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.2rem;
+  margin-bottom: 3rem;
+}
+
+.services__item {
+  color: #8b8d95;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  -moz-column-gap: 1.6rem;
+       column-gap: 1.6rem;
+}
+
+.services__item::before {
+  content: "";
+  background-color: #ffa41c;
+  height: 0.7rem;
+  width: 0.7rem;
+  border-radius: 50%;
+}
+
+.services .btn {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.find {
+  padding: 17rem 0;
+}
+
+.find__container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 3rem;
+  background: rgba(182, 194, 207, 0.15);
+  -webkit-backdrop-filter: blur(2rem);
+          backdrop-filter: blur(2rem);
+  padding: 12.5rem 38rem;
+  position: relative;
+}
+
+.no-webp .find__container::after {
+  background: url("../../../img/main/baner-bg-2.png"); }
+
+.find__container::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 3rem;
+  z-index: -1;
+}
+
+.find .title {
+  margin-bottom: 2rem;
+}
+
+.find__text {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 4rem;
+  max-width: 70rem;
+}
+
+.find__form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  -moz-column-gap: 3rem;
+       column-gap: 3rem;
+}
+
+.desc__container {
+  padding-bottom: 28rem;
+  display: flex;
+  position: relative;
+}
+
+.desc__desc {
+  padding: 9rem 30rem 9rem 9rem;
+  border-radius: 4rem;
+  background: #f0f3f7;
+  -webkit-backdrop-filter: blur(2rem);
+          backdrop-filter: blur(2rem);
+  width: 120rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+.desc__desc p {
+  color: #8b8d95;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 2.4rem;
+}
+
+.desc__imgs {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 69.1rem;
+  top: 3rem;
+  right: 0;
+}
+
+.desc__imgs-people {
+  width: 69.1rem;
+  height: 56.9rem;
+  position: relative;
+}
+
+.desc__img-capas {
+  width: 33.3rem;
+  height: 14rem;
+  position: relative;
+  top: 5rem;
+  right: -27rem;
+}
+
+.desc__img-capas img {
+  width: 100%;
+  height: 100%;
+}
+
+.blog__container {
+  padding-bottom: 17rem;
+}
+
+.blog__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.blog__items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  -moz-column-gap: 3rem;
+       column-gap: 3rem;
+}
+
+.blog__item {
+  border-radius: 10rem 0;
+  position: relative;
+}
+
+.blog__data {
+  border-radius: 6.5rem;
+  background: rgba(231, 242, 255, 0.7);
+  -webkit-backdrop-filter: blur(0.2rem);
+          backdrop-filter: blur(0.2rem);
+  padding: 0.8rem 1.6rem;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+  position: absolute;
+  top: 5rem;
+  left: 5rem;
+}
+
+.blog__desc {
+  padding: 4rem 5rem 3rem 5rem;
+  position: absolute;
+  bottom: 0;
+}
+
+.blog__desc-text {
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+  margin-top: 1rem;
+}
+
+.blog .btn-round {
+  background: #ffffff;
+  border: 0;
+  position: absolute;
+  top: -3.5rem;
+  right: 6rem;
+}
+
+.blog__substract {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  width: 40.2rem;
+  height: 39.3rem;
+}
+
+.blog__img {
+  width: 40.2rem;
+  height: 58.1rem;
+}
+
 @media (max-width: 48em) {
   html {
     font-size: 5px;
@@ -1153,3 +1585,7 @@ fieldset {
 }
 
 .webp .baner-bg { background: url(../../../img/main/baner.webp) no-repeat center; }
+
+.webp .cost__container::after { background: url(../../../img/main/baner-bg-2.webp); }
+
+.webp .find__container::after { background: url(../../../img/main/baner-bg-2.webp); }

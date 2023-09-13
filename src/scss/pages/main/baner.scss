@@ -1,10 +1,9 @@
 .baner {
   position: relative;
-  margin-bottom: 20rem;
-  background-color: #f6f8fb;
+  background-color: #f6f8fbb8;
 
   &-bg {
-    background: url('../../../img/main/baner.jpg') no-repeat center;
+    background: url('../../../img/main/baner.png') no-repeat center;
     background-size: cover;
     position: absolute;
     overflow: hidden;
@@ -144,5 +143,19 @@
     backdrop-filter: blur(2rem);
     width: 170rem;
     height: 12rem;
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 12rem;
+  }
+
+  &__form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 3rem;
   }
 }

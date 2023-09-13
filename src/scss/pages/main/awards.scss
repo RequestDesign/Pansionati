@@ -1,0 +1,95 @@
+.awards {
+  .title {
+    margin-bottom: 5rem;
+  }
+
+  &__container {
+    padding-top: 23rem;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 3rem;
+  }
+
+  &__item {
+    border-radius: 4rem;
+    background: rgba(182, 194, 207, 0.15);
+    backdrop-filter: blur(19px);
+    backdrop-filter: blur(2rem);
+    padding: 3.5rem 5rem 0 4rem;
+    width: 40.3rem;
+    height: 29.3rem;
+    overflow: hidden;
+    position: relative;
+    transition: $transition;
+
+    &:hover {
+      background: linear-gradient(151deg, #2ecdf0 9.04%, rgba(46, 205, 240, 0.24) 116.35%), rgba(156, 171, 189, 0.15);
+
+      .awards__circle {
+        background: $white;
+      }
+
+      .awards__circle-img {
+        display: none;
+      }
+
+      .awards__circle-img-hover {
+        display: block;
+      }
+
+      .btn-tertiary {
+        span {
+          color: $white;
+          transition: $transition;
+        }
+        svg path {
+          stroke: $white;
+          transition: $transition;
+        }
+      }
+    }
+  }
+
+  &__circle {
+    width: 19.5rem;
+    height: 19.5rem;
+    border-radius: 50%;
+    background: $gradientBlue;
+    position: absolute;
+    right: -3rem;
+    bottom: -4.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: $transition;
+  }
+
+  &__circle-img,
+  &__circle-img-hover {
+    width: 5rem;
+    height: 5rem;
+    position: relative;
+    right: -2.3rem;
+    bottom: -1.3rem;
+    transition: $transition;
+  }
+
+  &__circle-img-hover {
+    display: none;
+  }
+
+  .btn-tertiary {
+    white-space: normal;
+    text-align: start;
+    display: inline;
+    padding: 0;
+    svg {
+      vertical-align: middle;
+      margin-top: -0.5rem;
+    }
+  }
+}
