@@ -46,6 +46,7 @@
     "gulp-webpcss": "latest",
     "prettier": "latest",
     "sass": "latest",
+    "swiper": "^10.2.0",
     "webp-converter": "latest",
     "webpack": "latest",
     "webpack-stream": "latest"

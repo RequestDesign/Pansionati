@@ -1,3 +1,4 @@
+@import './swiper.scss';
 @import './general/consts.scss';
 
 @import './normalize.scss';
@@ -9,8 +10,10 @@
 @import './blocks/btns.scss';
 @import './blocks/phones.scss';
 @import './blocks/region.scss';
+@import './blocks/card.scss';
 
 @import './templates/header.scss';
 @import './templates/footer.scss';
 
 @import './pages/main/index.scss';
+@import './pages/main/boards-swiper.scss';
