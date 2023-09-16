@@ -8,7 +8,9 @@
           <div class="title">Пансионаты для престарелых в Москве</div>
         </div>
         <div class="baner__desc">
-          <div class="text">Более 120 объектов в Москве и Подмосковье с ценами, фотографиями и отзывами</div>
+          <div class="text" data-modal-el="cost-services">
+            Более 120 объектов в Москве и Подмосковье с ценами, фотографиями и отзывами
+          </div>
           <div class="baner__desc-btns">
             <a href="#" class="btn btn-round">
               <img src="@img/icons/tg.svg" alt="" />
@@ -22,6 +24,63 @@
       <div class="baner__center">
         <div class="baner__btns">
           <form action="#" method="#" class="baner__form">
+            <div class="datalist">
+              <div class="datalist__header">
+                <div class="datalist__header-icon">
+                  <img src="@img/icons/location-orange.svg" alt="" />
+                </div>
+                <input
+                  autocomplete="off"
+                  role="combobox"
+                  list=""
+                  id="input"
+                  name="location"
+                  placeholder="Выберите локацию"
+                />
+                <div class="datalist__header-arrow">
+                  <img src="@img/icons/arrow-down.svg" alt="" />
+                </div>
+              </div>
+
+              <div class="datalist__datalist">
+                <datalist id="browsers" role="listbox">
+                  <label class="datalist__option">
+                    <input type="checkbox" name="locatio" />
+                    <option value="Volvo">Volvo</option>
+                    <span>(4)</span>
+                  </label>
+                  <label class="datalist__option">
+                    <input type="checkbox" name="locatio" />
+                    <option value="Chrome">Chrome</option>
+                    <span>(5)</span>
+                  </label>
+
+                  <option value="Chrome">Chrome</option>
+                  <option value="Safari">Safari</option>
+                  <option value="Microsoft Edge">Microsoft Edge</option>
+                  <option value="Firefox">Firefox</option>
+                  <option value="Microsoft Edge">Microsoft Edge</option>
+                  <option value="Firefox">Firefox</option>
+                  <option value="Microsoft Edge">Microsoft Edge</option>
+                  <option value="Firefox">Firefox</option>
+                  <option value="Microsoft Edge">Microsoft Edge</option>
+                  <option value="Firefox">Firefox</option>
+                  <option value="Microsoft Edge">Microsoft Edge</option>
+                  <option value="Firefox">Firefox</option>
+                  <option value="Microsoft Edge">Microsoft Edge</option>
+                  <option value="Firefox">Firefox</option>
+                  <option value="Microsoft Edge">Microsoft Edge</option>
+                  <option value="Firefox">Firefox</option>
+                  <option value="Microsoft Edge">Microsoft Edge</option>
+                  <option value="Firefox">Firefox</option>
+                  <option value="Microsoft Edge">Microsoft Edge</option>
+                  <option value="Firefox">Firefox</option>
+                  <option value="Microsoft Edge">Microsoft Edge</option>
+                  <option value="Firefox">Firefox</option>
+                </datalist>
+              </div>
+            </div>
+
             <button type="submit" class="btn btn-primary">
               <span>Найти пансионат</span>
             </button>

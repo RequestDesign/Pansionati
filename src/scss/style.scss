@@ -1,4 +1,4 @@
-@import './swiper.scss';
+@import './libs/swiper.scss';
 @import './general/consts.scss';
 
 @import './normalize.scss';
@@ -11,6 +11,9 @@
 @import './blocks/phones.scss';
 @import './blocks/region.scss';
 @import './blocks/card.scss';
+@import './blocks/datalist.scss';
+@import './blocks/modals.scss';
+@import './blocks/inputs.scss';
 
 @import './templates/header.scss';
 @import './templates/footer.scss';

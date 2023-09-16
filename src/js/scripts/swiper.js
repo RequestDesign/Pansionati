@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
       pagination: {
         el: pagination,
         clickable: true,
-        renderBullet: function (index, className) {
+        renderBullet(index, className) {
           const total = this.slides.length - 2;
           if (index === 0) {
             return `
@@ -46,11 +46,11 @@ document.addEventListener('DOMContentLoaded', () => {
 							<span class="${className}">${index + 1}</span>
 						`;
           }
-          return '<span class="' + className + '">' + (index + 1) + '</span>';
+          return `<span class="${className}">${index + 1}</span>`;
         },
       },
       on: {
-        paginationUpdate: function () {
+        paginationUpdate() {
           const dots = this.pagination.bullets;
           dots.forEach((dot) => dot.classList.remove('hide'));
 

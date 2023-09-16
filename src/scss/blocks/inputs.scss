@@ -1,0 +1,24 @@
+.input {
+  border-radius: 6rem;
+  background: $white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 1rem;
+  border: 0.1rem solid transparent;
+  padding: 2.2rem 2rem 2.2rem 3rem;
+
+  input {
+    color: $black;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.4rem;
+    border: 0;
+    width: 30.6rem;
+    flex-shrink: 0;
+    &::placeholder {
+      color: $grey;
+    }
+  }
+}

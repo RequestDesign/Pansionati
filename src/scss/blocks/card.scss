@@ -31,6 +31,27 @@
     background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(0.2rem);
     padding: 0.8rem;
+
+    img {
+      &:first-child {
+        display: block;
+      }
+      &:last-child {
+        display: none;
+      }
+    }
+
+    &.active {
+      img {
+        &:first-child {
+          display: none;
+        }
+
+        &:last-child {
+          display: block;
+        }
+      }
+    }
   }
 
   &__desc {

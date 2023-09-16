@@ -1,0 +1,120 @@
+.modal {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(194, 199, 200, 0.79);
+  backdrop-filter: blur(0.5rem);
+  overflow: auto;
+  z-index: -100;
+  opacity: 0;
+  transition:
+    opacity 500ms,
+    z-index 250ms;
+
+  &.active {
+    z-index: 50000;
+    opacity: 1;
+    transition:
+      opacity 500ms,
+      z-index 1ms;
+
+    .modal__inner {
+      transform: scale(1);
+      opacity: 1;
+      transition:
+        transform 700ms,
+        opacity 250ms;
+    }
+  }
+
+  &__inner {
+    width: fit-content;
+    position: relative;
+    z-index: 2;
+    margin: auto;
+    transform: scale(0.1);
+    opacity: 0;
+    transition:
+      transform 700ms,
+      opacity 250ms;
+  }
+
+  &__content {
+    margin: 5rem auto;
+    padding: 9rem 25.5rem;
+    width: 112.4rem;
+    background-color: $lightGrey;
+    border-radius: 3rem;
+    background-image: url('../../img/modal-bg.png');
+  }
+
+  &__content-close {
+    display: inline-block;
+    width: 2.4rem;
+    height: 2.4rem;
+    position: absolute;
+    top: 9rem;
+    right: 4rem;
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  &__content-close img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+  }
+
+  .title {
+    margin-bottom: 2rem;
+  }
+
+  &__content-text {
+    color: #36393d;
+    text-align: center;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    margin: 0 auto 3rem auto;
+    max-width: 53rem;
+  }
+
+  &__content-btns {
+    width: fit-content;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 48em) {
+  .modal {
+    &__content {
+      margin: 6.3vw auto;
+      padding: 4.27vw 17vw;
+      width: 91.3vw;
+      border-radius: 5.3vw;
+    }
+
+    &__content-close {
+      width: 6.4vw;
+      height: 6.4vw;
+      top: 5.3vw;
+      right: 5.3vw;
+    }
+
+    .title {
+      margin-bottom: 3.2vw;
+    }
+
+    &__content-text {
+      font-size: 3.7vw;
+      margin: 0 auto 5.3vw auto;
+      max-width: 100%;
+    }
+  }
+}

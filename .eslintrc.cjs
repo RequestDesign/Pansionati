@@ -19,5 +19,6 @@ module.exports = {
     // 'no-restricted-globals': 'off',
     // 'no-param-reassign': 'off',
     'import/extensions': 'off',
+    'no-undef': 'off',
   },
 };

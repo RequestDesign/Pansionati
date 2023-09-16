@@ -1,10 +1,123 @@
 <!doctype html>
-<html lang="en">
-  @@include('html/templates/head.html', { 'title': "Главная" })
-  <body>
-    @@include('html/templates/header.html') @@include('html/pages/main/main.html')
-    @@include('html/templates/footer.html')
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=`, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.min.css" />
+    <title>Пансионаты</title>
+  </head>
 
-    <script src="js/app.min.js"></script>
+  <style>
+    body {
+      background: rgb(0, 62, 0);
+      width: 100%;
+      height: 100%;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin: 5rem 0 0 5rem;
+    }
+
+    .menu {
+      margin: 3rem;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: row;
+      column-gap: 3rem;
+      flex-wrap: wrap;
+      row-gap: 2rem;
+    }
+
+    .item {
+      display: block;
+      border: 0.3rem solid black;
+      height: 6rem;
+      width: 24rem;
+      border-radius: 1rem;
+      background: rgb(163, 172, 148);
+      text-align: center;
+    }
+
+    .item a,
+    .item div {
+      font-size: 1.4rem;
+      font-weight: 700;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #000000;
+      text-decoration: none;
+      font-family:
+        Goog Timing,
+        sans-serif;
+    }
+
+    .item:hover {
+      opacity: 0.5;
+      cursor: pointer;
+    }
+  </style>
+
+  <body>
+    <ul class="menu">
+      <li class="item">
+        <a href="./main.html">Главная</a>
+      </li>
+    </ul>
+
+    <h2>Модальные окна</h2>
+    <ul class="menu">
+      <li class="item">
+        <div data-modal-el="cost-services">Рассчитать стоимость услуг</div>
+      </li>
+      <li class="item">
+        <div data-modal-el="not-found-board">Не нашли пансионат</div>
+      </li>
+    </ul>
   </body>
+  <!--Модалка рассчитать стоимость услуг-->
+  <div class="modal close-x" data-modal="cost-services">
+    <div class="modal__inner">
+      <div class="modal__content">
+        <div class="modal__content-close close-x">
+          <img class="close-x" src="@img/icons/close-modal.svg" alt="" />
+        </div>
+        <div class="title modal__content-title">Спасибо за обращение</div>
+        <div class="modal__content-text">Наш специалист свяжется с вами и поможет подобрать подходящие варианты</div>
+        <div class="modal__content-btns">
+          <a href="#" class="btn btn-primary">
+            <span>Вернуться на главную</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Модалка не нашли пансионат-->
+  <div class="modal close-x" data-modal="not-found-board">
+    <div class="modal__inner">
+      <div class="modal__content">
+        <div class="modal__content-close close-x">
+          <img class="close-x" src="@img/icons/close-modal.svg" alt="" />
+        </div>
+        <div class="title modal__content-title">Спасибо за обращение</div>
+        <div class="modal__content-text">
+          Наш специалист свяжется с вами и сделает индивидуальную подборку пансионатов.
+        </div>
+        <div class="modal__content-btns">
+          <a href="#" class="btn btn-primary">
+            <span>Вернуться на главную</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./js/app.min.js"></script>
 </html>
