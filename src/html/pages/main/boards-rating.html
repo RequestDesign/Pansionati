@@ -3,7 +3,39 @@
     <div class="boards-swipers__container">
       <div class="boards-swipers__titles">
         <div class="title">Подбор пансионата по рейтингу</div>
-        <div></div>
+
+        <div class="select select-sort js-select">
+          <div class="select__header js-select-inner">
+            <div class="select__value js-select-value">Сортировать</div>
+            <button type="button" class="select__btn">
+              <img src="@img/icons/arrow-down.svg" alt="" />
+            </button>
+          </div>
+          <div class="select__content">
+            <div class="select__items">
+              <div class="select__item js-select-item">
+                <input id="sort-1" type="radio" name="sort" value="По умолчанию" checked />
+                <label for="sort-1">По умолчанию</label>
+              </div>
+              <div class="select__item js-select-item">
+                <input id="sort-2" type="radio" value="Популярные" name="sort" />
+                <label for="sort-2">Популярные</label>
+              </div>
+              <div class="select__item js-select-item">
+                <input id="sort-3" type="radio" value="Цена (дешевые)" name="sort" />
+                <label for="sort-3">Цена (дешевые)</label>
+              </div>
+              <div class="select__item js-select-item">
+                <input id="sort-4" type="radio" value="Цена (дорогие)" name="sort" />
+                <label for="sort-4">Цена (дорогие)</label>
+              </div>
+              <div class="select__item js-select-item">
+                <input id="sort-5" type="radio" value="По названию" name="sort" />
+                <label for="sort-5">По названию</label>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="swiper cards js-cards">

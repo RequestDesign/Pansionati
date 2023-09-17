@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const cardSwiper = new Swiper(slider, {
       slidesPerView: 3,
       allowTouchMove: true,
+      watchSlidesProgress: true,
       spaceBetween: 30,
       navigation: {
         nextEl: btnNext,

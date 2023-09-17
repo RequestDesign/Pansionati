@@ -5,91 +5,51 @@
       <div class="header__logo logo">
         <a href="#">Пансионаты</a>
       </div>
-      <div class="header__region region">
-        <div class="region__title">Ваш регион:</div>
-        <div class="region__select-icon">
-          <img src="@img/icons/location-orange.svg" alt="" />
-        </div>
-
-        <form action="#" method="#">
-          <div class="region__select js-dropdown">
-            <div class="region__select-header js-dropdown-inner">
-              <div class="region__select-value js-dropdown-value">Москва</div>
-              <button type="button" class="region__select-btn">
-                <img src="@img/icons/arrow-down.svg" alt="" />
-              </button>
+      <div class="header__region">
+        <div class="header__region-title">Ваш регион:</div>
+        <div class="select select-region js-select">
+          <div class="select__header js-select-inner">
+            <div class="select__icon">
+              <img src="@img/icons/location-orange.svg" alt="" />
             </div>
-            <div class="region__select-content js-dropdown-content">
-              <div class="region__select-list">
-                <input
-                  id="citySelect0"
-                  class="region__select-input js-dropdown-input"
-                  type="radio"
-                  name="citySelect"
-                  value="Москва"
-                  checked
-                />
-                <label for="citySelect0" class="region__select-label js-dropdown-label">Москва</label>
-                <input
-                  id="citySelect1"
-                  class="region__select-input js-dropdown-input"
-                  type="radio"
-                  name="citySelect"
-                  value="Ростов"
-                />
-                <label for="citySelect1" class="region__select-label js-dropdown-label">Ростов</label>
-                <input
-                  id="citySelect2"
-                  class="region__select-input js-dropdown-input"
-                  type="radio"
-                  name="citySelect"
-                  value="Санкт-Петербург"
-                />
-                <label for="citySelect2" class="region__select-label js-dropdown-label">Санкт-Петербург</label>
-                <input
-                  id="citySelect3"
-                  class="region__select-input js-dropdown-input"
-                  type="radio"
-                  name="citySelect"
-                  value="Сочи"
-                />
-                <label for="citySelect3" class="region__select-label js-dropdown-label">Сочи</label>
-                <input
-                  id="citySelect4"
-                  class="region__select-input js-dropdown-input"
-                  type="radio"
-                  name="citySelect"
-                  value="Самара"
-                />
-                <label for="citySelect4" class="region__select-label js-dropdown-label">Самара</label>
-                <input
-                  id="citySelect5"
-                  class="region__select-input js-dropdown-input"
-                  type="radio"
-                  name="citySelect"
-                  value="Орел"
-                />
-                <label for="citySelect5" class="region__select-label js-dropdown-label">Орел</label>
-                <input
-                  id="citySelect6"
-                  class="region__select-input js-dropdown-input"
-                  type="radio"
-                  name="citySelect"
-                  value="Екатеринбург"
-                />
-                <label for="citySelect6" class="region__select-label js-dropdown-label">Екатеринбург</label>
-                <input
-                  id="citySelect7"
-                  class="region__select-input js-dropdown-input"
-                  type="radio"
-                  name="citySelect"
-                  value="Краснодар"
-                />
-                <label for="citySelect7" class="region__select-label js-dropdown-label">Краснодар</label>
+            <div class="select__value js-select-value">Москва</div>
+            <button type="button" class="select__btn">
+              <img src="@img/icons/arrow-down.svg" alt="" />
+            </button>
+          </div>
+          <div class="select__content">
+            <div class="select__items">
+              <div class="select__item js-select-item">
+                <input id="city-1" type="radio" name="city" value="Москва" checked />
+                <label for="city-1">Москва</label>
+              </div>
+              <div class="select__item js-select-item">
+                <input id="city-2" type="radio" value="Санкт-Петербург" name="city" />
+                <label for="city-2">Санкт-Петербург</label>
+              </div>
+              <div class="select__item js-select-item">
+                <input id="city-3" type="radio" value="Брянск" name="city" />
+                <label for="city-3">Брянск</label>
+              </div>
+              <div class="select__item js-select-item">
+                <input id="city-4" type="radio" value="Сочи" name="city" />
+                <label for="city-4">Сочи</label>
+              </div>
+              <div class="select__item js-select-item">
+                <input id="city-5" type="radio" value="Ростов" name="city" />
+                <label for="city-5">Ростов</label>
+              </div>
+              <div class="select__item js-select-item">
+                <input id="city-6" type="radio" value="Краснодар" name="city" />
+                <label for="city-6">Краснодар</label>
+              </div>
+              <div class="select__item js-select-item">
+                <input id="city-7" type="radio" value="Тула" name="city" />
+                <label for="city-7">Тула</label>
               </div>
             </div>
           </div>
-        </form>
+        </div>
       </div>
       <nav class="header__menu">
         <ul class="header__list">

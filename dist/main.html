@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Главная</title>
-  <link rel="stylesheet" href="css/style.min.css" />
+  <link rel="stylesheet" href="css/style.min.css?_v=20230917232303" />
 </head>
 
   <body>
@@ -15,91 +15,51 @@
       <div class="header__logo logo">
         <a href="#">Пансионаты</a>
       </div>
-      <div class="header__region region">
-        <div class="region__title">Ваш регион:</div>
-        <div class="region__select-icon">
-          <img src="img/icons/location-orange.svg" alt="" />
-        </div>
-
-        <form action="#" method="#">
-          <div class="region__select js-dropdown">
-            <div class="region__select-header js-dropdown-inner">
-              <div class="region__select-value js-dropdown-value">Москва</div>
-              <button type="button" class="region__select-btn">
-                <img src="img/icons/arrow-down.svg" alt="" />
-              </button>
+      <div class="header__region">
+        <div class="header__region-title">Ваш регион:</div>
+        <div class="select select-region js-select">
+          <div class="select__header js-select-inner">
+            <div class="select__icon">
+              <img src="img/icons/location-orange.svg" alt="" />
             </div>
-            <div class="region__select-content js-dropdown-content">
-              <div class="region__select-list">
-                <input
-                  id="citySelect0"
-                  class="region__select-input js-dropdown-input"
-                  type="radio"
-                  name="citySelect"
-                  value="Москва"
-                  checked
-                />
-                <label for="citySelect0" class="region__select-label js-dropdown-label">Москва</label>
-                <input
-                  id="citySelect1"
-                  class="region__select-input js-dropdown-input"
-                  type="radio"
-                  name="citySelect"
-                  value="Ростов"
-                />
-                <label for="citySelect1" class="region__select-label js-dropdown-label">Ростов</label>
-                <input
-                  id="citySelect2"
-                  class="region__select-input js-dropdown-input"
-                  type="radio"
-                  name="citySelect"
-                  value="Санкт-Петербург"
-                />
-                <label for="citySelect2" class="region__select-label js-dropdown-label">Санкт-Петербург</label>
-                <input
-                  id="citySelect3"
-                  class="region__select-input js-dropdown-input"
-                  type="radio"
-                  name="citySelect"
-                  value="Сочи"
-                />
-                <label for="citySelect3" class="region__select-label js-dropdown-label">Сочи</label>
-                <input
-                  id="citySelect4"
-                  class="region__select-input js-dropdown-input"
-                  type="radio"
-                  name="citySelect"
-                  value="Самара"
-                />
-                <label for="citySelect4" class="region__select-label js-dropdown-label">Самара</label>
-                <input
-                  id="citySelect5"
-                  class="region__select-input js-dropdown-input"
-                  type="radio"
-                  name="citySelect"
-                  value="Орел"
-                />
-                <label for="citySelect5" class="region__select-label js-dropdown-label">Орел</label>
-                <input
-                  id="citySelect6"
-                  class="region__select-input js-dropdown-input"
-                  type="radio"
-                  name="citySelect"
-                  value="Екатеринбург"
-                />
-                <label for="citySelect6" class="region__select-label js-dropdown-label">Екатеринбург</label>
-                <input
-                  id="citySelect7"
-                  class="region__select-input js-dropdown-input"
-                  type="radio"
-                  name="citySelect"
-                  value="Краснодар"
-                />
-                <label for="citySelect7" class="region__select-label js-dropdown-label">Краснодар</label>
+            <div class="select__value js-select-value">Москва</div>
+            <button type="button" class="select__btn">
+              <img src="img/icons/arrow-down.svg" alt="" />
+            </button>
+          </div>
+          <div class="select__content">
+            <div class="select__items">
+              <div class="select__item js-select-item">
+                <input id="city-1" type="radio" name="city" value="Москва" checked />
+                <label for="city-1">Москва</label>
+              </div>
+              <div class="select__item js-select-item">
+                <input id="city-2" type="radio" value="Санкт-Петербург" name="city" />
+                <label for="city-2">Санкт-Петербург</label>
+              </div>
+              <div class="select__item js-select-item">
+                <input id="city-3" type="radio" value="Брянск" name="city" />
+                <label for="city-3">Брянск</label>
+              </div>
+              <div class="select__item js-select-item">
+                <input id="city-4" type="radio" value="Сочи" name="city" />
+                <label for="city-4">Сочи</label>
+              </div>
+              <div class="select__item js-select-item">
+                <input id="city-5" type="radio" value="Ростов" name="city" />
+                <label for="city-5">Ростов</label>
+              </div>
+              <div class="select__item js-select-item">
+                <input id="city-6" type="radio" value="Краснодар" name="city" />
+                <label for="city-6">Краснодар</label>
+              </div>
+              <div class="select__item js-select-item">
+                <input id="city-7" type="radio" value="Тула" name="city" />
+                <label for="city-7">Тула</label>
               </div>
             </div>
           </div>
-        </form>
+        </div>
       </div>
       <nav class="header__menu">
         <ul class="header__list">
@@ -163,61 +123,91 @@
       </div>
       <div class="baner__center">
         <div class="baner__btns">
-          <form action="#" method="#" class="baner__form">
-            <div class="datalist">
-              <div class="datalist__header">
-                <div class="datalist__header-icon">
+          <form action="#" method="#" id="baner-form" class="baner__form">
+            <div class="select select-baner js-select">
+              <div class="select__header js-select-inner">
+                <div class="select__icon">
                   <img src="img/icons/location-orange.svg" alt="" />
                 </div>
-                <input
-                  autocomplete="off"
-                  role="combobox"
-                  list=""
-                  id="input"
-                  name="location"
-                  placeholder="Выберите локацию"
-                />
-                <div class="datalist__header-arrow">
+                <div class="select__value js-select-value">Выберите локацию</div>
+                <button type="button" class="select__btn">
                   <img src="img/icons/arrow-down.svg" alt="" />
+                </button>
+              </div>
+              <div class="select__content">
+                <div class="select__items">
+                  <div class="select__item js-select-item">
+                    <input id="location-1" type="radio" name="location" value="Москва" />
+                    <label for="location-1">Москва</label>
+                  </div>
+                  <div class="select__item js-select-item">
+                    <input id="location-2" type="radio" value="Санкт-Петербург" name="location" />
+                    <label for="location-2">Санкт-Петербург</label>
+                  </div>
+                  <div class="select__item js-select-item">
+                    <input id="location-3" type="radio" value="Брянск" name="location" />
+                    <label for="location-3">Брянск</label>
+                  </div>
+                  <div class="select__item js-select-item">
+                    <input id="location-4" type="radio" value="Сочи" name="location" />
+                    <label for="location-4">Сочи</label>
+                  </div>
+                  <div class="select__item js-select-item">
+                    <input id="location-5" type="radio" value="Ростов" name="location" />
+                    <label for="location-5">Ростов</label>
+                  </div>
+                  <div class="select__item js-select-item">
+                    <input id="location-6" type="radio" value="Краснодар" name="location" />
+                    <label for="location-6">Краснодар</label>
+                  </div>
+                  <div class="select__item js-select-item">
+                    <input id="location-7" type="radio" value="Тула" name="location" />
+                    <label for="location-7">Тула</label>
+                  </div>
                 </div>
               </div>
-
-              <div class="datalist__datalist">
-                <datalist id="browsers" role="listbox">
-                  <label class="datalist__option">
-                    <input type="checkbox" name="locatio" />
-                    <option value="Volvo">Volvo</option>
-                    <span>(4)</span>
-                  </label>
-                  <label class="datalist__option">
-                    <input type="checkbox" name="locatio" />
-                    <option value="Chrome">Chrome</option>
-                    <span>(5)</span>
-                  </label>
-
-                  <option value="Chrome">Chrome</option>
-                  <option value="Safari">Safari</option>
-                  <option value="Microsoft Edge">Microsoft Edge</option>
-                  <option value="Firefox">Firefox</option>
-                  <option value="Microsoft Edge">Microsoft Edge</option>
-                  <option value="Firefox">Firefox</option>
-                  <option value="Microsoft Edge">Microsoft Edge</option>
-                  <option value="Firefox">Firefox</option>
-                  <option value="Microsoft Edge">Microsoft Edge</option>
-                  <option value="Firefox">Firefox</option>
-                  <option value="Microsoft Edge">Microsoft Edge</option>
-                  <option value="Firefox">Firefox</option>
-                  <option value="Microsoft Edge">Microsoft Edge</option>
-                  <option value="Firefox">Firefox</option>
-                  <option value="Microsoft Edge">Microsoft Edge</option>
-                  <option value="Firefox">Firefox</option>
-                  <option value="Microsoft Edge">Microsoft Edge</option>
-                  <option value="Firefox">Firefox</option>
-                  <option value="Microsoft Edge">Microsoft Edge</option>
-                  <option value="Firefox">Firefox</option>
-                  <option value="Microsoft Edge">Microsoft Edge</option>
-                  <option value="Firefox">Firefox</option>
-                </datalist>
+            </div>
+            <div class="select select-baner js-select">
+              <div class="select__header js-select-inner">
+                <div class="select__icon">
+                  <img src="img/icons/treatment.svg" alt="" />
+                </div>
+                <div class="select__value js-select-value">Выберите заболевание</div>
+                <button type="button" class="select__btn">
+                  <img src="img/icons/arrow-down.svg" alt="" />
+                </button>
+              </div>
+              <div class="select__content">
+                <div class="select__items">
+                  <div class="select__item js-select-item">
+                    <input id="treatment-1" type="radio" name="treatment" value="Альцгеймер" />
+                    <label for="treatment-1">Альцгеймер</label>
+                  </div>
+                  <div class="select__item js-select-item">
+                    <input id="treatment-2" type="radio" value="Онкология" name="location" />
+                    <label for="treatment-2">Онкология</label>
+                  </div>
+                  <div class="select__item js-select-item">
+                    <input id="treatment-3" type="radio" value="После инсульта" name="treatment" />
+                    <label for="treatment-3">После инсульта</label>
+                  </div>
+                  <div class="select__item js-select-item">
+                    <input id="treatment-4" type="radio" value="Склероз" name="treatment" />
+                    <label for="treatment-4">Склероз</label>
+                  </div>
+                  <div class="select__item js-select-item">
+                    <input id="treatment-5" type="radio" value="Паркинсон" name="treatment" />
+                    <label for="treatment-5">Паркинсон</label>
+                  </div>
+                  <div class="select__item js-select-item">
+                    <input id="treatment-6" type="radio" value="Сахарный диабет" name="treatment" />
+                    <label for="treatment-6">Сахарный диабет</label>
+                  </div>
+                  <div class="select__item js-select-item">
+                    <input id="treatment-7" type="radio" value="Деменция" name="treatment" />
+                    <label for="treatment-7">Дменеция</label>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -225,7 +215,8 @@
               <span>Найти пансионат</span>
             </button>
           </form>
-          <button type="button" class="btn btn-tertiary">
+
+          <button type="button" form="baner-form" class="btn btn-tertiary">
             <span>Перейти в каталог</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="2.6rem" height="2.6rem" viewBox="0 0 26 26" fill="none">
               <path
@@ -246,15 +237,15 @@
             <span>Пансионатов на проекте</span>
           </div>
           <div class="baner__count-imgs">
-            <img src="img/main/baner-count-1.png" alt="" />
-            <img src="img/main/baner-count-2.png" alt="" />
-            <img src="img/main/baner-count-3.png" alt="" />
+            <picture><source srcset="img/main/baner-count-1.webp" type="image/webp"><img src="img/main/baner-count-1.png" alt="" /></picture>
+            <picture><source srcset="img/main/baner-count-2.webp" type="image/webp"><img src="img/main/baner-count-2.png" alt="" /></picture>
+            <picture><source srcset="img/main/baner-count-3.webp" type="image/webp"><img src="img/main/baner-count-3.png" alt="" /></picture>
           </div>
         </div>
         <div class="baner__doctor">
           <div class="baner__doctor-text">Врачи с подтвержденным высшим образованием</div>
           <div class="baner__doctor-img">
-            <img src="img/main/baner-doctor.png" alt="" />
+            <picture><source srcset="img/main/baner-doctor.webp" type="image/webp"><img src="img/main/baner-doctor.png" alt="" /></picture>
           </div>
         </div>
       </div>
@@ -347,7 +338,68 @@
     <div class="boards-swipers__container">
       <div class="boards-swipers__titles">
         <div class="title">Подбор пансионата по городу</div>
-        <div></div>
+
+        <div class="select select-mult js-select">
+          <div class="select__header js-select-inner">
+            <input
+              name="search"
+              type="text"
+              class="select__input js-select-search"
+              autocomplete="off"
+              placeholder="Город"
+            />
+            <button type="button" class="select__btn">
+              <img src="img/icons/arrow-down.svg" alt="" />
+            </button>
+          </div>
+          <div class="select__content">
+            <div class="select__items">
+              <div class="select__empty js-select-empty">Ничего не найдено</div>
+              <div class="select__item js-select-item">
+                <input id="town-1" type="checkbox" name="town" value="Домодедово" />
+                <label for="town-1">
+                  Домодедово
+                  <span>(2)</span>
+                </label>
+              </div>
+              <div class="select__item js-select-item">
+                <input id="town-2" type="checkbox" name="town" value="Видное" />
+                <label for="town-2">
+                  Видное
+                  <span>(5)</span>
+                </label>
+              </div>
+              <div class="select__item js-select-item">
+                <input id="town-3" type="checkbox" name="town" value="Броннинцы" />
+                <label for="town-3">
+                  Броннинцы
+                  <span>(4)</span>
+                </label>
+              </div>
+              <div class="select__item js-select-item">
+                <input id="town-4" type="checkbox" name="town" value="Дедовск" />
+                <label for="town-4">
+                  Дедовск
+                  <span>(6)</span>
+                </label>
+              </div>
+              <div class="select__item js-select-item">
+                <input id="town-5" type="checkbox" name="town" value="Жуковский" />
+                <label for="town-5">
+                  Жуковский
+                  <span>(8)</span>
+                </label>
+              </div>
+              <div class="select__item js-select-item">
+                <input id="town-6" type="checkbox" name="town" value="Химки" />
+                <label for="town-6">
+                  Химки
+                  <span>(7)</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="swiper cards js-cards">
@@ -357,13 +409,13 @@
               <div class="js-card__swiper card__swiper">
                 <div class="swiper-wrapper card__slider-wrapper">
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-1.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-1.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-1.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
                   </div>
                 </div>
                 <div class="pagination card__pagination js-card__pagination">
@@ -429,7 +481,7 @@
                 </div>
                 <div class="card__items card__items-services">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__item">Одноместные</div>
                   <div class="card__item">Восстановление после инсульта</div>
@@ -440,7 +492,7 @@
                 </div>
                 <div class="card__icon-items">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__icon-item">
                     <div class="card__icon">
@@ -487,13 +539,13 @@
               <div class="js-card__swiper card__swiper">
                 <div class="swiper-wrapper card__slider-wrapper">
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-1.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-1.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-1.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
                   </div>
                 </div>
                 <div class="pagination card__pagination js-card__pagination">
@@ -559,7 +611,7 @@
                 </div>
                 <div class="card__items card__items-services">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__item">Одноместные</div>
                   <div class="card__item">Восстановление после инсульта</div>
@@ -570,7 +622,7 @@
                 </div>
                 <div class="card__icon-items">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__icon-item">
                     <div class="card__icon">
@@ -617,13 +669,13 @@
               <div class="js-card__swiper card__swiper">
                 <div class="swiper-wrapper card__slider-wrapper">
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-1.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-1.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-1.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
                   </div>
                 </div>
                 <div class="pagination card__pagination js-card__pagination">
@@ -689,7 +741,7 @@
                 </div>
                 <div class="card__items card__items-services">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__item">Одноместные</div>
                   <div class="card__item">Восстановление после инсульта</div>
@@ -700,7 +752,7 @@
                 </div>
                 <div class="card__icon-items">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__icon-item">
                     <div class="card__icon">
@@ -747,13 +799,13 @@
               <div class="js-card__swiper card__swiper">
                 <div class="swiper-wrapper card__slider-wrapper">
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-1.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-1.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-1.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
                   </div>
                 </div>
                 <div class="pagination card__pagination js-card__pagination">
@@ -819,7 +871,7 @@
                 </div>
                 <div class="card__items card__items-services">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__item">Одноместные</div>
                   <div class="card__item">Восстановление после инсульта</div>
@@ -830,7 +882,7 @@
                 </div>
                 <div class="card__icon-items">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__icon-item">
                     <div class="card__icon">
@@ -877,13 +929,13 @@
               <div class="js-card__swiper card__swiper">
                 <div class="swiper-wrapper card__slider-wrapper">
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-1.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-1.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-1.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
                   </div>
                 </div>
                 <div class="pagination card__pagination js-card__pagination">
@@ -949,7 +1001,7 @@
                 </div>
                 <div class="card__items card__items-services">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__item">Одноместные</div>
                   <div class="card__item">Восстановление после инсульта</div>
@@ -960,7 +1012,7 @@
                 </div>
                 <div class="card__icon-items">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__icon-item">
                     <div class="card__icon">
@@ -1007,13 +1059,13 @@
               <div class="js-card__swiper card__swiper">
                 <div class="swiper-wrapper card__slider-wrapper">
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-1.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-1.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-1.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
                   </div>
                 </div>
                 <div class="pagination card__pagination js-card__pagination">
@@ -1079,7 +1131,7 @@
                 </div>
                 <div class="card__items card__items-services">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__item">Одноместные</div>
                   <div class="card__item">Восстановление после инсульта</div>
@@ -1090,7 +1142,7 @@
                 </div>
                 <div class="card__icon-items">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__icon-item">
                     <div class="card__icon">
@@ -1137,13 +1189,13 @@
               <div class="js-card__swiper card__swiper">
                 <div class="swiper-wrapper card__slider-wrapper">
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-1.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-1.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-1.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
                   </div>
                 </div>
                 <div class="pagination card__pagination js-card__pagination">
@@ -1209,7 +1261,7 @@
                 </div>
                 <div class="card__items card__items-services">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__item">Одноместные</div>
                   <div class="card__item">Восстановление после инсульта</div>
@@ -1220,7 +1272,7 @@
                 </div>
                 <div class="card__icon-items">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__icon-item">
                     <div class="card__icon">
@@ -1267,13 +1319,13 @@
               <div class="js-card__swiper card__swiper">
                 <div class="swiper-wrapper card__slider-wrapper">
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-1.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-1.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-1.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
                   </div>
                 </div>
                 <div class="pagination card__pagination js-card__pagination">
@@ -1339,7 +1391,7 @@
                 </div>
                 <div class="card__items card__items-services">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__item">Одноместные</div>
                   <div class="card__item">Восстановление после инсульта</div>
@@ -1350,7 +1402,7 @@
                 </div>
                 <div class="card__icon-items">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__icon-item">
                     <div class="card__icon">
@@ -1397,13 +1449,13 @@
               <div class="js-card__swiper card__swiper">
                 <div class="swiper-wrapper card__slider-wrapper">
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-1.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-1.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-1.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
                   </div>
                 </div>
                 <div class="pagination card__pagination js-card__pagination">
@@ -1469,7 +1521,7 @@
                 </div>
                 <div class="card__items card__items-services">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__item">Одноместные</div>
                   <div class="card__item">Восстановление после инсульта</div>
@@ -1480,7 +1532,7 @@
                 </div>
                 <div class="card__icon-items">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__icon-item">
                     <div class="card__icon">
@@ -1527,13 +1579,13 @@
               <div class="js-card__swiper card__swiper">
                 <div class="swiper-wrapper card__slider-wrapper">
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-1.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-1.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-1.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
                   </div>
                 </div>
                 <div class="pagination card__pagination js-card__pagination">
@@ -1599,7 +1651,7 @@
                 </div>
                 <div class="card__items card__items-services">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__item">Одноместные</div>
                   <div class="card__item">Восстановление после инсульта</div>
@@ -1610,7 +1662,7 @@
                 </div>
                 <div class="card__icon-items">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__icon-item">
                     <div class="card__icon">
@@ -1721,7 +1773,39 @@
     <div class="boards-swipers__container">
       <div class="boards-swipers__titles">
         <div class="title">Подбор пансионата по рейтингу</div>
-        <div></div>
+
+        <div class="select select-sort js-select">
+          <div class="select__header js-select-inner">
+            <div class="select__value js-select-value">Сортировать</div>
+            <button type="button" class="select__btn">
+              <img src="img/icons/arrow-down.svg" alt="" />
+            </button>
+          </div>
+          <div class="select__content">
+            <div class="select__items">
+              <div class="select__item js-select-item">
+                <input id="sort-1" type="radio" name="sort" value="По умолчанию" checked />
+                <label for="sort-1">По умолчанию</label>
+              </div>
+              <div class="select__item js-select-item">
+                <input id="sort-2" type="radio" value="Популярные" name="sort" />
+                <label for="sort-2">Популярные</label>
+              </div>
+              <div class="select__item js-select-item">
+                <input id="sort-3" type="radio" value="Цена (дешевые)" name="sort" />
+                <label for="sort-3">Цена (дешевые)</label>
+              </div>
+              <div class="select__item js-select-item">
+                <input id="sort-4" type="radio" value="Цена (дорогие)" name="sort" />
+                <label for="sort-4">Цена (дорогие)</label>
+              </div>
+              <div class="select__item js-select-item">
+                <input id="sort-5" type="radio" value="По названию" name="sort" />
+                <label for="sort-5">По названию</label>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="swiper cards js-cards">
@@ -1731,13 +1815,13 @@
               <div class="js-card__swiper card__swiper">
                 <div class="swiper-wrapper card__slider-wrapper">
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-2.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-2.webp" type="image/webp"><img src="img/cards/board-hostel-2.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-2.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-2.webp" type="image/webp"><img src="img/cards/board-hostel-2.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-2.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-2.webp" type="image/webp"><img src="img/cards/board-hostel-2.png" alt="" /></picture>
                   </div>
                 </div>
                 <div class="pagination card__pagination js-card__pagination">
@@ -1803,7 +1887,7 @@
                 </div>
                 <div class="card__items card__items-services">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__item">Одноместные</div>
                   <div class="card__item">Восстановление после инсульта</div>
@@ -1814,7 +1898,7 @@
                 </div>
                 <div class="card__icon-items">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__icon-item">
                     <div class="card__icon">
@@ -1861,13 +1945,13 @@
               <div class="js-card__swiper card__swiper">
                 <div class="swiper-wrapper card__slider-wrapper">
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-2.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-2.webp" type="image/webp"><img src="img/cards/board-hostel-2.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-2.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-2.webp" type="image/webp"><img src="img/cards/board-hostel-2.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-2.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-2.webp" type="image/webp"><img src="img/cards/board-hostel-2.png" alt="" /></picture>
                   </div>
                 </div>
                 <div class="pagination card__pagination js-card__pagination">
@@ -1933,7 +2017,7 @@
                 </div>
                 <div class="card__items card__items-services">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__item">Одноместные</div>
                   <div class="card__item">Восстановление после инсульта</div>
@@ -1944,7 +2028,7 @@
                 </div>
                 <div class="card__icon-items">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__icon-item">
                     <div class="card__icon">
@@ -1991,13 +2075,13 @@
               <div class="js-card__swiper card__swiper">
                 <div class="swiper-wrapper card__slider-wrapper">
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-2.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-2.webp" type="image/webp"><img src="img/cards/board-hostel-2.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-2.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-2.webp" type="image/webp"><img src="img/cards/board-hostel-2.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-2.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-2.webp" type="image/webp"><img src="img/cards/board-hostel-2.png" alt="" /></picture>
                   </div>
                 </div>
                 <div class="pagination card__pagination js-card__pagination">
@@ -2063,7 +2147,7 @@
                 </div>
                 <div class="card__items card__items-services">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__item">Одноместные</div>
                   <div class="card__item">Восстановление после инсульта</div>
@@ -2074,7 +2158,7 @@
                 </div>
                 <div class="card__icon-items">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__icon-item">
                     <div class="card__icon">
@@ -2121,13 +2205,13 @@
               <div class="js-card__swiper card__swiper">
                 <div class="swiper-wrapper card__slider-wrapper">
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-2.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-2.webp" type="image/webp"><img src="img/cards/board-hostel-2.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-2.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-2.webp" type="image/webp"><img src="img/cards/board-hostel-2.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-2.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-2.webp" type="image/webp"><img src="img/cards/board-hostel-2.png" alt="" /></picture>
                   </div>
                 </div>
                 <div class="pagination card__pagination js-card__pagination">
@@ -2193,7 +2277,7 @@
                 </div>
                 <div class="card__items card__items-services">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__item">Одноместные</div>
                   <div class="card__item">Восстановление после инсульта</div>
@@ -2204,7 +2288,7 @@
                 </div>
                 <div class="card__icon-items">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__icon-item">
                     <div class="card__icon">
@@ -2251,13 +2335,13 @@
               <div class="js-card__swiper card__swiper">
                 <div class="swiper-wrapper card__slider-wrapper">
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-2.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-2.webp" type="image/webp"><img src="img/cards/board-hostel-2.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-2.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-2.webp" type="image/webp"><img src="img/cards/board-hostel-2.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-2.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-2.webp" type="image/webp"><img src="img/cards/board-hostel-2.png" alt="" /></picture>
                   </div>
                 </div>
                 <div class="pagination card__pagination js-card__pagination">
@@ -2323,7 +2407,7 @@
                 </div>
                 <div class="card__items card__items-services">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__item">Одноместные</div>
                   <div class="card__item">Восстановление после инсульта</div>
@@ -2334,7 +2418,7 @@
                 </div>
                 <div class="card__icon-items">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__icon-item">
                     <div class="card__icon">
@@ -2381,13 +2465,13 @@
               <div class="js-card__swiper card__swiper">
                 <div class="swiper-wrapper card__slider-wrapper">
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-2.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-2.webp" type="image/webp"><img src="img/cards/board-hostel-2.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-2.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-2.webp" type="image/webp"><img src="img/cards/board-hostel-2.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-2.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-2.webp" type="image/webp"><img src="img/cards/board-hostel-2.png" alt="" /></picture>
                   </div>
                 </div>
                 <div class="pagination card__pagination js-card__pagination">
@@ -2453,7 +2537,7 @@
                 </div>
                 <div class="card__items card__items-services">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__item">Одноместные</div>
                   <div class="card__item">Восстановление после инсульта</div>
@@ -2464,7 +2548,7 @@
                 </div>
                 <div class="card__icon-items">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__icon-item">
                     <div class="card__icon">
@@ -2511,13 +2595,13 @@
               <div class="js-card__swiper card__swiper">
                 <div class="swiper-wrapper card__slider-wrapper">
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-2.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-2.webp" type="image/webp"><img src="img/cards/board-hostel-2.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-2.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-2.webp" type="image/webp"><img src="img/cards/board-hostel-2.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-2.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-2.webp" type="image/webp"><img src="img/cards/board-hostel-2.png" alt="" /></picture>
                   </div>
                 </div>
                 <div class="pagination card__pagination js-card__pagination">
@@ -2583,7 +2667,7 @@
                 </div>
                 <div class="card__items card__items-services">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__item">Одноместные</div>
                   <div class="card__item">Восстановление после инсульта</div>
@@ -2594,7 +2678,7 @@
                 </div>
                 <div class="card__icon-items">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__icon-item">
                     <div class="card__icon">
@@ -2641,13 +2725,13 @@
               <div class="js-card__swiper card__swiper">
                 <div class="swiper-wrapper card__slider-wrapper">
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-2.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-2.webp" type="image/webp"><img src="img/cards/board-hostel-2.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-2.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-2.webp" type="image/webp"><img src="img/cards/board-hostel-2.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-2.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-2.webp" type="image/webp"><img src="img/cards/board-hostel-2.png" alt="" /></picture>
                   </div>
                 </div>
                 <div class="pagination card__pagination js-card__pagination">
@@ -2713,7 +2797,7 @@
                 </div>
                 <div class="card__items card__items-services">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__item">Одноместные</div>
                   <div class="card__item">Восстановление после инсульта</div>
@@ -2724,7 +2808,7 @@
                 </div>
                 <div class="card__icon-items">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__icon-item">
                     <div class="card__icon">
@@ -2771,13 +2855,13 @@
               <div class="js-card__swiper card__swiper">
                 <div class="swiper-wrapper card__slider-wrapper">
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-2.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-2.webp" type="image/webp"><img src="img/cards/board-hostel-2.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-2.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-2.webp" type="image/webp"><img src="img/cards/board-hostel-2.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-2.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-2.webp" type="image/webp"><img src="img/cards/board-hostel-2.png" alt="" /></picture>
                   </div>
                 </div>
                 <div class="pagination card__pagination js-card__pagination">
@@ -2843,7 +2927,7 @@
                 </div>
                 <div class="card__items card__items-services">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__item">Одноместные</div>
                   <div class="card__item">Восстановление после инсульта</div>
@@ -2854,7 +2938,7 @@
                 </div>
                 <div class="card__icon-items">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__icon-item">
                     <div class="card__icon">
@@ -2901,13 +2985,13 @@
               <div class="js-card__swiper card__swiper">
                 <div class="swiper-wrapper card__slider-wrapper">
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-2.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-2.webp" type="image/webp"><img src="img/cards/board-hostel-2.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-2.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-2.webp" type="image/webp"><img src="img/cards/board-hostel-2.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-2.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-2.webp" type="image/webp"><img src="img/cards/board-hostel-2.png" alt="" /></picture>
                   </div>
                 </div>
                 <div class="pagination card__pagination js-card__pagination">
@@ -2973,7 +3057,7 @@
                 </div>
                 <div class="card__items card__items-services">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__item">Одноместные</div>
                   <div class="card__item">Восстановление после инсульта</div>
@@ -2984,7 +3068,7 @@
                 </div>
                 <div class="card__icon-items">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__icon-item">
                     <div class="card__icon">
@@ -3031,13 +3115,13 @@
               <div class="js-card__swiper card__swiper">
                 <div class="swiper-wrapper card__slider-wrapper">
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-2.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-2.webp" type="image/webp"><img src="img/cards/board-hostel-2.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-2.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-2.webp" type="image/webp"><img src="img/cards/board-hostel-2.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-2.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-2.webp" type="image/webp"><img src="img/cards/board-hostel-2.png" alt="" /></picture>
                   </div>
                 </div>
                 <div class="pagination card__pagination js-card__pagination">
@@ -3103,7 +3187,7 @@
                 </div>
                 <div class="card__items card__items-services">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__item">Одноместные</div>
                   <div class="card__item">Восстановление после инсульта</div>
@@ -3114,7 +3198,7 @@
                 </div>
                 <div class="card__icon-items">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__icon-item">
                     <div class="card__icon">
@@ -3161,13 +3245,13 @@
               <div class="js-card__swiper card__swiper">
                 <div class="swiper-wrapper card__slider-wrapper">
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-2.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-2.webp" type="image/webp"><img src="img/cards/board-hostel-2.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-2.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-2.webp" type="image/webp"><img src="img/cards/board-hostel-2.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-2.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-2.webp" type="image/webp"><img src="img/cards/board-hostel-2.png" alt="" /></picture>
                   </div>
                 </div>
                 <div class="pagination card__pagination js-card__pagination">
@@ -3233,7 +3317,7 @@
                 </div>
                 <div class="card__items card__items-services">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__item">Одноместные</div>
                   <div class="card__item">Восстановление после инсульта</div>
@@ -3244,7 +3328,7 @@
                 </div>
                 <div class="card__icon-items">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__icon-item">
                     <div class="card__icon">
@@ -3291,13 +3375,13 @@
               <div class="js-card__swiper card__swiper">
                 <div class="swiper-wrapper card__slider-wrapper">
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-2.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-2.webp" type="image/webp"><img src="img/cards/board-hostel-2.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-2.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-2.webp" type="image/webp"><img src="img/cards/board-hostel-2.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-2.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-2.webp" type="image/webp"><img src="img/cards/board-hostel-2.png" alt="" /></picture>
                   </div>
                 </div>
                 <div class="pagination card__pagination js-card__pagination">
@@ -3363,7 +3447,7 @@
                 </div>
                 <div class="card__items card__items-services">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__item">Одноместные</div>
                   <div class="card__item">Восстановление после инсульта</div>
@@ -3374,7 +3458,7 @@
                 </div>
                 <div class="card__icon-items">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__icon-item">
                     <div class="card__icon">
@@ -3421,13 +3505,13 @@
               <div class="js-card__swiper card__swiper">
                 <div class="swiper-wrapper card__slider-wrapper">
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-2.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-2.webp" type="image/webp"><img src="img/cards/board-hostel-2.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-2.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-2.webp" type="image/webp"><img src="img/cards/board-hostel-2.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-2.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-2.webp" type="image/webp"><img src="img/cards/board-hostel-2.png" alt="" /></picture>
                   </div>
                 </div>
                 <div class="pagination card__pagination js-card__pagination">
@@ -3493,7 +3577,7 @@
                 </div>
                 <div class="card__items card__items-services">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__item">Одноместные</div>
                   <div class="card__item">Восстановление после инсульта</div>
@@ -3504,7 +3588,7 @@
                 </div>
                 <div class="card__icon-items">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__icon-item">
                     <div class="card__icon">
@@ -3551,13 +3635,13 @@
               <div class="js-card__swiper card__swiper">
                 <div class="swiper-wrapper card__slider-wrapper">
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-2.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-2.webp" type="image/webp"><img src="img/cards/board-hostel-2.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-2.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-2.webp" type="image/webp"><img src="img/cards/board-hostel-2.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-2.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-2.webp" type="image/webp"><img src="img/cards/board-hostel-2.png" alt="" /></picture>
                   </div>
                 </div>
                 <div class="pagination card__pagination js-card__pagination">
@@ -3623,7 +3707,7 @@
                 </div>
                 <div class="card__items card__items-services">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__item">Одноместные</div>
                   <div class="card__item">Восстановление после инсульта</div>
@@ -3634,7 +3718,7 @@
                 </div>
                 <div class="card__icon-items">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__icon-item">
                     <div class="card__icon">
@@ -3749,18 +3833,18 @@
           Оставьте свой номер телефона и наш сотрудник свяжется <br />
           с вами для консультации в ближайшее время.
         </div>
-        <form method="#" action="#" class="cost__form">
+        <form method="#" action="#" id="cost-phone" class="cost__form">
           <div class="input">
             <img src="img/icons/phone-orange.svg" alt="" />
             <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" autocomplete="off" />
           </div>
-          <button type="submit" class="btn btn-primary">
+          <button type="submit" form="cost__form" class="btn btn-primary">
             <span>Заказать звонок</span>
           </button>
         </form>
       </div>
       <div class="cost__img">
-        <img src="img/main/cost-people.png" alt="" />
+        <picture><source srcset="img/main/cost-people.webp" type="image/webp"><img src="img/main/cost-people.png" alt="" /></picture>
       </div>
     </div>
   </div>
@@ -3782,13 +3866,13 @@
               <div class="js-card__swiper card__swiper">
                 <div class="swiper-wrapper card__slider-wrapper">
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-3.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-3.webp" type="image/webp"><img src="img/cards/board-hostel-3.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-3.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-3.webp" type="image/webp"><img src="img/cards/board-hostel-3.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-3.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-3.webp" type="image/webp"><img src="img/cards/board-hostel-3.png" alt="" /></picture>
                   </div>
                 </div>
                 <div class="pagination card__pagination js-card__pagination">
@@ -3854,7 +3938,7 @@
                 </div>
                 <div class="card__items card__items-services">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__item">Одноместные</div>
                   <div class="card__item">Восстановление после инсульта</div>
@@ -3865,7 +3949,7 @@
                 </div>
                 <div class="card__icon-items">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__icon-item">
                     <div class="card__icon">
@@ -3912,13 +3996,13 @@
               <div class="js-card__swiper card__swiper">
                 <div class="swiper-wrapper card__slider-wrapper">
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-3.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-3.webp" type="image/webp"><img src="img/cards/board-hostel-3.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-3.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-3.webp" type="image/webp"><img src="img/cards/board-hostel-3.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-3.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-3.webp" type="image/webp"><img src="img/cards/board-hostel-3.png" alt="" /></picture>
                   </div>
                 </div>
                 <div class="pagination card__pagination js-card__pagination">
@@ -3984,7 +4068,7 @@
                 </div>
                 <div class="card__items card__items-services">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__item">Одноместные</div>
                   <div class="card__item">Восстановление после инсульта</div>
@@ -3995,7 +4079,7 @@
                 </div>
                 <div class="card__icon-items">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__icon-item">
                     <div class="card__icon">
@@ -4042,13 +4126,13 @@
               <div class="js-card__swiper card__swiper">
                 <div class="swiper-wrapper card__slider-wrapper">
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-3.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-3.webp" type="image/webp"><img src="img/cards/board-hostel-3.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-3.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-3.webp" type="image/webp"><img src="img/cards/board-hostel-3.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-3.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-3.webp" type="image/webp"><img src="img/cards/board-hostel-3.png" alt="" /></picture>
                   </div>
                 </div>
                 <div class="pagination card__pagination js-card__pagination">
@@ -4114,7 +4198,7 @@
                 </div>
                 <div class="card__items card__items-services">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__item">Одноместные</div>
                   <div class="card__item">Восстановление после инсульта</div>
@@ -4125,7 +4209,7 @@
                 </div>
                 <div class="card__icon-items">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__icon-item">
                     <div class="card__icon">
@@ -4172,13 +4256,13 @@
               <div class="js-card__swiper card__swiper">
                 <div class="swiper-wrapper card__slider-wrapper">
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-3.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-3.webp" type="image/webp"><img src="img/cards/board-hostel-3.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-3.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-3.webp" type="image/webp"><img src="img/cards/board-hostel-3.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-3.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-3.webp" type="image/webp"><img src="img/cards/board-hostel-3.png" alt="" /></picture>
                   </div>
                 </div>
                 <div class="pagination card__pagination js-card__pagination">
@@ -4244,7 +4328,7 @@
                 </div>
                 <div class="card__items card__items-services">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__item">Одноместные</div>
                   <div class="card__item">Восстановление после инсульта</div>
@@ -4255,7 +4339,7 @@
                 </div>
                 <div class="card__icon-items">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__icon-item">
                     <div class="card__icon">
@@ -4302,13 +4386,13 @@
               <div class="js-card__swiper card__swiper">
                 <div class="swiper-wrapper card__slider-wrapper">
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-3.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-3.webp" type="image/webp"><img src="img/cards/board-hostel-3.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-3.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-3.webp" type="image/webp"><img src="img/cards/board-hostel-3.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-3.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-3.webp" type="image/webp"><img src="img/cards/board-hostel-3.png" alt="" /></picture>
                   </div>
                 </div>
                 <div class="pagination card__pagination js-card__pagination">
@@ -4374,7 +4458,7 @@
                 </div>
                 <div class="card__items card__items-services">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__item">Одноместные</div>
                   <div class="card__item">Восстановление после инсульта</div>
@@ -4385,7 +4469,7 @@
                 </div>
                 <div class="card__icon-items">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__icon-item">
                     <div class="card__icon">
@@ -4432,13 +4516,13 @@
               <div class="js-card__swiper card__swiper">
                 <div class="swiper-wrapper card__slider-wrapper">
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-3.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-3.webp" type="image/webp"><img src="img/cards/board-hostel-3.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-3.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-3.webp" type="image/webp"><img src="img/cards/board-hostel-3.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-3.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-3.webp" type="image/webp"><img src="img/cards/board-hostel-3.png" alt="" /></picture>
                   </div>
                 </div>
                 <div class="pagination card__pagination js-card__pagination">
@@ -4504,7 +4588,7 @@
                 </div>
                 <div class="card__items card__items-services">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__item">Одноместные</div>
                   <div class="card__item">Восстановление после инсульта</div>
@@ -4515,7 +4599,7 @@
                 </div>
                 <div class="card__icon-items">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__icon-item">
                     <div class="card__icon">
@@ -4562,13 +4646,13 @@
               <div class="js-card__swiper card__swiper">
                 <div class="swiper-wrapper card__slider-wrapper">
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-1.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-1.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-1.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
                   </div>
                 </div>
                 <div class="pagination card__pagination js-card__pagination">
@@ -4634,7 +4718,7 @@
                 </div>
                 <div class="card__items card__items-services">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__item">Одноместные</div>
                   <div class="card__item">Восстановление после инсульта</div>
@@ -4645,138 +4729,7 @@
                 </div>
                 <div class="card__icon-items">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/nurses.svg" alt="" />
-                    </div>
-                    <div class="card__icon-text">Медсестры</div>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/leisure.svg" alt="" />
-                    </div>
-                    <div class="card__icon-text">Досуг</div>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/nutrition.svg" alt="" />
-                    </div>
-                    <div class="card__icon-text">3х разовое питание</div>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/nurses.svg" alt="" />
-                    </div>
-                    <div class="card__icon-text">Медсестры</div>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/leisure.svg" alt="" />
-                    </div>
-                    <div class="card__icon-text">Досуг</div>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/nutrition.svg" alt="" />
-                    </div>
-                    <div class="card__icon-text">3х разовое питание</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="swiper-slide card card-vert">
-            <div class="card-slider js-card__slider">
-              <div class="js-card__swiper card__swiper">
-                <div class="swiper-wrapper card__slider-wrapper">
-                  <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-3.png" alt="" />
-                  </div>
-                  <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-3.png" alt="" />
-                  </div>
-                  <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-3.png" alt="" />
-                  </div>
-                </div>
-                <div class="pagination card__pagination js-card__pagination">
-                  <div class="pagination__bullets card__bullets js-card__bullets"></div>
-                </div>
-              </div>
-            </div>
-            <div class="card__items card__items-top">
-              <div class="card__item">Комфорт</div>
-              <div class="card__item">Лицензия проверена</div>
-            </div>
-            <button type="button" class="card__like js-toggle">
-              <img src="img/icons/like.svg" alt="" />
-              <img src="img/icons/like-active.svg" alt="" />
-            </button>
-            <div class="card__items card__items-bottom">
-              <div class="card__item">от 1 700₽ <span>/сутки</span></div>
-              <div class="card__item">
-                <img src="img/icons/star.svg" alt="" />
-                <div>4.8</div>
-              </div>
-            </div>
-            <div class="card__substract">
-              <img src="img/cards/substract-board.svg" alt="" />
-              <div class="card__desc">
-                <div class="card__desc-top">
-                  <div class="title-h3">Пушкино пансионат</div>
-                  <div class="card__desc-rec">
-                    <div class="card__desc-rec-like">
-                      <img src="img/icons/like-finger.svg" alt="" />
-                      <span>81%</span>
-                    </div>
-                    <div class="card__desc-rec-text">Рекомендуют</div>
-                  </div>
-                </div>
-                <div class="card__desc-location">
-                  <div class="card__desc-location-address">
-                    <div class="card__icon">
-                      <img src="img/icons/location.svg" alt="" />
-                    </div>
-                    <div class="card__desc-location-text">
-                      Город Домодедово, СНТ Искра-Старосьяново, Берёзовая улица, 4
-                    </div>
-                  </div>
-                  <a href="#" type="button" class="btn btn-tertiary card__desc-location-btn">
-                    <span>Узнать о наличии мест</span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="2.6rem"
-                      height="2.6rem"
-                      viewBox="0 0 26 26"
-                      fill="none"
-                    >
-                      <path
-                        d="M9.5 19.5L15.5 13L9.5 6.5"
-                        stroke="#1A1A1A"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </a>
-                </div>
-                <div class="card__items card__items-services">
-                  <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
-                  </div>
-                  <div class="card__item">Одноместные</div>
-                  <div class="card__item">Восстановление после инсульта</div>
-                  <div class="card__item">Одноместные</div>
-                  <div class="card__item">Восстановление после инсульта</div>
-                  <div class="card__item">Одноместные</div>
-                  <div class="card__item">Восстановление после инсульта</div>
-                </div>
-                <div class="card__icon-items">
-                  <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__icon-item">
                     <div class="card__icon">
@@ -4824,13 +4777,13 @@
               <div class="js-card__swiper card__swiper">
                 <div class="swiper-wrapper card__slider-wrapper">
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-3.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-3.webp" type="image/webp"><img src="img/cards/board-hostel-3.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-3.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-3.webp" type="image/webp"><img src="img/cards/board-hostel-3.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-3.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-3.webp" type="image/webp"><img src="img/cards/board-hostel-3.png" alt="" /></picture>
                   </div>
                 </div>
                 <div class="pagination card__pagination js-card__pagination">
@@ -4896,7 +4849,7 @@
                 </div>
                 <div class="card__items card__items-services">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__item">Одноместные</div>
                   <div class="card__item">Восстановление после инсульта</div>
@@ -4907,7 +4860,138 @@
                 </div>
                 <div class="card__icon-items">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
+                  </div>
+                  <div class="card__icon-item">
+                    <div class="card__icon">
+                      <img src="img/icons/nurses.svg" alt="" />
+                    </div>
+                    <div class="card__icon-text">Медсестры</div>
+                  </div>
+                  <div class="card__icon-item">
+                    <div class="card__icon">
+                      <img src="img/icons/leisure.svg" alt="" />
+                    </div>
+                    <div class="card__icon-text">Досуг</div>
+                  </div>
+                  <div class="card__icon-item">
+                    <div class="card__icon">
+                      <img src="img/icons/nutrition.svg" alt="" />
+                    </div>
+                    <div class="card__icon-text">3х разовое питание</div>
+                  </div>
+                  <div class="card__icon-item">
+                    <div class="card__icon">
+                      <img src="img/icons/nurses.svg" alt="" />
+                    </div>
+                    <div class="card__icon-text">Медсестры</div>
+                  </div>
+                  <div class="card__icon-item">
+                    <div class="card__icon">
+                      <img src="img/icons/leisure.svg" alt="" />
+                    </div>
+                    <div class="card__icon-text">Досуг</div>
+                  </div>
+                  <div class="card__icon-item">
+                    <div class="card__icon">
+                      <img src="img/icons/nutrition.svg" alt="" />
+                    </div>
+                    <div class="card__icon-text">3х разовое питание</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide card card-vert">
+            <div class="card-slider js-card__slider">
+              <div class="js-card__swiper card__swiper">
+                <div class="swiper-wrapper card__slider-wrapper">
+                  <div class="swiper-slide card__slider-slide">
+                    <picture><source srcset="img/cards/board-hostel-3.webp" type="image/webp"><img src="img/cards/board-hostel-3.png" alt="" /></picture>
+                  </div>
+                  <div class="swiper-slide card__slider-slide">
+                    <picture><source srcset="img/cards/board-hostel-3.webp" type="image/webp"><img src="img/cards/board-hostel-3.png" alt="" /></picture>
+                  </div>
+                  <div class="swiper-slide card__slider-slide">
+                    <picture><source srcset="img/cards/board-hostel-3.webp" type="image/webp"><img src="img/cards/board-hostel-3.png" alt="" /></picture>
+                  </div>
+                </div>
+                <div class="pagination card__pagination js-card__pagination">
+                  <div class="pagination__bullets card__bullets js-card__bullets"></div>
+                </div>
+              </div>
+            </div>
+            <div class="card__items card__items-top">
+              <div class="card__item">Комфорт</div>
+              <div class="card__item">Лицензия проверена</div>
+            </div>
+            <button type="button" class="card__like js-toggle">
+              <img src="img/icons/like.svg" alt="" />
+              <img src="img/icons/like-active.svg" alt="" />
+            </button>
+            <div class="card__items card__items-bottom">
+              <div class="card__item">от 1 700₽ <span>/сутки</span></div>
+              <div class="card__item">
+                <img src="img/icons/star.svg" alt="" />
+                <div>4.8</div>
+              </div>
+            </div>
+            <div class="card__substract">
+              <img src="img/cards/substract-board.svg" alt="" />
+              <div class="card__desc">
+                <div class="card__desc-top">
+                  <div class="title-h3">Пушкино пансионат</div>
+                  <div class="card__desc-rec">
+                    <div class="card__desc-rec-like">
+                      <img src="img/icons/like-finger.svg" alt="" />
+                      <span>81%</span>
+                    </div>
+                    <div class="card__desc-rec-text">Рекомендуют</div>
+                  </div>
+                </div>
+                <div class="card__desc-location">
+                  <div class="card__desc-location-address">
+                    <div class="card__icon">
+                      <img src="img/icons/location.svg" alt="" />
+                    </div>
+                    <div class="card__desc-location-text">
+                      Город Домодедово, СНТ Искра-Старосьяново, Берёзовая улица, 4
+                    </div>
+                  </div>
+                  <a href="#" type="button" class="btn btn-tertiary card__desc-location-btn">
+                    <span>Узнать о наличии мест</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="2.6rem"
+                      height="2.6rem"
+                      viewBox="0 0 26 26"
+                      fill="none"
+                    >
+                      <path
+                        d="M9.5 19.5L15.5 13L9.5 6.5"
+                        stroke="#1A1A1A"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </a>
+                </div>
+                <div class="card__items card__items-services">
+                  <div class="card__items-shadow">
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
+                  </div>
+                  <div class="card__item">Одноместные</div>
+                  <div class="card__item">Восстановление после инсульта</div>
+                  <div class="card__item">Одноместные</div>
+                  <div class="card__item">Восстановление после инсульта</div>
+                  <div class="card__item">Одноместные</div>
+                  <div class="card__item">Восстановление после инсульта</div>
+                </div>
+                <div class="card__icon-items">
+                  <div class="card__items-shadow">
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__icon-item">
                     <div class="card__icon">
@@ -4971,7 +5055,7 @@
   <div class="container">
     <div class="services__container">
       <div class="services__img">
-        <img src="img/main/services.png" alt="" />
+        <picture><source srcset="img/main/services.webp" type="image/webp"><img src="img/main/services.png" alt="" /></picture>
       </div>
       <div class="services__desc">
         <div class="title">Услуги по транспортировке лежачих больных</div>
@@ -5010,13 +5094,13 @@
               <div class="js-card__swiper card__swiper">
                 <div class="swiper-wrapper card__slider-wrapper">
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-1.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-1.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-1.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
                   </div>
                 </div>
                 <div class="pagination card__pagination js-card__pagination">
@@ -5082,7 +5166,7 @@
                 </div>
                 <div class="card__items card__items-services">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__item">Одноместные</div>
                   <div class="card__item">Восстановление после инсульта</div>
@@ -5093,7 +5177,7 @@
                 </div>
                 <div class="card__icon-items">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__icon-item">
                     <div class="card__icon">
@@ -5141,13 +5225,13 @@
               <div class="js-card__swiper card__swiper">
                 <div class="swiper-wrapper card__slider-wrapper">
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-1.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-1.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-1.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
                   </div>
                 </div>
                 <div class="pagination card__pagination js-card__pagination">
@@ -5213,7 +5297,7 @@
                 </div>
                 <div class="card__items card__items-services">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__item">Одноместные</div>
                   <div class="card__item">Восстановление после инсульта</div>
@@ -5224,7 +5308,7 @@
                 </div>
                 <div class="card__icon-items">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__icon-item">
                     <div class="card__icon">
@@ -5271,13 +5355,13 @@
               <div class="js-card__swiper card__swiper">
                 <div class="swiper-wrapper card__slider-wrapper">
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-1.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-1.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-1.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
                   </div>
                 </div>
                 <div class="pagination card__pagination js-card__pagination">
@@ -5343,7 +5427,7 @@
                 </div>
                 <div class="card__items card__items-services">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__item">Одноместные</div>
                   <div class="card__item">Восстановление после инсульта</div>
@@ -5354,7 +5438,7 @@
                 </div>
                 <div class="card__icon-items">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__icon-item">
                     <div class="card__icon">
@@ -5401,13 +5485,13 @@
               <div class="js-card__swiper card__swiper">
                 <div class="swiper-wrapper card__slider-wrapper">
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-1.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-1.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-1.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
                   </div>
                 </div>
                 <div class="pagination card__pagination js-card__pagination">
@@ -5473,7 +5557,7 @@
                 </div>
                 <div class="card__items card__items-services">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__item">Одноместные</div>
                   <div class="card__item">Восстановление после инсульта</div>
@@ -5484,7 +5568,7 @@
                 </div>
                 <div class="card__icon-items">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__icon-item">
                     <div class="card__icon">
@@ -5531,13 +5615,13 @@
               <div class="js-card__swiper card__swiper">
                 <div class="swiper-wrapper card__slider-wrapper">
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-1.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-1.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-1.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
                   </div>
                 </div>
                 <div class="pagination card__pagination js-card__pagination">
@@ -5603,7 +5687,7 @@
                 </div>
                 <div class="card__items card__items-services">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__item">Одноместные</div>
                   <div class="card__item">Восстановление после инсульта</div>
@@ -5614,7 +5698,7 @@
                 </div>
                 <div class="card__icon-items">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__icon-item">
                     <div class="card__icon">
@@ -5661,13 +5745,13 @@
               <div class="js-card__swiper card__swiper">
                 <div class="swiper-wrapper card__slider-wrapper">
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-1.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-1.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
                   </div>
                   <div class="swiper-slide card__slider-slide">
-                    <img src="img/cards/board-hostel-1.png" alt="" />
+                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
                   </div>
                 </div>
                 <div class="pagination card__pagination js-card__pagination">
@@ -5733,7 +5817,7 @@
                 </div>
                 <div class="card__items card__items-services">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__item">Одноместные</div>
                   <div class="card__item">Восстановление после инсульта</div>
@@ -5744,7 +5828,7 @@
                 </div>
                 <div class="card__icon-items">
                   <div class="card__items-shadow">
-                    <img src="img/cards/card-items-shadow.png" alt="" />
+                    <picture><source srcset="img/cards/card-items-shadow.webp" type="image/webp"><img src="img/cards/card-items-shadow.png" alt="" /></picture>
                   </div>
                   <div class="card__icon-item">
                     <div class="card__icon">
@@ -5811,15 +5895,15 @@
         Оставьте ваш телефон, наш специалист перезвонит вам и бесплатно сделает для вас персональную подборку пансионов,
         удовлетворяющих вашим запросам.
       </div>
-      <div class="find__form">
+      <form method="#" action="#" id="find-form" class="find__form">
         <div class="input">
           <img src="img/icons/phone-orange.svg" alt="" />
           <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" autocomplete="off" />
         </div>
-        <button type="submit" class="btn btn-primary">
+        <button type="submit" form="find-form" class="btn btn-primary">
           <span>Заказать звонок</span>
         </button>
-      </div>
+      </form>
     </div>
   </div>
 </section>
@@ -5835,11 +5919,11 @@
       <div class="blog__items">
         <div class="blog__item">
           <div class="blog__img">
-            <img src="img/main/blog-1.png" alt="" />
+            <picture><source srcset="img/main/blog-1.webp" type="image/webp"><img src="img/main/blog-1.png" alt="" /></picture>
           </div>
           <div class="blog__data">17.04.2023</div>
           <div class="blog__substract">
-            <img src="img/main/substract-blog.png" alt="" />
+            <picture><source srcset="img/main/substract-blog.webp" type="image/webp"><img src="img/main/substract-blog.png" alt="" /></picture>
           </div>
           <div class="blog__desc">
             <div class="title-h3">Кого не возьмут в дом престарелых?</div>
@@ -5853,11 +5937,11 @@
         </div>
         <div class="blog__item">
           <div class="blog__img">
-            <img src="img/main/blog-2.png" alt="" />
+            <picture><source srcset="img/main/blog-2.webp" type="image/webp"><img src="img/main/blog-2.png" alt="" /></picture>
           </div>
           <div class="blog__data">17.04.2023</div>
           <div class="blog__substract">
-            <img src="img/main/substract-blog.png" alt="" />
+            <picture><source srcset="img/main/substract-blog.webp" type="image/webp"><img src="img/main/substract-blog.png" alt="" /></picture>
           </div>
           <div class="blog__desc">
             <div class="title-h3">Что едят в доме престарелых?</div>
@@ -5869,11 +5953,11 @@
         </div>
         <div class="blog__item">
           <div class="blog__img">
-            <img src="img/main/blog-3.png" alt="" />
+            <picture><source srcset="img/main/blog-3.webp" type="image/webp"><img src="img/main/blog-3.png" alt="" /></picture>
           </div>
           <div class="blog__data">17.04.2023</div>
           <div class="blog__substract">
-            <img src="img/main/substract-blog.png" alt="" />
+            <picture><source srcset="img/main/substract-blog.webp" type="image/webp"><img src="img/main/substract-blog.png" alt="" /></picture>
           </div>
           <div class="blog__desc">
             <div class="title-h3">Со скольки берут в дом престарелых?</div>
@@ -5887,11 +5971,11 @@
         </div>
         <div class="blog__item">
           <div class="blog__img">
-            <img src="img/main/blog-4.png" alt="" />
+            <picture><source srcset="img/main/blog-4.webp" type="image/webp"><img src="img/main/blog-4.png" alt="" /></picture>
           </div>
           <div class="blog__data">17.04.2023</div>
           <div class="blog__substract">
-            <img src="img/main/substract-blog.png" alt="" />
+            <picture><source srcset="img/main/substract-blog.webp" type="image/webp"><img src="img/main/substract-blog.png" alt="" /></picture>
           </div>
           <div class="blog__desc">
             <div class="title-h3">Причины возникновения пролежней</div>
@@ -5930,10 +6014,10 @@
       </div>
       <div class="desc__imgs">
         <div class="desc__img-capas">
-          <img src="img/main/capas.png" alt="" />
+          <picture><source srcset="img/main/capas.webp" type="image/webp"><img src="img/main/capas.png" alt="" /></picture>
         </div>
         <div class="desc__imgs-people">
-          <img src="img/main/desc-people.png" alt="" />
+          <picture><source srcset="img/main/desc-people.webp" type="image/webp"><img src="img/main/desc-people.png" alt="" /></picture>
         </div>
       </div>
     </div>
@@ -6066,7 +6150,7 @@
   </div>
 </div>
 
-<script src="js/app.min.js"></script>
+<script src="js/app.min.js?_v=20230917232303"></script>
 
   </body>
 </html>

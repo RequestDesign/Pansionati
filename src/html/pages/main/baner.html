@@ -23,61 +23,91 @@
       </div>
       <div class="baner__center">
         <div class="baner__btns">
-          <form action="#" method="#" class="baner__form">
-            <div class="datalist">
-              <div class="datalist__header">
-                <div class="datalist__header-icon">
+          <form action="#" method="#" id="baner-form" class="baner__form">
+            <div class="select select-baner js-select">
+              <div class="select__header js-select-inner">
+                <div class="select__icon">
                   <img src="@img/icons/location-orange.svg" alt="" />
                 </div>
-                <input
-                  autocomplete="off"
-                  role="combobox"
-                  list=""
-                  id="input"
-                  name="location"
-                  placeholder="Выберите локацию"
-                />
-                <div class="datalist__header-arrow">
+                <div class="select__value js-select-value">Выберите локацию</div>
+                <button type="button" class="select__btn">
                   <img src="@img/icons/arrow-down.svg" alt="" />
+                </button>
+              </div>
+              <div class="select__content">
+                <div class="select__items">
+                  <div class="select__item js-select-item">
+                    <input id="location-1" type="radio" name="location" value="Москва" />
+                    <label for="location-1">Москва</label>
+                  </div>
+                  <div class="select__item js-select-item">
+                    <input id="location-2" type="radio" value="Санкт-Петербург" name="location" />
+                    <label for="location-2">Санкт-Петербург</label>
+                  </div>
+                  <div class="select__item js-select-item">
+                    <input id="location-3" type="radio" value="Брянск" name="location" />
+                    <label for="location-3">Брянск</label>
+                  </div>
+                  <div class="select__item js-select-item">
+                    <input id="location-4" type="radio" value="Сочи" name="location" />
+                    <label for="location-4">Сочи</label>
+                  </div>
+                  <div class="select__item js-select-item">
+                    <input id="location-5" type="radio" value="Ростов" name="location" />
+                    <label for="location-5">Ростов</label>
+                  </div>
+                  <div class="select__item js-select-item">
+                    <input id="location-6" type="radio" value="Краснодар" name="location" />
+                    <label for="location-6">Краснодар</label>
+                  </div>
+                  <div class="select__item js-select-item">
+                    <input id="location-7" type="radio" value="Тула" name="location" />
+                    <label for="location-7">Тула</label>
+                  </div>
                 </div>
               </div>
-
-              <div class="datalist__datalist">
-                <datalist id="browsers" role="listbox">
-                  <label class="datalist__option">
-                    <input type="checkbox" name="locatio" />
-                    <option value="Volvo">Volvo</option>
-                    <span>(4)</span>
-                  </label>
-                  <label class="datalist__option">
-                    <input type="checkbox" name="locatio" />
-                    <option value="Chrome">Chrome</option>
-                    <span>(5)</span>
-                  </label>
-
-                  <option value="Chrome">Chrome</option>
-                  <option value="Safari">Safari</option>
-                  <option value="Microsoft Edge">Microsoft Edge</option>
-                  <option value="Firefox">Firefox</option>
-                  <option value="Microsoft Edge">Microsoft Edge</option>
-                  <option value="Firefox">Firefox</option>
-                  <option value="Microsoft Edge">Microsoft Edge</option>
-                  <option value="Firefox">Firefox</option>
-                  <option value="Microsoft Edge">Microsoft Edge</option>
-                  <option value="Firefox">Firefox</option>
-                  <option value="Microsoft Edge">Microsoft Edge</option>
-                  <option value="Firefox">Firefox</option>
-                  <option value="Microsoft Edge">Microsoft Edge</option>
-                  <option value="Firefox">Firefox</option>
-                  <option value="Microsoft Edge">Microsoft Edge</option>
-                  <option value="Firefox">Firefox</option>
-                  <option value="Microsoft Edge">Microsoft Edge</option>
-                  <option value="Firefox">Firefox</option>
-                  <option value="Microsoft Edge">Microsoft Edge</option>
-                  <option value="Firefox">Firefox</option>
-                  <option value="Microsoft Edge">Microsoft Edge</option>
-                  <option value="Firefox">Firefox</option>
-                </datalist>
+            </div>
+            <div class="select select-baner js-select">
+              <div class="select__header js-select-inner">
+                <div class="select__icon">
+                  <img src="@img/icons/treatment.svg" alt="" />
+                </div>
+                <div class="select__value js-select-value">Выберите заболевание</div>
+                <button type="button" class="select__btn">
+                  <img src="@img/icons/arrow-down.svg" alt="" />
+                </button>
+              </div>
+              <div class="select__content">
+                <div class="select__items">
+                  <div class="select__item js-select-item">
+                    <input id="treatment-1" type="radio" name="treatment" value="Альцгеймер" />
+                    <label for="treatment-1">Альцгеймер</label>
+                  </div>
+                  <div class="select__item js-select-item">
+                    <input id="treatment-2" type="radio" value="Онкология" name="location" />
+                    <label for="treatment-2">Онкология</label>
+                  </div>
+                  <div class="select__item js-select-item">
+                    <input id="treatment-3" type="radio" value="После инсульта" name="treatment" />
+                    <label for="treatment-3">После инсульта</label>
+                  </div>
+                  <div class="select__item js-select-item">
+                    <input id="treatment-4" type="radio" value="Склероз" name="treatment" />
+                    <label for="treatment-4">Склероз</label>
+                  </div>
+                  <div class="select__item js-select-item">
+                    <input id="treatment-5" type="radio" value="Паркинсон" name="treatment" />
+                    <label for="treatment-5">Паркинсон</label>
+                  </div>
+                  <div class="select__item js-select-item">
+                    <input id="treatment-6" type="radio" value="Сахарный диабет" name="treatment" />
+                    <label for="treatment-6">Сахарный диабет</label>
+                  </div>
+                  <div class="select__item js-select-item">
+                    <input id="treatment-7" type="radio" value="Деменция" name="treatment" />
+                    <label for="treatment-7">Дменеция</label>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -85,7 +115,8 @@
               <span>Найти пансионат</span>
             </button>
           </form>
-          <button type="button" class="btn btn-tertiary">
+
+          <button type="button" form="baner-form" class="btn btn-tertiary">
             <span>Перейти в каталог</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="2.6rem" height="2.6rem" viewBox="0 0 26 26" fill="none">
               <path

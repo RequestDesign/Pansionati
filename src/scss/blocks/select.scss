@@ -1,0 +1,273 @@
+.select {
+  position: relative;
+
+  &.active {
+    .select__content {
+      opacity: 1;
+      max-height: 26rem;
+    }
+
+    .select__btn {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__empty {
+    color: $black;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 150%;
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+
+    &.active {
+      button {
+        transform: rotate(180deg);
+        transition: $transition;
+      }
+    }
+  }
+
+  &__btn {
+    transition: $transition;
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    transition: $transition;
+    position: absolute;
+    z-index: 4;
+    opacity: 0;
+    top: 3rem;
+    right: -3rem;
+    padding: 3rem 1rem 3rem 3rem;
+    border-radius: 3rem;
+    background: $background;
+    box-shadow: 0 0 1rem rgba(143, 155, 205, 0.25);
+    overflow: hidden;
+    height: 26rem;
+    max-height: 0;
+  }
+
+  &__items {
+    max-height: 20rem;
+    overflow-y: scroll;
+    width: max-content;
+    padding-right: 2rem;
+
+    &::-webkit-scrollbar {
+      width: 0.5rem;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: #e8edf2;
+      border-radius: 0.5rem;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $orange;
+      border-radius: 0.5rem;
+    }
+  }
+
+  &__item {
+    border-radius: 1rem;
+    cursor: pointer;
+    &:not(:last-child) {
+      margin-bottom: 0.8rem;
+    }
+    &:hover {
+      background-color: $lightGrey;
+      transition: $transition;
+    }
+    label {
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      transition: $transition;
+      cursor: pointer;
+      overflow: hidden;
+      color: $black;
+      font-size: 1.8rem;
+      font-weight: 700;
+      line-height: 2.4rem;
+    }
+  }
+
+  &__value {
+    margin-right: 2rem;
+  }
+
+  &__value {
+    color: $black;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 2.4rem;
+  }
+
+  &__icon {
+    width: auto;
+    height: auto;
+    margin-right: 0.6rem;
+  }
+}
+
+.select-sort,
+.select-mult {
+  .select__header {
+    background-color: $lightGrey;
+    padding: 2.2rem 2rem 2.2rem 3rem;
+    border-radius: 5.1rem;
+  }
+
+  .select__content {
+    top: 8.5rem;
+    right: 0;
+  }
+}
+
+.select-sort {
+  .select__items {
+    &::-webkit-scrollbar,
+    &::-webkit-scrollbar-track,
+    &::-webkit-scrollbar-thumb {
+      display: none;
+    }
+  }
+}
+
+.select-sort,
+.select-baner,
+.select-region {
+  input {
+    display: none;
+
+    &:checked + label {
+      color: $orange;
+    }
+  }
+}
+
+.select-mult {
+  .select__input {
+    border: 0;
+    background: transparent;
+    width: 29.5rem;
+    color: $black;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 130%;
+
+    &::placeholder {
+      color: $black;
+    }
+  }
+
+  .select__item {
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    label,
+    span {
+      font-size: 1.8rem;
+      font-weight: 400;
+      line-height: 2.4rem;
+    }
+    label {
+      color: $black;
+      display: flex;
+      align-items: center;
+      column-gap: 1.2rem;
+      position: relative;
+      &::before {
+        content: '';
+        border-radius: 0.5rem;
+        display: inline-block;
+        width: 2.4rem;
+        height: 2.4rem;
+        position: relative;
+        left: 0;
+        background: url('../../img/icons/checkbox.svg');
+      }
+    }
+    span {
+      color: $grey;
+    }
+
+    &:hover {
+      label {
+        &::before {
+          background: url('../../img/icons/checkbox-hover.svg');
+        }
+      }
+    }
+
+    input[type='checkbox'] {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+      display: block;
+      width: 0;
+      height: 0;
+    }
+
+    input[type='checkbox']:checked + label:before {
+      background-position: 50% 50%;
+      background-size: 2.4rem 2.4rem;
+      background-repeat: no-repeat;
+      background-image: url('../../img/icons/checkbox-active.svg');
+    }
+  }
+
+  .select__content {
+    width: 100%;
+  }
+
+  .select__items {
+    width: 100%;
+  }
+}
+
+.select-baner {
+  .select__icon {
+    margin-right: 1rem;
+  }
+
+  .select__header {
+    background-color: $white;
+    padding: 2.2rem 2rem 2.2rem 3rem;
+    border-radius: 5.9rem;
+  }
+
+  .select__value {
+    color: $black;
+    font-size: 2rem;
+    font-weight: 700;
+    width: 35rem;
+    line-height: normal;
+  }
+
+  .select__content {
+    width: 100%;
+    left: 0;
+    top: 8.5rem;
+  }
+
+  .select__items {
+    width: 100%;
+  }
+}

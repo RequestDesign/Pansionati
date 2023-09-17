@@ -3,7 +3,68 @@
     <div class="boards-swipers__container">
       <div class="boards-swipers__titles">
         <div class="title">Подбор пансионата по городу</div>
-        <div></div>
+
+        <div class="select select-mult js-select">
+          <div class="select__header js-select-inner">
+            <input
+              name="search"
+              type="text"
+              class="select__input js-select-search"
+              autocomplete="off"
+              placeholder="Город"
+            />
+            <button type="button" class="select__btn">
+              <img src="@img/icons/arrow-down.svg" alt="" />
+            </button>
+          </div>
+          <div class="select__content">
+            <div class="select__items">
+              <div class="select__empty js-select-empty">Ничего не найдено</div>
+              <div class="select__item js-select-item">
+                <input id="town-1" type="checkbox" name="town" value="Домодедово" />
+                <label for="town-1">
+                  Домодедово
+                  <span>(2)</span>
+                </label>
+              </div>
+              <div class="select__item js-select-item">
+                <input id="town-2" type="checkbox" name="town" value="Видное" />
+                <label for="town-2">
+                  Видное
+                  <span>(5)</span>
+                </label>
+              </div>
+              <div class="select__item js-select-item">
+                <input id="town-3" type="checkbox" name="town" value="Броннинцы" />
+                <label for="town-3">
+                  Броннинцы
+                  <span>(4)</span>
+                </label>
+              </div>
+              <div class="select__item js-select-item">
+                <input id="town-4" type="checkbox" name="town" value="Дедовск" />
+                <label for="town-4">
+                  Дедовск
+                  <span>(6)</span>
+                </label>
+              </div>
+              <div class="select__item js-select-item">
+                <input id="town-5" type="checkbox" name="town" value="Жуковский" />
+                <label for="town-5">
+                  Жуковский
+                  <span>(8)</span>
+                </label>
+              </div>
+              <div class="select__item js-select-item">
+                <input id="town-6" type="checkbox" name="town" value="Химки" />
+                <label for="town-6">
+                  Химки
+                  <span>(7)</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="swiper cards js-cards">

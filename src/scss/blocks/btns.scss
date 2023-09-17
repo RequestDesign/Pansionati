@@ -14,7 +14,11 @@
     line-height: 130%;
   }
 
-  &:hover {
+  &:disabled {
+    opacity: 0.5;
+  }
+
+  &:not(:disabled):hover {
     transition: $transition;
     cursor: pointer;
   }
@@ -27,7 +31,11 @@
   padding: 2rem 6rem;
   background: $gradientBlue;
 
-  &:hover {
+  &:disabled {
+    background: $blue;
+  }
+
+  &:not(:disabled):hover {
     background: $blue;
     transition: $transition;
   }
@@ -46,7 +54,7 @@
   color: $orange;
   background: $white;
 
-  &:hover {
+  &:not(:disabled):hover {
     background: $orange;
     span {
       color: $white;
@@ -61,7 +69,7 @@
   padding: 0.7rem 0.4rem;
   backdrop-filter: none;
 
-  &:hover {
+  &:not(:disabled):hover {
     span {
       color: $orange;
       transition: $transition;
@@ -87,7 +95,7 @@
     height: 2.4rem;
   }
 
-  &:hover {
+  &:not(:disabled):hover {
     opacity: 0.7;
   }
 }

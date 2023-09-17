@@ -51,5 +51,16 @@
 
   &__region {
     width: 33rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__region-title {
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+    margin-right: 1.2rem;
+    flex-shrink: 0;
   }
 }
