@@ -782,6 +782,16 @@ button.swiper-pagination-bullet {
   overflow: hidden;
 }
 
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -2392,6 +2402,134 @@ fieldset {
   height: 57rem;
   width: 126.8rem;
   margin-top: 2rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.map ymaps {
+  border-radius: 3rem;
+}
+
+.map-descs {
+  position: absolute;
+  bottom: 2.6rem;
+  z-index: 2;
+  width: 118.5rem;
+  padding: 2.5rem;
+  border-radius: 2rem;
+  background-color: #ffffff;
+  align-items: center;
+  box-shadow: -0.8rem 1.6rem 4rem 0 rgba(76, 98, 187, 0.2);
+  display: none;
+}
+
+.map-descs.active {
+  display: flex;
+  animation: show 1s;
+}
+
+.map-desc {
+  display: none;
+}
+
+.map-desc.active {
+  display: flex;
+  animation: show 3s;
+}
+
+.map-desc__left {
+  display: flex;
+  -moz-column-gap: 1.6rem;
+       column-gap: 1.6rem;
+  padding-right: 5rem;
+  border-right: 0.2rem solid #f0f3f7;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+
+.map-desc__img {
+  width: 12.5rem;
+  height: 12.5rem;
+  border-radius: 1rem;
+}
+
+.map-desc__desc {
+  max-width: 31.7rem;
+}
+
+.map .btn-tertiary {
+  color: #1a1a1a;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%;
+  margin-bottom: 0.7rem;
+  justify-content: flex-start;
+  text-align: left;
+  padding: 0;
+}
+
+.map .btn-tertiary span {
+  white-space: wrap;
+}
+
+.map .btn-tertiary svg {
+  position: absolute;
+  top: calc(50% - 1.2rem);
+  right: 2.5rem;
+}
+
+.map-desc__desc-text {
+  color: #8b8d95;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.map-desc__items {
+  padding-left: 5rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, auto));
+  -moz-column-gap: 4.5rem;
+       column-gap: 4.5rem;
+  row-gap: 2rem;
+  grid-auto-columns: min-content;
+}
+
+.map-desc__item {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 0.8rem;
+       column-gap: 0.8rem;
+}
+
+.map-desc__item span {
+  color: #8b8d95;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.map-desc__item img {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+[class*=gototech],
+[class*=copyrights-pane],
+[class*=controls__control],
+[class*=controls__toolbar],
+[class*=controls__bottom] {
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+
+.map:hover [class*=copyrights-pane],
+.map:hover [class*=controls__control] {
+  opacity: 1;
 }
 
 .header {
@@ -3245,6 +3383,11 @@ fieldset {
   justify-content: space-between;
 }
 
+.maps__list-item-header-img {
+  height: 7.7rem;
+  width: 7.7rem;
+}
+
 .maps__list-item-header-desc {
   display: flex;
   justify-content: space-between;
@@ -3259,17 +3402,17 @@ fieldset {
   line-height: normal;
 }
 
-.maps .btn-tertiary {
+.maps__list .btn-tertiary {
   text-align: left;
   max-width: 18rem;
   padding: 0;
 }
 
-.maps .btn-tertiary span {
+.maps__list .btn-tertiary span {
   white-space: wrap;
 }
 
-.maps .btn-tertiary svg {
+.maps__list .btn-tertiary svg {
   position: absolute;
   top: calc(50% - 1.2rem);
   right: 0;

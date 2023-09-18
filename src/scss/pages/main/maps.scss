@@ -68,6 +68,11 @@
     justify-content: space-between;
   }
 
+  &__list-item-header-img {
+    height: 7.7rem;
+    width: 7.7rem;
+  }
+
   &__list-item-header-desc {
     display: flex;
     justify-content: space-between;
@@ -82,17 +87,21 @@
     }
   }
 
-  .btn-tertiary {
-    text-align: left;
-    max-width: 18rem;
-    padding: 0;
-    span {
-      white-space: wrap;
-    }
-    svg {
-      position: absolute;
-      top: calc(50% - 2.4rem / 2);
-      right: 0;
+  &__list {
+    .btn-tertiary {
+      text-align: left;
+      max-width: 18rem;
+      padding: 0;
+
+      span {
+        white-space: wrap;
+      }
+
+      svg {
+        position: absolute;
+        top: calc(50% - 2.4rem / 2);
+        right: 0;
+      }
     }
   }
 

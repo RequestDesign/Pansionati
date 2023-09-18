@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Главная</title>
-  <link rel="stylesheet" href="css/style.min.css?_v=20230918093307" />
+  <link rel="stylesheet" href="css/style.min.css?_v=20230918232246" />
 </head>
 
   <body>
@@ -341,7 +341,7 @@
         <div class="maps__list">
           <div class="title-h3">Список пансионатов</div>
           <div class="maps__list-items">
-            <div class="maps__list-item active">
+            <div class="maps__list-item" data-board-map="board-1">
               <div class="maps__list-item-header">
                 <div class="maps__list-item-header-img">
                   <picture><source srcset="img/boards/board-mayak.webp" type="image/webp"><img src="img/boards/board-mayak.png" alt="" /></picture>
@@ -383,7 +383,7 @@
                 </div>
               </div>
             </div>
-            <div class="maps__list-item">
+            <div class="maps__list-item" data-board-map="board-2">
               <div class="maps__list-item-header">
                 <div class="maps__list-item-header-img">
                   <picture><source srcset="img/boards/board-moscow.webp" type="image/webp"><img src="img/boards/board-moscow.png" alt="" /></picture>
@@ -425,7 +425,7 @@
                 </div>
               </div>
             </div>
-            <div class="maps__list-item">
+            <div class="maps__list-item" data-board-map="board-3">
               <div class="maps__list-item-header">
                 <div class="maps__list-item-header-img">
                   <picture><source srcset="img/boards/board-mayak.webp" type="image/webp"><img src="img/boards/board-mayak.png" alt="" /></picture>
@@ -467,91 +467,7 @@
                 </div>
               </div>
             </div>
-            <div class="maps__list-item">
-              <div class="maps__list-item-header">
-                <div class="maps__list-item-header-img">
-                  <picture><source srcset="img/boards/board-moscow.webp" type="image/webp"><img src="img/boards/board-moscow.png" alt="" /></picture>
-                </div>
-                <div class="maps__list-item-header-desc">
-                  <a href="#" class="btn btn-tertiary">
-                    <span>Пансионат Московский</span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="2.6rem"
-                      height="2.6rem"
-                      viewBox="0 0 26 26"
-                      fill="none"
-                    >
-                      <path
-                        d="M9.5 19.5L15.5 13L9.5 6.5"
-                        stroke="#1A1A1A"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </a>
-                  <p>Город: Москва</p>
-                </div>
-              </div>
-              <div class="maps__list-item-footer">
-                <div class="maps__list-item-footer-item">
-                  <div class="maps__list-item-footer-item-img">
-                    <img src="img/icons/phone-orange.svg" alt="" />
-                  </div>
-                  <div class="maps__list-item-footer-item-text">+7 (499) 113-33-55</div>
-                </div>
-                <div class="maps__list-item-footer-item">
-                  <div class="maps__list-item-footer-item-img">
-                    <img src="img/icons/clock-orange.svg" alt="" />
-                  </div>
-                  <div class="maps__list-item-footer-item-text">с 09:00 до 20:00</div>
-                </div>
-              </div>
-            </div>
-            <div class="maps__list-item">
-              <div class="maps__list-item-header">
-                <div class="maps__list-item-header-img">
-                  <picture><source srcset="img/boards/board-mayak.webp" type="image/webp"><img src="img/boards/board-mayak.png" alt="" /></picture>
-                </div>
-                <div class="maps__list-item-header-desc">
-                  <a href="#" class="btn btn-tertiary">
-                    <span>Дом престарелых «Маяк»</span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="2.6rem"
-                      height="2.6rem"
-                      viewBox="0 0 26 26"
-                      fill="none"
-                    >
-                      <path
-                        d="M9.5 19.5L15.5 13L9.5 6.5"
-                        stroke="#1A1A1A"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </a>
-                  <p>Город: Раменский</p>
-                </div>
-              </div>
-              <div class="maps__list-item-footer">
-                <div class="maps__list-item-footer-item">
-                  <div class="maps__list-item-footer-item-img">
-                    <img src="img/icons/phone-orange.svg" alt="" />
-                  </div>
-                  <div class="maps__list-item-footer-item-text">+7 (499) 113-33-55</div>
-                </div>
-                <div class="maps__list-item-footer-item">
-                  <div class="maps__list-item-footer-item-img">
-                    <img src="img/icons/clock-orange.svg" alt="" />
-                  </div>
-                  <div class="maps__list-item-footer-item-text">с 09:00 до 20:00</div>
-                </div>
-              </div>
-            </div>
-            <div class="maps__list-item">
+            <div class="maps__list-item" data-board-map="board-4">
               <div class="maps__list-item-header">
                 <div class="maps__list-item-header-img">
                   <picture><source srcset="img/boards/board-moscow.webp" type="image/webp"><img src="img/boards/board-moscow.png" alt="" /></picture>
@@ -688,7 +604,238 @@
             </div>
           </div>
 
-          <div class="map" id="map"></div>
+          <div class="map" id="map">
+            <div class="map-descs">
+              <div class="map-desc" data-board-map="board-1">
+                <div class="map-desc__left">
+                  <div class="map-desc__img">
+                    <picture><source srcset="img/boards/map-desc.webp" type="image/webp"><img src="img/boards/map-desc.png" alt="" /></picture>
+                  </div>
+                  <div class="map-desc__desc">
+                    <a href="#" class="btn btn-tertiary">
+                      <span>Частный дом престарелых Маяк в Раменском районе</span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="2.6rem"
+                        height="2.6rem"
+                        viewBox="0 0 26 26"
+                        fill="none"
+                      >
+                        <path
+                          d="M9.5 19.5L15.5 13L9.5 6.5"
+                          stroke="#1A1A1A"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </a>
+                    <div class="map-desc__desc-text">
+                      Частный дом престарелых Маяк в Раменском районе предлагает комфортное размещение для пожилых людей
+                      и инвалидов.
+                    </div>
+                  </div>
+                </div>
+                <div class="map-desc__items">
+                  <div class="map-desc__item">
+                    <img src="img/icons/rehabilitation.svg" alt="" />
+                    <span>Реабилитация</span>
+                  </div>
+                  <div class="map-desc__item">
+                    <img src="img/icons/infrastructure.svg" alt="" />
+                    <span>Инфраструктура для колясочников</span>
+                  </div>
+                  <div class="map-desc__item">
+                    <img src="img/icons/bathrooms.svg" alt="" />
+                    <span>Санузлы для инвалидов</span>
+                  </div>
+                  <div class="map-desc__item">
+                    <img src="img/icons/caring.svg" alt="" />
+                    <span>Уход за пожилыми с деменцией</span>
+                  </div>
+                  <div class="map-desc__item">
+                    <img src="img/icons/medical-supervision.svg" alt="" />
+                    <span>Медицинский присмотр</span>
+                  </div>
+                  <div class="map-desc__item">
+                    <img src="img/icons/recovery.svg" alt="" />
+                    <span>Восстановление после инсульта</span>
+                  </div>
+                </div>
+              </div>
+              <div class="map-desc" data-board-map="board-2">
+                <div class="map-desc__left">
+                  <div class="map-desc__img">
+                    <picture><source srcset="img/boards/map-desc.webp" type="image/webp"><img src="img/boards/map-desc.png" alt="" /></picture>
+                  </div>
+                  <div class="map-desc__desc">
+                    <a href="#" class="btn btn-tertiary">
+                      <span>Пансонат Московский</span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="2.6rem"
+                        height="2.6rem"
+                        viewBox="0 0 26 26"
+                        fill="none"
+                      >
+                        <path
+                          d="M9.5 19.5L15.5 13L9.5 6.5"
+                          stroke="#1A1A1A"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </a>
+                    <div class="map-desc__desc-text">
+                      Частный дом престарелых Маяк в Раменском районе предлагает комфортное размещение для пожилых людей
+                      и инвалидов.
+                    </div>
+                  </div>
+                </div>
+                <div class="map-desc__items">
+                  <div class="map-desc__item">
+                    <img src="img/icons/rehabilitation.svg" alt="" />
+                    <span>Реабилитация</span>
+                  </div>
+                  <div class="map-desc__item">
+                    <img src="img/icons/infrastructure.svg" alt="" />
+                    <span>Инфраструктура для колясочников</span>
+                  </div>
+                  <div class="map-desc__item">
+                    <img src="img/icons/bathrooms.svg" alt="" />
+                    <span>Санузлы для инвалидов</span>
+                  </div>
+                  <div class="map-desc__item">
+                    <img src="img/icons/caring.svg" alt="" />
+                    <span>Уход за пожилыми с деменцией</span>
+                  </div>
+                  <div class="map-desc__item">
+                    <img src="img/icons/medical-supervision.svg" alt="" />
+                    <span>Медицинский присмотр</span>
+                  </div>
+                  <div class="map-desc__item">
+                    <img src="img/icons/recovery.svg" alt="" />
+                    <span>Восстановление после инсульта</span>
+                  </div>
+                </div>
+              </div>
+              <div class="map-desc" data-board-map="board-3">
+                <div class="map-desc__left">
+                  <div class="map-desc__img">
+                    <picture><source srcset="img/boards/map-desc.webp" type="image/webp"><img src="img/boards/map-desc.png" alt="" /></picture>
+                  </div>
+                  <div class="map-desc__desc">
+                    <a href="#" class="btn btn-tertiary">
+                      <span>Частный дом престарелых Маяк в Раменском районе</span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="2.6rem"
+                        height="2.6rem"
+                        viewBox="0 0 26 26"
+                        fill="none"
+                      >
+                        <path
+                          d="M9.5 19.5L15.5 13L9.5 6.5"
+                          stroke="#1A1A1A"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </a>
+                    <div class="map-desc__desc-text">
+                      Частный дом престарелых Маяк в Раменском районе предлагает комфортное размещение для пожилых людей
+                      и инвалидов.
+                    </div>
+                  </div>
+                </div>
+                <div class="map-desc__items">
+                  <div class="map-desc__item">
+                    <img src="img/icons/rehabilitation.svg" alt="" />
+                    <span>Реабилитация</span>
+                  </div>
+                  <div class="map-desc__item">
+                    <img src="img/icons/infrastructure.svg" alt="" />
+                    <span>Инфраструктура для колясочников</span>
+                  </div>
+                  <div class="map-desc__item">
+                    <img src="img/icons/bathrooms.svg" alt="" />
+                    <span>Санузлы для инвалидов</span>
+                  </div>
+                  <div class="map-desc__item">
+                    <img src="img/icons/caring.svg" alt="" />
+                    <span>Уход за пожилыми с деменцией</span>
+                  </div>
+                  <div class="map-desc__item">
+                    <img src="img/icons/medical-supervision.svg" alt="" />
+                    <span>Медицинский присмотр</span>
+                  </div>
+                  <div class="map-desc__item">
+                    <img src="img/icons/recovery.svg" alt="" />
+                    <span>Восстановление после инсульта</span>
+                  </div>
+                </div>
+              </div>
+              <div class="map-desc" data-board-map="board-4">
+                <div class="map-desc__left">
+                  <div class="map-desc__img">
+                    <picture><source srcset="img/boards/map-desc.webp" type="image/webp"><img src="img/boards/map-desc.png" alt="" /></picture>
+                  </div>
+                  <div class="map-desc__desc">
+                    <a href="#" class="btn btn-tertiary">
+                      <span>Пансонат Московский</span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="2.6rem"
+                        height="2.6rem"
+                        viewBox="0 0 26 26"
+                        fill="none"
+                      >
+                        <path
+                          d="M9.5 19.5L15.5 13L9.5 6.5"
+                          stroke="#1A1A1A"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </a>
+                    <div class="map-desc__desc-text">
+                      Частный дом престарелых Маяк в Раменском районе предлагает комфортное размещение для пожилых людей
+                      и инвалидов.
+                    </div>
+                  </div>
+                </div>
+                <div class="map-desc__items">
+                  <div class="map-desc__item">
+                    <img src="img/icons/rehabilitation.svg" alt="" />
+                    <span>Реабилитация</span>
+                  </div>
+                  <div class="map-desc__item">
+                    <img src="img/icons/infrastructure.svg" alt="" />
+                    <span>Инфраструктура для колясочников</span>
+                  </div>
+                  <div class="map-desc__item">
+                    <img src="img/icons/bathrooms.svg" alt="" />
+                    <span>Санузлы для инвалидов</span>
+                  </div>
+                  <div class="map-desc__item">
+                    <img src="img/icons/caring.svg" alt="" />
+                    <span>Уход за пожилыми с деменцией</span>
+                  </div>
+                  <div class="map-desc__item">
+                    <img src="img/icons/medical-supervision.svg" alt="" />
+                    <span>Медицинский присмотр</span>
+                  </div>
+                  <div class="map-desc__item">
+                    <img src="img/icons/recovery.svg" alt="" />
+                    <span>Восстановление после инсульта</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -6511,7 +6658,11 @@
   </div>
 </div>
 
-<script src="js/app.min.js?_v=20230918093307"></script>
+<script
+  src="https://api-maps.yandex.ru/2.1/?apikey=e1d17623-ee55-4c9d-8251-85ab8eb1263e&lang=ru_RU"
+  type="text/javascript"
+></script>
+<script src="js/app.min.js?_v=20230918232246"></script>
 
   </body>
 </html>
