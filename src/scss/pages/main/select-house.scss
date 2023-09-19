@@ -71,3 +71,45 @@
     line-height: 2.4rem;
   }
 }
+
+@media screen and (max-width: 48em) {
+  .select-house {
+    &__container {
+      position: relative;
+      row-gap: 7.5vw;
+      padding-top: 24vw;
+      padding-bottom: 20.8vw;
+    }
+
+    &__titles {
+      display: block;
+      .btn-primary {
+        position: absolute;
+        bottom: 0;
+      }
+    }
+
+    &__items {
+      row-gap: 2.8vw;
+    }
+
+    &__item {
+      border-radius: 13vw;
+      column-gap: 16vw;
+      padding: 1.8vw 2.8vw 1.8vw 5.3vw;
+      width: 100%;
+    }
+
+    &__item-text {
+      font-size: 4vw;
+      line-height: 120%;
+    }
+
+    &__item-circle {
+      width: 9vw;
+      height: 9vw;
+      font-size: 4vw;
+      line-height: 120%;
+    }
+  }
+}

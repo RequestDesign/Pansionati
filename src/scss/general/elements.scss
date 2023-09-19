@@ -29,3 +29,32 @@
   font-weight: 400;
   line-height: 130%;
 }
+
+.hide {
+  display: none;
+}
+
+@media screen and (max-width: 48em) {
+  .logo {
+    font-size: 2.3rem;
+    font-weight: 700;
+    letter-spacing: 0.92px;
+  }
+
+  .title {
+    font-size: 8.5vw;
+    font-weight: 700;
+    line-height: 105%;
+  }
+
+  .title-h3 {
+    font-size: 4.27vw;
+    line-height: 130%;
+  }
+
+  .text {
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 130%;
+  }
+}

@@ -85,11 +85,73 @@
   .btn-tertiary {
     white-space: normal;
     text-align: start;
-    display: inline;
+    display: block;
     padding: 0;
     svg {
       vertical-align: middle;
       margin-top: -0.5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 48em) {
+  .awards {
+    .title {
+      margin-bottom: 7.5vw;
+    }
+
+    &__container {
+      padding-top: 24vw;
+    }
+
+    &__list {
+      column-gap: 4.27vw;
+      overflow-x: scroll;
+      &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+      }
+    }
+
+    &__item {
+      border-radius: 5.3vw;
+      padding: 4.27vw;
+      width: 65.8vw;
+      height: 40.5vw;
+      flex-shrink: 0;
+      &:last-child {
+        padding-right: 4.27vw;
+      }
+    }
+
+    &__circle {
+      width: 19.5rem;
+      height: 19.5rem;
+      border-radius: 50%;
+      background: $gradientBlue;
+      position: absolute;
+      right: -3rem;
+      bottom: -4.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: $transition;
+    }
+
+    &__circle-img,
+    &__circle-img-hover {
+      width: 7.5vw;
+      height: 7.5vw;
+      right: -1vw;
+      bottom: -1vw;
+    }
+
+    .btn-tertiary {
+      svg {
+        margin-top: -1.4vw;
+        width: 5.3vw;
+        height: 5.3vw;
+      }
     }
   }
 }

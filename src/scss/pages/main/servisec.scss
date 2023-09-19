@@ -65,3 +65,54 @@
     width: fit-content;
   }
 }
+
+@media screen and (max-width: 48em) {
+  .services {
+    &__container {
+      width: 100%;
+      padding-top: 24vw;
+      flex-direction: column-reverse;
+      row-gap: 6.4vw;
+    }
+
+    &__img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .title {
+      margin-bottom: 7.5vw;
+    }
+
+    &__desc {
+      padding: 0;
+    }
+
+    &__text {
+      font-size: 4vw;
+      line-height: 120%;
+      margin-bottom: 5.3vw;
+    }
+
+    &__items {
+      row-gap: 3.2vw;
+      margin-bottom: 8vw;
+    }
+
+    &__item {
+      font-size: 3.75vw;
+      line-height: 130%;
+      column-gap: 2.2vw;
+
+      &::before {
+        height: 2vw;
+        width: 2vw;
+        flex-shrink: 0;
+      }
+    }
+
+    .btn {
+      width: fit-content;
+    }
+  }
+}

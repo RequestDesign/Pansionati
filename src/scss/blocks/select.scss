@@ -271,3 +271,121 @@
     width: 100%;
   }
 }
+
+@media screen and (max-width: 48em) {
+  .select {
+    width: 100%;
+    &.active {
+      .select__content {
+        max-height: 53vw;
+      }
+    }
+
+    &__empty {
+      font-size: 5.3vw;
+    }
+
+    &__btn {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+
+    &__content {
+      padding: 6.4vw 6.4vw 6.4vw 3.2vw;
+      border-radius: 5.3vw;
+      height: 53vw;
+      width: 100%;
+    }
+
+    &__items {
+      max-height: 50vw;
+      padding-right: 3.2vw;
+    }
+
+    &__item {
+      border-radius: 3.2vw;
+
+      label {
+        padding: 3.2vw;
+        font-size: 4vw;
+        line-height: 120%;
+      }
+    }
+
+    &__value {
+      margin-right: 2rem;
+    }
+
+    &__value {
+      font-size: 4vw;
+      line-height: 120%;
+    }
+
+    &__icon {
+      width: auto;
+      height: auto;
+      margin-right: 0.6rem;
+    }
+  }
+
+  .select-sort,
+  .select-mult {
+    .select__header {
+      padding: 4vw 3.2vw 4vw 5.3vw;
+      border-radius: 16vw;
+      justify-content: space-between;
+    }
+
+    .select__content {
+      top: 14vw;
+    }
+  }
+
+  .select-mult {
+    .select__input {
+      width: 29.5rem;
+      font-size: 3.8vw;
+    }
+
+    .select__item {
+      label,
+      span {
+        font-size: 4vw;
+        line-height: 120%;
+      }
+
+      label {
+        &::before {
+          content: '';
+          border-radius: 1vw;
+          width: 6.4vw;
+          height: 6.4vw;
+        }
+      }
+
+      input[type='checkbox']:checked + label:before {
+        background-size: 6.4vw 6.4vw;
+      }
+    }
+  }
+
+  .select-baner {
+    .select__icon {
+      margin-right: 1rem;
+    }
+
+    .select__header {
+      padding: 2.2rem 2rem 2.2rem 3rem;
+      border-radius: 5.9rem;
+    }
+
+    .select__value {
+      font-size: 2rem;
+      width: 35rem;
+    }
+
+    .select__content {
+      top: 8.5rem;
+    }
+  }
+}

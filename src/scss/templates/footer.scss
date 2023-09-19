@@ -11,11 +11,22 @@
   }
 
   &__menu {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, auto));
+    display: flex;
     column-gap: 12rem;
+
+    &.--desc {
+      display: flex;
+    }
+
+    &.--mob {
+      display: none;
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
     row-gap: 1.5rem;
-    grid-auto-columns: min-content;
   }
 
   &__item {
@@ -44,6 +55,67 @@
     align-items: flex-end;
     .phones__phone-numbers {
       text-align: start;
+    }
+  }
+}
+
+@media screen and (max-width: 48em) {
+  .footer {
+    border-radius: 5.3vw 5.3vw 0 0;
+
+    &__container {
+      flex-direction: column;
+    }
+
+    &__container {
+      padding: 9.6vw 0;
+    }
+
+    &__menu {
+      column-gap: 8.5vw;
+      &.--desc {
+        display: none;
+      }
+
+      &.--mob {
+        display: flex;
+      }
+    }
+
+    &__items {
+      row-gap: 3.2vw;
+    }
+
+    &__link {
+      font-size: 3.75vw;
+      line-height: 130%;
+    }
+
+    .btn-tertiary {
+      margin: 0;
+      position: absolute;
+      bottom: 28.6vw;
+    }
+
+    &__left {
+      .footer__link {
+        display: none;
+      }
+    }
+
+    &__logo {
+      font-size: 5.3vw;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      margin-bottom: 6.4vw;
+    }
+
+    &__phones {
+      flex-direction: row;
+      width: 100%;
+      justify-content: space-between;
+      margin-top: 7.5vw;
     }
   }
 }

@@ -52,3 +52,56 @@
     height: 45rem;
   }
 }
+
+@media screen and (max-width: 48em) {
+  .cost {
+    padding-top: 24vw;
+
+    &__container {
+      border-radius: 5.3vw;
+      padding: 12.2vw 4.27vw 0 4.27vw;
+      flex-direction: column;
+
+      &::after {
+        background: url('../../../img/main/baner-bg-3-mob.png');
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        border-radius: 8.5vw;
+      }
+    }
+
+    .title {
+      margin-bottom: 3.2vw;
+      text-align: center;
+      font-size: 8.6vw;
+    }
+
+    &__desc-text {
+      margin-bottom: 5.3vw;
+      font-size: 3.88vw;
+      text-align: center;
+      line-height: 130%;
+    }
+
+    &__form {
+      flex-direction: column;
+      row-gap: 5.3vw;
+    }
+
+    &__img {
+      position: relative;
+      bottom: 0;
+      right: 0;
+      width: 71vw;
+      height: 58vw;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}

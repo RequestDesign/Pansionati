@@ -12,13 +12,29 @@
     color: $black;
     font-size: 1.8rem;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 700;
     line-height: 2.4rem;
     border: 0;
     width: 30.6rem;
     flex-shrink: 0;
     &::placeholder {
       color: $grey;
+      font-weight: 400;
+    }
+  }
+}
+
+@media screen and (max-width: 48em) {
+  .input {
+    border-radius: 16vw;
+    column-gap: 1vw;
+    padding: 3.2vw 5.3vw;
+    width: 100%;
+
+    input {
+      font-size: 4vw;
+      line-height: 130%;
+      width: 90%;
     }
   }
 }

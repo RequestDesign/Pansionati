@@ -5,10 +5,12 @@
   width: 54.7rem;
   height: 55.2rem;
 
-  &-slider {
-    width: 54.7rem;
-    height: 55.2rem;
-    overflow: hidden;
+  .--desc {
+    display: block;
+  }
+
+  .--mob {
+    display: none;
   }
 
   &__swiper {
@@ -186,7 +188,7 @@
     z-index: 0;
   }
 
-  &__desc-location-btn {
+  .btn-tertiary {
     padding: 0;
     column-gap: 0.5rem;
     span {
@@ -207,9 +209,11 @@
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    padding: 1rem;
     img {
-      width: auto;
-      height: auto;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
     }
   }
 
@@ -291,21 +295,6 @@
   }
 }
 
-.card-vert {
-  height: 55.2rem;
-  width: 54.6rem;
-
-  .card__slider-slide {
-    width: 54.6rem;
-    height: 35.9rem;
-  }
-
-  .card__substract {
-    width: 54.7rem;
-    height: 37.4rem;
-  }
-}
-
 .cards {
   &-slider {
     width: 170rem;
@@ -338,6 +327,13 @@
   .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
   .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
     margin: 0;
+    column-gap: 1vw;
+
+    span {
+      border-radius: 5.3vw;
+      width: 3.2vw;
+      height: 1.1vw;
+    }
   }
 
   &__bullets {
@@ -421,4 +417,204 @@
   font-size: 1.5rem;
   font-weight: 400;
   line-height: normal;
+}
+
+@media screen and (max-width: 48em) {
+  .card {
+    border-radius: 5.3vw;
+    width: 91.5vw;
+    height: 108vw;
+
+    .--desc {
+      display: none;
+    }
+
+    .--mob {
+      display: block;
+    }
+
+    &__like {
+      top: 3.2vw;
+      right: 3.2vw;
+      width: 9vw;
+      height: 9vw;
+      border-radius: 2.7vw;
+      padding: 2.2vw;
+    }
+
+    &__desc {
+      padding: 3.2vw 0 3.2vw 3.2vw;
+      top: 21.8vw;
+      width: 100%;
+    }
+
+    &__desc-top {
+      padding-right: 3.2vw;
+      margin-bottom: 3.2vw;
+    }
+
+    &__desc-rec {
+      padding: 1.1vw 3.2vw;
+      border-radius: 3.2vw;
+    }
+
+    &__desc-rec-text {
+      font-size: 4vw;
+      margin-top: -1.2vw;
+    }
+
+    &__desc-rec-like {
+      img {
+        width: 4vw;
+        height: 4vw;
+        margin-right: 0.8vw;
+      }
+
+      span {
+        font-size: 4vw;
+        line-height: 100%;
+      }
+    }
+
+    &__pagination {
+      top: 51.2vw;
+    }
+
+    &__bullets {
+      column-gap: 1vw;
+
+      span {
+        border-radius: 5.3vw;
+        width: 3.2vw;
+        height: 1.1vw;
+      }
+    }
+
+    &__items-top {
+      top: 3.2vw;
+      left: 3.2vw;
+    }
+
+    &__items {
+      column-gap: 2.2vw;
+    }
+
+    &__item {
+      column-gap: 2vw;
+      padding: 2vw 2.4vw;
+      border-radius: 2.8vw;
+      font-size: 3.8vw;
+      line-height: 130%;
+
+      span {
+        font-size: 3.8vw;
+      }
+    }
+
+    &__items-bottom {
+      column-gap: 2.2vw;
+      top: 39.5vw;
+      left: 3.2vw;
+    }
+
+    .btn-tertiary {
+      padding: 1.1vw;
+      column-gap: 2.2vw;
+
+      span {
+        font-size: 3.8vw;
+      }
+
+      svg {
+        width: 6.4vw;
+        height: 6.4vw;
+      }
+    }
+
+    &__icon {
+      width: 8.5vw;
+      height: 8.5vw;
+      padding: 1.6vw;
+      border-radius: 1.6vw;
+    }
+
+    &__desc-location {
+      column-gap: 1vw;
+      padding-right: 3.2vw;
+      margin-bottom: 3.2vw;
+    }
+
+    &__desc-location-address {
+      column-gap: 1.1vw;
+    }
+
+    &__desc-location-text {
+      font-size: 3.8vw;
+      line-height: 130%;
+      width: 26vw;
+    }
+
+    &__items-services {
+      margin-bottom: 3.2vw;
+      position: relative;
+
+      .card__item {
+        font-size: 3.8vw;
+        padding: 2vw 2.6vw;
+      }
+
+      .card__items-shadow {
+        display: block;
+      }
+    }
+
+    &__items-shadow {
+      display: none;
+      top: -5.2vw;
+      img {
+        width: 24vw;
+        height: 8.5vw;
+      }
+    }
+
+    &__icon-item {
+      column-gap: 1.1vw;
+    }
+
+    &__icon-text {
+      font-size: 3.8vw;
+      line-height: 130%;
+    }
+
+    &__icon-items {
+      column-gap: 5vw;
+    }
+
+    .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+    .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+      column-gap: 1vw;
+
+      span {
+        border-radius: 5.3vw;
+        width: 3.2vw;
+        height: 1.1vw;
+      }
+    }
+  }
+
+  .cards {
+    &-slider {
+      width: 100%;
+      row-gap: 4.27vw;
+      flex-direction: column;
+    }
+
+    &__navigation {
+      display: none;
+    }
+
+    &__bullets {
+      display: none;
+    }
+  }
 }

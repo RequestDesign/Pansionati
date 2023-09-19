@@ -40,11 +40,51 @@ function init() {
       }
     );
 
+    const boardsItems = document.querySelectorAll('[data-board-map]');
+    const boardsDescContainer = document.querySelector('.map-descs');
+
+    boardsItems.forEach((boardItem) => {
+      boardItem.addEventListener('click', () => {
+        const attr = boardItem.getAttribute('data-board-map');
+        boardsDescContainer.classList.add('active');
+
+        if (newPlacemark.properties.get('myDataAttr') === attr) {
+          mainMap.geoObjects.each((geoObject) => {
+            if (geoObject.properties.get('myDataAttr') === attr) {
+              geoObject.options.set('iconImageHref', './img/icons/location-pin-active.svg');
+            }
+          });
+        }
+
+        for (let i = 0; i < boardsItems.length; i += 1) {
+          if (boardsItems[i].getAttribute('data-board-map') === attr) {
+            boardsItems[i].classList.add('active');
+          } else {
+            boardsItems[i].classList.remove('active');
+          }
+        }
+      });
+    });
+
     mainMap.geoObjects.add(newPlacemark);
 
     newPlacemark.events.add('click', () => {
       mainMap.geoObjects.each((geoObject) => {
         geoObject.options.set('iconImageHref', './img/icons/location-pin-default.svg');
+      });
+
+      const boardItems = document.querySelectorAll('[data-board-map]');
+      const boardDescContainer = document.querySelector('.map-descs');
+      boardDescContainer.classList.add('active');
+
+      boardItems.forEach((boardItem) => {
+        const attr = boardItem.getAttribute('data-board-map');
+
+        if (newPlacemark.properties.get('myDataAttr') === attr) {
+          boardItem.classList.add('active');
+        } else {
+          boardItem.classList.remove('active');
+        }
       });
 
       newPlacemark.options.set('iconImageHref', './img/icons/location-pin-active.svg');

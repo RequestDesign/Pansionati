@@ -32,3 +32,33 @@
     }
   }
 }
+
+@media screen and (max-width: 48em) {
+  .phones {
+    column-gap: 10.6vw;
+    row-gap: 3.2vw;
+
+    &__phone {
+      row-gap: 3.2vw;
+      flex-direction: column-reverse;
+      align-items: flex-end;
+      flex-shrink: 0;
+    }
+
+    &__phone-numbers {
+      padding: 1vw 0;
+      div {
+        &:first-child {
+          font-size: 4vw;
+          line-height: 120%;
+          margin-bottom: 2.2vw;
+        }
+
+        &:last-child {
+          font-size: 4vw;
+          text-align: end;
+        }
+      }
+    }
+  }
+}

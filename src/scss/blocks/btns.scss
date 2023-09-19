@@ -99,3 +99,74 @@
     opacity: 0.7;
   }
 }
+
+@media screen and (max-width: 48em) {
+  .btn {
+    border-radius: 26.6vw;
+    border: 0.4vw solid $blue;
+    backdrop-filter: blur(3.75vw);
+
+    span {
+      font-size: 4vw;
+    }
+  }
+
+  .btn-primary,
+  .btn-primary-sm {
+    color: $white;
+    border-color: $blue;
+    padding: 3.4vw 12vw;
+    background: $gradientBlue;
+
+    &:disabled {
+      background: $blue;
+    }
+
+    &:not(:disabled):hover {
+      background: $blue;
+      transition: $transition;
+    }
+  }
+
+  .btn-primary,
+  .btn-primary-sm {
+    height: auto;
+  }
+
+  .btn-secondary {
+    border-color: $orange;
+    color: $orange;
+    background: $white;
+
+    &:not(:disabled):hover {
+      background: $orange;
+
+      span {
+        color: $white;
+      }
+    }
+  }
+
+  .btn-tertiary {
+    column-gap: 2.2vw;
+    border: none;
+    background: none;
+    padding: 0.8vw 0.9vw;
+    backdrop-filter: none;
+    svg {
+      width: 6.4vw;
+      height: 6.4vw;
+    }
+  }
+
+  .btn-round {
+    width: 11.8vw;
+    height: 11.8vw;
+    border-color: $orange;
+
+    img {
+      width: 4.8vw;
+      height: 4.8vw;
+    }
+  }
+}
