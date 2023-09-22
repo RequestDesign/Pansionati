@@ -1,17 +1,9 @@
 .card {
+  @include sizes(54.7rem, 55.2rem);
+  @include showDesc();
   border-radius: 3rem;
   position: relative;
   overflow: hidden;
-  width: 54.7rem;
-  height: 55.2rem;
-
-  .--desc {
-    display: block;
-  }
-
-  .--mob {
-    display: none;
-  }
 
   &__swiper {
     display: flex;
@@ -24,11 +16,10 @@
   }
 
   &__like {
+    @include sizes(4rem, 4rem);
     position: absolute;
     top: 2.4rem;
     right: 2.4rem;
-    width: 4rem;
-    height: 4rem;
     border-radius: 1.2rem;
     background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(0.2rem);
@@ -39,6 +30,7 @@
       &:first-child {
         display: block;
       }
+
       &:last-child {
         display: none;
       }
@@ -58,18 +50,15 @@
   }
 
   &__desc {
-    display: flex;
-    flex-direction: column;
+    @extend %flexColumn;
+    @include sizes();
     padding: 1.3rem 0 0 2.4rem;
     position: absolute;
     top: 13rem;
-    width: 100%;
   }
 
   &__desc-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @extend %flexCenterBetween;
     column-gap: 5rem;
     padding-right: 2.4rem;
     margin-bottom: 0.8rem;
@@ -82,29 +71,21 @@
   }
 
   &__desc-rec-text {
+    @extend %textRegular15;
     color: $grey;
-    font-size: 1.5rem;
-    font-weight: 400;
-    line-height: normal;
     margin-top: -0.6rem;
   }
 
   &__desc-rec-like {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @extend %flexCenter;
 
     img {
-      width: 2rem;
-      height: 2rem;
+      @include sizes(2rem, 2rem);
       margin-right: 0.3rem;
     }
 
     span {
-      color: $black;
-      font-size: 1.5rem;
-      font-weight: 700;
-      line-height: 1.7rem;
+      @extend %textBold15;
     }
   }
 
@@ -115,15 +96,12 @@
   }
 
   &__bullets {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @extend %flexCenter;
     column-gap: 0.4rem;
 
     span {
+      @include sizes(2.4rem, 0.8rem);
       border-radius: 2rem;
-      width: 2.4rem;
-      height: 0.8rem;
       opacity: 1;
       cursor: pointer;
     }
@@ -137,48 +115,56 @@
     }
   }
 
-  &__items-top {
+  &__items {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    column-gap: 0.8rem;
+  }
+
+  &__items-top {
+    @extend %flexCenterBetween;
     position: absolute;
     top: 2.4rem;
     left: 2.4rem;
-  }
-
-  &__items {
-    display: flex;
     column-gap: 1.6rem;
   }
 
   &__item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @extend %flexCenter;
+    @extend %textBold18;
     column-gap: 0.4rem;
     padding: 0.8rem 1rem;
     border-radius: 1.2rem;
     background-color: $white;
-    color: $black;
-    font-size: 1.8rem;
-    font-weight: 700;
-    line-height: 2.4rem;
 
     span {
-      font-size: 1.5rem;
+      @extend %textRegular15;
       color: $grey;
-      font-weight: 400;
     }
   }
 
   &__items-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @extend %flexCenterBetween;
     column-gap: 1rem;
     position: absolute;
-    top: 24rem;
+    top: 23.5rem;
     left: 2.4rem;
+
+    .card__item {
+      @extend %textH3;
+
+      &:first-child {
+        padding: 1rem 1.4rem;
+      }
+
+      &:last-child {
+        padding: 1rem;
+      }
+
+      span {
+        @extend %textH3;
+        font-weight: 400;
+      }
+    }
   }
 
   &__substract {
@@ -188,138 +174,116 @@
     z-index: 0;
   }
 
-  .btn-tertiary {
-    padding: 0;
-    column-gap: 0.5rem;
-    span {
-      font-size: 1.8rem;
-    }
-    svg {
-      width: 1.7rem;
-      height: 1.7rem;
-    }
-  }
-
   &__icon {
+    @extend %flexCenter;
+    @include sizes(4rem, 4rem);
     background: $white;
-    width: 4rem;
-    height: 4rem;
     border-radius: 0.6rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     flex-shrink: 0;
     padding: 1rem;
+
     img {
-      width: 100%;
       height: 100%;
       object-fit: contain;
     }
   }
 
   &__desc-location {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @extend %flexCenterBetween;
     column-gap: 2rem;
     padding-right: 2.4rem;
     margin-bottom: 1.6rem;
   }
 
   &__desc-location-address {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @extend %flexCenter;
     column-gap: 1.3rem;
   }
 
   &__desc-location-text {
+    @extend %textRegular18;
+    width: 22.3rem;
     white-space: nowrap;
     overflow: hidden;
     color: rgba(26, 26, 26, 0.7);
     text-overflow: ellipsis;
-    font-size: 1.8rem;
-    font-weight: 400;
-    line-height: 2.4rem;
-    width: 22.3rem;
   }
 
   &__items-services {
+    @include noScrollLine();
     overflow-x: scroll;
     margin-bottom: 1.6rem;
+
     .card__item {
-      font-weight: 400;
-      font-size: 1.8rem;
+      @extend %textRegular18;
       white-space: nowrap;
       padding: 0.6rem 1rem;
-    }
-    &::-webkit-scrollbar {
-      width: 0;
-      height: 0;
     }
   }
 
   &__items-shadow {
     position: absolute;
     right: 0;
+
     img {
-      width: 8.8rem;
-      height: 4rem;
+      @include sizes(8.8rem, 4rem);
     }
   }
 
   &__icon-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    column-gap: 0.5rem;
+    @extend %flexCenter;
+    column-gap: 0.7rem;
   }
 
   &__icon-text {
-    color: $black;
-    font-size: 1.8rem;
-    font-weight: 400;
-    line-height: 2.4rem;
+    @extend %textRegular18;
     white-space: nowrap;
     flex-shrink: 0;
   }
 
   &__icon-items {
+    @include noScrollLine();
     display: flex;
     column-gap: 2.8rem;
     overflow-x: scroll;
-    &::-webkit-scrollbar {
-      width: 0;
-      height: 0;
+  }
+
+  .btn-tertiary {
+    padding: 0;
+    column-gap: 0.5rem;
+
+    span {
+      font-size: 1.8rem;
+    }
+
+    svg {
+      @include sizes(1.7rem, 1.7rem);
     }
   }
 }
 
 .cards {
   &-slider {
-    width: 170rem;
+    @include sizes($width: 170rem);
     margin-bottom: 2rem;
   }
 
   &__navigation {
+    @include sizes($width: 42rem);
+    @extend %flexCenterBetween;
     padding: 1.6rem 2rem;
     border-radius: 7.2rem;
     background-color: $white;
-    width: 42rem;
     margin: 0 auto 2rem auto;
-    display: flex;
     column-gap: 3rem;
-    justify-content: space-between;
-    align-items: center;
     box-shadow: 0 0 1rem rgba(143, 155, 205, 0.25);
 
     &-btn {
-      width: 2.4rem;
-      height: 2.4rem;
+      @include sizes(2.4rem, 2.4rem);
       flex-shrink: 0;
+
       img {
-        width: 100%;
-        height: 100%;
+        @include sizes($height: 100%);
       }
     }
   }
@@ -330,46 +294,37 @@
     column-gap: 1vw;
 
     span {
+      @include sizes(3.2vw, 1.1vw);
       border-radius: 5.3vw;
-      width: 3.2vw;
-      height: 1.1vw;
     }
   }
 
   &__bullets {
     display: flex;
-    column-gap: 1.2rem;
     align-items: center;
+    column-gap: 1.2rem;
 
     .swiper-pagination-bullet {
-      width: 2.8rem;
-      height: 2.8rem;
+      @extend %flexCenter;
+      @extend %textRegular15;
+      @include sizes(2.8rem, 2.8rem);
       background: none;
-      font-size: 1.5rem;
-      font-weight: 400;
-      line-height: normal;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: $black;
       opacity: 1;
       position: relative;
 
       &:last-child::before,
       &:first-child::after {
+        @include sizes(1.3rem, 2.2rem);
+        @extend %textRegular15;
         content: '...';
-        width: 1.3rem;
-        height: 2.2rem;
-        color: $black;
-        font-size: 1.5rem;
-        font-weight: 400;
-        line-height: normal;
         display: none;
         position: absolute;
       }
+
       &:last-child::before {
         left: -2.3rem;
       }
+
       &:first-child::after {
         right: -2.3rem;
       }
@@ -408,44 +363,30 @@
 
 .points-next,
 .points-prev {
-  display: flex;
-  align-items: end;
-  justify-content: center;
-  width: 1.3rem;
-  height: 2.2rem;
-  color: $black;
-  font-size: 1.5rem;
-  font-weight: 400;
-  line-height: normal;
+  @include sizes(1.3rem, 2.2rem);
+  @extend %textRegular15;
+  @extend %flexEndCenter;
 }
 
+//---------------------Mob----------------------
 @media screen and (max-width: 48em) {
   .card {
+    @include sizes(91.5vw, 108vw);
+    @include showMob();
     border-radius: 5.3vw;
-    width: 91.5vw;
-    height: 108vw;
-
-    .--desc {
-      display: none;
-    }
-
-    .--mob {
-      display: block;
-    }
 
     &__like {
+      @include sizes(9vw, 9vw);
       top: 3.2vw;
       right: 3.2vw;
-      width: 9vw;
-      height: 9vw;
       border-radius: 2.7vw;
       padding: 2.2vw;
     }
 
     &__desc {
+      @include sizes();
       padding: 3.2vw 0 3.2vw 3.2vw;
       top: 21.8vw;
-      width: 100%;
     }
 
     &__desc-top {
@@ -465,8 +406,7 @@
 
     &__desc-rec-like {
       img {
-        width: 4vw;
-        height: 4vw;
+        @include sizes(4vw, 4vw);
         margin-right: 0.8vw;
       }
 
@@ -484,9 +424,8 @@
       column-gap: 1vw;
 
       span {
+        @include sizes(3.2vw, 1.1vw);
         border-radius: 5.3vw;
-        width: 3.2vw;
-        height: 1.1vw;
       }
     }
 
@@ -526,14 +465,12 @@
       }
 
       svg {
-        width: 6.4vw;
-        height: 6.4vw;
+        @include sizes(6.4vw, 6.4vw);
       }
     }
 
     &__icon {
-      width: 8.5vw;
-      height: 8.5vw;
+      @include sizes(8.5vw, 8.5vw);
       padding: 1.6vw;
       border-radius: 1.6vw;
     }
@@ -549,9 +486,9 @@
     }
 
     &__desc-location-text {
+      width: 26vw;
       font-size: 3.8vw;
       line-height: 130%;
-      width: 26vw;
     }
 
     &__items-services {
@@ -571,9 +508,9 @@
     &__items-shadow {
       display: none;
       top: -5.2vw;
+
       img {
-        width: 24vw;
-        height: 8.5vw;
+        @include sizes(24vw, 8.5vw);
       }
     }
 
@@ -595,25 +532,20 @@
       column-gap: 1vw;
 
       span {
+        @include sizes(3.2vw, 1.1vw);
         border-radius: 5.3vw;
-        width: 3.2vw;
-        height: 1.1vw;
       }
     }
   }
 
   .cards {
     &-slider {
-      width: 100%;
+      @include sizes();
       row-gap: 4.27vw;
       flex-direction: column;
     }
 
-    &__navigation {
-      display: none;
-    }
-
-    &__bullets {
+    &__navigationб &__bullets {
       display: none;
     }
   }

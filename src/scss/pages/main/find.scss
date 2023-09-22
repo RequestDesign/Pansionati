@@ -1,24 +1,20 @@
 .find {
-  padding: 17rem 0;
-
   &__container {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    @extend %flexColumn;
+    @extend %flexCenter;
+    margin: 16rem auto;
     border-radius: 3rem;
-    background: rgba(182, 194, 207, 0.15);
+    background: $lightBlack;
     backdrop-filter: blur(2rem);
     padding: 12.5rem 38rem;
     position: relative;
 
     &::after {
+      @extend %fullSize;
       content: '';
-      background: url('../../../img/main/baner-bg-2.png');
+      background: url('@img/bg/baner-bg-2.png') no-repeat;
       position: absolute;
-      width: 100%;
-      height: 100%;
+      background-size: cover;
       left: 0;
       top: 0;
       border-radius: 3rem;
@@ -26,27 +22,24 @@
     }
   }
 
-  .title {
-    margin-bottom: 2rem;
-  }
-
   &__text {
+    @extend %textRegular20;
     text-align: center;
-    font-size: 1.6rem;
-    font-weight: 400;
-    line-height: normal;
     margin-bottom: 4rem;
-    max-width: 70rem;
+    max-width: 72rem;
   }
 
   &__form {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @extend %flexCenterBetween;
     column-gap: 3rem;
+  }
+
+  .title {
+    margin-bottom: 2rem;
   }
 }
 
+//------------------Mob-----------------//
 @media screen and (max-width: 48em) {
   .find {
     padding: 24vw 0;
@@ -57,11 +50,10 @@
       text-align: center;
 
       &::after {
+        @extend %fullSize;
         content: '';
-        background: url('../../../img/main/baner-bg-2-mob.png');
+        background: url('@img/bg/baner-bg-2-mob.png');
         position: absolute;
-        width: 100%;
-        height: 100%;
         left: 0;
         top: 0;
         border-radius: 8.5vw;

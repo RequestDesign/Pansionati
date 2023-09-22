@@ -1,31 +1,25 @@
 .footer {
+  @include showDesc();
   border-radius: 4rem 4rem 0 0;
   background: $lightGrey;
   backdrop-filter: blur(2rem);
 
   &__container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    @extend %flexCenterBetween;
     padding: 8.6rem 0;
+  }
+
+  &__left {
+    @extend %flexColumn;
   }
 
   &__menu {
     display: flex;
     column-gap: 12rem;
-
-    &.--desc {
-      display: flex;
-    }
-
-    &.--mob {
-      display: none;
-    }
   }
 
   &__items {
-    display: flex;
-    flex-direction: column;
+    @extend %flexColumn;
     row-gap: 1.5rem;
   }
 
@@ -34,15 +28,12 @@
   }
 
   &__link {
+    @extend %textRegular18;
     color: $grey;
-    font-size: 1.8rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 2.4rem;
 
     &:hover {
+      @extend %hover;
       color: $black;
-      transition: $transition;
     }
   }
 
@@ -51,16 +42,20 @@
   }
 
   &__phones {
-    flex-direction: column-reverse;
+    @extend %flexColumn;
     align-items: flex-end;
+    flex-direction: column-reverse;
+
     .phones__phone-numbers {
       text-align: start;
     }
   }
 }
 
+//--------------Mob----------------------
 @media screen and (max-width: 48em) {
   .footer {
+    @include showMob();
     border-radius: 5.3vw 5.3vw 0 0;
 
     &__container {
@@ -73,13 +68,6 @@
 
     &__menu {
       column-gap: 8.5vw;
-      &.--desc {
-        display: none;
-      }
-
-      &.--mob {
-        display: flex;
-      }
     }
 
     &__items {
@@ -104,10 +92,6 @@
     }
 
     &__logo {
-      font-size: 5.3vw;
-      font-style: normal;
-      font-weight: 700;
-      line-height: normal;
       margin-bottom: 6.4vw;
     }
 

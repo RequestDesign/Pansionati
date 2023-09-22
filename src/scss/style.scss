@@ -1,13 +1,17 @@
 @import './libs/swiper.scss';
 @import './libs/normalize.scss';
+
 @import './general/consts.scss';
+@import './general/extends.scss';
+@import './general/mixins.scss';
 @import './general/animation.scss';
-
-@import './set.scss';
-@import './fonts.scss';
-
 @import './general/elements.scss';
 
+@import './fonts.scss';
+@import './set.scss';
+
+@import './blocks/header.scss';
+@import './blocks/footer.scss';
 @import './blocks/btns.scss';
 @import './blocks/phones.scss';
 @import './blocks/select.scss';
@@ -15,9 +19,6 @@
 @import './blocks/modals.scss';
 @import './blocks/inputs.scss';
 @import './blocks/map.scss';
-
-@import './templates/header.scss';
-@import './templates/footer.scss';
 
 @import './pages/main/index.scss';
 @import './pages/main/boards-swiper.scss';

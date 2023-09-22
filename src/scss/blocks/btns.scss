@@ -1,17 +1,12 @@
 .btn {
+  @extend %flexCenter;
   border-radius: 10rem;
   border: 0.14rem solid $blue;
   backdrop-filter: blur(1.5rem);
   text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
   span {
-    font-size: 2rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 130%;
+    @extend %textBold20;
   }
 
   &:disabled {
@@ -19,8 +14,7 @@
   }
 
   &:not(:disabled):hover {
-    transition: $transition;
-    cursor: pointer;
+    @extend %hover;
   }
 }
 
@@ -63,36 +57,34 @@
 }
 
 .btn-tertiary {
+  padding: 0.7rem 0.4rem;
   column-gap: 1.2rem;
   border: none;
   background: none;
-  padding: 0.7rem 0.4rem;
   backdrop-filter: none;
 
   &:not(:disabled):hover {
     span {
+      @extend %hover;
       color: $orange;
-      transition: $transition;
     }
     svg {
       path {
+        @extend %hover;
         stroke: $orange;
-        transition: $transition;
       }
     }
   }
 }
 
 .btn-round {
+  @include sizes(7rem, 7rem);
   border-radius: 50%;
   background: $orange;
   border-color: $orange;
-  width: 7rem;
-  height: 7rem;
 
   img {
-    width: 2.4rem;
-    height: 2.4rem;
+    @include sizes(2.4rem, 2.4rem);
   }
 
   &:not(:disabled):hover {
@@ -100,6 +92,7 @@
   }
 }
 
+//------------------Mob-------------------//
 @media screen and (max-width: 48em) {
   .btn {
     border-radius: 26.6vw;
@@ -153,20 +146,18 @@
     background: none;
     padding: 0.8vw 0.9vw;
     backdrop-filter: none;
+
     svg {
-      width: 6.4vw;
-      height: 6.4vw;
+      @include sizes(6.4vw, 6.4vw);
     }
   }
 
   .btn-round {
-    width: 11.8vw;
-    height: 11.8vw;
+    @include sizes(11.8vw, 11.8vw);
     border-color: $orange;
 
     img {
-      width: 4.8vw;
-      height: 4.8vw;
+      @include sizes(4.8vw, 4.8vw);
     }
   }
 }

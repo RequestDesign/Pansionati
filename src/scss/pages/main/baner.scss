@@ -1,100 +1,85 @@
 .baner {
+  @include showDesc();
   position: relative;
-  background-color: #f6f8fbb8;
+  background-color: $backgroundBaner;
 
   &-bg {
-    background: url('../img/main/baner.png') no-repeat center;
+    @include sizes(90%, 91.2rem);
+    background: url('@img/main/baner.png') no-repeat center;
     background-size: cover;
     position: absolute;
     overflow: hidden;
-    left: 0;
-    height: 91.2rem;
+    left: 1rem;
     top: -13rem;
-    width: 90%;
   }
 
   &__container {
+    @extend %flexCenterBetween;
     padding: 3rem 0 9rem 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     position: relative;
     z-index: 2;
   }
 
   &__left {
-    display: flex;
-    flex-direction: column;
+    @extend %flexColumn;
     row-gap: 18rem;
     max-width: 50rem;
     padding-top: 4rem;
   }
 
   &__titles {
-    display: flex;
-    flex-direction: column;
+    @extend %flexColumn;
     row-gap: 5.2rem;
   }
 
   &__title {
-    font-size: 2rem;
-    font-weight: 700;
-    line-height: 130%;
+    @extend %textBold20;
+  }
+
+  &__text {
+    @extend %textRegular20;
   }
 
   &__desc {
+    @extend %flexColumn;
     max-width: 35rem;
-    display: flex;
-    flex-direction: column;
     row-gap: 2.8rem;
   }
 
   &__desc-btns {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    @extend %flexCenterStart;
     column-gap: 1.8rem;
   }
 
-  .btn-round {
-    background: rgba(240, 243, 247, 0.51);
-    border-color: rgba(240, 243, 247, 0.51);
-  }
-
   &__right {
-    display: flex;
-    flex-direction: column;
+    @extend %flexColumn;
     row-gap: 3.1rem;
     width: 32.3rem;
+    z-index: -1;
+    margin-top: -3rem;
   }
 
   &__count-boards {
+    @extend %flexColumn;
     padding: 2.8rem 5.1rem;
     border-radius: 4rem;
     background: rgba(156, 171, 189, 0.15);
     backdrop-filter: blur(2rem);
-    display: flex;
-    flex-direction: column;
     align-items: center;
   }
 
   &__count-number {
-    display: flex;
-    flex-direction: column;
+    @extend %flexColumn;
     align-items: center;
     margin-bottom: 2rem;
+
     span {
       &:first-child {
-        font-size: 6rem;
-        font-weight: 400;
-        line-height: normal;
-        text-transform: uppercase;
+        @extend %textNums;
       }
       &:last-child {
+        @extend %textRegular20;
         text-align: center;
-        font-size: 2rem;
-        font-weight: 400;
-        line-height: 130%;
         margin-top: -1.2rem;
       }
     }
@@ -104,8 +89,7 @@
     display: flex;
     width: 17rem;
     img {
-      width: 7rem;
-      height: 7rem;
+      @include sizes(7rem, 7rem);
       position: relative;
       &:nth-child(2) {
         left: -2rem;
@@ -117,45 +101,178 @@
   }
 
   &__doctor {
-    padding: 5.1rem 2.9rem 0 2.9rem;
+    @extend %flexColumn;
+    padding: 4.6rem 2.9rem 0 2.9rem;
     border-radius: 4rem;
-    background: linear-gradient(151deg, #2ecdf0 9.04%, rgba(46, 205, 240, 0.24) 116.35%);
-    display: flex;
-    flex-direction: column;
+    background: $gradientBlue2;
     align-items: center;
   }
 
   &__doctor-text {
+    @extend %textBold18;
     color: $white;
     text-align: center;
-    font-size: 1.8rem;
-    font-weight: 700;
-    line-height: 120%;
     margin-bottom: 2.8rem;
   }
 
   &__center {
+    @include sizes(170rem, 12rem);
     position: absolute;
-    bottom: -6rem;
+    bottom: -5.8rem;
     padding: 2.4rem 5rem 2.4rem 2.4rem;
     border-radius: 3rem;
-    background: rgba(182, 194, 207, 0.15);
+    background: $lightBlack;
     backdrop-filter: blur(2rem);
-    width: 170rem;
-    height: 12rem;
   }
 
   &__btns {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @extend %flexCenterBetween;
     column-gap: 12rem;
   }
 
   &__form {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @extend %flexCenterBetween;
     column-gap: 3rem;
+  }
+
+  .btn-round {
+    background: $darkGrey;
+    border-color: $darkGrey;
+  }
+}
+
+//-----------------Mob-----------------//
+@media screen and (max-width: 48em) {
+  .baner {
+    @include showMob();
+    position: relative;
+    background-color: transparent;
+
+    &-bg {
+      height: 150vw;
+      background: url('@img/main/baner-mob.png') no-repeat center;
+      background-size: contain;
+      position: absolute;
+      overflow: hidden;
+      left: 0;
+      top: 0;
+      background-color: $backgroundBaner;
+    }
+
+    &__container {
+      padding: 4.27vw 0 0 0;
+      flex-direction: column;
+    }
+
+    &__left {
+      max-width: 100%;
+      padding-top: 0;
+    }
+
+    &__titles {
+      row-gap: 3.2vw;
+      align-items: center;
+      text-align: center;
+      max-width: 90%;
+    }
+
+    &__title {
+      font-size: 3.2vw;
+      font-weight: 400;
+    }
+
+    .btn-round {
+      background: $darkGrey;
+      border-color: $darkGrey;
+    }
+
+    &__right {
+      flex-direction: row-reverse;
+      width: 100%;
+      column-gap: 4.27vw;
+      margin-top: 4.27vw;
+    }
+
+    &__count-boards {
+      padding: 11vw 1.4vw;
+      flex: 0 0 calc(50% - 4.27vw / 2);
+      border-radius: 5.3vw;
+      background: rgba(156, 171, 189, 0.15);
+      backdrop-filter: blur(5.3vw);
+      row-gap: 4.27vw;
+    }
+
+    &__count-number {
+      margin-bottom: 0;
+
+      span {
+        &:first-child {
+          font-size: 8.5vw;
+        }
+
+        &:last-child {
+          width: 80%;
+          font-size: 3.8vw;
+          margin-top: -1vw;
+        }
+      }
+    }
+
+    &__count-imgs {
+      width: 70%;
+
+      img {
+        @include sizes(12.8vw, 12.8vw);
+
+        &:nth-child(2) {
+          left: -4vw;
+        }
+
+        &:nth-child(3) {
+          left: -8vw;
+        }
+      }
+    }
+
+    &__doctor {
+      flex: 0 0 calc(50% - 4.27vw / 2);
+      padding: 5.3vw 2.4vw 0 2.4vw;
+      border-radius: 5.3vw;
+      background: $gradientBlue2;
+    }
+
+    &__doctor-text {
+      font-size: 3.8vw;
+      line-height: 130%;
+      margin-bottom: 4.8vw;
+    }
+
+    &__center {
+      height: 100%;
+      margin-top: 64vw;
+      position: static;
+      padding: 6.4vw 4.27vw;
+      border-radius: 5.3vw;
+      backdrop-filter: blur(5.3vw);
+
+      .text {
+        font-weight: 700;
+        width: 85%;
+        margin-bottom: 4.27vw;
+      }
+    }
+
+    &__btns {
+      flex-direction: column;
+      row-gap: 4.27vw;
+      align-items: flex-start;
+    }
+
+    &__form {
+      flex-direction: column;
+      width: 100%;
+      row-gap: 2.8vw;
+      align-items: flex-start;
+    }
   }
 }

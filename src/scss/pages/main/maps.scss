@@ -4,7 +4,7 @@
   }
 
   &__container {
-    padding-top: 17rem;
+    margin-top: 17rem;
   }
 
   &__content {
@@ -14,33 +14,20 @@
   }
 
   &__list-items {
-    display: flex;
-    flex-direction: column;
+    @extend %flexColumn;
+    @include customScrol();
     row-gap: 1.8rem;
     overflow-y: scroll;
     max-height: 57rem;
     padding-right: 3.1rem;
-
-    &::-webkit-scrollbar {
-      width: 0.5rem;
-    }
-
-    &::-webkit-scrollbar-track {
-      background-color: #e8edf2;
-      border-radius: 0.5rem;
-    }
-
-    &::-webkit-scrollbar-thumb {
-      background-color: $orange;
-      border-radius: 0.5rem;
-    }
   }
 
   &__list-item {
     border-radius: 3rem;
-    padding: 2rem;
+    padding: 1.8rem 2rem 2.3rem 2rem;
     background-color: $white;
     cursor: pointer;
+
     &.active {
       background-color: $lightGrey;
     }
@@ -53,37 +40,29 @@
   }
 
   &__list-item-header {
+    @extend %flexCenterStart;
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
     column-gap: 1.7rem;
     padding-bottom: 1rem;
     border-bottom: 0.2rem solid $lightGrey;
   }
 
   &__maps-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @extend %flexCenterBetween;
   }
 
   &__list-item-header-img {
-    height: 7.7rem;
-    width: 7.7rem;
+    @include sizes(7.7rem, 7.7rem);
   }
 
   &__list-item-header-desc {
-    display: flex;
+    @extend %flexColumn;
     justify-content: space-between;
-    flex-direction: column;
     row-gap: 0.6rem;
 
     p {
+      @extend %textRegular15;
       color: $grey;
-      font-size: 1.5rem;
-      font-weight: 400;
-      line-height: normal;
     }
   }
 
@@ -106,36 +85,31 @@
   }
 
   &__maps-header-selects {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @extend %flexCenterBetween;
     column-gap: 4rem;
   }
 
   &__list-item-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @extend %flexCenterBetween;
     column-gap: 4.5rem;
     padding-top: 2.4rem;
   }
 
   &__list-item-footer-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @extend %flexCenterBetween;
     column-gap: 0.4rem;
   }
 
   &__list-item-footer-item-img {
-    width: 2rem;
-    height: 2rem;
+    @include sizes(2rem, 2rem);
   }
 
   &__list-item-footer-item-text {
+    @extend %textRegular15;
     color: $grey;
-    font-size: 1.5rem;
-    font-weight: 400;
-    line-height: normal;
+  }
+
+  .select-mult .select__input {
+    width: 22.8rem;
   }
 }

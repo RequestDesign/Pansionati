@@ -1,25 +1,25 @@
 .boards-swipers {
+  @include showDesc();
+
   &__container {
-    display: flex;
-    flex-direction: column;
-    padding-top: 17rem;
+    @extend %flexColumn;
+    margin-top: 17rem;
   }
 
   &__titles {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 5.3rem;
+    @extend %flexCenterBetween;
+    margin-bottom: 5rem;
   }
 }
 
+//-----------------Mob---------------//
 @media screen and (max-width: 48em) {
   .boards-swipers {
+    @include showMob();
     position: relative;
 
     &__container {
-      display: flex;
-      flex-direction: column;
+      @extend %flexColumn;
       align-items: center;
       padding-top: 24vw;
       padding-bottom: 20.8vw;
@@ -28,9 +28,6 @@
     &__titles {
       margin-bottom: 7.5vw;
       text-align: center;
-      align-items: center;
-      display: flex;
-      justify-content: center;
       flex-direction: column;
 
       .title {

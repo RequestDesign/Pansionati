@@ -1,38 +1,31 @@
 .phones {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @extend %flexCenter;
   column-gap: 7.4rem;
   row-gap: 2.2rem;
 
   &__phone {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    @extend %flexCenterEnd;
     column-gap: 2rem;
   }
 
   &__phone-numbers {
     text-align: end;
+
     div {
       &:first-child {
-        color: $black;
-        font-size: 1.8rem;
-        font-weight: 700;
-        line-height: 2.2rem;
+        @extend %textBold18;
         margin-bottom: 0.8rem;
       }
 
       &:last-child {
+        @extend %textRegular15;
         color: $grey;
-        font-size: 1.5rem;
-        font-weight: 400;
-        line-height: normal;
       }
     }
   }
 }
 
+//------------------Mob------------------//
 @media screen and (max-width: 48em) {
   .phones {
     column-gap: 10.6vw;
@@ -47,6 +40,7 @@
 
     &__phone-numbers {
       padding: 1vw 0;
+
       div {
         &:first-child {
           font-size: 4vw;

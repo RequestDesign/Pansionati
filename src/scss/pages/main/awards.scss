@@ -4,30 +4,26 @@
   }
 
   &__container {
-    padding-top: 23rem;
+    margin-top: 23rem;
   }
 
   &__list {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @extend %flexCenterBetween;
     column-gap: 3rem;
   }
 
   &__item {
+    @include sizes(40.2rem, 29.3rem);
     border-radius: 4rem;
-    background: rgba(182, 194, 207, 0.15);
-    backdrop-filter: blur(19px);
+    background: $lightBlack;
     backdrop-filter: blur(2rem);
     padding: 3.5rem 5rem 0 4rem;
-    width: 40.3rem;
-    height: 29.3rem;
     overflow: hidden;
     position: relative;
     transition: $transition;
 
     &:hover {
-      background: linear-gradient(151deg, #2ecdf0 9.04%, rgba(46, 205, 240, 0.24) 116.35%), rgba(156, 171, 189, 0.15);
+      background: $gradientBlue2;
 
       .awards__circle {
         background: $white;
@@ -46,6 +42,7 @@
           color: $white;
           transition: $transition;
         }
+
         svg path {
           stroke: $white;
           transition: $transition;
@@ -55,23 +52,19 @@
   }
 
   &__circle {
-    width: 19.5rem;
-    height: 19.5rem;
+    @extend %flexCenter;
+    @include sizes(19.5rem, 19.5rem);
     border-radius: 50%;
     background: $gradientBlue;
     position: absolute;
     right: -3rem;
     bottom: -4.2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     transition: $transition;
   }
 
   &__circle-img,
   &__circle-img-hover {
-    width: 5rem;
-    height: 5rem;
+    @include sizes(5rem, 5rem);
     position: relative;
     right: -2.3rem;
     bottom: -1.3rem;
@@ -87,6 +80,7 @@
     text-align: start;
     display: block;
     padding: 0;
+
     svg {
       vertical-align: middle;
       margin-top: -0.5rem;
@@ -94,10 +88,15 @@
   }
 }
 
+//-----------------Mob---------------//
 @media screen and (max-width: 48em) {
   .awards {
     .title {
       margin-bottom: 7.5vw;
+    }
+
+    .container {
+      padding-right: 0;
     }
 
     &__container {
@@ -105,52 +104,44 @@
     }
 
     &__list {
+      @include noScrollLine();
       column-gap: 4.27vw;
       overflow-x: scroll;
-      &::-webkit-scrollbar {
-        width: 0;
-        height: 0;
-      }
     }
 
     &__item {
+      @include sizes(65.8vw, 40.5vw);
       border-radius: 5.3vw;
       padding: 4.27vw;
-      width: 65.8vw;
-      height: 40.5vw;
       flex-shrink: 0;
+
       &:last-child {
         padding-right: 4.27vw;
       }
     }
 
     &__circle {
-      width: 19.5rem;
-      height: 19.5rem;
+      @extend %flexCenter;
+      @include sizes(19.5rem, 19.5rem);
       border-radius: 50%;
       background: $gradientBlue;
       position: absolute;
       right: -3rem;
       bottom: -4.2rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       transition: $transition;
     }
 
     &__circle-img,
     &__circle-img-hover {
-      width: 7.5vw;
-      height: 7.5vw;
+      @include sizes(7.5vw, 7.5vw);
       right: -1vw;
       bottom: -1vw;
     }
 
     .btn-tertiary {
       svg {
+        @include sizes(5.3vw, 5.3vw);
         margin-top: -1.4vw;
-        width: 5.3vw;
-        height: 5.3vw;
       }
     }
   }

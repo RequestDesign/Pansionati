@@ -1,10 +1,10 @@
 .map {
-  height: 57rem;
-  width: 126.8rem;
+  @include sizes(126rem, 57rem);
   margin-top: 2rem;
   position: relative;
   display: flex;
   justify-content: center;
+
   ymaps {
     border-radius: 3rem;
   }
@@ -38,18 +38,15 @@
   }
 
   &-desc__left {
-    display: flex;
+    @extend %flexCenterBetween;
     column-gap: 1.6rem;
     padding-right: 5rem;
     border-right: 0.2rem solid $lightGrey;
-    align-items: center;
-    justify-content: space-between;
     flex-shrink: 0;
   }
 
   &-desc__img {
-    width: 12.5rem;
-    height: 12.5rem;
+    @include sizes(12.5rem, 12.5rem);
     border-radius: 1rem;
   }
 
@@ -57,34 +54,9 @@
     max-width: 31.7rem;
   }
 
-  .btn-tertiary {
-    color: $black;
-    font-size: 2rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 130%;
-    margin-bottom: 0.7rem;
-    justify-content: flex-start;
-    text-align: left;
-    padding: 0;
-
-    span {
-      white-space: wrap;
-    }
-
-    svg {
-      position: absolute;
-      top: calc(50% - 2.4rem / 2);
-      right: 2.5rem;
-    }
-  }
-
   &-desc__desc-text {
+    @extend %textRegular15;
     color: $grey;
-    font-size: 1.5rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
   }
 
   &-desc__items {
@@ -100,15 +72,32 @@
     display: flex;
     align-items: center;
     column-gap: 0.8rem;
+
     span {
+      @extend %textRegular15;
       color: $grey;
-      font-size: 1.5rem;
-      font-weight: 400;
-      line-height: normal;
     }
+
     img {
-      width: 2.4rem;
-      height: 2.4rem;
+      @include sizes(2.4rem, 2.4rem);
+    }
+  }
+
+  .btn-tertiary {
+    @extend %textBold20;
+    margin-bottom: 0.7rem;
+    justify-content: flex-start;
+    text-align: left;
+    padding: 0;
+
+    span {
+      white-space: wrap;
+    }
+
+    svg {
+      position: absolute;
+      top: calc(50% - 2.4rem / 2);
+      right: 2.5rem;
     }
   }
 }

@@ -1,27 +1,20 @@
 .services {
   &__container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    column-gap: 4.8rem;
-    width: 144.8rem;
+    @extend %flexCenterBetween;
+    column-gap: 5rem;
+    width: 152.4rem;
     margin: 0 auto;
-    padding-top: 17rem;
+    margin-top: 15rem;
   }
 
   &__img {
-    width: 65.6rem;
-    height: 64.7rem;
+    @include sizes(65.6rem, 64.7rem);
     flex-shrink: 0;
+
     img {
-      width: 100%;
-      height: 100%;
+      @extend %fullSize;
       object-fit: contain;
     }
-  }
-
-  .title {
-    margin-bottom: 2rem;
   }
 
   &__desc {
@@ -29,34 +22,27 @@
   }
 
   &__text {
-    font-size: 2rem;
-    font-weight: 400;
-    line-height: 130%;
+    @extend %textRegular20;
     margin-bottom: 3rem;
+    max-width: 54.7rem;
   }
 
   &__items {
-    display: flex;
-    flex-direction: column;
+    @extend %flexColumn;
     row-gap: 2.2rem;
     margin-bottom: 3rem;
   }
 
   &__item {
+    @extend %textRegular18;
+    @extend %flexCenterStart;
     color: $grey;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 2.4rem;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
     column-gap: 1.6rem;
 
     &::before {
+      @include sizes(0.7rem, 0.7rem);
       content: '';
       background-color: $orange;
-      height: 0.7rem;
-      width: 0.7rem;
       border-radius: 50%;
     }
   }
@@ -64,8 +50,13 @@
   .btn {
     width: fit-content;
   }
+
+  .title {
+    margin-bottom: 2rem;
+  }
 }
 
+//------------------Mob------------------//
 @media screen and (max-width: 48em) {
   .services {
     &__container {
@@ -105,8 +96,7 @@
       column-gap: 2.2vw;
 
       &::before {
-        height: 2vw;
-        width: 2vw;
+        @include sizes(2vw, 2vw);
         flex-shrink: 0;
       }
     }
