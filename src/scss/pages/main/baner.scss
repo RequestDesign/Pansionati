@@ -1,7 +1,6 @@
 .baner {
   @include showDesc();
   position: relative;
-  background-color: $backgroundBaner;
 
   &-bg {
     @include sizes(90%, 91.2rem);
@@ -10,6 +9,15 @@
     position: absolute;
     overflow: hidden;
     left: 1rem;
+    top: -13rem;
+  }
+
+  &-bg-2 {
+    background-color: $backgroundBaner;
+    width: 100%;
+    height: 91.2rem;
+    position: absolute;
+    z-index: -1;
     top: -13rem;
   }
 
@@ -61,7 +69,7 @@
 
   &__count-boards {
     @extend %flexColumn;
-    padding: 2.8rem 5.1rem;
+    padding: 2.8rem 4.6rem;
     border-radius: 4rem;
     background: rgba(156, 171, 189, 0.15);
     backdrop-filter: blur(2rem);
@@ -80,7 +88,6 @@
       &:last-child {
         @extend %textRegular20;
         text-align: center;
-        margin-top: -1.2rem;
       }
     }
   }
@@ -145,22 +152,17 @@
 @media screen and (max-width: 48em) {
   .baner {
     @include showMob();
-    position: relative;
     background-color: transparent;
 
     &-bg {
-      height: 150vw;
+      @include sizes(100%, 68rem);
       background: url('@img/main/baner-mob.png') no-repeat center;
-      background-size: contain;
-      position: absolute;
-      overflow: hidden;
       left: 0;
-      top: 0;
-      background-color: $backgroundBaner;
+      top: 16rem;
     }
 
     &__container {
-      padding: 4.27vw 0 0 0;
+      padding: 6rem 3.2rem 0 3.2rem;
       flex-direction: column;
     }
 
@@ -170,109 +172,92 @@
     }
 
     &__titles {
-      row-gap: 3.2vw;
+      row-gap: 2.4rem;
       align-items: center;
       text-align: center;
       max-width: 90%;
     }
 
-    &__title {
-      font-size: 3.2vw;
-      font-weight: 400;
-    }
-
-    .btn-round {
-      background: $darkGrey;
-      border-color: $darkGrey;
-    }
-
     &__right {
       flex-direction: row-reverse;
       width: 100%;
-      column-gap: 4.27vw;
-      margin-top: 4.27vw;
+      column-gap: 3.2rem;
+      margin-top: 3.2rem;
     }
 
     &__count-boards {
-      padding: 11vw 1.4vw;
-      flex: 0 0 calc(50% - 4.27vw / 2);
-      border-radius: 5.3vw;
-      background: rgba(156, 171, 189, 0.15);
-      backdrop-filter: blur(5.3vw);
-      row-gap: 4.27vw;
+      padding: 8.25rem 1rem;
+      flex: 0 0 calc(50% - 3.2rem / 2);
+      border-radius: 4rem;
+      backdrop-filter: blur(4rem);
+      row-gap: 3.2rem;
     }
 
     &__count-number {
       margin-bottom: 0;
-
-      span {
-        &:first-child {
-          font-size: 8.5vw;
-        }
-
-        &:last-child {
-          width: 80%;
-          font-size: 3.8vw;
-          margin-top: -1vw;
-        }
-      }
     }
 
     &__count-imgs {
       width: 70%;
 
       img {
-        @include sizes(12.8vw, 12.8vw);
+        @include sizes(9.6rem, 9.6rem);
 
         &:nth-child(2) {
-          left: -4vw;
+          left: -3rem;
         }
 
         &:nth-child(3) {
-          left: -8vw;
+          left: -6rem;
         }
       }
     }
 
     &__doctor {
-      flex: 0 0 calc(50% - 4.27vw / 2);
-      padding: 5.3vw 2.4vw 0 2.4vw;
-      border-radius: 5.3vw;
-      background: $gradientBlue2;
+      flex: 0 0 calc(50% - 3.2rem / 2);
+      padding: 4rem 1.8rem 0 1.8rem;
     }
 
     &__doctor-text {
-      font-size: 3.8vw;
-      line-height: 130%;
-      margin-bottom: 4.8vw;
+      margin-bottom: 3.6rem;
+    }
+
+    &__doctor-img {
+      width: 29.8rem;
+      position: relative;
+      bottom: -0.1rem;
     }
 
     &__center {
-      height: 100%;
-      margin-top: 64vw;
+      @include sizes($height: 100%);
+      margin-top: 47.4rem;
       position: static;
-      padding: 6.4vw 4.27vw;
-      border-radius: 5.3vw;
-      backdrop-filter: blur(5.3vw);
+      padding: 4.8rem 3.2rem;
+      border-radius: 4rem;
+      backdrop-filter: blur(4rem);
 
-      .text {
-        font-weight: 700;
+      .baner__text {
         width: 85%;
-        margin-bottom: 4.27vw;
+        margin-bottom: 3.2rem;
       }
     }
 
     &__btns {
       flex-direction: column;
-      row-gap: 4.27vw;
+      row-gap: 3.2rem;
       align-items: flex-start;
     }
 
     &__form {
       flex-direction: column;
       width: 100%;
-      row-gap: 2.8vw;
+      row-gap: 2rem;
       align-items: flex-start;
+    }
+
+    .btn-round {
+      background: $darkGrey;
+      border-color: $darkGrey;
     }
   }
 }

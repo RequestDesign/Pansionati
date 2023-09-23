@@ -1,6 +1,7 @@
 .desc {
+  margin-bottom: 28rem;
+
   &__container {
-    margin-bottom: 28rem;
     display: flex;
     position: relative;
   }
@@ -48,44 +49,37 @@
 //------------------Mob-------------------//
 @media screen and (max-width: 48em) {
   .desc {
+    margin-bottom: 18rem;
+
     &__container {
-      padding-bottom: 16vw;
       flex-direction: column;
-      row-gap: 8vw;
+      row-gap: 6rem;
     }
 
     &__desc {
-      padding: 0;
-      border-radius: 0;
-      background: none;
-      backdrop-filter: none;
-      width: 100%;
       @extend %flexColumn;
-      row-gap: 2.8vw;
-
-      p {
-        color: $grey;
-        font-size: 3.8vw;
-        line-height: 130%;
-      }
+      padding: 0;
+      background: none;
+      width: 100%;
+      row-gap: 2rem;
 
       .title {
-        margin-bottom: 4.8vw;
+        margin-bottom: 3.6rem;
       }
     }
 
     &__imgs {
-      @include sizes(100%, 50vw);
+      @include sizes(100%, 37rem);
       position: static;
     }
 
     &__imgs-people {
-      @include sizes(100%, 50vw);
+      @include sizes(100%, 37rem);
 
       img {
         @include sizes(100%, 100%);
         object-fit: cover;
-        border-radius: 5.3vw;
+        border-radius: 4rem;
       }
     }
 

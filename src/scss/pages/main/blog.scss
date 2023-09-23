@@ -1,7 +1,6 @@
 .blog {
-  &__container {
-    margin-bottom: 17rem;
-  }
+  @include showDesc();
+  margin-bottom: 17rem;
 
   &__title {
     @extend %flexCenterBetween;
@@ -41,11 +40,13 @@
   }
 
   &__substract {
-    @include sizes(40.3rem, 39.3rem);
+    @include sizes(100%, 39.3rem);
     position: absolute;
     bottom: 0;
     left: 0;
     z-index: 0;
+    background: url('@img/bg/substract-blog.png') no-repeat center;
+    background-size: cover;
   }
 
   &__img {
@@ -64,79 +65,75 @@
 //----------------Mob------------------//
 @media screen and (max-width: 48em) {
   .blog {
+    @include showMob();
     position: relative;
+    margin-bottom: 18rem;
 
-    &__container {
-      padding-bottom: 45vw;
+    .container {
+      padding-right: 0;
+      padding-bottom: 15.6rem;
     }
 
     &__title {
-      margin-bottom: 7.5vw;
+      margin-bottom: 5.6rem;
       display: block;
     }
 
     &__items {
       @include noScrollLine();
-      column-gap: 4.27vw;
-      padding-right: 4.27vw;
+      column-gap: 3.2rem;
+      padding-right: 3.2rem;
       overflow-x: scroll;
     }
 
     &__item {
-      border-radius: 10.6vw 0;
-
-      &:last-child {
-        padding-right: 4.27vw;
-      }
-    }
-
-    .btn-primary {
-      position: absolute;
-      bottom: 23.4vw;
+      border-radius: 8rem 0;
     }
 
     &__data {
-      border-radius: 17.3vw;
-      padding: 1.06vw 3.2vw;
-      font-size: 3.2vw;
-      line-height: 130%;
-      position: absolute;
-      top: 5.3vw;
-      left: 5.3vw;
+      border-radius: 13rem;
+      padding: 0.8rem 2.4rem;
+      font-size: 2.4rem;
+      top: 4rem;
+      left: 4rem;
     }
 
     &__desc {
-      padding: 5.8vw 5.3vw;
-      position: absolute;
-      bottom: 0;
+      padding: 4.4rem 4rem;
     }
 
     &__desc-text {
-      font-size: 3.8vw;
-      line-height: 130%;
-      margin-top: 1.06vw;
+      margin-top: 0.8rem;
       overflow: hidden;
       display: -webkit-box;
       -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
     }
 
-    .btn-round {
-      @include sizes(10vw, 10vw);
-      top: -3.5rem;
-      right: 6rem;
-    }
-
     &__substract {
-      @include sizes(60.8vw, 58.9vw);
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      z-index: 0;
+      @include sizes(100%, 54.8rem);
+      background: url('@img/bg/substract-blog-mob.svg') no-repeat center;
+      background-size: cover;
     }
 
     &__img {
-      @include sizes(60.8vw, 87.5vw);
+      @include sizes(45.6rem, 66rem);
+    }
+
+    .btn-round {
+      @include sizes(7.5rem, 7.5rem);
+      top: -5.5rem;
+      right: 6.8rem;
+    }
+
+    .btn-primary {
+      position: absolute;
+      bottom: 0;
+    }
+
+    .title-h3 {
+      font-size: 3.2rem;
+      line-height: 130%;
     }
   }
 }

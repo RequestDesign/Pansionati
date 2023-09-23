@@ -1,7 +1,8 @@
 .cost {
+  margin-top: 20.5rem;
+
   &__container {
     @extend %flexCenterBetween;
-    margin-top: 20.5rem;
     column-gap: 9.4rem;
     border-radius: 3rem;
     background: $lightBlack;
@@ -20,6 +21,11 @@
       border-radius: 3rem;
       z-index: -1;
     }
+  }
+
+  &__desc {
+    @extend %flexColumn;
+    align-items: center;
   }
 
   &__desc-text {
@@ -56,52 +62,53 @@
 //------------------Mob----------------//
 @media screen and (max-width: 48em) {
   .cost {
-    padding-top: 24vw;
+    margin: 18rem 3.2rem 0 3.2rem;
 
     &__container {
-      border-radius: 5.3vw;
-      padding: 12.2vw 4.27vw 0 4.27vw;
+      border-radius: 4rem;
+      padding: 9rem 3.2rem 0 3.2rem;
       flex-direction: column;
 
       &::after {
         @extend %fullSize;
         background: url('@img/bg/baner-bg-3-mob.png');
-        position: absolute;
-        left: 0;
-        top: 0;
-        border-radius: 8.5vw;
       }
     }
 
-    .title {
-      margin-bottom: 3.2vw;
-      text-align: center;
-      font-size: 8.6vw;
-    }
-
     &__desc-text {
-      margin-bottom: 5.3vw;
-      font-size: 3.88vw;
+      margin-bottom: 4rem;
+      max-width: 85%;
       text-align: center;
-      line-height: 130%;
     }
 
     &__form {
       flex-direction: column;
-      row-gap: 5.3vw;
+      row-gap: 4rem;
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+
+    &__form-img {
+      @include sizes(4.8rem, 4.8rem);
     }
 
     &__img {
-      @include sizes(71vw, 58vw);
+      @include sizes(53.25rem, 43.5rem);
       position: relative;
-      bottom: 0;
       right: 0;
 
       img {
-        width: 100%;
-        height: 100%;
+        @include sizes(100%, 100%);
         object-fit: contain;
       }
+    }
+
+    .title {
+      margin-bottom: 2.4rem;
+      text-align: center;
+      font-size: 4.8rem;
+      line-height: 130%;
+      max-width: 50.6rem;
     }
   }
 }

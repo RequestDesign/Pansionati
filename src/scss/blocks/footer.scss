@@ -56,50 +56,44 @@
 @media screen and (max-width: 48em) {
   .footer {
     @include showMob();
-    border-radius: 5.3vw 5.3vw 0 0;
+    border-radius: 4rem 4rem 0 0;
 
     &__container {
       flex-direction: column;
-    }
-
-    &__container {
-      padding: 9.6vw 0;
+      padding: 7.2rem 0;
     }
 
     &__menu {
-      column-gap: 8.5vw;
+      column-gap: 6.4rem;
     }
 
     &__items {
-      row-gap: 3.2vw;
-    }
-
-    &__link {
-      font-size: 3.75vw;
-      line-height: 130%;
-    }
-
-    .btn-tertiary {
-      margin: 0;
-      position: absolute;
-      bottom: 28.6vw;
+      row-gap: 2.4rem;
     }
 
     &__left {
+      margin: 0 auto 0 0;
       .footer__link {
         display: none;
       }
     }
 
     &__logo {
-      margin-bottom: 6.4vw;
+      margin-bottom: 4.8rem;
     }
 
     &__phones {
       flex-direction: row;
       width: 100%;
       justify-content: space-between;
-      margin-top: 7.5vw;
+      margin-top: 5.6rem;
+    }
+
+    .btn-tertiary {
+      margin: 0;
+      position: absolute;
+      bottom: 21rem;
+      left: 3.2rem;
     }
   }
 }

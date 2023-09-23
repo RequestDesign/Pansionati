@@ -1,9 +1,9 @@
 .boards-swipers {
   @include showDesc();
+  margin-top: 17rem;
 
   &__container {
     @extend %flexColumn;
-    margin-top: 17rem;
   }
 
   &__titles {
@@ -17,25 +17,24 @@
   .boards-swipers {
     @include showMob();
     position: relative;
+    margin-top: 18rem;
 
     &__container {
-      @extend %flexColumn;
       align-items: center;
-      padding-top: 24vw;
-      padding-bottom: 20.8vw;
+      padding-bottom: 15.6rem;
     }
 
     &__titles {
-      margin-bottom: 7.5vw;
+      margin-bottom: 5.6rem;
       text-align: center;
       flex-direction: column;
 
       .title {
-        max-width: 90%;
+        max-width: 100%;
       }
 
       .select {
-        margin-top: 7.5vw;
+        margin-top: 5.6rem;
       }
 
       .btn-primary {

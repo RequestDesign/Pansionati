@@ -23,14 +23,18 @@
 @media screen and (max-width: 48em) {
   .input {
     @include sizes();
-    border-radius: 16vw;
-    column-gap: 1vw;
-    padding: 3.2vw 5.3vw;
+    border-radius: 12rem;
+    column-gap: 2rem;
+    padding: 2.3rem 4rem;
+    justify-content: flex-start;
+
+    img {
+      @include sizes(4.8rem, 4.8rem);
+    }
 
     input {
       width: 90%;
-      font-size: 4vw;
-      line-height: 130%;
+      font-size: 3rem;
     }
   }
 }

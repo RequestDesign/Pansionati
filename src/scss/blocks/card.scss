@@ -26,27 +26,19 @@
     padding: 0.8rem;
     z-index: 10;
 
-    img {
-      &:first-child {
-        display: block;
-      }
-
-      &:last-child {
-        display: none;
-      }
-    }
-
     &.active {
-      img {
-        &:first-child {
-          display: none;
-        }
-
-        &:last-child {
-          display: block;
-        }
+      .card__like-img {
+        @extend %fullSize;
+        background: url('@img/icons/like-active.svg') no-repeat center;
+        background-size: cover;
       }
     }
+  }
+
+  &__like-img {
+    @extend %fullSize;
+    background: url('@img/icons/like.svg') no-repeat center;
+    background-size: cover;
   }
 
   &__desc {
@@ -150,24 +142,28 @@
     left: 2.4rem;
 
     .card__item {
-      @extend %textH3;
+      font-size: 2.4rem;
 
       &:first-child {
-        padding: 1rem 1.4rem;
+        padding: 0.6rem 1.6rem;
+        column-gap: 0;
       }
 
       &:last-child {
-        padding: 1rem;
+        padding: 1.2rem;
       }
 
       span {
-        @extend %textH3;
+        font-size: 2.4rem;
         font-weight: 400;
       }
     }
   }
 
   &__substract {
+    @include sizes(100%, 37.8rem);
+    background: url('@img/bg/card-substract.svg') no-repeat center;
+    background-size: cover;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -202,7 +198,7 @@
 
   &__desc-location-text {
     @extend %textRegular18;
-    width: 22.3rem;
+    width: 17rem;
     white-space: nowrap;
     overflow: hidden;
     color: rgba(26, 26, 26, 0.7);
@@ -371,133 +367,144 @@
 //---------------------Mob----------------------
 @media screen and (max-width: 48em) {
   .card {
-    @include sizes(91.5vw, 108vw);
+    @include sizes(68.6rem, 81rem);
     @include showMob();
-    border-radius: 5.3vw;
+    border-radius: 4rem;
 
     &__like {
-      @include sizes(9vw, 9vw);
-      top: 3.2vw;
-      right: 3.2vw;
-      border-radius: 2.7vw;
-      padding: 2.2vw;
+      @include sizes(6.8rem, 6.8rem);
+      border-radius: 2rem;
+      padding: 1.65rem;
+    }
+
+    &__substract {
+      @include sizes(100%, 57.4rem);
+      background: url('@img/bg/card-substract-mob.svg') no-repeat center;
+      background-size: cover;
     }
 
     &__desc {
       @include sizes();
-      padding: 3.2vw 0 3.2vw 3.2vw;
-      top: 21.8vw;
+      padding: 2.4rem 0 4rem 2.4rem;
+      top: auto;
+      bottom: 0;
     }
 
     &__desc-top {
-      padding-right: 3.2vw;
-      margin-bottom: 3.2vw;
+      padding-right: 2.4rem;
+      margin-bottom: 2.4rem;
     }
 
     &__desc-rec {
-      padding: 1.1vw 3.2vw;
-      border-radius: 3.2vw;
+      padding: 0.4rem 2.4rem;
+      border-radius: 2rem;
     }
 
     &__desc-rec-text {
-      font-size: 4vw;
-      margin-top: -1.2vw;
+      font-size: 2.8rem;
+      margin-top: -0.9rem;
     }
 
     &__desc-rec-like {
       img {
-        @include sizes(4vw, 4vw);
-        margin-right: 0.8vw;
+        @include sizes(3.2rem, 3.2rem);
+        margin-right: 0.6rem;
       }
 
       span {
-        font-size: 4vw;
-        line-height: 100%;
+        font-size: 2.8rem;
       }
     }
 
     &__pagination {
-      top: 51.2vw;
+      top: 38.4rem;
     }
 
     &__bullets {
-      column-gap: 1vw;
+      column-gap: 0.6rem;
 
       span {
-        @include sizes(3.2vw, 1.1vw);
-        border-radius: 5.3vw;
+        @include sizes(2.4rem, 0.825);
+        border-radius: 4rem;
       }
     }
 
     &__items-top {
-      top: 3.2vw;
-      left: 3.2vw;
+      top: 2.4rem;
+      left: 2.4rem;
     }
 
     &__items {
-      column-gap: 2.2vw;
+      column-gap: 1.4rem;
     }
 
     &__item {
-      column-gap: 2vw;
-      padding: 2vw 2.4vw;
-      border-radius: 2.8vw;
-      font-size: 3.8vw;
-      line-height: 130%;
-
-      span {
-        font-size: 3.8vw;
-      }
+      column-gap: 1.5rem;
+      padding: 1.6rem 2rem;
+      border-radius: 2rem;
     }
 
     &__items-bottom {
-      column-gap: 2.2vw;
-      top: 39.5vw;
-      left: 3.2vw;
+      column-gap: 1.6rem;
+      top: 29.6rem;
+      left: 2.4rem;
+
+      .card__item {
+        font-size: 3.2rem;
+
+        &:first-child {
+          padding: 1.6rem 3rem;
+        }
+
+        &:last-child {
+          font-size: 2.8rem;
+          padding: 1.8rem 1.6rem;
+        }
+
+        span {
+          font-size: 3.2rem;
+        }
+      }
     }
 
     .btn-tertiary {
-      padding: 1.1vw;
-      column-gap: 2.2vw;
+      padding: 0;
+      column-gap: 1.6rem;
 
       span {
-        font-size: 3.8vw;
+        font-size: 2.7rem;
       }
 
       svg {
-        @include sizes(6.4vw, 6.4vw);
+        @include sizes(4.8rem, 4.8rem);
       }
     }
 
     &__icon {
-      @include sizes(8.5vw, 8.5vw);
-      padding: 1.6vw;
-      border-radius: 1.6vw;
+      @include sizes(6.4rem, 6.4rem);
+      padding: 1.2rem;
+      border-radius: 1.2rem;
     }
 
     &__desc-location {
-      column-gap: 1vw;
-      padding-right: 3.2vw;
-      margin-bottom: 3.2vw;
+      column-gap: 0.4rem;
+      padding-right: 2.4rem;
+      margin-bottom: 2.4rem;
     }
 
     &__desc-location-address {
-      column-gap: 1.1vw;
+      column-gap: 0.8rem;
     }
 
     &__desc-location-text {
-      width: 26vw;
-      font-size: 3.8vw;
-      line-height: 130%;
+      width: 20rem;
     }
 
     &__items-services {
-      margin-bottom: 3.2vw;
-      position: relative;
+      margin-bottom: 2.4rem;
 
       .card__item {
-        font-size: 3.8vw;
-        padding: 2vw 2.6vw;
+        padding: 1.4rem 2rem;
       }
 
       .card__items-shadow {
@@ -507,45 +514,46 @@
 
     &__items-shadow {
       display: none;
-      top: -5.2vw;
+      top: 17rem;
 
       img {
-        @include sizes(24vw, 8.5vw);
+        @include sizes(18rem, 6.4rem);
       }
     }
 
     &__icon-item {
-      column-gap: 1.1vw;
-    }
-
-    &__icon-text {
-      font-size: 3.8vw;
-      line-height: 130%;
+      column-gap: 0.8rem;
     }
 
     &__icon-items {
-      column-gap: 5vw;
+      column-gap: 3.8rem;
     }
 
     .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
     .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-      column-gap: 1vw;
+      column-gap: 0.75rem;
 
       span {
-        @include sizes(3.2vw, 1.1vw);
-        border-radius: 5.3vw;
+        @include sizes(2.4rem, 0.825rem);
+        border-radius: 4rem;
       }
+    }
+
+    .title-h3 {
+      font-size: 3.2rem;
     }
   }
 
   .cards {
     &-slider {
       @include sizes();
-      row-gap: 4.27vw;
+      row-gap: 3.2rem;
       flex-direction: column;
+      margin-bottom: 0;
     }
 
-    &__navigationб &__bullets {
+    &__navigation,
+    &__bullets {
       display: none;
     }
   }

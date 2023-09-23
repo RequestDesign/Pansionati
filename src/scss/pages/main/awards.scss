@@ -1,11 +1,5 @@
 .awards {
-  .title {
-    margin-bottom: 5rem;
-  }
-
-  &__container {
-    margin-top: 23rem;
-  }
+  margin-top: 23rem;
 
   &__list {
     @extend %flexCenterBetween;
@@ -27,14 +21,12 @@
 
       .awards__circle {
         background: $white;
+        transition: $transition;
       }
 
       .awards__circle-img {
-        display: none;
-      }
-
-      .awards__circle-img-hover {
-        display: block;
+        background: url('@img/icons/document-favorite.svg') no-repeat center;
+        background-size: cover;
       }
 
       .btn-tertiary {
@@ -62,17 +54,18 @@
     transition: $transition;
   }
 
-  &__circle-img,
-  &__circle-img-hover {
+  &__circle-img {
     @include sizes(5rem, 5rem);
     position: relative;
     right: -2.3rem;
     bottom: -1.3rem;
     transition: $transition;
+    background: url('@img/icons/medal-star.svg') no-repeat center;
+    background-size: cover;
   }
 
-  &__circle-img-hover {
-    display: none;
+  .title {
+    margin-bottom: 5rem;
   }
 
   .btn-tertiary {
@@ -91,58 +84,44 @@
 //-----------------Mob---------------//
 @media screen and (max-width: 48em) {
   .awards {
-    .title {
-      margin-bottom: 7.5vw;
-    }
-
-    .container {
-      padding-right: 0;
-    }
-
-    &__container {
-      padding-top: 24vw;
-    }
+    margin-top: 18rem;
 
     &__list {
       @include noScrollLine();
-      column-gap: 4.27vw;
       overflow-x: scroll;
+      padding-right: 3.2rem;
     }
 
     &__item {
-      @include sizes(65.8vw, 40.5vw);
-      border-radius: 5.3vw;
-      padding: 4.27vw;
+      @include sizes(49.4rem, 30.5rem);
+      border-radius: 4rem;
+      padding: 3.2rem;
       flex-shrink: 0;
 
       &:last-child {
-        padding-right: 4.27vw;
+        padding-right: 3.2rem;
       }
     }
 
-    &__circle {
-      @extend %flexCenter;
-      @include sizes(19.5rem, 19.5rem);
-      border-radius: 50%;
-      background: $gradientBlue;
-      position: absolute;
-      right: -3rem;
-      bottom: -4.2rem;
-      transition: $transition;
-    }
-
-    &__circle-img,
-    &__circle-img-hover {
-      @include sizes(7.5vw, 7.5vw);
-      right: -1vw;
-      bottom: -1vw;
+    &__circle-img {
+      @include sizes(5.625rem, 5.625rem);
+      right: -0.75rem;
+      bottom: -0.75rem;
     }
 
     .btn-tertiary {
       svg {
-        @include sizes(5.3vw, 5.3vw);
-        margin-top: -1.4vw;
+        @include sizes(4rem, 4rem);
+        margin-top: -1rem;
       }
+    }
+
+    .title {
+      margin-bottom: 5.6rem;
+    }
+
+    .container {
+      padding-right: 0;
     }
   }
 }

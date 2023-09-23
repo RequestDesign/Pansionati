@@ -88,25 +88,24 @@
 @media screen and (max-width: 48em) {
   .modal {
     &__content {
-      margin: 6.3vw auto;
-      padding: 4.27vw 17vw;
-      width: 91.3vw;
-      border-radius: 5.3vw;
+      margin: 4.8rem auto;
+      padding: 3.2rem 10.5rem;
+      width: 68.5rem;
+      border-radius: 4rem;
     }
 
     &__content-close {
-      @include sizes(6.4vw, 6.4vw);
-      top: 5.3vw;
-      right: 5.3vw;
+      @include sizes(4.8rem, 4.8rem);
+      top: 4rem;
+      right: 4rem;
     }
 
     .title {
-      margin-bottom: 3.2vw;
+      margin-bottom: 2.4rem;
     }
 
     &__content-text {
-      font-size: 3.7vw;
-      margin: 0 auto 5.3vw auto;
+      margin: 0 auto 4rem auto;
       max-width: 100%;
     }
   }

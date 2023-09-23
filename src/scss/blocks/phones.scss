@@ -28,28 +28,31 @@
 //------------------Mob------------------//
 @media screen and (max-width: 48em) {
   .phones {
-    column-gap: 10.6vw;
-    row-gap: 3.2vw;
+    column-gap: 8rem;
+    row-gap: 2.4rem;
 
     &__phone {
-      row-gap: 3.2vw;
+      row-gap: 2.4rem;
       flex-direction: column-reverse;
       align-items: flex-end;
       flex-shrink: 0;
     }
 
     &__phone-numbers {
-      padding: 1vw 0;
+      padding: 0.8rem 0;
 
       div {
-        &:first-child {
-          font-size: 4vw;
+        &:first-child,
+        &:last-child {
+          font-size: 3rem;
           line-height: 120%;
-          margin-bottom: 2.2vw;
+        }
+
+        &:first-child {
+          margin-bottom: 1.6rem;
         }
 
         &:last-child {
-          font-size: 4vw;
           text-align: end;
         }
       }

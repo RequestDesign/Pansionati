@@ -1,9 +1,9 @@
 .select-house {
+  margin-top: 14.5rem;
+
   &__container {
     @extend %flexColumn;
-    @extend %flexCenter;
     row-gap: 5rem;
-    margin-top: 14.5rem;
   }
 
   &__titles {
@@ -61,15 +61,18 @@
 //-------------------Mob---------------------//
 @media screen and (max-width: 48em) {
   .select-house {
+    margin-top: 18rem;
+
     &__container {
       position: relative;
-      row-gap: 7.5vw;
-      padding-top: 24vw;
-      padding-bottom: 20.8vw;
+      row-gap: 5.6rem;
+      padding-bottom: 15rem;
+      align-items: center;
     }
 
     &__titles {
-      display: block;
+      flex-direction: column;
+      align-items: center;
 
       .btn-primary {
         position: absolute;
@@ -78,25 +81,24 @@
     }
 
     &__items {
-      row-gap: 2.8vw;
+      row-gap: 2rem;
     }
 
     &__item {
-      border-radius: 13vw;
-      column-gap: 16vw;
-      padding: 1.8vw 2.8vw 1.8vw 5.3vw;
+      border-radius: 20rem;
+      column-gap: 13rem;
+      padding: 1.3rem 2rem 1.3rem 4rem;
       width: 100%;
     }
 
-    &__item-text {
-      font-size: 4vw;
+    &__item-text,
+    &__item-circle {
+      font-size: 3rem;
       line-height: 120%;
     }
 
     &__item-circle {
-      @include sizes(9vw, 9vw);
-      font-size: 4vw;
-      line-height: 120%;
+      @include sizes(6.8rem, 6.8rem);
     }
   }
 }

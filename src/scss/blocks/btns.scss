@@ -95,12 +95,12 @@
 //------------------Mob-------------------//
 @media screen and (max-width: 48em) {
   .btn {
-    border-radius: 26.6vw;
-    border: 0.4vw solid $blue;
-    backdrop-filter: blur(3.75vw);
+    border-radius: 20rem;
+    border: 0.3rem solid $blue;
+    backdrop-filter: blur(2.8rem);
 
     span {
-      font-size: 4vw;
+      line-height: 130%;
     }
   }
 
@@ -108,7 +108,8 @@
   .btn-primary-sm {
     color: $white;
     border-color: $blue;
-    padding: 3.4vw 12vw;
+    padding: 2.5rem 11rem;
+    width: 40.4rem;
     background: $gradientBlue;
 
     &:disabled {
@@ -141,23 +142,27 @@
   }
 
   .btn-tertiary {
-    column-gap: 2.2vw;
+    column-gap: 1.6rem;
     border: none;
     background: none;
-    padding: 0.8vw 0.9vw;
+    padding: 0;
     backdrop-filter: none;
 
     svg {
-      @include sizes(6.4vw, 6.4vw);
+      @include sizes(4.8rem, 4.8rem);
     }
   }
 
   .btn-round {
-    @include sizes(11.8vw, 11.8vw);
+    @include sizes(8.8rem, 8.8rem);
     border-color: $orange;
 
     img {
-      @include sizes(4.8vw, 4.8vw);
+      @include sizes(3.6rem, 3.6rem);
     }
   }
+}
+
+._icon-x24Medcine::before {
+  color: red;
 }
