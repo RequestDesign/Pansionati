@@ -163,6 +163,14 @@
   }
 }
 
-._icon-x24Medcine::before {
-  color: red;
+.icon {
+  // fill: red;
+  width: 20px;
+  height: 20px;
+
+  stroke: red;
+
+  &:hover {
+    stroke: blue;
+  }
 }

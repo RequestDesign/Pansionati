@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Главная</title>
-  <link rel="stylesheet" href="css/style.min.css?_v=20230923231049" />
+  <link rel="stylesheet" href="css/style.min.css?_v=20230924160156" />
 </head>
 
   <body>
@@ -108,11 +108,19 @@
     </div>
   </div>
 </header>
- <main>
+ <main class="mainpage">
   <section class="baner">
   <div class="baner-bg"></div>
   <div class="baner-bg-2"></div>
   <div class="baner__container container">
+    <svg class="icon">
+      <use xlink:href="img/icons.svg#arrow-down&#x3D;24"></use>
+    </svg>
+
+    <!-- <svg class="icon">
+			<use xlink:href="../../../img/icons/icons.svg#alarm-clock"></use>
+		</svg> -->
+
     <div class="baner__left">
       <div class="baner__titles">
         <div class="baner__title">Индивидуальная программа ухода</div>
@@ -6574,8 +6582,7 @@
     </div>
   </div>
 </footer>
-
-<!--Модалка рассчитать стоимость услуг-->
+ <!--Модалка рассчитать стоимость услуг-->
 <div class="modal close-x" data-modal="cost-services">
   <div class="modal__inner">
     <div class="modal__content">
@@ -6613,11 +6620,11 @@
   </div>
 </div>
 
-<script
+    <script
   src="https://api-maps.yandex.ru/2.1/?apikey=e1d17623-ee55-4c9d-8251-85ab8eb1263e&lang=ru_RU"
   type="text/javascript"
 ></script>
-<script src="js/app.min.js?_v=20230923231049"></script>
+<script src="js/app.min.js?_v=20230924160156"></script>
 
   </body>
 </html>

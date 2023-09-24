@@ -1,0 +1,18 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="24" height="24" fill="#F5F5F5"/>
+<g id="Icons">
+<rect width="729" height="697" transform="translate(-137 -303)" fill="#D8D8D8"/>
+<g id="Icons 24*24">
+<g id="24x24=Thumbs up" clip-path="url(#clip0_62_451)">
+<path id="Vector" d="M6 8.00061H3C2.20435 8.00061 1.44129 8.31668 0.87868 8.87929C0.31607 9.4419 0 10.205 0 11.0006L0 19.0006C0 19.7963 0.31607 20.5593 0.87868 21.1219C1.44129 21.6845 2.20435 22.0006 3 22.0006H6V8.00061Z" fill="#1A1A1A"/>
+<path id="Vector_2" d="M13.9997 7.99975L14.5547 4.67175C14.6508 4.1758 14.5787 3.66195 14.3497 3.21163C14.1208 2.76131 13.7481 2.40028 13.2907 2.18575C12.7662 1.95676 12.174 1.93655 11.6351 2.12927C11.0962 2.32198 10.6511 2.71308 10.3907 3.22275L7.99969 7.99975V21.9998H21.9997L23.9997 10.9998V7.99975H13.9997Z" fill="#1A1A1A"/>
+</g>
+<rect x="-103.5" y="-223.5" width="389" height="301" rx="4.5" stroke="#9747FF" stroke-dasharray="10 5"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_62_451">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs>
+</svg>

@@ -371,6 +371,10 @@
     @include showMob();
     border-radius: 4rem;
 
+    &:not(:nth-child(-n + 3)) {
+      display: none;
+    }
+
     &__like {
       @include sizes(6.8rem, 6.8rem);
       border-radius: 2rem;

@@ -1398,6 +1398,10 @@ template {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+.container {
+  overflow: hidden;
+}
+
 .logo {
   color: #1a1a1a;
   font-family: Avanti, sans-serif;
@@ -1431,16 +1435,8 @@ template {
 @font-face {
   font-family: Circe;
   font-display: swap;
-  src: url("../fonts/Circe-ExtraBold.woff2") format("woff2"), url("../fonts/Circe-ExtraBold.woff") format("woff");
-  font-weight: 800;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: Circe;
-  font-display: swap;
-  src: url("../fonts/Circe-Light.woff2") format("woff2"), url("../fonts/Circe-Light.woff") format("woff");
-  font-weight: 300;
+  src: url("../fonts/Circe-ExtraLight.woff2") format("woff2"), url("../fonts/Circe-ExtraLight.woff") format("woff");
+  font-weight: 200;
   font-style: normal;
 }
 
@@ -1455,8 +1451,16 @@ template {
 @font-face {
   font-family: Circe;
   font-display: swap;
-  src: url("../fonts/Circe-ExtraLight.woff2") format("woff2"), url("../fonts/Circe-ExtraLight.woff") format("woff");
-  font-weight: 200;
+  src: url("../fonts/Circe-ExtraBold.woff2") format("woff2"), url("../fonts/Circe-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Circe;
+  font-display: swap;
+  src: url("../fonts/Circe-Light.woff2") format("woff2"), url("../fonts/Circe-Light.woff") format("woff");
+  font-weight: 300;
   font-style: normal;
 }
 
@@ -1814,8 +1818,14 @@ fieldset {
   opacity: 0.7;
 }
 
-._icon-x24Medcine::before {
-  color: red;
+.icon {
+  width: 20px;
+  height: 20px;
+  stroke: red;
+}
+
+.icon:hover {
+  stroke: blue;
 }
 
 .phones {
@@ -3812,6 +3822,10 @@ fieldset {
 
   .card .--mob {
     display: flex;
+  }
+
+  .card:not(:nth-child(-n+3)) {
+    display: none;
   }
 
   .card__like {
