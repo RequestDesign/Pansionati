@@ -95,6 +95,8 @@
   &__count-imgs {
     display: flex;
     width: 17rem;
+
+    picture,
     img {
       @include sizes(7rem, 7rem);
       position: relative;
@@ -200,7 +202,7 @@
     &__count-imgs {
       width: 70%;
 
-      img {
+      picture {
         @include sizes(9.6rem, 9.6rem);
 
         &:nth-child(2) {

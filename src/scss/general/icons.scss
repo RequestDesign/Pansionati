@@ -1,0 +1,20 @@
+.icon {
+  @include sizes(2.4rem, 2.4rem);
+
+  &-arrow-hover-orange,
+  &-arrow-hover-white,
+  &-arrow-slider {
+    @extend %hover;
+    fill: none;
+    stroke-width: 2px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: $black;
+  }
+}
+
+@media screen and (max-width: 48em) {
+  .icon {
+    @include sizes(3.6rem, 3.6rem);
+  }
+}

@@ -63,16 +63,21 @@
   background: none;
   backdrop-filter: none;
 
+  span {
+    @extend %hover;
+  }
+
   &:not(:disabled):hover {
     span {
-      @extend %hover;
       color: $orange;
     }
-    svg {
-      path {
-        @extend %hover;
-        stroke: $orange;
-      }
+
+    .icon-arrow-hover-orange {
+      stroke: $orange;
+    }
+
+    .icon-arrow-hover-white {
+      stroke: $white;
     }
   }
 }
@@ -160,17 +165,5 @@
     img {
       @include sizes(3.6rem, 3.6rem);
     }
-  }
-}
-
-.icon {
-  // fill: red;
-  width: 20px;
-  height: 20px;
-
-  stroke: red;
-
-  &:hover {
-    stroke: blue;
   }
 }

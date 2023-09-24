@@ -29,7 +29,7 @@
     &.active {
       .card__like-img {
         @extend %fullSize;
-        background: url('@img/icons/like-active.svg') no-repeat center;
+        background: url('@img/icons/icons.svg#like-active') no-repeat center;
         background-size: cover;
       }
     }
@@ -37,7 +37,7 @@
 
   &__like-img {
     @extend %fullSize;
-    background: url('@img/icons/like.svg') no-repeat center;
+    background: url('@img/icons/icons.svg#like') no-repeat center;
     background-size: cover;
   }
 
@@ -132,6 +132,10 @@
       @extend %textRegular15;
       color: $grey;
     }
+
+    img {
+      @include sizes(2rem, 2rem);
+    }
   }
 
   &__items-bottom {
@@ -162,7 +166,7 @@
 
   &__substract {
     @include sizes(100%, 37.8rem);
-    background: url('@img/bg/card-substract.svg') no-repeat center;
+    background: url('@img/cards/card-substract.svg') no-repeat center;
     background-size: cover;
     position: absolute;
     bottom: 0;
@@ -278,8 +282,10 @@
       @include sizes(2.4rem, 2.4rem);
       flex-shrink: 0;
 
-      img {
-        @include sizes($height: 100%);
+      &:first-child {
+        svg {
+          transform: rotate(180deg);
+        }
       }
     }
   }
@@ -383,7 +389,7 @@
 
     &__substract {
       @include sizes(100%, 57.4rem);
-      background: url('@img/bg/card-substract-mob.svg') no-repeat center;
+      background: url('@img/cards/card-substract-mob.svg') no-repeat center;
       background-size: cover;
     }
 

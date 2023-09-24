@@ -101,7 +101,10 @@
   }
 
   &__list-item-footer-item-img {
-    @include sizes(2rem, 2rem);
+    @include sizes(1.6rem, 1.6rem);
+    svg {
+      @extend %fullSize;
+    }
   }
 
   &__list-item-footer-item-text {

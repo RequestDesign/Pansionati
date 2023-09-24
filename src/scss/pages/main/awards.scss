@@ -19,13 +19,17 @@
     &:hover {
       background: $gradientBlue2;
 
+      .icon-arrow-hover-white {
+        stroke: $white;
+      }
+
       .awards__circle {
         background: $white;
         transition: $transition;
       }
 
       .awards__circle-img {
-        background: url('@img/icons/document-favorite.svg') no-repeat center;
+        background: url('@img/icons/icons.svg#document') no-repeat center;
         background-size: cover;
       }
 
@@ -60,7 +64,7 @@
     right: -2.3rem;
     bottom: -1.3rem;
     transition: $transition;
-    background: url('@img/icons/medal-star.svg') no-repeat center;
+    background: url('@img/icons/icons.svg#award') no-repeat center;
     background-size: cover;
   }
 
