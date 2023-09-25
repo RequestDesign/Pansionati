@@ -3,10 +3,7 @@
   position: relative;
   display: flex;
   justify-content: center;
-
-  ymaps {
-    border-radius: 3rem;
-  }
+  $transition: $transition;
 
   &-descs {
     position: absolute;
@@ -21,9 +18,11 @@
     box-shadow: -0.8rem 1.6rem 4rem 0 rgba(76, 98, 187, 0.2);
     display: none;
 
-    &.active {
-      display: flex;
-      animation: show 1s;
+    @media (min-width: 48em) {
+      &.active {
+        display: flex;
+        animation: show 1s;
+      }
     }
   }
 
@@ -82,6 +81,38 @@
     }
   }
 
+  &__balloon {
+    @extend %flexCenterBetween;
+    padding: 2.1rem 1.4rem;
+    border-radius: 2rem;
+    border: 0;
+    column-gap: 1.6rem;
+  }
+
+  &__balloon-img {
+    @include sizes(5rem, 5rem);
+    border-radius: 50%;
+  }
+
+  &__balloon-content {
+    @extend %flexColumn;
+    row-gap: 0.8rem;
+    max-width: 17.5rem;
+  }
+
+  &__balloon-title {
+    @extend %textBold15;
+    color: $black;
+    font-family: Circe, sans-serif;
+  }
+
+  &__balloon-address {
+    @extend %textRegular15;
+    color: $grey;
+    font-family: Circe, sans-serif;
+    line-height: 120%;
+  }
+
   .btn-tertiary {
     @extend %textBold20;
     margin-bottom: 0.7rem;
@@ -99,6 +130,35 @@
       right: 2.5rem;
     }
   }
+
+  .ymaps-2-1-79-map,
+  .ymaps-2-1-79-inner-panes {
+    border-radius: 3rem;
+  }
+
+  .ymaps-2-1-79-balloon__layout {
+    border-radius: 2rem;
+  }
+
+  .ymaps-2-1-79-balloon {
+    box-shadow: none;
+    backdrop-filter: blur(2rem);
+    animation: show 1s;
+    border-radius: 2rem;
+  }
+
+  .ymaps-2-1-79-balloon__content {
+    padding: 2.1rem 1.4rem;
+    margin: 0 !important;
+    border-radius: 2rem;
+    background: $white;
+    padding: 0;
+  }
+
+  .ymaps-2-1-79-balloon__close,
+  .ymaps-2-1-79-balloon__tail {
+    display: none;
+  }
 }
 
 [class*='gototech'],
@@ -108,6 +168,11 @@
 [class*='controls__bottom'] {
   opacity: 0;
   transition: $transition;
+}
+
+[class*='balloon_layout_normal'] {
+  top: -6rem !important;
+  left: 2.5rem !important;
 }
 
 .map:hover [class*='copyrights-pane'],
@@ -134,10 +199,10 @@
       box-shadow: -0.8rem 1.6rem 4rem 0 rgba(76, 98, 187, 0.2);
       display: none;
 
-      &.active {
-        display: flex;
-        animation: show 1s;
-      }
+      // &.active {
+      //   display: flex;
+      //   animation: show 1s;
+      // }
     }
 
     &-desc {

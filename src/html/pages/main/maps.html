@@ -1,15 +1,115 @@
 <section class="maps">
   <div class="maps__container container">
     <div class="title">Пансионаты рядом с вами</div>
-    <div class="maps__content">
-      <div class="maps__list js-maps-list">
-        <div class="maps__title">
-          <div class="title-h3">Список пансионатов</div>
-          <div class="maps__title-btns --mob">
-            <button type="button" class="btn btn-round maps__title-btn"></button>
-            <button type="button" class="btn btn-round maps__title-btn"></button>
-          </div>
+    <div class="maps__maps-header">
+      <div class="maps__title">
+        <div class="title-h3" data-content="list">Список пансионатов</div>
+        <div class="title-h3" data-content="map">Пансионаты на карте</div>
+
+        <div class="maps__title-btns --mob">
+          <button type="button" class="btn btn-round maps__title-btn js-filter-open">
+            <img src="@img/icons/icons.svg#filter" alt="filter" />
+          </button>
+          <button type="button" class="btn btn-round maps__title-btn js-btn js-maps-list" data-open-content="map">
+            <img src="@img/icons/icons.svg#maps-marker" alt="maps" />
+          </button>
+          <button type="button" class="btn btn-round maps__title-btn js-btn js-maps-maps" data-open-content="list">
+            <img src="@img/icons/icons.svg#maps-list" alt="lists" />
+          </button>
         </div>
+      </div>
+
+      <form method="#" action="#" class="maps__filter">
+        <fieldset class="select select-mult js-select">
+          <div class="select__header js-select-inner">
+            <input
+              name="search"
+              type="text"
+              class="select__input js-select-search"
+              autocomplete="off"
+              placeholder="Особенности"
+            />
+            <button type="button" class="select__btn">
+              <img src="@img/icons/icons.svg#arrow-down" alt="arrow" />
+            </button>
+          </div>
+          <div class="select__content">
+            <div class="select__items">
+              <div class="select__empty js-select-empty">Ничего не найдено</div>
+              <div class="select__item js-select-item">
+                <input id="peculiarities-1" type="checkbox" name="peculiarities" value="Временнное размещение" />
+                <label for="peculiarities-1">Временное размещение</label>
+              </div>
+              <div class="select__item js-select-item">
+                <input id="peculiarities-2" type="checkbox" name="peculiarities" value="Недорогие" />
+                <label for="peculiarities-2">Недорогие</label>
+              </div>
+              <div class="select__item js-select-item">
+                <input id="peculiarities-3" type="checkbox" name="peculiarities" value="Одноместное размещение" />
+                <label for="peculiarities-3">Одноместное размещение</label>
+              </div>
+              <div class="select__item js-select-item">
+                <input id="peculiarities-4" type="checkbox" name="peculiarities" value="За пенсию" />
+                <label for="peculiarities-4">За пенсию</label>
+              </div>
+              <div class="select__item js-select-item">
+                <input id="peculiarities-5" type="checkbox" name="peculiarities" value="Сиделки" />
+                <label for="peculiarities-5">Сиделки</label>
+              </div>
+              <div class="select__item js-select-item">
+                <input id="peculiarities-6" type="checkbox" name="peculiarities" value="С животными" />
+                <label for="peculiarities-6">С животными</label>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="select select-mult js-select">
+          <div class="select__header js-select-inner">
+            <input
+              name="search"
+              type="text"
+              class="select__input js-select-search"
+              autocomplete="off"
+              placeholder="Заболевания"
+            />
+            <button type="button" class="select__btn">
+              <img src="@img/icons/icons.svg#arrow-down" alt="arrow" />
+            </button>
+          </div>
+          <div class="select__content">
+            <div class="select__items">
+              <div class="select__empty js-select-empty">Ничего не найдено</div>
+              <div class="select__item js-select-item">
+                <input id="diseases-1" type="checkbox" name="diseases" value="Альцгеймер" />
+                <label for="diseases-1">Альцгеймер</label>
+              </div>
+              <div class="select__item js-select-item">
+                <input id="diseases-2" type="checkbox" name="diseases" value="Онкология" />
+                <label for="diseases-2">Онкология</label>
+              </div>
+              <div class="select__item js-select-item">
+                <input id="diseases-3" type="checkbox" name="diseases" value="После инсульта" />
+                <label for="diseases-3">После инсульта</label>
+              </div>
+              <div class="select__item js-select-item">
+                <input id="peculiarities-4" type="checkbox" name="diseases" value="После травм" />
+                <label for="peculiarities-4">После травм</label>
+              </div>
+              <div class="select__item js-select-item">
+                <input id="diseases-5" type="checkbox" name="diseases" value="Склероз" />
+                <label for="diseases-5">Склероз</label>
+              </div>
+              <div class="select__item js-select-item">
+                <input id="diseases-6" type="checkbox" name="diseases" value="Паркинскон" />
+                <label for="diseases-6">Паркинскон</label>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <div class="maps__content">
+      <div class="maps__list js-maps-list" data-content="list">
         <div class="maps__list-items">
           <div class="maps__list-item" data-board-map="board-1">
             <div class="maps__list-item-header">
@@ -80,13 +180,13 @@
               </div>
               <div class="maps__list-item-header-desc">
                 <a href="#" class="btn btn-tertiary">
-                  <span class="--desc">Дом престарелых «Маяк»</span>
-                  <span class="--mob">Частный дом престарелых Маяк в Раменском районе</span>
+                  <span class="--desc">Дом престарелых «Химки»</span>
+                  <span class="--mob">Частный дом престарелых Маяк в Химках</span>
                   <svg class="icon icon-arrow-hover-orange">
                     <use xlink:href="@img/icons/icons.svg#arrow-right"></use>
                   </svg>
                 </a>
-                <p>Город: Раменский</p>
+                <p>Город: Химки</p>
               </div>
             </div>
             <div class="maps__list-item-footer">
@@ -111,13 +211,13 @@
               </div>
               <div class="maps__list-item-header-desc">
                 <a href="#" class="btn btn-tertiary">
-                  <span class="--desc">Пансионат Московский</span>
-                  <span class="--mob">Частный дом престарелых Московский в Москве</span>
+                  <span class="--desc">Пансионат Бронинцы</span>
+                  <span class="--mob">Частный дом престарелых Бронинцы</span>
                   <svg class="icon icon-arrow-hover-orange">
                     <use xlink:href="@img/icons/icons.svg#arrow-right"></use>
                   </svg>
                 </a>
-                <p>Город: Москва</p>
+                <p>Город: Бронинцы</p>
               </div>
             </div>
             <div class="maps__list-item-footer">
@@ -137,105 +237,7 @@
           </div>
         </div>
       </div>
-      <div class="maps__maps js-maps-maps">
-        <div class="maps__maps-header">
-          <div class="maps__title">
-            <div class="title-h3">Пансионаты на карте</div>
-            <div class="maps__title-btns --mob">
-              <button type="button" class="btn btn-round maps__title-btn"></button>
-              <button type="button" class="btn btn-round maps__title-btn"></button>
-            </div>
-          </div>
-          <div class="maps__maps-header-selects">
-            <div class="select select-mult js-select">
-              <div class="select__header js-select-inner">
-                <input
-                  name="search"
-                  type="text"
-                  class="select__input js-select-search"
-                  autocomplete="off"
-                  placeholder="Особенности"
-                />
-                <button type="button" class="select__btn">
-                  <img src="@img/icons/icons.svg#arrow-down" alt="arrow" />
-                </button>
-              </div>
-              <div class="select__content">
-                <div class="select__items">
-                  <div class="select__empty js-select-empty">Ничего не найдено</div>
-                  <div class="select__item js-select-item">
-                    <input id="peculiarities-1" type="checkbox" name="peculiarities" value="Временнное размещение" />
-                    <label for="peculiarities-1">Временное размещение</label>
-                  </div>
-                  <div class="select__item js-select-item">
-                    <input id="peculiarities-2" type="checkbox" name="peculiarities" value="Недорогие" />
-                    <label for="peculiarities-2">Недорогие</label>
-                  </div>
-                  <div class="select__item js-select-item">
-                    <input id="peculiarities-3" type="checkbox" name="peculiarities" value="Одноместное размещение" />
-                    <label for="peculiarities-3">Одноместное размещение</label>
-                  </div>
-                  <div class="select__item js-select-item">
-                    <input id="peculiarities-4" type="checkbox" name="peculiarities" value="За пенсию" />
-                    <label for="peculiarities-4">За пенсию</label>
-                  </div>
-                  <div class="select__item js-select-item">
-                    <input id="peculiarities-5" type="checkbox" name="peculiarities" value="Сиделки" />
-                    <label for="peculiarities-5">Сиделки</label>
-                  </div>
-                  <div class="select__item js-select-item">
-                    <input id="peculiarities-6" type="checkbox" name="peculiarities" value="С животными" />
-                    <label for="peculiarities-6">С животными</label>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="select select-mult js-select">
-              <div class="select__header js-select-inner">
-                <input
-                  name="search"
-                  type="text"
-                  class="select__input js-select-search"
-                  autocomplete="off"
-                  placeholder="Заболевания"
-                />
-                <button type="button" class="select__btn">
-                  <img src="@img/icons/icons.svg#arrow-down" alt="arrow" />
-                </button>
-              </div>
-              <div class="select__content">
-                <div class="select__items">
-                  <div class="select__empty js-select-empty">Ничего не найдено</div>
-                  <div class="select__item js-select-item">
-                    <input id="diseases-1" type="checkbox" name="diseases" value="Альцгеймер" />
-                    <label for="diseases-1">Альцгеймер</label>
-                  </div>
-                  <div class="select__item js-select-item">
-                    <input id="diseases-2" type="checkbox" name="diseases" value="Онкология" />
-                    <label for="diseases-2">Онкология</label>
-                  </div>
-                  <div class="select__item js-select-item">
-                    <input id="diseases-3" type="checkbox" name="diseases" value="После инсульта" />
-                    <label for="diseases-3">После инсульта</label>
-                  </div>
-                  <div class="select__item js-select-item">
-                    <input id="peculiarities-4" type="checkbox" name="diseases" value="После травм" />
-                    <label for="peculiarities-4">После травм</label>
-                  </div>
-                  <div class="select__item js-select-item">
-                    <input id="diseases-5" type="checkbox" name="diseases" value="Склероз" />
-                    <label for="diseases-5">Склероз</label>
-                  </div>
-                  <div class="select__item js-select-item">
-                    <input id="diseases-6" type="checkbox" name="diseases" value="Паркинскон" />
-                    <label for="diseases-6">Паркинскон</label>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
+      <div class="maps__maps js-maps-maps" data-content="map">
         <div class="map" id="map">
           <div class="map-descs">
             <div class="map-desc" data-board-map="board-1">
@@ -335,13 +337,13 @@
                 </div>
                 <div class="map-desc__desc">
                   <a href="#" class="btn btn-tertiary">
-                    <span>Частный дом престарелых Маяк в Раменском районе</span>
+                    <span>Дом престарелых «Химки»</span>
                     <svg class="icon icon-arrow-hover-orange">
                       <use xlink:href="@img/icons/icons.svg#arrow-right"></use>
                     </svg>
                   </a>
                   <div class="map-desc__desc-text">
-                    Частный дом престарелых Маяк в Раменском районе предлагает комфортное размещение для пожилых людей и
+                    Частный дом престарелых Химки в городе Химки предлагает комфортное размещение для пожилых людей и
                     инвалидов.
                   </div>
                 </div>
@@ -380,13 +382,13 @@
                 </div>
                 <div class="map-desc__desc">
                   <a href="#" class="btn btn-tertiary">
-                    <span>Пансонат Московский</span>
+                    <span>Пансионат Бронинцы</span>
                     <svg class="icon icon-arrow-hover-orange">
                       <use xlink:href="@img/icons/icons.svg#arrow-right"></use>
                     </svg>
                   </a>
                   <div class="map-desc__desc-text">
-                    Частный дом престарелых Маяк в Раменском районе предлагает комфортное размещение для пожилых людей и
+                    Частный дом престарелых Броннинцы в Бронинцах предлагает комфортное размещение для пожилых людей и
                     инвалидов.
                   </div>
                 </div>
