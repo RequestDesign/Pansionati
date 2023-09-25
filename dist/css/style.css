@@ -1171,7 +1171,8 @@ template {
 .modal__content-close img,
 .modal,
 .card__like-img,
-.card__like.active .card__like-img {
+.card__like.active .card__like-img,
+.overlay {
   width: 100%;
   height: 100%;
 }
@@ -1265,6 +1266,7 @@ template {
 .card__items-top,
 .card__desc-top,
 .footer__container,
+.header__panel,
 .header__container {
   display: flex;
   align-items: center;
@@ -1403,6 +1405,25 @@ template {
 
 .webp {
   background-size: cover;
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+.overlay {
+  background: rgba(194, 199, 200, 0.79);
+  -webkit-backdrop-filter: blur(0.5rem);
+          backdrop-filter: blur(0.5rem);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: none;
+}
+
+.overlay.active {
+  display: flex;
+  animation: show 0.2s;
 }
 
 .logo {
@@ -1664,10 +1685,15 @@ fieldset {
 
 .header__container {
   padding: 3rem 0;
-  -moz-column-gap: 2rem;
-       column-gap: 2rem;
+  -moz-column-gap: 7rem;
+       column-gap: 7rem;
   position: relative;
   z-index: 4;
+}
+
+.header__panel {
+  -moz-column-gap: 7rem;
+       column-gap: 7rem;
 }
 
 .header__list {
@@ -3491,6 +3517,111 @@ fieldset {
     padding: 2.4rem 0 0 0;
   }
 
+  .header__panel {
+    width: 78%;
+    height: 100%;
+    border-radius: 0 2rem 2rem 0;
+    background: #ffffff;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    transition: all 0.3s ease-out;
+    transform: translateX(-100%);
+    z-index: -1;
+    flex-direction: column;
+    padding: 4rem 3.2rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .header__panel.active {
+    z-index: 4;
+    transform: translateX(0);
+  }
+
+  .header__panel .header__logo {
+    margin-bottom: 4rem;
+  }
+
+  .header__panel .header__region {
+    margin-bottom: 4.8rem;
+  }
+
+  .header__panel .header__menu {
+    margin-bottom: 5.6rem;
+  }
+
+  .header__panel .header__socials {
+    display: flex;
+    -moz-column-gap: 3.2rem;
+         column-gap: 3.2rem;
+  }
+
+  .header__panel .header__socials .btn-round {
+    background: rgba(182, 194, 207, 0.15);
+    border-color: transparent;
+  }
+
+  .header__panel .header__socials .btn-round img {
+    width: 4.8rem;
+    height: 4.8rem;
+  }
+
+  .header__panel .select__content {
+    top: 6rem;
+    right: 1rem;
+  }
+
+  .header__panel .select__value {
+    margin-right: 1rem;
+  }
+
+  .header__panel .phones {
+    flex-direction: column-reverse;
+    row-gap: 4rem;
+    align-items: flex-start;
+    margin-bottom: 4rem;
+  }
+
+  .header__panel .phones__phone {
+    flex-direction: row-reverse;
+    -moz-column-gap: 1.6rem;
+         column-gap: 1.6rem;
+  }
+
+  .header__panel .phones__phone-numbers {
+    padding: 0;
+  }
+
+  .header__panel .phones__phone-numbers div:last-child {
+    text-align: start;
+  }
+
+  .header__panel .btn-primary {
+    width: 52.6rem;
+  }
+
+  .header__list {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 3.2rem;
+  }
+
+  .header__list a {
+    font-size: 3rem;
+    line-height: 130%;
+  }
+
+  .header__region {
+    width: 100%;
+  }
+
+  .header__region-title {
+    font-size: 3rem;
+    line-height: 130%;
+    margin-right: 2.4rem;
+  }
+
   .header__burger .btn-round {
     background-color: #2ecdf0;
     border-color: #2ecdf0;
@@ -3503,41 +3634,6 @@ fieldset {
     align-items: center;
     justify-content: center;
     position: relative;
-  }
-
-  .header__burger-icon span,
-  .header__burger-icon::before,
-  .header__burger-icon::after {
-    width: 2.8rem;
-    height: 2px;
-    display: block;
-    position: absolute;
-    transition: all 0.3s ease-out;
-    background-color: #ffffff;
-    border-radius: 0.8rem;
-  }
-
-  .header__burger-icon::before,
-  .header__burger-icon::after {
-    content: "";
-  }
-
-  .header__burger-icon::before {
-    top: 0;
-  }
-
-  .header__burger-icon::after {
-    bottom: 0;
-  }
-
-  .header__burger-icon span {
-    top: 50%;
-    transform: scale(1) translate(0px, -50%);
-  }
-
-  .header__menu,
-  .header__region {
-    display: none;
   }
 
   .footer {
@@ -3713,7 +3809,7 @@ fieldset {
   }
 
   .select__content {
-    padding: 4.8rem 4.8rem 4.8rem 2.4rem;
+    padding: 4.8rem 2.4rem;
     border-radius: 4rem;
     height: 40rem;
   }
@@ -3732,9 +3828,9 @@ fieldset {
   }
 
   .select__icon {
-    width: auto;
-    height: auto;
-    margin-right: 0.6rem;
+    width: 4.8rem;
+    height: 4.8rem;
+    margin-right: 0.8rem;
   }
 
   .select-sort .select__header,

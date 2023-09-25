@@ -10,6 +10,27 @@
   background-size: cover;
 }
 
+body {
+  &.lock {
+    overflow: hidden;
+  }
+}
+
+.overlay {
+  @extend %fullSize;
+  background: rgba(194, 199, 200, 0.79);
+  backdrop-filter: blur(0.5rem);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: none;
+
+  &.active {
+    display: flex;
+    animation: show 0.2s;
+  }
+}
+
 .logo {
   color: $black;
   font-family: Avanti, sans-serif;
