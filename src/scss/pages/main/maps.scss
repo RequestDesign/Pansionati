@@ -1,10 +1,12 @@
 .maps {
+  @include showDesc();
+
   .title {
     margin-bottom: 5rem;
   }
 
   &__container {
-    margin-top: 17rem;
+    margin-top: 18rem;
   }
 
   &__content {
@@ -114,5 +116,113 @@
 
   .select-mult .select__input {
     width: 22.8rem;
+  }
+}
+
+@media screen and (max-width: 48em) {
+  .maps {
+    @include showMob();
+
+    .map {
+      @include sizes(100%, 118.6rem);
+    }
+
+    &__maps,
+    &__list {
+      width: 100%;
+    }
+
+    &__maps {
+      display: none;
+    }
+
+    &__title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+    }
+
+    &__title-btns {
+      display: flex;
+      column-gap: 2rem;
+    }
+
+    &__title-btn {
+      background: $lightGrey;
+      border-color: $lightGrey;
+    }
+
+    &__list {
+      .btn-tertiary {
+        max-width: 38.6rem;
+
+        span {
+          font-size: 3.2rem;
+        }
+
+        svg {
+          top: calc(50% + 4.8rem / 2);
+        }
+      }
+    }
+
+    &__list-item-header-desc {
+      row-gap: 3.2rem;
+    }
+
+    &__list-items {
+      padding-right: 1.4rem;
+      max-height: 102rem;
+    }
+
+    &__list-item {
+      padding: 3.2rem;
+      border-radius: 4rem;
+    }
+
+    &__list-item-header {
+      padding-bottom: 2.4rem;
+    }
+
+    &__list-item-header-img {
+      @include sizes(15.4rem, 15.4rem);
+    }
+
+    &__list-item-header-desc p {
+      font-size: 3rem;
+      line-height: 120%;
+    }
+
+    &__list-item-footer {
+      padding-top: 4rem;
+    }
+
+    &__list-item-footer-item {
+      column-gap: 0.8rem;
+    }
+
+    &__list-item-footer-item-img {
+      @include sizes(4rem, 4rem);
+    }
+
+    &__list-item-footer-item-text {
+      font-size: 2.8rem;
+      line-height: 130%;
+    }
+
+    .title {
+      margin-bottom: 5.6rem;
+    }
+
+    .title-h3 {
+      font-size: 3.2rem;
+      line-height: 130%;
+      margin: 0;
+    }
+
+    &__maps-header-selects {
+      display: none;
+    }
   }
 }
