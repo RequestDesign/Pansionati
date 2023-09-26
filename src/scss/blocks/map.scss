@@ -1,5 +1,6 @@
 .map {
   @include sizes(126rem, 57rem);
+  @include showDesc();
   position: relative;
   display: flex;
   justify-content: center;
@@ -10,7 +11,6 @@
     bottom: 2.6rem;
     z-index: 2;
     width: 118.5rem;
-    padding: 2.5rem;
     border-radius: 2rem;
     background-color: $white;
     align-items: center;
@@ -18,20 +18,19 @@
     box-shadow: -0.8rem 1.6rem 4rem 0 rgba(76, 98, 187, 0.2);
     display: none;
 
-    @media (min-width: 48em) {
-      &.active {
-        display: flex;
-        animation: show 1s;
-      }
+    &.active {
+      display: flex;
+      animation: show 1s;
     }
   }
 
   &-desc {
     display: none;
+    padding: 2.5rem;
 
     &.active {
       display: flex;
-      animation: show 3s;
+      animation: show 1.5s;
     }
   }
 
@@ -50,6 +49,23 @@
 
   &-desc__desc {
     max-width: 31.7rem;
+    .btn-tertiary {
+      @extend %textBold20;
+      margin-bottom: 0.7rem;
+      justify-content: flex-start;
+      text-align: left;
+      padding: 0;
+
+      span {
+        white-space: wrap;
+      }
+
+      svg {
+        position: absolute;
+        top: calc(50% - 2.4rem / 2);
+        right: 2.5rem;
+      }
+    }
   }
 
   &-desc__desc-text {
@@ -113,22 +129,12 @@
     line-height: 120%;
   }
 
-  .btn-tertiary {
-    @extend %textBold20;
-    margin-bottom: 0.7rem;
-    justify-content: flex-start;
-    text-align: left;
-    padding: 0;
-
-    span {
-      white-space: wrap;
-    }
-
-    svg {
-      position: absolute;
-      top: calc(50% - 2.4rem / 2);
-      right: 2.5rem;
-    }
+  &__balloon-items,
+  &__balloon-icons,
+  &__balloon-icon,
+  &__balloon-btn {
+    display: none;
+    @extend %flexCenterBetween;
   }
 
   .ymaps-2-1-79-map,
@@ -145,6 +151,8 @@
     backdrop-filter: blur(2rem);
     animation: show 1s;
     border-radius: 2rem;
+    top: -6.5rem !important;
+    left: 2.5rem !important;
   }
 
   .ymaps-2-1-79-balloon__content {
@@ -170,11 +178,6 @@
   transition: $transition;
 }
 
-[class*='balloon_layout_normal'] {
-  top: -6rem !important;
-  left: 2.5rem !important;
-}
-
 .map:hover [class*='copyrights-pane'],
 .map:hover [class*='controls__control'] {
   opacity: 1;
@@ -182,100 +185,132 @@
 
 @media screen and (max-width: 48em) {
   .map {
-    ymaps {
-      border-radius: 4rem;
+    @include showMob();
+
+    &__balloon-items,
+    &__balloon-icons,
+    &__balloon-icon,
+    &__balloon-btn {
+      display: flex;
     }
 
     &-descs {
-      position: absolute;
-      bottom: 2.6rem;
-      z-index: 2;
-      width: 118.5rem;
-      padding: 2.5rem;
-      border-radius: 2rem;
-      background-color: $white;
-      align-items: center;
-      // box-shadow: 0 0 1rem rgba(143, 155, 205, 0.25);
-      box-shadow: -0.8rem 1.6rem 4rem 0 rgba(76, 98, 187, 0.2);
-      display: none;
-
-      // &.active {
-      //   display: flex;
-      //   animation: show 1s;
-      // }
+      width: 64rem;
+      border-radius: 4rem;
+      bottom: 12rem;
     }
 
     &-desc {
-      display: none;
-
-      &.active {
-        display: flex;
-        animation: show 3s;
-      }
+      flex-direction: column;
+      row-gap: 3.2rem;
+      padding: 3.2rem;
+      border-radius: 4rem;
+      background: $white;
+      box-shadow: -1.6rem 3.2rem 8rem 0 rgba(76, 98, 187, 0.2);
     }
 
     &-desc__left {
-      @extend %flexCenterBetween;
-      column-gap: 1.6rem;
-      padding-right: 5rem;
-      border-right: 0.2rem solid $lightGrey;
-      flex-shrink: 0;
-    }
-
-    &-desc__img {
-      @include sizes(12.5rem, 12.5rem);
-      border-radius: 1rem;
+      flex-direction: column;
+      row-gap: 2rem;
+      padding: 0;
+      border: 0;
+      align-items: flex-start;
     }
 
     &-desc__desc {
-      max-width: 31.7rem;
-    }
-
-    &-desc__desc-text {
-      @extend %textRegular15;
-      color: $grey;
+      max-width: 100%;
     }
 
     &-desc__items {
-      padding-left: 5rem;
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, auto));
-      column-gap: 4.5rem;
-      row-gap: 2rem;
-      grid-auto-columns: min-content;
+      padding: 0;
+      display: flex;
+      column-gap: 4rem;
+    }
+
+    &-desc__img {
+      @include sizes(100%, 25rem);
+    }
+
+    &-desc__desc-title {
+      color: $black;
+      font-size: 3.2rem;
+      font-weight: 700;
+      line-height: 130%;
+      margin-bottom: 1.6rem;
+    }
+
+    &-desc__desc-address {
+      color: $grey;
+      font-size: 3rem;
+      font-weight: 400;
+      line-height: 18px;
+    }
+
+    &-desc__btn {
+      justify-content: flex-start;
+      padding-left: 0.8rem;
+      svg {
+        position: static;
+      }
+    }
+
+    &-desc__number {
+      color: $blue;
+      font-size: 3.2rem;
+      font-weight: 700;
+      line-height: 125%;
+    }
+
+    &-desc__icons {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      column-gap: 4rem;
+    }
+
+    &-desc__icon {
+      &:not(:nth-child(-n + 6)) {
+        display: none;
+      }
+    }
+
+    &-desc__close {
+      @include sizes(6.8rem, 6.8rem);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 2rem;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(0.4rem);
+      position: absolute;
+      right: 4.8rem;
+      top: 4.8rem;
+
+      img {
+        @include sizes(3.2rem, 3.2rem);
+      }
     }
 
     &-desc__item {
-      display: flex;
-      align-items: center;
-      column-gap: 0.8rem;
-
       span {
-        @extend %textRegular15;
-        color: $grey;
+        display: none;
       }
-
       img {
-        @include sizes(2.4rem, 2.4rem);
+        @include sizes(4.8rem, 4.8rem);
       }
     }
 
-    .btn-tertiary {
-      @extend %textBold20;
-      margin-bottom: 0.7rem;
-      justify-content: flex-start;
-      text-align: left;
-      padding: 0;
+    .ymaps-2-1-79-balloon__layout {
+      border-radius: 4rem;
+    }
 
-      span {
-        white-space: wrap;
-      }
+    .ymaps-2-1-79-balloon {
+      box-shadow: -1.6rem 3.2rem 8rem 0 rgba(76, 98, 187, 0.2);
+      border-radius: 4rem;
+    }
 
-      svg {
-        position: absolute;
-        top: calc(50% - 2.4rem / 2);
-        right: 2.5rem;
-      }
+    .ymaps-2-1-79-balloon {
+      display: none;
     }
   }
 }
