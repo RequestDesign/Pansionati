@@ -1,3 +1,5 @@
+import { scroolMapList } from './functions.js';
+
 const PLACEMARKS = [
   {
     lalitude: 55.520003,
@@ -50,10 +52,16 @@ function removeContent(mainMap) {
 }
 
 function animationMap(placemark, map) {
-  map.panTo([placemark[0] - 0.08, placemark[1]], {
+  const options = {
     flying: true,
     duration: 1000,
-  });
+  };
+
+  if (window.innerWidth > 768) {
+    map.panTo([placemark[0], placemark[1]], options);
+  } else {
+    map.panTo([placemark[0] - 0.08, placemark[1]], options);
+  }
 }
 
 function createBalloon(placemark) {
@@ -77,8 +85,8 @@ function createBalloon(placemark) {
               `;
 }
 
-function changeActiveClass(item, attr, el) {
-  if (item === attr) {
+function changeActiveClass(attrEl, attr, el) {
+  if (attrEl === attr) {
     el.classList.add('active');
   } else {
     el.classList.remove('active');
@@ -88,8 +96,11 @@ function changeActiveClass(item, attr, el) {
 document.addEventListener('DOMContentLoaded', () => {
   function init() {
     if (document.querySelector('.mainpage .map')) {
-      const boardsItems = document.querySelectorAll('[data-board-map]');
+      const boardsList = document.querySelectorAll('[data-board-list]');
+      const boardsMap = document.querySelectorAll('[data-board-map]');
       const boardsDescContainer = document.querySelector('.map-descs');
+      const mapDescs = document.querySelectorAll('.map-desc');
+      const boardsContainer = document.querySelector('.maps__list-items');
 
       const mainMap = new ymaps.Map('map', {
         center: [55.520003, 38.089062],
@@ -112,9 +123,9 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         );
 
-        boardsItems.forEach((boardItem) => {
+        boardsList.forEach((boardItem) => {
           boardItem.addEventListener('click', () => {
-            const attr = boardItem.getAttribute('data-board-map');
+            const attr = boardItem.getAttribute('data-board-list');
             boardsDescContainer.classList.add('active');
 
             if (window.innerWidth < 768) {
@@ -124,6 +135,11 @@ document.addEventListener('DOMContentLoaded', () => {
               lists.forEach((list) => list.classList.add('hide'));
               maps.forEach((map) => map.classList.remove('hide'));
             }
+
+            mapDescs.forEach((mapDesc) => changeActiveClass(mapDesc.getAttribute('data-board-map'), attr, mapDesc));
+            boardsList.forEach((boardList) =>
+              changeActiveClass(boardList.getAttribute('data-board-list'), attr, boardList)
+            );
 
             if (newPlacemark.properties.get('myDataAttr') === attr) {
               mainMap.geoObjects.each((geoObject) => {
@@ -136,15 +152,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
               });
             }
-
-            boardsItems.forEach((boardsItem) => {
-              const item = boardsItem.getAttribute('data-board-map');
-              changeActiveClass(item, attr, boardsItem);
-            });
           });
         });
 
         mainMap.geoObjects.add(newPlacemark);
+
+        boardsMap.forEach((boardMap) => {
+          boardMap.addEventListener('click', (event) => {
+            // Если клик на кнопку закрытия
+            if (event.target.parentNode.classList.contains('js-balloon-close')) {
+              boardsDescContainer.classList.remove('active');
+              mapDescs.forEach((desc) => desc.classList.remove('active'));
+              mainMap.geoObjects.each((geoObject) =>
+                geoObject.options.set('iconImageHref', './img/icons/location-pin-default.svg')
+              );
+              boardsList.forEach((board) => board.classList.remove('active'));
+            }
+          });
+        });
 
         newPlacemark.events.add('click', () => {
           mainMap.geoObjects.each((geoObject) =>
@@ -153,10 +178,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
           boardsDescContainer.classList.add('active');
 
-          boardsItems.forEach((boardItem) => {
-            const attr = boardItem.getAttribute('data-board-map');
-            const item = newPlacemark.properties.get('myDataAttr');
-            changeActiveClass(item, attr, boardItem);
+          boardsMap.forEach((boardMap) => {
+            const attr = boardMap.getAttribute('data-board-map');
+            changeActiveClass(newPlacemark.properties.get('myDataAttr'), attr, boardMap);
+          });
+
+          boardsList.forEach((boardList) => {
+            if (boardList.getAttribute('data-board-list') === newPlacemark.properties.get('myDataAttr')) {
+              boardList.classList.add('active');
+              scroolMapList(boardsContainer, boardList);
+            } else {
+              boardList.classList.remove('active');
+            }
           });
 
           animationMap([placemark.lalitude, placemark.longitude], mainMap);

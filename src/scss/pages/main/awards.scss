@@ -107,10 +107,15 @@
       }
     }
 
+    &__circle {
+      @include sizes(16.5rem, 16.5rem);
+      right: -2rem;
+    }
+
     &__circle-img {
       @include sizes(5.625rem, 5.625rem);
-      right: -0.75rem;
-      bottom: -0.75rem;
+      right: -0.5rem;
+      bottom: 0rem;
     }
 
     .btn-tertiary {

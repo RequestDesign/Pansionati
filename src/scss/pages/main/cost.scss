@@ -30,7 +30,7 @@
 
   &__desc-text {
     @extend %textRegular18;
-    margin-bottom: 3rem;
+    margin: 0 auto 3rem 0;
     max-width: 48rem;
   }
 
@@ -79,15 +79,15 @@
 
     &__form {
       flex-direction: column;
-      row-gap: 4rem;
+      row-gap: 5rem;
       width: 100%;
       margin-bottom: 2rem;
     }
 
     &__img {
-      @include sizes(53.25rem, 43.5rem);
+      @include sizes(50rem, 41rem);
       position: relative;
-      right: 0;
+      right: -1rem;
 
       img {
         @include sizes(100%, 100%);
@@ -100,7 +100,7 @@
       text-align: center;
       font-size: 4.8rem;
       line-height: 130%;
-      max-width: 50.6rem;
+      max-width: 45rem;
     }
   }
 }

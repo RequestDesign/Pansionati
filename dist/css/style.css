@@ -1653,15 +1653,16 @@ fieldset {
 
 .header__container {
   padding: 3rem 0;
-  -moz-column-gap: 7rem;
-       column-gap: 7rem;
+  -moz-column-gap: 6rem;
+       column-gap: 6rem;
   position: relative;
   z-index: 4;
+  justify-content: flex-start;
 }
 
 .header__panel {
-  -moz-column-gap: 7rem;
-       column-gap: 7rem;
+  -moz-column-gap: 8rem;
+       column-gap: 8rem;
 }
 
 .header__list {
@@ -1893,6 +1894,7 @@ fieldset {
 }
 
 .select__content {
+  width: 100%;
   position: absolute;
   z-index: -1;
   opacity: 0;
@@ -2609,7 +2611,6 @@ fieldset {
 
 .map-descs.active {
   display: flex;
-  animation: show 1s;
 }
 
 .map-desc {
@@ -2765,11 +2766,6 @@ fieldset {
   transition: all 0.3s ease-out;
 }
 
-.map:hover [class*=copyrights-pane],
-.map:hover [class*=controls__control] {
-  opacity: 1;
-}
-
 .baner {
   position: relative;
 }
@@ -2812,7 +2808,7 @@ fieldset {
 
 .baner__left {
   row-gap: 18rem;
-  max-width: 50rem;
+  max-width: 49rem;
   padding-top: 4rem;
 }
 
@@ -2853,6 +2849,7 @@ fieldset {
 
 .baner__count-number span:last-child {
   text-align: center;
+  margin-top: -1rem;
 }
 
 .baner__count-imgs {
@@ -3038,7 +3035,7 @@ fieldset {
 }
 
 .cost__desc-text {
-  margin-bottom: 3rem;
+  margin: 0 auto 3rem 0;
   max-width: 48rem;
 }
 
@@ -3332,7 +3329,7 @@ fieldset {
 }
 
 .maps__container {
-  margin-top: 18rem;
+  margin-top: 17rem;
 }
 
 .maps__title {
@@ -3351,7 +3348,7 @@ fieldset {
   row-gap: 1.8rem;
   overflow-y: scroll;
   max-height: 57rem;
-  padding-right: 3.1rem;
+  padding-right: 4.3rem;
 }
 
 .maps__list-items::-webkit-scrollbar {
@@ -3422,7 +3419,7 @@ fieldset {
 .maps__list .btn-tertiary svg {
   position: absolute;
   top: calc(50% - 1.2rem);
-  right: 0;
+  right: -1.2rem;
 }
 
 .maps__filter {
@@ -3433,7 +3430,7 @@ fieldset {
 .maps__list-item-footer {
   -moz-column-gap: 4.5rem;
        column-gap: 4.5rem;
-  padding-top: 2.4rem;
+  padding-top: 2rem;
 }
 
 .maps__list-item-footer-item {
@@ -3515,6 +3512,13 @@ fieldset {
 
 .hide {
   display: none;
+}
+
+@media screen and (min-width: 48em) {
+  .map:hover [class*=copyrights-pane],
+  .map:hover [class*=controls__control] {
+    opacity: 1;
+  }
 }
 
 @media screen and (max-width: 48em) {
@@ -3617,6 +3621,7 @@ fieldset {
 
   .header__container {
     padding: 2.4rem 0 0 0;
+    justify-content: space-between;
   }
 
   .header__panel {
@@ -4445,7 +4450,7 @@ fieldset {
 
   .baner-bg {
     width: 100%;
-    height: 68rem;
+    height: 71rem;
     left: 0;
     top: 16rem;
   }
@@ -4460,11 +4465,16 @@ fieldset {
     padding-top: 0;
   }
 
+  .baner__title {
+    font-size: 2.4rem;
+  }
+
   .baner__titles {
-    row-gap: 2.4rem;
+    row-gap: 1.6rem;
     align-items: center;
     text-align: center;
-    max-width: 90%;
+    max-width: 76%;
+    margin: 0 auto;
   }
 
   .baner__right {
@@ -4549,6 +4559,10 @@ fieldset {
     align-items: flex-start;
   }
 
+  .baner__form .btn-primary {
+    margin-top: 1rem;
+  }
+
   .baner .btn-round {
     background: rgba(240, 243, 247, 0.51);
     border-color: rgba(240, 243, 247, 0.51);
@@ -4580,11 +4594,17 @@ fieldset {
     padding-right: 3.2rem;
   }
 
+  .awards__circle {
+    width: 16.5rem;
+    height: 16.5rem;
+    right: -2rem;
+  }
+
   .awards__circle-img {
     width: 5.625rem;
     height: 5.625rem;
-    right: -0.75rem;
-    bottom: -0.75rem;
+    right: -0.5rem;
+    bottom: 0rem;
   }
 
   .awards .btn-tertiary svg {
@@ -4622,16 +4642,16 @@ fieldset {
 
   .cost__form {
     flex-direction: column;
-    row-gap: 4rem;
+    row-gap: 5rem;
     width: 100%;
     margin-bottom: 2rem;
   }
 
   .cost__img {
-    width: 53.25rem;
-    height: 43.5rem;
+    width: 50rem;
+    height: 41rem;
     position: relative;
-    right: 0;
+    right: -1rem;
   }
 
   .cost__img img {
@@ -4646,7 +4666,7 @@ fieldset {
     text-align: center;
     font-size: 4.8rem;
     line-height: 130%;
-    max-width: 50.6rem;
+    max-width: 45rem;
   }
 
   .services {
@@ -4910,6 +4930,10 @@ fieldset {
     height: 118.6rem;
   }
 
+  .maps__container {
+    margin-top: 18rem;
+  }
+
   .maps__maps,
   .maps__list {
     width: 100%;
@@ -5022,7 +5046,7 @@ fieldset {
 
   .boards-swipers {
     position: relative;
-    margin-top: 18rem;
+    margin-top: 17rem;
   }
 
   .boards-swipers .--desc {

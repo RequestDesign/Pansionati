@@ -20,7 +20,6 @@
 
     &.active {
       display: flex;
-      animation: show 1s;
     }
   }
 
@@ -178,9 +177,11 @@
   transition: $transition;
 }
 
-.map:hover [class*='copyrights-pane'],
-.map:hover [class*='controls__control'] {
-  opacity: 1;
+@media screen and (min-width: 48em) {
+  .map:hover [class*='copyrights-pane'],
+  .map:hover [class*='controls__control'] {
+    opacity: 1;
+  }
 }
 
 @media screen and (max-width: 48em) {

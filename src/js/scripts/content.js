@@ -1,3 +1,13 @@
+import { scroolMapList } from './functions.js';
+
+function changeHideClass(item, attr, el) {
+  if (item === attr) {
+    el.classList.add('hide');
+  } else {
+    el.classList.remove('hide');
+  }
+}
+
 function changeContentMap() {
   const contents = document.querySelectorAll('[data-content]');
   contents.forEach((content) => {
@@ -15,6 +25,15 @@ function changeContentMap() {
   });
 }
 
+function scroolListWithBoard() {
+  const boardsContainer = document.querySelector('.maps__list-items');
+  const boardListActive = document.querySelector('.maps__list-item.active');
+
+  if (boardsContainer && boardListActive) {
+    scroolMapList(boardsContainer, boardListActive);
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   changeContentMap();
 
@@ -26,21 +45,15 @@ document.addEventListener('DOMContentLoaded', () => {
       const contents = document.querySelectorAll('[data-content]');
       const activeContent = document.querySelectorAll(`[data-content=${contentBtn}]`);
 
-      contents.forEach((cont) => {
-        cont.classList.add('hide');
-      });
-
-      activeContent.forEach((content) => {
-        content.classList.remove('hide');
-      });
+      contents.forEach((cont) => cont.classList.add('hide'));
+      activeContent.forEach((content) => content.classList.remove('hide'));
 
       btns.forEach((button) => {
-        if (button.getAttribute('data-open-content') === contentBtn) {
-          button.classList.add('hide');
-        } else {
-          button.classList.remove('hide');
-        }
+        const item = button.getAttribute('data-open-content');
+        changeHideClass(item, contentBtn, button);
       });
+
+      scroolListWithBoard();
     });
   });
 });

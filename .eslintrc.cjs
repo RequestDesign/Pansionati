@@ -10,12 +10,7 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
-    // 'import/prefer-default-export': 'off',
-    // 'func-names': 'off',
-    // 'consistent-return': 'off',
-    // 'no-unused-vars': 'off',
-    // 'prefer-destructuring': 'off',
-    // 'no-restricted-globals': 'off',
+    'import/prefer-default-export': 'off',
     'no-param-reassign': 'off',
     'import/extensions': 'off',
     'no-undef': 'off',

@@ -6,7 +6,7 @@
   }
 
   &__container {
-    margin-top: 18rem;
+    margin-top: 17rem;
   }
 
   &__title {
@@ -26,7 +26,7 @@
     row-gap: 1.8rem;
     overflow-y: scroll;
     max-height: 57rem;
-    padding-right: 3.1rem;
+    padding-right: 4.3rem;
   }
 
   &__list-item {
@@ -87,7 +87,7 @@
       svg {
         position: absolute;
         top: calc(50% - 2.4rem / 2);
-        right: 0;
+        right: -1.2rem;
       }
     }
   }
@@ -100,7 +100,7 @@
   &__list-item-footer {
     @extend %flexCenterBetween;
     column-gap: 4.5rem;
-    padding-top: 2.4rem;
+    padding-top: 2rem;
   }
 
   &__list-item-footer-item {
@@ -131,6 +131,10 @@
 
     .map {
       @include sizes(100%, 118.6rem);
+    }
+
+    &__container {
+      margin-top: 18rem;
     }
 
     &__maps,

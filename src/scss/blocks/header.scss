@@ -5,14 +5,15 @@
   &__container {
     @extend %flexCenterBetween;
     padding: 3rem 0;
-    column-gap: 7rem;
+    column-gap: 6rem;
     position: relative;
     z-index: 4;
+    justify-content: flex-start;
   }
 
   &__panel {
     @extend %flexCenterBetween;
-    column-gap: 7rem;
+    column-gap: 8rem;
   }
 
   &__list {
@@ -54,6 +55,7 @@
 
     &__container {
       padding: 2.4rem 0 0 0;
+      justify-content: space-between;
     }
 
     &__panel {

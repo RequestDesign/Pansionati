@@ -31,7 +31,7 @@
   &__left {
     @extend %flexColumn;
     row-gap: 18rem;
-    max-width: 50rem;
+    max-width: 49rem;
     padding-top: 4rem;
   }
 
@@ -88,6 +88,7 @@
       &:last-child {
         @extend %textRegular20;
         text-align: center;
+        margin-top: -1rem;
       }
     }
   }
@@ -157,7 +158,7 @@
     background-color: transparent;
 
     &-bg {
-      @include sizes(100%, 68rem);
+      @include sizes(100%, 71rem);
       background: url('@img/main/baner-mob.png') no-repeat center;
       left: 0;
       top: 16rem;
@@ -173,11 +174,16 @@
       padding-top: 0;
     }
 
+    &__title {
+      font-size: 2.4rem;
+    }
+
     &__titles {
-      row-gap: 2.4rem;
+      row-gap: 1.6rem;
       align-items: center;
       text-align: center;
-      max-width: 90%;
+      max-width: 76%;
+      margin: 0 auto;
     }
 
     &__right {
@@ -255,6 +261,10 @@
       width: 100%;
       row-gap: 2rem;
       align-items: flex-start;
+
+      .btn-primary {
+        margin-top: 1rem;
+      }
     }
 
     .btn-round {
