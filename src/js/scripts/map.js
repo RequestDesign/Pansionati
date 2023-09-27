@@ -5,7 +5,7 @@ const PLACEMARKS = [
     lalitude: 55.520003,
     longitude: 38.089062,
     balloonContent: {
-      img: '../img/boards/board-mayak.png',
+      img: './img/boards/board-mayak.png',
       title: 'Дом престарелых "Маяк"',
       address: 'Посёлок Раменской Агрохимстанции, 5Д',
     },
@@ -15,7 +15,7 @@ const PLACEMARKS = [
     lalitude: 55.52023,
     longitude: 38.189062,
     balloonContent: {
-      img: '../img/boards/board-moscow.png',
+      img: './img/boards/board-moscow.png',
       title: 'Дом престарелых "Московский"',
       address: 'Город Москва, 5Д',
     },
@@ -25,7 +25,7 @@ const PLACEMARKS = [
     lalitude: 55.540003,
     longitude: 38.289062,
     balloonContent: {
-      img: '../img/boards/board-mayak.png',
+      img: './img/boards/board-mayak.png',
       title: 'Дом престарелых «Химки»',
       address: 'Город: Химки',
     },
@@ -35,7 +35,7 @@ const PLACEMARKS = [
     lalitude: 55.62423,
     longitude: 38.280062,
     balloonContent: {
-      img: '../img/boards/board-mayak.png',
+      img: './img/boards/board-mayak.png',
       title: 'Пансионат Бронинцы',
       address: 'Город: Бронинцы',
     },

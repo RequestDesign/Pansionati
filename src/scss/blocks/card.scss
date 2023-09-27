@@ -36,6 +36,7 @@
   }
 
   &__like-img {
+    display: block;
     @extend %fullSize;
     background: url('@img/icons/icons.svg#like') no-repeat center;
     background-size: cover;

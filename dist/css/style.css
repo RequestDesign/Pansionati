@@ -2135,6 +2135,7 @@ fieldset {
 }
 
 .card__like-img {
+  display: block;
   background: url("@img/icons/icons.svg#like") no-repeat center;
   background-size: cover;
 }
@@ -2766,6 +2767,10 @@ fieldset {
   transition: all 0.3s ease-out;
 }
 
+.webp .baner-bg {
+  background-size: contain;
+}
+
 .baner {
   position: relative;
 }
@@ -2857,20 +2862,17 @@ fieldset {
   width: 17rem;
 }
 
-.baner__count-imgs picture,
-.baner__count-imgs img {
+.baner__count-imgs picture {
   width: 7rem;
   height: 7rem;
   position: relative;
 }
 
-.baner__count-imgs picture:nth-child(2),
-.baner__count-imgs img:nth-child(2) {
+.baner__count-imgs picture:nth-child(2) {
   left: -2rem;
 }
 
-.baner__count-imgs picture:nth-child(3),
-.baner__count-imgs img:nth-child(3) {
+.baner__count-imgs picture:nth-child(3) {
   left: -4rem;
 }
 

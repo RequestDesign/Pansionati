@@ -1,3 +1,7 @@
+.webp .baner-bg {
+  background-size: contain;
+}
+
 .baner {
   @include showDesc();
   position: relative;
@@ -97,8 +101,7 @@
     display: flex;
     width: 17rem;
 
-    picture,
-    img {
+    picture {
       @include sizes(7rem, 7rem);
       position: relative;
       &:nth-child(2) {
