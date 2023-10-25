@@ -92,7 +92,7 @@
     }
   }
 
-  &__filter {
+  &__filter-filters {
     @extend %flexCenterBetween;
     column-gap: 4rem;
   }
@@ -221,7 +221,7 @@
     }
 
     &__filter {
-      display: none;
+      display: block;
       position: fixed;
       left: 0;
       top: 0;
@@ -229,9 +229,85 @@
       height: 100%;
       background: #ffffff;
       z-index: 4;
-      padding: 3.2rem 3.2rem 7.6rem 3.2rem;
+      padding: 2.4rem 0 9.6rem;
       flex-direction: column;
       justify-content: flex-start;
+    }
+
+    &__filter-header {
+      padding: 0 3.2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 4.6rem;
+    }
+
+    &__filter-title {
+      font-size: 6.4rem;
+      font-weight: 700;
+      line-height: 105%;
+    }
+
+    &__filter-close {
+      @include sizes(8.8rem, 8.8rem);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background-color: $lightGrey;
+
+      img {
+        @include sizes(4rem, 4rem);
+      }
+    }
+
+    &__filter-items {
+      margin-bottom: 6rem;
+      display: flex;
+      align-items: center;
+      padding: 0 3.2rem;
+      column-gap: 1.6rem;
+      overflow-x: scroll;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    &__filter-item {
+      padding: 1.2rem 2rem;
+      width: fit-content;
+      height: auto;
+      display: flex;
+      align-items: center;
+      background-color: $lightGrey;
+      border-radius: 1.6rem;
+      column-gap: 1.6rem;
+      flex-shrink: 0;
+
+      span {
+        font-size: 3rem;
+        font-weight: 400;
+        line-height: 120%;
+      }
+
+      img {
+        @include sizes(3rem, 3rem);
+      }
+    }
+
+    &__filter-btns {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 3.2rem;
+    }
+
+    &__filter-filters {
+      padding: 0 3.2rem;
+      flex-direction: column;
+      row-gap: 6rem;
+      margin-bottom: 6rem;
     }
 
     .title {

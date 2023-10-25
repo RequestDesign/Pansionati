@@ -8,7 +8,7 @@
 
   &-bg {
     @include sizes(90%, 91.2rem);
-    background: url('@img/main/baner.png') no-repeat center;
+    background-image: url('@img/main/baner.png');
     background-size: cover;
     position: absolute;
     overflow: hidden;
@@ -100,16 +100,20 @@
   &__count-imgs {
     display: flex;
     width: 17rem;
+    position: relative;
+    left: 2rem;
+  }
 
-    picture {
-      @include sizes(7rem, 7rem);
-      position: relative;
-      &:nth-child(2) {
-        left: -2rem;
-      }
-      &:nth-child(3) {
-        left: -4rem;
-      }
+  &__count-img {
+    @include sizes(7rem, 7rem);
+    position: relative;
+
+    &:nth-child(2) {
+      left: -2rem;
+    }
+
+    &:nth-child(3) {
+      left: -4rem;
     }
   }
 
@@ -210,17 +214,19 @@
 
     &__count-imgs {
       width: 70%;
+      left: -0.5rem;
+    }
 
-      picture {
-        @include sizes(9.6rem, 9.6rem);
+    &__count-img {
+      @include sizes(9.6rem, 9.6rem);
+      flex-shrink: 0;
 
-        &:nth-child(2) {
-          left: -3rem;
-        }
+      &:nth-child(2) {
+        left: -3rem;
+      }
 
-        &:nth-child(3) {
-          left: -6rem;
-        }
+      &:nth-child(3) {
+        left: -6rem;
       }
     }
 

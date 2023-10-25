@@ -45,7 +45,7 @@
   &__desc {
     @extend %flexColumn;
     @include sizes();
-    padding: 1.3rem 0 0 2.4rem;
+    padding-top: 1.3rem;
     position: absolute;
     top: 13rem;
   }
@@ -53,7 +53,7 @@
   &__desc-top {
     @extend %flexCenterBetween;
     column-gap: 5rem;
-    padding-right: 2.4rem;
+    padding: 0 2.4rem;
     margin-bottom: 0.8rem;
   }
 
@@ -192,7 +192,7 @@
   &__desc-location {
     @extend %flexCenterBetween;
     column-gap: 2rem;
-    padding-right: 2.4rem;
+    padding: 0 2.4rem;
     margin-bottom: 1.6rem;
   }
 
@@ -214,6 +214,7 @@
     @include noScrollLine();
     overflow-x: scroll;
     margin-bottom: 1.6rem;
+    padding: 0 2.4rem;
 
     .card__item {
       @extend %textRegular18;
@@ -247,6 +248,7 @@
     display: flex;
     column-gap: 2.8rem;
     overflow-x: scroll;
+    padding: 0 2.4rem;
   }
 
   .btn-tertiary {
@@ -396,13 +398,14 @@
 
     &__desc {
       @include sizes();
-      padding: 2.4rem 0 4rem 2.4rem;
+      padding-top: 2.4rem;
       top: auto;
       bottom: 0;
+      padding-bottom: 4rem;
     }
 
     &__desc-top {
-      padding-right: 2.4rem;
+      padding: 0 2.4rem;
       margin-bottom: 2.4rem;
     }
 
@@ -499,7 +502,7 @@
 
     &__desc-location {
       column-gap: 0.4rem;
-      padding-right: 2.4rem;
+      padding: 0 2.4rem;
       margin-bottom: 2.4rem;
     }
 

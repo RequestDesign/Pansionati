@@ -2,10 +2,12 @@
   @extend %flexCenter;
   column-gap: 7.4rem;
   row-gap: 2.2rem;
+  flex-shrink: 0;
 
   &__phone {
     @extend %flexCenterEnd;
     column-gap: 2rem;
+    flex-shrink: 0;
   }
 
   &__phone-numbers {

@@ -2,18 +2,22 @@
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-// .container {
-//   overflow: hidden;
-// }
-
 .webp {
   background-size: cover;
 }
 
 body {
+  min-height: 100vh;
+  position: relative;
+  @extend %flexColumn;
+
   &.lock {
     overflow: hidden;
   }
+}
+
+main {
+  flex: 1;
 }
 
 .overlay {

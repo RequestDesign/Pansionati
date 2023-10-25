@@ -11,7 +11,7 @@ function changeHideClass(item, attr, el) {
 function changeContentMap() {
   const contents = document.querySelectorAll('[data-content]');
   contents.forEach((content) => {
-    if (window.innerWidth < 768) {
+    if (document.body.clientWidth < 769) {
       content.classList.add('hide');
     } else {
       content.classList.remove('hide');

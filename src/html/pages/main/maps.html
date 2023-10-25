@@ -19,93 +19,144 @@
         </div>
       </div>
 
-      <form class="maps__filter">
-        <fieldset class="select select-mult js-select">
-          <div class="select__header js-select-inner">
-            <input
-              name="search"
-              type="text"
-              class="select__input js-select-search"
-              autocomplete="off"
-              placeholder="Особенности"
-            />
-            <button type="button" class="select__btn">
-              <img src="@img/icons/icons.svg#arrow-down" alt="arrow" />
-            </button>
+      <form class="maps__filter" id="main-filter">
+        <div class="maps__filter-header --mob">
+          <div class="maps__filter-title">Фильтры</div>
+          <div class="maps__filter-close">
+            <img src="@img/icons/icons.svg#close" alt="" />
           </div>
-          <div class="select__content">
-            <div class="select__items">
-              <div class="select__empty js-select-empty">Ничего не найдено</div>
-              <div class="select__item js-select-item">
-                <input id="peculiarities-1" type="checkbox" name="peculiarities" value="Временнное размещение" />
-                <label for="peculiarities-1">Временное размещение</label>
-              </div>
-              <div class="select__item js-select-item">
-                <input id="peculiarities-2" type="checkbox" name="peculiarities" value="Недорогие" />
-                <label for="peculiarities-2">Недорогие</label>
-              </div>
-              <div class="select__item js-select-item">
-                <input id="peculiarities-3" type="checkbox" name="peculiarities" value="Одноместное размещение" />
-                <label for="peculiarities-3">Одноместное размещение</label>
-              </div>
-              <div class="select__item js-select-item">
-                <input id="peculiarities-4" type="checkbox" name="peculiarities" value="За пенсию" />
-                <label for="peculiarities-4">За пенсию</label>
-              </div>
-              <div class="select__item js-select-item">
-                <input id="peculiarities-5" type="checkbox" name="peculiarities" value="Сиделки" />
-                <label for="peculiarities-5">Сиделки</label>
-              </div>
-              <div class="select__item js-select-item">
-                <input id="peculiarities-6" type="checkbox" name="peculiarities" value="С животными" />
-                <label for="peculiarities-6">С животными</label>
+        </div>
+        <div class="maps__filter-filters">
+          <fieldset class="select select-mult js-select">
+            <div class="select__header js-select-inner">
+              <input
+                name="search"
+                type="text"
+                class="select__input js-select-search"
+                autocomplete="off"
+                placeholder="Особенности"
+              />
+              <button type="button" class="select__btn">
+                <img src="@img/icons/icons.svg#arrow-down" alt="arrow" />
+              </button>
+            </div>
+            <div class="select__content">
+              <div class="select__items">
+                <div class="select__empty js-select-empty">Ничего не найдено</div>
+                <div class="select__item js-select-item">
+                  <input id="peculiarities-1" type="checkbox" name="peculiarities" value="Временнное размещение" />
+                  <label for="peculiarities-1">Временное размещение</label>
+                </div>
+                <div class="select__item js-select-item">
+                  <input id="peculiarities-2" type="checkbox" name="peculiarities" value="Недорогие" />
+                  <label for="peculiarities-2">Недорогие</label>
+                </div>
+                <div class="select__item js-select-item">
+                  <input id="peculiarities-3" type="checkbox" name="peculiarities" value="Одноместное размещение" />
+                  <label for="peculiarities-3">Одноместное размещение</label>
+                </div>
+                <div class="select__item js-select-item">
+                  <input id="peculiarities-4" type="checkbox" name="peculiarities" value="За пенсию" />
+                  <label for="peculiarities-4">За пенсию</label>
+                </div>
+                <div class="select__item js-select-item">
+                  <input id="peculiarities-5" type="checkbox" name="peculiarities" value="Сиделки" />
+                  <label for="peculiarities-5">Сиделки</label>
+                </div>
+                <div class="select__item js-select-item">
+                  <input id="peculiarities-6" type="checkbox" name="peculiarities" value="С животными" />
+                  <label for="peculiarities-6">С животными</label>
+                </div>
               </div>
             </div>
-          </div>
-        </fieldset>
-        <fieldset class="select select-mult js-select">
-          <div class="select__header js-select-inner">
-            <input
-              name="search"
-              type="text"
-              class="select__input js-select-search"
-              autocomplete="off"
-              placeholder="Заболевания"
-            />
-            <button type="button" class="select__btn">
-              <img src="@img/icons/icons.svg#arrow-down" alt="arrow" />
-            </button>
-          </div>
-          <div class="select__content">
-            <div class="select__items">
-              <div class="select__empty js-select-empty">Ничего не найдено</div>
-              <div class="select__item js-select-item">
-                <input id="diseases-1" type="checkbox" name="diseases" value="Альцгеймер" />
-                <label for="diseases-1">Альцгеймер</label>
-              </div>
-              <div class="select__item js-select-item">
-                <input id="diseases-2" type="checkbox" name="diseases" value="Онкология" />
-                <label for="diseases-2">Онкология</label>
-              </div>
-              <div class="select__item js-select-item">
-                <input id="diseases-3" type="checkbox" name="diseases" value="После инсульта" />
-                <label for="diseases-3">После инсульта</label>
-              </div>
-              <div class="select__item js-select-item">
-                <input id="diseases-4" type="checkbox" name="diseases" value="После травм" />
-                <label for="diseases-4">После травм</label>
-              </div>
-              <div class="select__item js-select-item">
-                <input id="diseases-5" type="checkbox" name="diseases" value="Склероз" />
-                <label for="diseases-5">Склероз</label>
-              </div>
-              <div class="select__item js-select-item">
-                <input id="diseases-6" type="checkbox" name="diseases" value="Паркинскон" />
-                <label for="diseases-6">Паркинскон</label>
+          </fieldset>
+          <fieldset class="select select-mult js-select">
+            <div class="select__header js-select-inner">
+              <input
+                name="search"
+                type="text"
+                class="select__input js-select-search"
+                autocomplete="off"
+                placeholder="Заболевания"
+              />
+              <button type="button" class="select__btn">
+                <img src="@img/icons/icons.svg#arrow-down" alt="arrow" />
+              </button>
+            </div>
+            <div class="select__content">
+              <div class="select__items">
+                <div class="select__empty js-select-empty">Ничего не найдено</div>
+                <div class="select__item js-select-item">
+                  <input id="diseases-1" type="checkbox" name="diseases" value="Альцгеймер" />
+                  <label for="diseases-1">Альцгеймер</label>
+                </div>
+                <div class="select__item js-select-item">
+                  <input id="diseases-2" type="checkbox" name="diseases" value="Онкология" />
+                  <label for="diseases-2">Онкология</label>
+                </div>
+                <div class="select__item js-select-item">
+                  <input id="diseases-3" type="checkbox" name="diseases" value="После инсульта" />
+                  <label for="diseases-3">После инсульта</label>
+                </div>
+                <div class="select__item js-select-item">
+                  <input id="diseases-4" type="checkbox" name="diseases" value="После травм" />
+                  <label for="diseases-4">После травм</label>
+                </div>
+                <div class="select__item js-select-item">
+                  <input id="diseases-5" type="checkbox" name="diseases" value="Склероз" />
+                  <label for="diseases-5">Склероз</label>
+                </div>
+                <div class="select__item js-select-item">
+                  <input id="diseases-6" type="checkbox" name="diseases" value="Паркинскон" />
+                  <label for="diseases-6">Паркинскон</label>
+                </div>
               </div>
             </div>
+          </fieldset>
+        </div>
+        <div class="maps__filter-items --mob">
+          <div class="maps__filter-item">
+            <span>Одноместные</span>
+            <button type="button">
+              <img src="@img/icons/icons.svg#close" alt="" />
+            </button>
           </div>
-        </fieldset>
+          <div class="maps__filter-item">
+            <span>Номера с ТВ</span>
+            <button type="button">
+              <img src="@img/icons/icons.svg#close" alt="" />
+            </button>
+          </div>
+          <div class="maps__filter-item">
+            <span>Одноместные</span>
+            <button type="button">
+              <img src="@img/icons/icons.svg#close" alt="" />
+            </button>
+          </div>
+          <div class="maps__filter-item">
+            <span>Номера с ТВ</span>
+            <button type="button">
+              <img src="@img/icons/icons.svg#close" alt="" />
+            </button>
+          </div>
+          <div class="maps__filter-item">
+            <span>Одноместные</span>
+            <button type="button">
+              <img src="@img/icons/icons.svg#close" alt="" />
+            </button>
+          </div>
+        </div>
+        <div class="maps__filter-btns --mob">
+          <button class="btn btn-primary" type="submit" form="main-filter">
+            <span>Применить</span>
+          </button>
+          <button class="btn btn-tertiary" type="reset" form="main-filter">
+            <span>Сбросить</span>
+            <svg class="icon icon-arrow-hover-orange">
+              <use xlink:href="@img/icons/icons.svg#arrow-right"></use>
+            </svg>
+          </button>
+        </div>
       </form>
     </div>
     <div class="maps__content">

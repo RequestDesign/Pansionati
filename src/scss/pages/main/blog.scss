@@ -68,20 +68,20 @@
     margin-bottom: 18rem;
 
     .container {
-      padding-right: 0;
-      padding-bottom: 15.6rem;
+      padding: 0 0 15.6rem 0;
     }
 
     &__title {
       margin-bottom: 5.6rem;
       display: block;
+      padding: 0 4.27vw;
     }
 
     &__items {
       @include noScrollLine();
       column-gap: 3.2rem;
-      padding-right: 3.2rem;
       overflow-x: scroll;
+      padding: 0 4.27vw;
     }
 
     &__item {

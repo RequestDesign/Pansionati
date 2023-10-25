@@ -93,6 +93,7 @@
     &__list {
       @include noScrollLine();
       overflow-x: scroll;
+      padding: 0 4.27vw;
       padding-right: 3.2rem;
     }
 
@@ -127,10 +128,11 @@
 
     .title {
       margin-bottom: 5.6rem;
+      padding: 0 4.27vw;
     }
 
     .container {
-      padding-right: 0;
+      padding: 0;
     }
   }
 }

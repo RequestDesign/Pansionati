@@ -1,0 +1,43 @@
+.breadcrumbs {
+  @extend %flexCenterStart;
+  column-gap: 1rem;
+  margin-bottom: 2rem;
+
+  a,
+  span {
+    @extend %textRegular18;
+  }
+
+  a {
+    @extend %flexCenter;
+    position: relative;
+    column-gap: 1rem;
+    color: $grey;
+
+    &:not(:last-child):after {
+      content: '';
+      @include sizes(0.5rem, 0.5rem);
+      border-radius: 50%;
+      background-color: $blue;
+    }
+  }
+
+  span {
+    color: $black;
+  }
+}
+
+@media screen and (max-width: 48em) {
+  .breadcrumbs {
+    column-gap: 2rem;
+    margin-bottom: 4rem;
+
+    a {
+      column-gap: 2rem;
+
+      &:not(:last-child):after {
+        @include sizes(1rem, 1rem);
+      }
+    }
+  }
+}

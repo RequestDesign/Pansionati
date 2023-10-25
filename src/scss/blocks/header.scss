@@ -31,6 +31,10 @@
     }
   }
 
+  &__menu {
+    flex-shrink: 0;
+  }
+
   &__phones {
     @extend %flexCenter;
     flex-wrap: wrap;
@@ -39,6 +43,10 @@
   &__region {
     @extend %flexCenter;
     width: 33rem;
+
+    .select__content {
+      width: fit-content;
+    }
   }
 
   &__region-title {

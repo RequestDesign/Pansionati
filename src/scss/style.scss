@@ -10,17 +10,20 @@
 @import './fonts.scss';
 @import './set.scss';
 
+@import './elements/btns.scss';
+@import './elements/phones.scss';
+@import './elements/select.scss';
+@import './elements/card.scss';
+@import './elements/modals.scss';
+@import './elements/inputs.scss';
+@import './elements/map.scss';
+@import './elements/breadcrumbs.scss';
+
 @import './blocks/header.scss';
 @import './blocks/footer.scss';
-@import './blocks/btns.scss';
-@import './blocks/phones.scss';
-@import './blocks/select.scss';
-@import './blocks/card.scss';
-@import './blocks/modals.scss';
-@import './blocks/inputs.scss';
-@import './blocks/map.scss';
 
 @import './pages/main/index.scss';
 @import './pages/main/boards-swiper.scss';
+@import './pages/favorites/index.scss';
 
-@import './general/elements.scss';
+@import './general/base.scss';
