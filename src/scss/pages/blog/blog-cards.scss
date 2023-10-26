@@ -1,0 +1,87 @@
+.blog-cards {
+  &__btns {
+    @extend %flexCenterStart;
+    column-gap: 1.6rem;
+    margin-top: 5rem;
+
+    .btn-primary {
+      background: $lightGrey;
+      border: none;
+      span {
+        @extend %textRegular18;
+        color: $black;
+      }
+
+      &:hover,
+      &.active {
+        background: $blue;
+        transition: $transition;
+        span {
+          color: $white;
+        }
+      }
+    }
+  }
+
+  &__items {
+    @extend %flexCenterBetween;
+    row-gap: 3rem;
+    column-gap: 3rem;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+  }
+
+  &__btn {
+    margin-top: 3rem;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 48em) {
+  .blog-cards {
+    margin: 6.4rem 0 16rem 0;
+
+    &__btns {
+      margin-top: 5.4rem;
+      padding: 0 3.2rem;
+      overflow: scroll;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    &__items {
+      row-gap: 3.2rem;
+      margin-top: 7.2rem;
+      padding: 0 3.2rem;
+    }
+
+    &__btn {
+      margin-top: 6rem;
+    }
+
+    .container {
+      padding: 0;
+    }
+
+    .breadcrumbs,
+    .title {
+      padding: 0 3.2rem;
+    }
+
+    .breadcrumbs {
+      margin-bottom: 5.6rem;
+    }
+
+    .btn-primary {
+      padding: 2rem 4rem;
+      width: fit-content;
+
+      span {
+        font-weight: 700;
+        font-size: 3rem;
+      }
+    }
+  }
+}

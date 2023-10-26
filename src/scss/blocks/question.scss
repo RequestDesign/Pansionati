@@ -1,5 +1,5 @@
-.find {
-  margin: 16rem auto;
+.question {
+  margin: 17rem auto;
 
   &__container {
     @extend %flexColumn;
@@ -7,7 +7,7 @@
     border-radius: 3rem;
     background: $lightBlack;
     backdrop-filter: blur(2rem);
-    padding: 12.5rem 38rem;
+    padding: 12.5rem;
     position: relative;
 
     &::after {
@@ -42,11 +42,11 @@
 
 //------------------Mob-----------------//
 @media screen and (max-width: 48em) {
-  .find {
+  .question {
     margin: 18rem 3.2rem;
 
     &__container {
-      border-radius: 6.4rem;
+      border-radius: 4rem;
       padding: 12.4rem 2.4rem;
       text-align: center;
 
@@ -69,6 +69,14 @@
       flex-direction: column;
       row-gap: 4rem;
       width: 100%;
+    }
+
+    &--blog {
+      margin: 16rem 3.2rem;
+
+      .question__form {
+        row-gap: 6.4rem;
+      }
     }
 
     .title {

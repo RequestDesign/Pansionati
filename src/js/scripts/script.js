@@ -17,6 +17,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  function clickToogleBlockCards() {
+    const btns = document.querySelectorAll('.js-cards-btns button');
+
+    btns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        btns.forEach((bt) => bt.classList.remove('active'));
+        btn.classList.add('active');
+      });
+    });
+  }
+
   setPhoneMask();
   clickToogle();
+  clickToogleBlockCards();
 });
