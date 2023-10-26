@@ -2,11 +2,13 @@
   &__btns {
     @extend %flexCenterStart;
     column-gap: 1.6rem;
-    margin-top: 5rem;
+    margin-top: 2rem;
 
     .btn-primary {
       background: $lightGrey;
       border: none;
+      padding: 1rem 3rem;
+      width: fit-content;
       span {
         @extend %textRegular18;
         color: $black;

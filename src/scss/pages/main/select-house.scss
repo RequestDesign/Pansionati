@@ -1,5 +1,5 @@
 .select-house {
-  margin-top: 14.5rem;
+  margin-top: 15rem;
 
   &__container {
     @extend %flexColumn;
@@ -61,7 +61,7 @@
 //-------------------Mob---------------------//
 @media screen and (max-width: 48em) {
   .select-house {
-    margin-top: 18rem;
+    margin-top: 17.5rem;
 
     &__container {
       position: relative;

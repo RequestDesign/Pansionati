@@ -1,540 +1,542 @@
 <section class="maps">
-  <div class="maps__container container">
-    <div class="title">Пансионаты рядом с вами</div>
-    <div class="maps__maps-header">
-      <div class="maps__title">
-        <div class="title-h3" data-content="list">Список пансионатов</div>
-        <div class="title-h3" data-content="map">Пансионаты на карте</div>
+  <div class="container">
+    <div class="maps__container">
+      <div class="title">Пансионаты рядом с вами</div>
+      <div class="maps__maps-header">
+        <div class="maps__title">
+          <div class="title-h3" data-content="list">Список пансионатов</div>
+          <div class="title-h3" data-content="map">Пансионаты на карте</div>
 
-        <div class="maps__title-btns --mob">
-          <button type="button" class="btn btn-round maps__title-btn js-filter-open">
-            <img src="@img/icons/icons.svg#filter" alt="filter" />
-          </button>
-          <button type="button" class="btn btn-round maps__title-btn js-btn js-maps-list" data-open-content="map">
-            <img src="@img/icons/icons.svg#maps-marker" alt="maps" />
-          </button>
-          <button type="button" class="btn btn-round maps__title-btn js-btn js-maps-maps" data-open-content="list">
-            <img src="@img/icons/icons.svg#maps-list" alt="lists" />
-          </button>
-        </div>
-      </div>
-
-      <form class="maps__filter" id="main-filter">
-        <div class="maps__filter-header --mob">
-          <div class="maps__filter-title">Фильтры</div>
-          <div class="maps__filter-close">
-            <img src="@img/icons/icons.svg#close" alt="" />
+          <div class="maps__title-btns --mob">
+            <button type="button" class="btn btn-round maps__title-btn js-filter-open">
+              <img src="@img/icons/icons.svg#filter" alt="filter" />
+            </button>
+            <button type="button" class="btn btn-round maps__title-btn js-btn js-maps-list" data-open-content="map">
+              <img src="@img/icons/icons.svg#maps-marker" alt="maps" />
+            </button>
+            <button type="button" class="btn btn-round maps__title-btn js-btn js-maps-maps" data-open-content="list">
+              <img src="@img/icons/icons.svg#maps-list" alt="lists" />
+            </button>
           </div>
         </div>
-        <div class="maps__filter-filters">
-          <fieldset class="select select-mult js-select">
-            <div class="select__header js-select-inner">
-              <input
-                name="search"
-                type="text"
-                class="select__input js-select-search"
-                autocomplete="off"
-                placeholder="Особенности"
-              />
-              <button type="button" class="select__btn">
-                <img src="@img/icons/icons.svg#arrow-down" alt="arrow" />
+
+        <form class="maps__filter" id="main-filter">
+          <div class="maps__filter-header --mob">
+            <div class="maps__filter-title">Фильтры</div>
+            <div class="maps__filter-close">
+              <img src="@img/icons/icons.svg#close" alt="" />
+            </div>
+          </div>
+          <div class="maps__filter-filters">
+            <fieldset class="select select-mult js-select">
+              <div class="select__header js-select-inner">
+                <input
+                  name="search"
+                  type="text"
+                  class="select__input js-select-search"
+                  autocomplete="off"
+                  placeholder="Особенности"
+                />
+                <button type="button" class="select__btn">
+                  <img src="@img/icons/icons.svg#arrow-down" alt="arrow" />
+                </button>
+              </div>
+              <div class="select__content">
+                <div class="select__items">
+                  <div class="select__empty js-select-empty">Ничего не найдено</div>
+                  <div class="select__item js-select-item">
+                    <input id="peculiarities-1" type="checkbox" name="peculiarities" value="Временнное размещение" />
+                    <label for="peculiarities-1">Временное размещение</label>
+                  </div>
+                  <div class="select__item js-select-item">
+                    <input id="peculiarities-2" type="checkbox" name="peculiarities" value="Недорогие" />
+                    <label for="peculiarities-2">Недорогие</label>
+                  </div>
+                  <div class="select__item js-select-item">
+                    <input id="peculiarities-3" type="checkbox" name="peculiarities" value="Одноместное размещение" />
+                    <label for="peculiarities-3">Одноместное размещение</label>
+                  </div>
+                  <div class="select__item js-select-item">
+                    <input id="peculiarities-4" type="checkbox" name="peculiarities" value="За пенсию" />
+                    <label for="peculiarities-4">За пенсию</label>
+                  </div>
+                  <div class="select__item js-select-item">
+                    <input id="peculiarities-5" type="checkbox" name="peculiarities" value="Сиделки" />
+                    <label for="peculiarities-5">Сиделки</label>
+                  </div>
+                  <div class="select__item js-select-item">
+                    <input id="peculiarities-6" type="checkbox" name="peculiarities" value="С животными" />
+                    <label for="peculiarities-6">С животными</label>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="select select-mult js-select">
+              <div class="select__header js-select-inner">
+                <input
+                  name="search"
+                  type="text"
+                  class="select__input js-select-search"
+                  autocomplete="off"
+                  placeholder="Заболевания"
+                />
+                <button type="button" class="select__btn">
+                  <img src="@img/icons/icons.svg#arrow-down" alt="arrow" />
+                </button>
+              </div>
+              <div class="select__content">
+                <div class="select__items">
+                  <div class="select__empty js-select-empty">Ничего не найдено</div>
+                  <div class="select__item js-select-item">
+                    <input id="diseases-1" type="checkbox" name="diseases" value="Альцгеймер" />
+                    <label for="diseases-1">Альцгеймер</label>
+                  </div>
+                  <div class="select__item js-select-item">
+                    <input id="diseases-2" type="checkbox" name="diseases" value="Онкология" />
+                    <label for="diseases-2">Онкология</label>
+                  </div>
+                  <div class="select__item js-select-item">
+                    <input id="diseases-3" type="checkbox" name="diseases" value="После инсульта" />
+                    <label for="diseases-3">После инсульта</label>
+                  </div>
+                  <div class="select__item js-select-item">
+                    <input id="diseases-4" type="checkbox" name="diseases" value="После травм" />
+                    <label for="diseases-4">После травм</label>
+                  </div>
+                  <div class="select__item js-select-item">
+                    <input id="diseases-5" type="checkbox" name="diseases" value="Склероз" />
+                    <label for="diseases-5">Склероз</label>
+                  </div>
+                  <div class="select__item js-select-item">
+                    <input id="diseases-6" type="checkbox" name="diseases" value="Паркинскон" />
+                    <label for="diseases-6">Паркинскон</label>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <div class="maps__filter-items --mob">
+            <div class="maps__filter-item">
+              <span>Одноместные</span>
+              <button type="button">
+                <img src="@img/icons/icons.svg#close" alt="" />
               </button>
             </div>
-            <div class="select__content">
-              <div class="select__items">
-                <div class="select__empty js-select-empty">Ничего не найдено</div>
-                <div class="select__item js-select-item">
-                  <input id="peculiarities-1" type="checkbox" name="peculiarities" value="Временнное размещение" />
-                  <label for="peculiarities-1">Временное размещение</label>
-                </div>
-                <div class="select__item js-select-item">
-                  <input id="peculiarities-2" type="checkbox" name="peculiarities" value="Недорогие" />
-                  <label for="peculiarities-2">Недорогие</label>
-                </div>
-                <div class="select__item js-select-item">
-                  <input id="peculiarities-3" type="checkbox" name="peculiarities" value="Одноместное размещение" />
-                  <label for="peculiarities-3">Одноместное размещение</label>
-                </div>
-                <div class="select__item js-select-item">
-                  <input id="peculiarities-4" type="checkbox" name="peculiarities" value="За пенсию" />
-                  <label for="peculiarities-4">За пенсию</label>
-                </div>
-                <div class="select__item js-select-item">
-                  <input id="peculiarities-5" type="checkbox" name="peculiarities" value="Сиделки" />
-                  <label for="peculiarities-5">Сиделки</label>
-                </div>
-                <div class="select__item js-select-item">
-                  <input id="peculiarities-6" type="checkbox" name="peculiarities" value="С животными" />
-                  <label for="peculiarities-6">С животными</label>
-                </div>
-              </div>
-            </div>
-          </fieldset>
-          <fieldset class="select select-mult js-select">
-            <div class="select__header js-select-inner">
-              <input
-                name="search"
-                type="text"
-                class="select__input js-select-search"
-                autocomplete="off"
-                placeholder="Заболевания"
-              />
-              <button type="button" class="select__btn">
-                <img src="@img/icons/icons.svg#arrow-down" alt="arrow" />
+            <div class="maps__filter-item">
+              <span>Номера с ТВ</span>
+              <button type="button">
+                <img src="@img/icons/icons.svg#close" alt="" />
               </button>
             </div>
-            <div class="select__content">
-              <div class="select__items">
-                <div class="select__empty js-select-empty">Ничего не найдено</div>
-                <div class="select__item js-select-item">
-                  <input id="diseases-1" type="checkbox" name="diseases" value="Альцгеймер" />
-                  <label for="diseases-1">Альцгеймер</label>
-                </div>
-                <div class="select__item js-select-item">
-                  <input id="diseases-2" type="checkbox" name="diseases" value="Онкология" />
-                  <label for="diseases-2">Онкология</label>
-                </div>
-                <div class="select__item js-select-item">
-                  <input id="diseases-3" type="checkbox" name="diseases" value="После инсульта" />
-                  <label for="diseases-3">После инсульта</label>
-                </div>
-                <div class="select__item js-select-item">
-                  <input id="diseases-4" type="checkbox" name="diseases" value="После травм" />
-                  <label for="diseases-4">После травм</label>
-                </div>
-                <div class="select__item js-select-item">
-                  <input id="diseases-5" type="checkbox" name="diseases" value="Склероз" />
-                  <label for="diseases-5">Склероз</label>
-                </div>
-                <div class="select__item js-select-item">
-                  <input id="diseases-6" type="checkbox" name="diseases" value="Паркинскон" />
-                  <label for="diseases-6">Паркинскон</label>
-                </div>
-              </div>
+            <div class="maps__filter-item">
+              <span>Одноместные</span>
+              <button type="button">
+                <img src="@img/icons/icons.svg#close" alt="" />
+              </button>
             </div>
-          </fieldset>
-        </div>
-        <div class="maps__filter-items --mob">
-          <div class="maps__filter-item">
-            <span>Одноместные</span>
-            <button type="button">
-              <img src="@img/icons/icons.svg#close" alt="" />
+            <div class="maps__filter-item">
+              <span>Номера с ТВ</span>
+              <button type="button">
+                <img src="@img/icons/icons.svg#close" alt="" />
+              </button>
+            </div>
+            <div class="maps__filter-item">
+              <span>Одноместные</span>
+              <button type="button">
+                <img src="@img/icons/icons.svg#close" alt="" />
+              </button>
+            </div>
+          </div>
+          <div class="maps__filter-btns --mob">
+            <button class="btn btn-primary" type="submit" form="main-filter">
+              <span>Применить</span>
+            </button>
+            <button class="btn btn-tertiary" type="reset" form="main-filter">
+              <span>Сбросить</span>
+              <svg class="icon icon-arrow-hover-orange">
+                <use xlink:href="@img/icons/icons.svg#arrow-right"></use>
+              </svg>
             </button>
           </div>
-          <div class="maps__filter-item">
-            <span>Номера с ТВ</span>
-            <button type="button">
-              <img src="@img/icons/icons.svg#close" alt="" />
-            </button>
-          </div>
-          <div class="maps__filter-item">
-            <span>Одноместные</span>
-            <button type="button">
-              <img src="@img/icons/icons.svg#close" alt="" />
-            </button>
-          </div>
-          <div class="maps__filter-item">
-            <span>Номера с ТВ</span>
-            <button type="button">
-              <img src="@img/icons/icons.svg#close" alt="" />
-            </button>
-          </div>
-          <div class="maps__filter-item">
-            <span>Одноместные</span>
-            <button type="button">
-              <img src="@img/icons/icons.svg#close" alt="" />
-            </button>
-          </div>
-        </div>
-        <div class="maps__filter-btns --mob">
-          <button class="btn btn-primary" type="submit" form="main-filter">
-            <span>Применить</span>
-          </button>
-          <button class="btn btn-tertiary" type="reset" form="main-filter">
-            <span>Сбросить</span>
-            <svg class="icon icon-arrow-hover-orange">
-              <use xlink:href="@img/icons/icons.svg#arrow-right"></use>
-            </svg>
-          </button>
-        </div>
-      </form>
-    </div>
-    <div class="maps__content">
-      <div class="maps__list js-maps-list" data-content="list">
-        <div class="maps__list-items">
-          <div class="maps__list-item" data-board-list="board-1">
-            <div class="maps__list-item-header">
-              <div class="maps__list-item-header-img">
-                <img src="@img/boards/board-mayak.png" alt="mayak" />
-              </div>
-              <div class="maps__list-item-header-desc">
-                <a href="#" class="btn btn-tertiary">
-                  <span class="--desc">Дом престарелых «Маяк»</span>
-                  <span class="--mob">Частный дом престарелых Маяк в Раменском районе</span>
-                  <svg class="icon icon-arrow-hover-orange">
-                    <use xlink:href="@img/icons/icons.svg#arrow-right"></use>
-                  </svg>
-                </a>
-                <p>Город: Раменский</p>
-              </div>
-            </div>
-            <div class="maps__list-item-footer">
-              <div class="maps__list-item-footer-item">
-                <div class="maps__list-item-footer-item-img">
-                  <img src="@img/icons/icons.svg#phone-orange" alt="" />
-                </div>
-                <div class="maps__list-item-footer-item-text">+7 (499) 113-33-55</div>
-              </div>
-              <div class="maps__list-item-footer-item">
-                <div class="maps__list-item-footer-item-img">
-                  <img src="@img/icons/icons.svg#alarm" alt="" />
-                </div>
-                <div class="maps__list-item-footer-item-text">с 09:00 до 20:00</div>
-              </div>
-            </div>
-          </div>
-          <div class="maps__list-item" data-board-list="board-2">
-            <div class="maps__list-item-header">
-              <div class="maps__list-item-header-img">
-                <img src="@img/boards/board-moscow.png" alt="" />
-              </div>
-              <div class="maps__list-item-header-desc">
-                <a href="#" class="btn btn-tertiary">
-                  <span class="--desc">Пансионат Московский</span>
-                  <span class="--mob">Частный дом престарелых Московский в Москве</span>
-                  <svg class="icon icon-arrow-hover-orange">
-                    <use xlink:href="@img/icons/icons.svg#arrow-right"></use>
-                  </svg>
-                </a>
-                <p>Город: Москва</p>
-              </div>
-            </div>
-            <div class="maps__list-item-footer">
-              <div class="maps__list-item-footer-item">
-                <div class="maps__list-item-footer-item-img">
-                  <img src="@img/icons/icons.svg#phone-orange" alt="" />
-                </div>
-                <div class="maps__list-item-footer-item-text">+7 (499) 113-33-55</div>
-              </div>
-              <div class="maps__list-item-footer-item">
-                <div class="maps__list-item-footer-item-img">
-                  <img src="@img/icons/icons.svg#alarm" alt="" />
-                </div>
-                <div class="maps__list-item-footer-item-text">с 09:00 до 20:00</div>
-              </div>
-            </div>
-          </div>
-          <div class="maps__list-item" data-board-list="board-3">
-            <div class="maps__list-item-header">
-              <div class="maps__list-item-header-img">
-                <img src="@img/boards/board-mayak.png" alt="" />
-              </div>
-              <div class="maps__list-item-header-desc">
-                <a href="#" class="btn btn-tertiary">
-                  <span class="--desc">Дом престарелых «Химки»</span>
-                  <span class="--mob">Частный дом престарелых Маяк в Химках</span>
-                  <svg class="icon icon-arrow-hover-orange">
-                    <use xlink:href="@img/icons/icons.svg#arrow-right"></use>
-                  </svg>
-                </a>
-                <p>Город: Химки</p>
-              </div>
-            </div>
-            <div class="maps__list-item-footer">
-              <div class="maps__list-item-footer-item">
-                <div class="maps__list-item-footer-item-img">
-                  <img src="@img/icons/icons.svg#phone-orange" alt="" />
-                </div>
-                <div class="maps__list-item-footer-item-text">+7 (499) 113-33-55</div>
-              </div>
-              <div class="maps__list-item-footer-item">
-                <div class="maps__list-item-footer-item-img">
-                  <img src="@img/icons/icons.svg#alarm" alt="" />
-                </div>
-                <div class="maps__list-item-footer-item-text">с 09:00 до 20:00</div>
-              </div>
-            </div>
-          </div>
-          <div class="maps__list-item" data-board-list="board-4">
-            <div class="maps__list-item-header">
-              <div class="maps__list-item-header-img">
-                <img src="@img/boards/board-moscow.png" alt="" />
-              </div>
-              <div class="maps__list-item-header-desc">
-                <a href="#" class="btn btn-tertiary">
-                  <span class="--desc">Пансионат Бронинцы</span>
-                  <span class="--mob">Частный дом престарелых Бронинцы</span>
-                  <svg class="icon icon-arrow-hover-orange">
-                    <use xlink:href="@img/icons/icons.svg#arrow-right"></use>
-                  </svg>
-                </a>
-                <p>Город: Бронинцы</p>
-              </div>
-            </div>
-            <div class="maps__list-item-footer">
-              <div class="maps__list-item-footer-item">
-                <div class="maps__list-item-footer-item-img">
-                  <img src="@img/icons/icons.svg#phone-orange" alt="" />
-                </div>
-                <div class="maps__list-item-footer-item-text">+7 (499) 113-33-55</div>
-              </div>
-              <div class="maps__list-item-footer-item">
-                <div class="maps__list-item-footer-item-img">
-                  <img src="@img/icons/icons.svg#alarm" alt="" />
-                </div>
-                <div class="maps__list-item-footer-item-text">с 09:00 до 20:00</div>
-              </div>
-            </div>
-          </div>
-        </div>
+        </form>
       </div>
-      <div class="maps__maps js-maps-maps" data-content="map">
-        <div class="map" id="map">
-          <div class="map-descs">
-            <div class="map-desc" data-board-map="board-1">
-              <div class="map-desc__left">
-                <button type="button" class="map-desc__close js-balloon-close --mob">
-                  <img src="@img/icons/icons.svg#close-balloon" alt="close" />
-                </button>
-                <div class="map-desc__img --desc">
-                  <img src="@img/boards/map-desc.png" alt="" />
+      <div class="maps__content">
+        <div class="maps__list js-maps-list" data-content="list">
+          <div class="maps__list-items">
+            <div class="maps__list-item" data-board-list="board-1">
+              <div class="maps__list-item-header">
+                <div class="maps__list-item-header-img">
+                  <img src="@img/boards/board-mayak.png" alt="mayak" />
                 </div>
-                <div class="map-desc__img --mob">
-                  <img src="@img/boards/mayak-map.png" alt="" />
-                </div>
-                <div class="map-desc__desc">
-                  <a href="#" class="btn btn-tertiary --desc">
-                    <span>Дом престарелых «Маяк»</span>
+                <div class="maps__list-item-header-desc">
+                  <a href="#" class="btn btn-tertiary">
+                    <span class="--desc">Дом престарелых «Маяк»</span>
+                    <span class="--mob">Частный дом престарелых Маяк в Раменском районе</span>
                     <svg class="icon icon-arrow-hover-orange">
                       <use xlink:href="@img/icons/icons.svg#arrow-right"></use>
                     </svg>
                   </a>
-                  <div class="map-desc__desc-title --mob">Дом престарелых «Маяк»</div>
-                  <div class="map-desc__desc-text --desc">Частный дом престарелых Маяк в Раменском районе</div>
-                  <div class="map-desc__desc-address --mob">Посёлок Раменской Агрохимстанции, 5Д</div>
+                  <p>Город: Раменский</p>
                 </div>
               </div>
-              <div class="map-desc__icons">
-                <div class="map-desc__items">
-                  <div class="map-desc__item">
-                    <img src="@img/icons/icons.svg#rehabilitation" alt="" />
-                    <span>Реабилитация</span>
+              <div class="maps__list-item-footer">
+                <div class="maps__list-item-footer-item">
+                  <div class="maps__list-item-footer-item-img">
+                    <img src="@img/icons/icons.svg#phone-orange" alt="" />
                   </div>
-                  <div class="map-desc__item">
-                    <img src="@img/icons/icons.svg#infrastructure" alt="" />
-                    <span>Инфраструктура для колясочников</span>
-                  </div>
-                  <div class="map-desc__item">
-                    <img src="@img/icons/icons.svg#bathrooms" alt="" />
-                    <span>Санузлы для инвалидов</span>
-                  </div>
-                  <div class="map-desc__item">
-                    <img src="@img/icons/icons.svg#care" alt="" />
-                    <span>Уход за пожилыми с деменцией</span>
-                  </div>
-                  <div class="map-desc__item">
-                    <img src="@img/icons/icons.svg#supervision" alt="" />
-                    <span>Медицинский присмотр</span>
-                  </div>
-                  <div class="map-desc__item">
-                    <img src="@img/icons/icons.svg#recovery" alt="" />
-                    <span>Восстановление после инсульта</span>
-                  </div>
+                  <div class="maps__list-item-footer-item-text">+7 (499) 113-33-55</div>
                 </div>
-                <div class="map-desc__number --mob">+5</div>
+                <div class="maps__list-item-footer-item">
+                  <div class="maps__list-item-footer-item-img">
+                    <img src="@img/icons/icons.svg#alarm" alt="" />
+                  </div>
+                  <div class="maps__list-item-footer-item-text">с 09:00 до 20:00</div>
+                </div>
               </div>
-              <a href="#" class="map-desc__btn btn btn-tertiary --mob">
-                <span>Подробнее</span>
-                <svg class="icon icon-arrow-hover-orange">
-                  <use xlink:href="@img/icons/icons.svg#arrow-right"></use>
-                </svg>
-              </a>
             </div>
-            <div class="map-desc" data-board-map="board-2">
-              <div class="map-desc__left">
-                <button type="button" class="map-desc__close js-balloon-close --mob">
-                  <img src="@img/icons/icons.svg#close-balloon" alt="close" />
-                </button>
-                <div class="map-desc__img --desc">
-                  <img src="@img/boards/map-desc.png" alt="" />
+            <div class="maps__list-item" data-board-list="board-2">
+              <div class="maps__list-item-header">
+                <div class="maps__list-item-header-img">
+                  <img src="@img/boards/board-moscow.png" alt="" />
                 </div>
-                <div class="map-desc__img --mob">
-                  <img src="@img/boards/mayak-map.png" alt="" />
-                </div>
-                <div class="map-desc__desc">
-                  <a href="#" class="btn btn-tertiary --desc">
-                    <span>Пансионат Московский</span>
+                <div class="maps__list-item-header-desc">
+                  <a href="#" class="btn btn-tertiary">
+                    <span class="--desc">Пансионат Московский</span>
+                    <span class="--mob">Частный дом престарелых Московский в Москве</span>
                     <svg class="icon icon-arrow-hover-orange">
                       <use xlink:href="@img/icons/icons.svg#arrow-right"></use>
                     </svg>
                   </a>
-                  <div class="map-desc__desc-title --mob">Пансионат Московский</div>
-                  <div class="map-desc__desc-text --desc">
-                    Частный дом престарелых Московский в Москве предлагает комфортное размещение для пожилых людей и
-                    инвалидов.
-                  </div>
-                  <div class="map-desc__desc-address --mob">город Москва</div>
+                  <p>Город: Москва</p>
                 </div>
               </div>
-              <div class="map-desc__icons">
-                <div class="map-desc__items">
-                  <div class="map-desc__item">
-                    <img src="@img/icons/icons.svg#rehabilitation" alt="" />
-                    <span>Реабилитация</span>
+              <div class="maps__list-item-footer">
+                <div class="maps__list-item-footer-item">
+                  <div class="maps__list-item-footer-item-img">
+                    <img src="@img/icons/icons.svg#phone-orange" alt="" />
                   </div>
-                  <div class="map-desc__item">
-                    <img src="@img/icons/icons.svg#infrastructure" alt="" />
-                    <span>Инфраструктура для колясочников</span>
-                  </div>
-                  <div class="map-desc__item">
-                    <img src="@img/icons/icons.svg#bathrooms" alt="" />
-                    <span>Санузлы для инвалидов</span>
-                  </div>
-                  <div class="map-desc__item">
-                    <img src="@img/icons/icons.svg#care" alt="" />
-                    <span>Уход за пожилыми с деменцией</span>
-                  </div>
-                  <div class="map-desc__item">
-                    <img src="@img/icons/icons.svg#supervision" alt="" />
-                    <span>Медицинский присмотр</span>
-                  </div>
-                  <div class="map-desc__item">
-                    <img src="@img/icons/icons.svg#recovery" alt="" />
-                    <span>Восстановление после инсульта</span>
-                  </div>
+                  <div class="maps__list-item-footer-item-text">+7 (499) 113-33-55</div>
                 </div>
-                <div class="map-desc__number --mob">+5</div>
+                <div class="maps__list-item-footer-item">
+                  <div class="maps__list-item-footer-item-img">
+                    <img src="@img/icons/icons.svg#alarm" alt="" />
+                  </div>
+                  <div class="maps__list-item-footer-item-text">с 09:00 до 20:00</div>
+                </div>
               </div>
-              <a href="#" class="map-desc__btn btn btn-tertiary --mob">
-                <span>Подробнее</span>
-                <svg class="icon icon-arrow-hover-orange">
-                  <use xlink:href="@img/icons/icons.svg#arrow-right"></use>
-                </svg>
-              </a>
             </div>
-            <div class="map-desc" data-board-map="board-3">
-              <div class="map-desc__left">
-                <button type="button" class="map-desc__close js-balloon-close --mob">
-                  <img src="@img/icons/icons.svg#close-balloon" alt="close" />
-                </button>
-                <div class="map-desc__img --desc">
-                  <img src="@img/boards/map-desc.png" alt="" />
+            <div class="maps__list-item" data-board-list="board-3">
+              <div class="maps__list-item-header">
+                <div class="maps__list-item-header-img">
+                  <img src="@img/boards/board-mayak.png" alt="" />
                 </div>
-                <div class="map-desc__img --mob">
-                  <img src="@img/boards/mayak-map.png" alt="" />
-                </div>
-                <div class="map-desc__desc">
-                  <a href="#" class="btn btn-tertiary --desc">
-                    <span>Дом престарелых "Маяк"</span>
+                <div class="maps__list-item-header-desc">
+                  <a href="#" class="btn btn-tertiary">
+                    <span class="--desc">Дом престарелых «Химки»</span>
+                    <span class="--mob">Частный дом престарелых Маяк в Химках</span>
                     <svg class="icon icon-arrow-hover-orange">
                       <use xlink:href="@img/icons/icons.svg#arrow-right"></use>
                     </svg>
                   </a>
-                  <div class="map-desc__desc-title --mob">Пансионат Бронинцы</div>
-                  <div class="map-desc__desc-text --desc">
-                    Частный дом престарелых Химки в Химках предлагает комфортное размещение для пожилых людей и
-                    инвалидов.
-                  </div>
-                  <div class="map-desc__desc-address --mob">город Химки</div>
+                  <p>Город: Химки</p>
                 </div>
               </div>
-              <div class="map-desc__icons">
-                <div class="map-desc__items">
-                  <div class="map-desc__item">
-                    <img src="@img/icons/icons.svg#rehabilitation" alt="" />
-                    <span>Реабилитация</span>
+              <div class="maps__list-item-footer">
+                <div class="maps__list-item-footer-item">
+                  <div class="maps__list-item-footer-item-img">
+                    <img src="@img/icons/icons.svg#phone-orange" alt="" />
                   </div>
-                  <div class="map-desc__item">
-                    <img src="@img/icons/icons.svg#infrastructure" alt="" />
-                    <span>Инфраструктура для колясочников</span>
-                  </div>
-                  <div class="map-desc__item">
-                    <img src="@img/icons/icons.svg#bathrooms" alt="" />
-                    <span>Санузлы для инвалидов</span>
-                  </div>
-                  <div class="map-desc__item">
-                    <img src="@img/icons/icons.svg#care" alt="" />
-                    <span>Уход за пожилыми с деменцией</span>
-                  </div>
-                  <div class="map-desc__item">
-                    <img src="@img/icons/icons.svg#supervision" alt="" />
-                    <span>Медицинский присмотр</span>
-                  </div>
-                  <div class="map-desc__item">
-                    <img src="@img/icons/icons.svg#recovery" alt="" />
-                    <span>Восстановление после инсульта</span>
-                  </div>
+                  <div class="maps__list-item-footer-item-text">+7 (499) 113-33-55</div>
                 </div>
-                <div class="map-desc__number --mob">+5</div>
+                <div class="maps__list-item-footer-item">
+                  <div class="maps__list-item-footer-item-img">
+                    <img src="@img/icons/icons.svg#alarm" alt="" />
+                  </div>
+                  <div class="maps__list-item-footer-item-text">с 09:00 до 20:00</div>
+                </div>
               </div>
-              <a href="#" class="map-desc__btn btn btn-tertiary --mob">
-                <span>Подробнее</span>
-                <svg class="icon icon-arrow-hover-orange">
-                  <use xlink:href="@img/icons/icons.svg#arrow-right"></use>
-                </svg>
-              </a>
             </div>
-            <div class="map-desc" data-board-map="board-4">
-              <div class="map-desc__left">
-                <button type="button" class="map-desc__close js-balloon-close --mob">
-                  <img src="@img/icons/icons.svg#close-balloon" alt="close" />
-                </button>
-                <div class="map-desc__img --desc">
-                  <img src="@img/boards/map-desc.png" alt="" />
+            <div class="maps__list-item" data-board-list="board-4">
+              <div class="maps__list-item-header">
+                <div class="maps__list-item-header-img">
+                  <img src="@img/boards/board-moscow.png" alt="" />
                 </div>
-                <div class="map-desc__img --mob">
-                  <img src="@img/boards/mayak-map.png" alt="" />
-                </div>
-                <div class="map-desc__desc">
-                  <a href="#" class="btn btn-tertiary --desc">
-                    <span>Пансионат Бронинцы</span>
+                <div class="maps__list-item-header-desc">
+                  <a href="#" class="btn btn-tertiary">
+                    <span class="--desc">Пансионат Бронинцы</span>
+                    <span class="--mob">Частный дом престарелых Бронинцы</span>
                     <svg class="icon icon-arrow-hover-orange">
                       <use xlink:href="@img/icons/icons.svg#arrow-right"></use>
                     </svg>
                   </a>
-                  <div class="map-desc__desc-title --mob">Пансионат Бронинцы</div>
-                  <div class="map-desc__desc-text --desc">
-                    Частный дом престарелых Броннинцы в Бронинцах предлагает комфортное размещение для пожилых людей и
-                    инвалидов.
-                  </div>
-                  <div class="map-desc__desc-address --mob">город Бронинцы</div>
+                  <p>Город: Бронинцы</p>
                 </div>
               </div>
-              <div class="map-desc__icons">
-                <div class="map-desc__items">
-                  <div class="map-desc__item">
-                    <img src="@img/icons/icons.svg#rehabilitation" alt="" />
-                    <span>Реабилитация</span>
+              <div class="maps__list-item-footer">
+                <div class="maps__list-item-footer-item">
+                  <div class="maps__list-item-footer-item-img">
+                    <img src="@img/icons/icons.svg#phone-orange" alt="" />
                   </div>
-                  <div class="map-desc__item">
-                    <img src="@img/icons/icons.svg#infrastructure" alt="" />
-                    <span>Инфраструктура для колясочников</span>
+                  <div class="maps__list-item-footer-item-text">+7 (499) 113-33-55</div>
+                </div>
+                <div class="maps__list-item-footer-item">
+                  <div class="maps__list-item-footer-item-img">
+                    <img src="@img/icons/icons.svg#alarm" alt="" />
                   </div>
-                  <div class="map-desc__item">
-                    <img src="@img/icons/icons.svg#bathrooms" alt="" />
-                    <span>Санузлы для инвалидов</span>
+                  <div class="maps__list-item-footer-item-text">с 09:00 до 20:00</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="maps__maps js-maps-maps" data-content="map">
+          <div class="map" id="map">
+            <div class="map-descs">
+              <div class="map-desc" data-board-map="board-1">
+                <div class="map-desc__left">
+                  <button type="button" class="map-desc__close js-balloon-close --mob">
+                    <img src="@img/icons/icons.svg#close-balloon" alt="close" />
+                  </button>
+                  <div class="map-desc__img --desc">
+                    <img src="@img/boards/map-desc.png" alt="" />
                   </div>
-                  <div class="map-desc__item">
-                    <img src="@img/icons/icons.svg#care" alt="" />
-                    <span>Уход за пожилыми с деменцией</span>
+                  <div class="map-desc__img --mob">
+                    <img src="@img/boards/mayak-map.png" alt="" />
                   </div>
-                  <div class="map-desc__item">
-                    <img src="@img/icons/icons.svg#supervision" alt="" />
-                    <span>Медицинский присмотр</span>
-                  </div>
-                  <div class="map-desc__item">
-                    <img src="@img/icons/icons.svg#recovery" alt="" />
-                    <span>Восстановление после инсульта</span>
+                  <div class="map-desc__desc">
+                    <a href="#" class="btn btn-tertiary --desc">
+                      <span>Дом престарелых «Маяк»</span>
+                      <svg class="icon icon-arrow-hover-orange">
+                        <use xlink:href="@img/icons/icons.svg#arrow-right"></use>
+                      </svg>
+                    </a>
+                    <div class="map-desc__desc-title --mob">Дом престарелых «Маяк»</div>
+                    <div class="map-desc__desc-text --desc">Частный дом престарелых Маяк в Раменском районе</div>
+                    <div class="map-desc__desc-address --mob">Посёлок Раменской Агрохимстанции, 5Д</div>
                   </div>
                 </div>
-                <div class="map-desc__number --mob">+5</div>
+                <div class="map-desc__icons">
+                  <div class="map-desc__items">
+                    <div class="map-desc__item">
+                      <img src="@img/icons/icons.svg#rehabilitation" alt="" />
+                      <span>Реабилитация</span>
+                    </div>
+                    <div class="map-desc__item">
+                      <img src="@img/icons/icons.svg#infrastructure" alt="" />
+                      <span>Инфраструктура для колясочников</span>
+                    </div>
+                    <div class="map-desc__item">
+                      <img src="@img/icons/icons.svg#bathrooms" alt="" />
+                      <span>Санузлы для инвалидов</span>
+                    </div>
+                    <div class="map-desc__item">
+                      <img src="@img/icons/icons.svg#care" alt="" />
+                      <span>Уход за пожилыми с деменцией</span>
+                    </div>
+                    <div class="map-desc__item">
+                      <img src="@img/icons/icons.svg#supervision" alt="" />
+                      <span>Медицинский присмотр</span>
+                    </div>
+                    <div class="map-desc__item">
+                      <img src="@img/icons/icons.svg#recovery" alt="" />
+                      <span>Восстановление после инсульта</span>
+                    </div>
+                  </div>
+                  <div class="map-desc__number --mob">+5</div>
+                </div>
+                <a href="#" class="map-desc__btn btn btn-tertiary --mob">
+                  <span>Подробнее</span>
+                  <svg class="icon icon-arrow-hover-orange">
+                    <use xlink:href="@img/icons/icons.svg#arrow-right"></use>
+                  </svg>
+                </a>
               </div>
-              <a href="#" class="map-desc__btn btn btn-tertiary --mob">
-                <span>Подробнее</span>
-                <svg class="icon icon-arrow-hover-orange">
-                  <use xlink:href="@img/icons/icons.svg#arrow-right"></use>
-                </svg>
-              </a>
+              <div class="map-desc" data-board-map="board-2">
+                <div class="map-desc__left">
+                  <button type="button" class="map-desc__close js-balloon-close --mob">
+                    <img src="@img/icons/icons.svg#close-balloon" alt="close" />
+                  </button>
+                  <div class="map-desc__img --desc">
+                    <img src="@img/boards/map-desc.png" alt="" />
+                  </div>
+                  <div class="map-desc__img --mob">
+                    <img src="@img/boards/mayak-map.png" alt="" />
+                  </div>
+                  <div class="map-desc__desc">
+                    <a href="#" class="btn btn-tertiary --desc">
+                      <span>Пансионат Московский</span>
+                      <svg class="icon icon-arrow-hover-orange">
+                        <use xlink:href="@img/icons/icons.svg#arrow-right"></use>
+                      </svg>
+                    </a>
+                    <div class="map-desc__desc-title --mob">Пансионат Московский</div>
+                    <div class="map-desc__desc-text --desc">
+                      Частный дом престарелых Московский в Москве предлагает комфортное размещение для пожилых людей и
+                      инвалидов.
+                    </div>
+                    <div class="map-desc__desc-address --mob">город Москва</div>
+                  </div>
+                </div>
+                <div class="map-desc__icons">
+                  <div class="map-desc__items">
+                    <div class="map-desc__item">
+                      <img src="@img/icons/icons.svg#rehabilitation" alt="" />
+                      <span>Реабилитация</span>
+                    </div>
+                    <div class="map-desc__item">
+                      <img src="@img/icons/icons.svg#infrastructure" alt="" />
+                      <span>Инфраструктура для колясочников</span>
+                    </div>
+                    <div class="map-desc__item">
+                      <img src="@img/icons/icons.svg#bathrooms" alt="" />
+                      <span>Санузлы для инвалидов</span>
+                    </div>
+                    <div class="map-desc__item">
+                      <img src="@img/icons/icons.svg#care" alt="" />
+                      <span>Уход за пожилыми с деменцией</span>
+                    </div>
+                    <div class="map-desc__item">
+                      <img src="@img/icons/icons.svg#supervision" alt="" />
+                      <span>Медицинский присмотр</span>
+                    </div>
+                    <div class="map-desc__item">
+                      <img src="@img/icons/icons.svg#recovery" alt="" />
+                      <span>Восстановление после инсульта</span>
+                    </div>
+                  </div>
+                  <div class="map-desc__number --mob">+5</div>
+                </div>
+                <a href="#" class="map-desc__btn btn btn-tertiary --mob">
+                  <span>Подробнее</span>
+                  <svg class="icon icon-arrow-hover-orange">
+                    <use xlink:href="@img/icons/icons.svg#arrow-right"></use>
+                  </svg>
+                </a>
+              </div>
+              <div class="map-desc" data-board-map="board-3">
+                <div class="map-desc__left">
+                  <button type="button" class="map-desc__close js-balloon-close --mob">
+                    <img src="@img/icons/icons.svg#close-balloon" alt="close" />
+                  </button>
+                  <div class="map-desc__img --desc">
+                    <img src="@img/boards/map-desc.png" alt="" />
+                  </div>
+                  <div class="map-desc__img --mob">
+                    <img src="@img/boards/mayak-map.png" alt="" />
+                  </div>
+                  <div class="map-desc__desc">
+                    <a href="#" class="btn btn-tertiary --desc">
+                      <span>Дом престарелых "Маяк"</span>
+                      <svg class="icon icon-arrow-hover-orange">
+                        <use xlink:href="@img/icons/icons.svg#arrow-right"></use>
+                      </svg>
+                    </a>
+                    <div class="map-desc__desc-title --mob">Пансионат Бронинцы</div>
+                    <div class="map-desc__desc-text --desc">
+                      Частный дом престарелых Химки в Химках предлагает комфортное размещение для пожилых людей и
+                      инвалидов.
+                    </div>
+                    <div class="map-desc__desc-address --mob">город Химки</div>
+                  </div>
+                </div>
+                <div class="map-desc__icons">
+                  <div class="map-desc__items">
+                    <div class="map-desc__item">
+                      <img src="@img/icons/icons.svg#rehabilitation" alt="" />
+                      <span>Реабилитация</span>
+                    </div>
+                    <div class="map-desc__item">
+                      <img src="@img/icons/icons.svg#infrastructure" alt="" />
+                      <span>Инфраструктура для колясочников</span>
+                    </div>
+                    <div class="map-desc__item">
+                      <img src="@img/icons/icons.svg#bathrooms" alt="" />
+                      <span>Санузлы для инвалидов</span>
+                    </div>
+                    <div class="map-desc__item">
+                      <img src="@img/icons/icons.svg#care" alt="" />
+                      <span>Уход за пожилыми с деменцией</span>
+                    </div>
+                    <div class="map-desc__item">
+                      <img src="@img/icons/icons.svg#supervision" alt="" />
+                      <span>Медицинский присмотр</span>
+                    </div>
+                    <div class="map-desc__item">
+                      <img src="@img/icons/icons.svg#recovery" alt="" />
+                      <span>Восстановление после инсульта</span>
+                    </div>
+                  </div>
+                  <div class="map-desc__number --mob">+5</div>
+                </div>
+                <a href="#" class="map-desc__btn btn btn-tertiary --mob">
+                  <span>Подробнее</span>
+                  <svg class="icon icon-arrow-hover-orange">
+                    <use xlink:href="@img/icons/icons.svg#arrow-right"></use>
+                  </svg>
+                </a>
+              </div>
+              <div class="map-desc" data-board-map="board-4">
+                <div class="map-desc__left">
+                  <button type="button" class="map-desc__close js-balloon-close --mob">
+                    <img src="@img/icons/icons.svg#close-balloon" alt="close" />
+                  </button>
+                  <div class="map-desc__img --desc">
+                    <img src="@img/boards/map-desc.png" alt="" />
+                  </div>
+                  <div class="map-desc__img --mob">
+                    <img src="@img/boards/mayak-map.png" alt="" />
+                  </div>
+                  <div class="map-desc__desc">
+                    <a href="#" class="btn btn-tertiary --desc">
+                      <span>Пансионат Бронинцы</span>
+                      <svg class="icon icon-arrow-hover-orange">
+                        <use xlink:href="@img/icons/icons.svg#arrow-right"></use>
+                      </svg>
+                    </a>
+                    <div class="map-desc__desc-title --mob">Пансионат Бронинцы</div>
+                    <div class="map-desc__desc-text --desc">
+                      Частный дом престарелых Броннинцы в Бронинцах предлагает комфортное размещение для пожилых людей и
+                      инвалидов.
+                    </div>
+                    <div class="map-desc__desc-address --mob">город Бронинцы</div>
+                  </div>
+                </div>
+                <div class="map-desc__icons">
+                  <div class="map-desc__items">
+                    <div class="map-desc__item">
+                      <img src="@img/icons/icons.svg#rehabilitation" alt="" />
+                      <span>Реабилитация</span>
+                    </div>
+                    <div class="map-desc__item">
+                      <img src="@img/icons/icons.svg#infrastructure" alt="" />
+                      <span>Инфраструктура для колясочников</span>
+                    </div>
+                    <div class="map-desc__item">
+                      <img src="@img/icons/icons.svg#bathrooms" alt="" />
+                      <span>Санузлы для инвалидов</span>
+                    </div>
+                    <div class="map-desc__item">
+                      <img src="@img/icons/icons.svg#care" alt="" />
+                      <span>Уход за пожилыми с деменцией</span>
+                    </div>
+                    <div class="map-desc__item">
+                      <img src="@img/icons/icons.svg#supervision" alt="" />
+                      <span>Медицинский присмотр</span>
+                    </div>
+                    <div class="map-desc__item">
+                      <img src="@img/icons/icons.svg#recovery" alt="" />
+                      <span>Восстановление после инсульта</span>
+                    </div>
+                  </div>
+                  <div class="map-desc__number --mob">+5</div>
+                </div>
+                <a href="#" class="map-desc__btn btn btn-tertiary --mob">
+                  <span>Подробнее</span>
+                  <svg class="icon icon-arrow-hover-orange">
+                    <use xlink:href="@img/icons/icons.svg#arrow-right"></use>
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
         </div>

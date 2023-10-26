@@ -7,7 +7,7 @@
   position: relative;
 
   &-bg {
-    @include sizes(90%, 91.2rem);
+    @include sizes(91%, 91.2rem);
     background-image: url('@img/main/baner.png');
     background-size: cover;
     position: absolute;
@@ -172,7 +172,7 @@
     }
 
     &__container {
-      padding: 6rem 3.2rem 0 3.2rem;
+      padding: 6rem 0 0 0;
       flex-direction: column;
     }
 
@@ -247,7 +247,7 @@
 
     &__center {
       @include sizes($height: 100%);
-      margin-top: 47.4rem;
+      margin-top: 48.4rem;
       position: static;
       padding: 4.8rem 3.2rem;
       border-radius: 4rem;
@@ -273,6 +273,7 @@
 
       .btn-primary {
         margin-top: 1rem;
+        width: 48rem;
       }
     }
 

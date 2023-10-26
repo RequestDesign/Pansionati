@@ -45,6 +45,7 @@
     @extend %flexColumn;
     align-items: flex-end;
     flex-direction: column-reverse;
+    margin-top: -2rem;
 
     .phones__phone-numbers {
       text-align: start;
@@ -64,11 +65,12 @@
     }
 
     &__menu {
-      column-gap: 6.4rem;
+      column-gap: 7.4rem;
     }
 
     &__items {
       row-gap: 2.4rem;
+      width: 39%;
     }
 
     &__left {
@@ -86,7 +88,7 @@
       flex-direction: row;
       width: 100%;
       justify-content: space-between;
-      margin-top: 5.6rem;
+      margin-top: 4.6rem;
     }
 
     .btn-tertiary {
@@ -94,6 +96,7 @@
       position: absolute;
       bottom: 21rem;
       left: 3.2rem;
+      padding: 0 1rem;
     }
   }
 }
