@@ -105,6 +105,7 @@
         .btn-round {
           background: rgba(182, 194, 207, 0.15);
           border-color: transparent;
+          @include sizes(9.6rem, 9.6rem);
 
           img {
             @include sizes(4.8rem, 4.8rem);
@@ -118,7 +119,11 @@
       }
 
       .select__value {
-        margin-right: 1rem;
+        flex-shrink: 0;
+      }
+
+      .select__header {
+        justify-content: flex-start;
       }
 
       .phones {
@@ -142,7 +147,7 @@
       }
 
       .btn-primary {
-        width: 52.6rem;
+        width: 54rem;
       }
     }
 
@@ -164,7 +169,7 @@
     &__region-title {
       font-size: 3rem;
       line-height: 130%;
-      margin-right: 2.4rem;
+      margin-right: 3rem;
     }
 
     &__burger {

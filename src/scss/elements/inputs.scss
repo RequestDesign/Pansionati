@@ -24,7 +24,7 @@
   .input {
     @include sizes();
     border-radius: 12rem;
-    column-gap: 2rem;
+    column-gap: 0.8rem;
     padding: 2.3rem 4rem;
     justify-content: flex-start;
 

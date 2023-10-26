@@ -39,7 +39,7 @@
   }
 
   &__substract {
-    @include sizes(100%, 39.3rem);
+    @include sizes(100%, 39rem);
     position: absolute;
     bottom: 0;
     left: 0;
@@ -72,7 +72,7 @@
     }
 
     &__title {
-      margin-bottom: 5.6rem;
+      margin-bottom: 4.6rem;
       display: block;
       padding: 0 4.27vw;
     }
