@@ -1,20 +1,19 @@
-input[type='file'] {
-  display: none;
-}
-
-.input {
-  @extend %flexCenterBetween;
-  border-radius: 6rem;
+.textarea {
+  @extend %flexCenterStart;
+  align-items: flex-start;
+  border-radius: 3.8rem;
   background: $white;
   column-gap: 1rem;
   border: 0.1rem solid transparent;
   padding: 2.2rem 2rem 2.2rem 3rem;
 
-  input {
+  textarea {
     @extend %textBold18;
-    width: 30.6rem;
+    padding-right: 1.5rem;
+    width: 94%;
     border: 0;
     flex-shrink: 0;
+    resize: none;
 
     &::placeholder {
       color: $grey;
@@ -23,11 +22,10 @@ input[type='file'] {
   }
 }
 
-//------------Mob---------------//
 @media screen and (max-width: 48em) {
-  .input {
+  .textarea {
     @include sizes();
-    border-radius: 12rem;
+    border-radius: 4rem;
     column-gap: 0.8rem;
     padding: 2.3rem 4rem;
     justify-content: flex-start;
@@ -36,7 +34,11 @@ input[type='file'] {
       @include sizes(4.8rem, 4.8rem);
     }
 
-    input {
+    .icon {
+      margin-top: -1rem;
+    }
+
+    textarea {
       width: 90%;
       font-size: 3rem;
     }

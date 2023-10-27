@@ -1,5 +1,6 @@
 .icon {
   @include sizes(2.4rem, 2.4rem);
+  flex-shrink: 0;
 
   &-arrow-hover-orange,
   &-arrow-hover-white,
