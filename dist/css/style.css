@@ -1168,7 +1168,7 @@ template {
 .maps__list-item-footer-item-img svg,
 .desc__img-capas img,
 .services__img img,
-.cost__container::after,
+.baner-form__container::after,
 .question__container::after,
 .modal__content-close img,
 .modal,
@@ -1197,6 +1197,7 @@ template {
 }
 
 body,
+.offers__plush,
 .add__form-inputs,
 .blog-card,
 .boards-swipers__container,
@@ -1206,7 +1207,6 @@ body,
 .desc__imgs,
 .desc__desc,
 .services__items,
-.cost__desc,
 .baner__doctor,
 .baner__count-number,
 .baner__count-boards,
@@ -1214,6 +1214,7 @@ body,
 .baner__desc,
 .baner__titles,
 .baner__left,
+.baner-form__desc,
 .question__container,
 .footer__phones,
 .footer__items,
@@ -1225,6 +1226,7 @@ body,
   flex-direction: column;
 }
 
+.offers__item-circle,
 .select-house__item-circle,
 .awards__circle,
 .question__container,
@@ -1247,6 +1249,7 @@ body,
   justify-content: center;
 }
 
+.help__container,
 .blog-card__top,
 .boards-swipers__titles,
 .maps__list-item-footer-item,
@@ -1260,11 +1263,11 @@ body,
 .blog__items,
 .blog__title,
 .services__container,
-.cost__container,
 .awards__list,
 .baner__form,
 .baner__btns,
 .baner__container,
+.baner-form__container,
 .question__form,
 .footer__container,
 .header__panel,
@@ -1299,19 +1302,27 @@ body,
   justify-content: center;
 }
 
+.offers__item,
+.offers__container,
 .add__form-btns,
 .blog-cards__items,
 .blog-cards__btns,
 .favorites__cards,
 .maps__list-item-header,
 .services__item,
-.cost__form,
 .baner__desc-btns,
+.baner-form__form,
 .textarea,
 .breadcrumbs__container {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+}
+
+.help__picture {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
 .blog-card__tem,
@@ -1355,6 +1366,9 @@ body,
   line-height: 2.4rem;
 }
 
+.about__desc p,
+.offers__item-txt,
+.help__text p,
 .blog-card__text,
 .blog-cards__btns .btn-primary span,
 .select-house__item-text,
@@ -1362,7 +1376,7 @@ body,
 .blog__data,
 .desc__desc p,
 .services__item,
-.cost__desc-text,
+.baner-form__desc-text,
 .footer__link,
 .header__region-title,
 .breadcrumbs a,
@@ -1377,6 +1391,7 @@ body,
   line-height: 2.4rem;
 }
 
+.offers__plush-txt,
 .services__text,
 .baner__count-number span:last-child,
 .baner__text,
@@ -1420,6 +1435,8 @@ body,
 }
 
 .title-h3,
+.offers__plush-tit,
+.help__txt,
 .blog-card__title {
   font-size: 2.4rem;
   font-weight: 700;
@@ -1433,7 +1450,9 @@ body,
   text-transform: uppercase;
 }
 
-.title {
+.title,
+.offers__title,
+.help__title {
   font-size: 6rem;
   font-weight: 700;
   line-height: 105%;
@@ -2932,6 +2951,73 @@ input[type=file] {
   padding: 13.5rem;
 }
 
+.baner-form {
+  margin-top: 20.5rem;
+}
+
+.baner-form__container {
+  -moz-column-gap: 9.4rem;
+       column-gap: 9.4rem;
+  border-radius: 3rem;
+  background: rgba(182, 194, 207, 0.15);
+  -webkit-backdrop-filter: blur(2rem);
+          backdrop-filter: blur(2rem);
+  padding: 9rem;
+  position: relative;
+}
+
+.no-webp .baner-form__container::after {
+  background: url("@img/bg/baner-bg-2.png") no-repeat; }
+
+.baner-form__container::after {
+  content: "";
+  background-size: cover;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 3rem;
+  z-index: -1;
+}
+
+.baner-form__desc {
+  align-items: center;
+}
+
+.baner-form__desc-text {
+  margin: 0 auto 3rem 0;
+  max-width: 48rem;
+}
+
+.baner-form__form {
+  -moz-column-gap: 3rem;
+       column-gap: 3rem;
+  width: 100%;
+}
+
+.baner-form__img {
+  width: 51rem;
+  height: 45rem;
+  position: absolute;
+  bottom: 0;
+  right: 9rem;
+}
+
+.baner-form .title {
+  margin-bottom: 2rem;
+}
+
+.baner-form .input input {
+  width: 34rem;
+}
+
+.baner-form--about {
+  margin: 17rem 0;
+}
+
+.baner-form--about .baner-form__desc-text {
+  max-width: 91rem;
+}
+
 .webp .baner-bg {
   background-size: contain;
 }
@@ -3169,64 +3255,6 @@ input[type=file] {
 .awards .btn-tertiary svg {
   vertical-align: middle;
   margin-top: -0.5rem;
-}
-
-.cost {
-  margin-top: 20.5rem;
-}
-
-.cost__container {
-  -moz-column-gap: 9.4rem;
-       column-gap: 9.4rem;
-  border-radius: 3rem;
-  background: rgba(182, 194, 207, 0.15);
-  -webkit-backdrop-filter: blur(2rem);
-          backdrop-filter: blur(2rem);
-  padding: 9rem;
-  position: relative;
-}
-
-.no-webp .cost__container::after {
-  background: url("@img/bg/baner-bg-2.png") no-repeat; }
-
-.cost__container::after {
-  content: "";
-  background-size: cover;
-  position: absolute;
-  left: 0;
-  top: 0;
-  border-radius: 3rem;
-  z-index: -1;
-}
-
-.cost__desc {
-  align-items: center;
-}
-
-.cost__desc-text {
-  margin: 0 auto 3rem 0;
-  max-width: 48rem;
-}
-
-.cost__form {
-  -moz-column-gap: 3rem;
-       column-gap: 3rem;
-}
-
-.cost__img {
-  width: 51rem;
-  height: 45rem;
-  position: absolute;
-  bottom: 0;
-  right: 9rem;
-}
-
-.cost .title {
-  margin-bottom: 2rem;
-}
-
-.cost .input input {
-  width: 34rem;
 }
 
 .services {
@@ -3747,6 +3775,185 @@ input[type=file] {
   width: 33.4rem;
 }
 
+.help__container {
+  -moz-column-gap: 19.8rem;
+       column-gap: 19.8rem;
+}
+
+.help__desc {
+  max-width: 81rem;
+  flex-shrink: 0;
+}
+
+.help__title {
+  margin-bottom: 2rem;
+}
+
+.help__text p {
+  color: #8b8d95;
+}
+
+.help__text p:not(:last-child) {
+  margin-bottom: 3rem;
+}
+
+.help__picture {
+  padding: 2rem 3.4rem 0 5rem;
+  flex-shrink: 0;
+  border-radius: 3rem;
+  background: linear-gradient(151deg, #2ecdf0 9.04%, rgba(46, 205, 240, 0.24) 116.35%);
+}
+
+.help__txt {
+  color: #ffffff;
+  max-width: 32.8rem;
+  flex-shrink: 0;
+  margin: 5.7rem -3rem 0 0;
+}
+
+.help__img {
+  width: 31rem;
+  height: 28rem;
+}
+
+.offers {
+  margin-top: 17rem;
+}
+
+.offers__container {
+  -moz-column-gap: 15.7rem;
+       column-gap: 15.7rem;
+}
+
+.offers__title {
+  margin-bottom: 2rem;
+}
+
+.offers__desc {
+  width: 79.7rem;
+  flex-shrink: 0;
+}
+
+.offers__item {
+  -moz-column-gap: 1.6rem;
+       column-gap: 1.6rem;
+}
+
+.offers__item:not(:last-child) {
+  margin-bottom: 2.2rem;
+}
+
+.offers__item-circle {
+  width: 4.4rem;
+  height: 4.4rem;
+  background-color: #2ecdf0;
+  border-radius: 50%;
+}
+
+.offers__item-circle img {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.offers__item-txt {
+  color: #8b8d95;
+}
+
+.offers__picture {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.offers__plush {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 2.8rem 5rem;
+  border-radius: 2rem;
+  background: #ffffff;
+  box-shadow: -0.8rem 1.6rem 4rem 0 rgba(76, 98, 187, 0.2);
+  position: absolute;
+}
+
+.offers__plush:first-child {
+  top: 4rem;
+  left: -9rem;
+}
+
+.offers__plush:last-child {
+  bottom: 4rem;
+  right: -9rem;
+}
+
+.offers__img {
+  width: 65.7rem;
+  height: 46.5rem;
+  border-radius: 3rem;
+}
+
+.about {
+  margin-bottom: 17rem;
+}
+
+.about__container {
+  display: flex;
+  margin-top: 5rem;
+}
+
+.about__picture {
+  flex-shrink: 0;
+  display: flex;
+  position: relative;
+}
+
+.about__capas {
+  position: absolute;
+  z-index: -2;
+}
+
+.about__capas:first-child {
+  top: -1.3rem;
+  right: -22rem;
+}
+
+.about__capas:last-child {
+  bottom: -5rem;
+  right: 16rem;
+}
+
+.about__img {
+  width: 71rem;
+  height: 40rem;
+  border-radius: 3rem;
+}
+
+.about__capas {
+  width: 33.3rem;
+  height: 14rem;
+}
+
+.about__desc {
+  width: 112.3rem;
+  height: 34.8rem;
+  border-radius: 4rem;
+  flex-shrink: 0;
+  background: #f0f3f7;
+  -webkit-backdrop-filter: blur(1.9rem);
+          backdrop-filter: blur(1.9rem);
+  padding: 9rem 9rem 9rem 22.3rem;
+  position: relative;
+  left: -13rem;
+  z-index: -2;
+  margin-top: 11.2rem;
+}
+
+.about__desc p {
+  color: #8b8d95;
+}
+
+.about__desc p:not(:last-child) {
+  margin-bottom: 3rem;
+}
+
 * {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -3855,6 +4062,9 @@ fieldset {
     line-height: 130%;
   }
 
+  .about__desc p,
+  .offers__item-txt,
+  .help__text p,
   .blog-card__text,
   .blog-cards__btns .btn-primary span,
   .select-house__item-text,
@@ -3862,7 +4072,7 @@ fieldset {
   .blog__data,
   .desc__desc p,
   .services__item,
-  .cost__desc-text,
+  .baner-form__desc-text,
   .footer__link,
   .header__region-title,
   .breadcrumbs a,
@@ -3876,6 +4086,7 @@ fieldset {
     line-height: 130%;
   }
 
+  .offers__plush-txt,
   .services__text,
   .baner__count-number span:last-child,
   .baner__text,
@@ -3915,6 +4126,8 @@ fieldset {
   }
 
   .title-h3,
+  .offers__plush-tit,
+  .help__txt,
   .blog-card__title {
     font-size: 4.8rem;
     line-height: 130%;
@@ -3924,7 +4137,9 @@ fieldset {
     font-size: 6.4rem;
   }
 
-  .title {
+  .title,
+  .offers__title,
+  .help__title {
     font-size: 6.4rem;
   }
 
@@ -4873,6 +5088,54 @@ fieldset {
     line-height: 130%;
   }
 
+  .baner-form {
+    margin: 18rem 0 0 0;
+  }
+
+  .baner-form__container {
+    border-radius: 4rem;
+    padding: 9rem 3.2rem 0 3.2rem;
+    flex-direction: column;
+  }
+
+  .no-webp .baner-form__container::after {
+    background: url("@img/bg/baner-bg-3-mob.png"); }
+
+  .baner-form__desc-text {
+    margin: 0 auto 4rem auto;
+    max-width: 95%;
+    text-align: center;
+  }
+
+  .baner-form__form {
+    flex-direction: column;
+    row-gap: 5rem;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .baner-form__img {
+    width: 50rem;
+    height: 41rem;
+    position: relative;
+    right: -1rem;
+  }
+
+  .baner-form__img img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+
+  .baner-form .title {
+    margin-bottom: 2.4rem;
+    text-align: center;
+    font-size: 4.8rem;
+    line-height: 130%;
+    max-width: 45rem;
+  }
+
   .baner {
     background-color: transparent;
   }
@@ -5064,54 +5327,6 @@ fieldset {
 
   .awards .container {
     padding: 0;
-  }
-
-  .cost {
-    margin: 18rem 0 0 0;
-  }
-
-  .cost__container {
-    border-radius: 4rem;
-    padding: 9rem 3.2rem 0 3.2rem;
-    flex-direction: column;
-  }
-
-  .no-webp .cost__container::after {
-    background: url("@img/bg/baner-bg-3-mob.png"); }
-
-  .cost__desc-text {
-    margin: 0 auto 4rem auto;
-    max-width: 95%;
-    text-align: center;
-  }
-
-  .cost__form {
-    flex-direction: column;
-    row-gap: 5rem;
-    width: 100%;
-    margin-bottom: 2rem;
-  }
-
-  .cost__img {
-    width: 50rem;
-    height: 41rem;
-    position: relative;
-    right: -1rem;
-  }
-
-  .cost__img img {
-    width: 100%;
-    height: 100%;
-    -o-object-fit: contain;
-       object-fit: contain;
-  }
-
-  .cost .title {
-    margin-bottom: 2.4rem;
-    text-align: center;
-    font-size: 4.8rem;
-    line-height: 130%;
-    max-width: 45rem;
   }
 
   .services {
@@ -5784,9 +5999,9 @@ fieldset {
 
 .webp .question__container::after { background: url(@img/bg/baner-bg-2.webp) no-repeat; }
 
-.webp .baner-bg { background-image: url(@img/main/baner.webp); }
+.webp .baner-form__container::after { background: url(@img/bg/baner-bg-2.webp) no-repeat; }
 
-.webp .cost__container::after { background: url(@img/bg/baner-bg-2.webp) no-repeat; }
+.webp .baner-bg { background-image: url(@img/main/baner.webp); }
 
 .webp .add__wrapper { background: url(@img/bg/add-bg.webp) no-repeat center; }
 
@@ -5797,10 +6012,10 @@ fieldset {
 
 @media screen and (max-width: 48em) {
 
-  .webp .baner-bg { background: url(@img/main/baner-mob.webp) no-repeat center; }
+  .webp .baner-form__container::after { background: url(@img/bg/baner-bg-3-mob.webp); }
 }
 
 @media screen and (max-width: 48em) {
 
-  .webp .cost__container::after { background: url(@img/bg/baner-bg-3-mob.webp); }
+  .webp .baner-bg { background: url(@img/main/baner-mob.webp) no-repeat center; }
 }

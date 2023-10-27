@@ -43,6 +43,12 @@
   align-items: center;
   justify-content: flex-start;
 }
+
+%flexStartBetween {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
 //-------------------------//
 
 //--------Texts----------//

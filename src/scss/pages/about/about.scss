@@ -1,0 +1,59 @@
+.about {
+  margin-bottom: 17rem;
+
+  &__container {
+    display: flex;
+    margin-top: 5rem;
+  }
+
+  &__picture {
+    flex-shrink: 0;
+    display: flex;
+    position: relative;
+  }
+
+  &__capas {
+    position: absolute;
+    z-index: -2;
+
+    &:first-child {
+      top: -1.3rem;
+      right: -22rem;
+    }
+
+    &:last-child {
+      bottom: -5rem;
+      right: 16rem;
+    }
+  }
+
+  &__img {
+    @include sizes(71rem, 40rem);
+    border-radius: 3rem;
+  }
+
+  &__capas {
+    @include sizes(33.3rem, 14rem);
+  }
+
+  &__desc {
+    @include sizes(112.3rem, 34.8rem);
+    border-radius: 4rem;
+    flex-shrink: 0;
+    background: $lightGrey;
+    backdrop-filter: blur(1.9rem);
+    padding: 9rem 9rem 9rem 22.3rem;
+    position: relative;
+    left: -13rem;
+    z-index: -2;
+    margin-top: 11.2rem;
+
+    p {
+      @extend %textRegular18;
+      color: $grey;
+      &:not(:last-child) {
+        margin-bottom: 3rem;
+      }
+    }
+  }
+}

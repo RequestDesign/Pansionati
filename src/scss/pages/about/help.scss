@@ -1,0 +1,46 @@
+.help {
+  &__container {
+    @extend %flexCenterBetween;
+    column-gap: 19.8rem;
+  }
+
+  &__desc {
+    max-width: 81rem;
+    flex-shrink: 0;
+  }
+
+  &__title {
+    @extend %textH1;
+    margin-bottom: 2rem;
+  }
+
+  &__text {
+    p {
+      @extend %textRegular18;
+      color: $grey;
+      &:not(:last-child) {
+        margin-bottom: 3rem;
+      }
+    }
+  }
+
+  &__picture {
+    @extend %flexStartBetween;
+    padding: 2rem 3.4rem 0 5rem;
+    flex-shrink: 0;
+    border-radius: 3rem;
+    background: linear-gradient(151deg, #2ecdf0 9.04%, rgba(46, 205, 240, 0.24) 116.35%);
+  }
+
+  &__txt {
+    @extend %textH3;
+    color: $white;
+    max-width: 32.8rem;
+    flex-shrink: 0;
+    margin: 5.7rem -3rem 0 0;
+  }
+
+  &__img {
+    @include sizes(31rem, 28rem);
+  }
+}

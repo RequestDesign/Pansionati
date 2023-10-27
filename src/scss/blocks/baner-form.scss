@@ -1,4 +1,4 @@
-.cost {
+.baner-form {
   margin-top: 20.5rem;
 
   &__container {
@@ -37,6 +37,7 @@
   &__form {
     @extend %flexCenterStart;
     column-gap: 3rem;
+    width: 100%;
   }
 
   &__img {
@@ -55,9 +56,18 @@
   }
 }
 
+.baner-form--about {
+  margin: 17rem 0;
+  .baner-form {
+    &__desc-text {
+      max-width: 91rem;
+    }
+  }
+}
+
 //------------------Mob----------------//
 @media screen and (max-width: 48em) {
-  .cost {
+  .baner-form {
     margin: 18rem 0 0 0;
 
     &__container {

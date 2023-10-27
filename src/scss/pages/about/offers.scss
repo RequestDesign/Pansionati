@@ -1,0 +1,80 @@
+.offers {
+  margin-top: 17rem;
+
+  &__container {
+    @extend %flexCenterStart;
+    column-gap: 15.7rem;
+  }
+
+  &__title {
+    @extend %textH1;
+    margin-bottom: 2rem;
+  }
+
+  &__desc {
+    width: 79.7rem;
+    flex-shrink: 0;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 2.2rem;
+    }
+    @extend %flexCenterStart;
+    column-gap: 1.6rem;
+  }
+
+  &__item-circle {
+    @include sizes(4.4rem, 4.4rem);
+    @extend %flexCenter;
+    background-color: $blue;
+    border-radius: 50%;
+
+    img {
+      @include sizes(2.4rem, 2.4rem);
+    }
+  }
+
+  &__item-txt {
+    @extend %textRegular18;
+    color: $grey;
+  }
+
+  &__picture {
+    position: relative;
+    flex-shrink: 0;
+  }
+
+  &__plush {
+    @extend %flexColumn;
+    width: fit-content;
+    padding: 2.8rem 5rem;
+    border-radius: 2rem;
+    background: $white;
+    box-shadow: -0.8rem 1.6rem 4rem 0 rgba(76, 98, 187, 0.2);
+    position: absolute;
+
+    &:first-child {
+      top: 4rem;
+      left: -9rem;
+    }
+
+    &:last-child {
+      bottom: 4rem;
+      right: -9rem;
+    }
+  }
+
+  &__plush-tit {
+    @extend %textH3;
+  }
+
+  &__plush-txt {
+    @extend %textRegular20;
+  }
+
+  &__img {
+    @include sizes(65.7rem, 46.5rem);
+    border-radius: 3rem;
+  }
+}
