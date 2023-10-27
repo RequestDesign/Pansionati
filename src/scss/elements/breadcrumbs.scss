@@ -1,7 +1,10 @@
 .breadcrumbs {
-  @extend %flexCenterStart;
-  column-gap: 1rem;
   margin: 1rem 0 2rem;
+
+  &__container {
+    @extend %flexCenterStart;
+    column-gap: 1rem;
+  }
 
   a,
   span {
@@ -29,8 +32,11 @@
 
 @media screen and (max-width: 48em) {
   .breadcrumbs {
-    column-gap: 2rem;
-    margin-bottom: 4rem;
+    margin: 6.4rem 0 4rem 0;
+
+    &__container {
+      column-gap: 2rem;
+    }
 
     a {
       column-gap: 2rem;

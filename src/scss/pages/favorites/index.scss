@@ -1,1 +1,37 @@
-@import './favorities.scss';
+.favorites {
+  margin-bottom: 17rem;
+
+  &__empty-msg {
+    @extend %textBold24;
+    color: $grey;
+  }
+
+  &__content {
+    margin-top: 5rem;
+  }
+
+  &__cards {
+    @extend %flexCenterStart;
+    row-gap: 2.9rem;
+    column-gap: 2.9rem;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 48em) {
+  .favorites {
+    margin-bottom: 18rem;
+
+    &__content {
+      margin-top: 5.4rem;
+    }
+
+    &__cards {
+      row-gap: 3.2rem;
+    }
+
+    .card:not(:nth-child(-n + 3)) {
+      display: block;
+    }
+  }
+}

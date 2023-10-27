@@ -1182,16 +1182,16 @@ template {
 .select-house__item:active,
 .footer__link:hover,
 .header__link:hover,
+.icon-arrow-hover-orange,
+.icon-arrow-hover-white,
+.icon-arrow-slider,
 .select__item label,
 .select__item:hover,
 .select__content,
 .select__btn,
 .select__header,
 .btn-tertiary span,
-.btn:not(:disabled):hover,
-.icon-arrow-hover-orange,
-.icon-arrow-hover-white,
-.icon-arrow-slider {
+.btn:not(:disabled):hover {
   transition: all 0.3s ease-out;
   cursor: pointer;
 }
@@ -1248,7 +1248,6 @@ body,
 }
 
 .blog-card__top,
-.blog-cards__items,
 .boards-swipers__titles,
 .maps__list-item-footer-item,
 .maps__list-item-footer,
@@ -1301,6 +1300,7 @@ body,
 }
 
 .add__form-btns,
+.blog-cards__items,
 .blog-cards__btns,
 .favorites__cards,
 .maps__list-item-header,
@@ -1308,7 +1308,7 @@ body,
 .cost__form,
 .baner__desc-btns,
 .textarea,
-.breadcrumbs {
+.breadcrumbs__container {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -1447,22 +1447,6 @@ body,
   100% {
     opacity: 1;
   }
-}
-
-.icon {
-  width: 2.4rem;
-  height: 2.4rem;
-  flex-shrink: 0;
-}
-
-.icon-arrow-hover-orange,
-.icon-arrow-hover-white,
-.icon-arrow-slider {
-  fill: none;
-  stroke-width: 2px;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke: #1a1a1a;
 }
 
 @font-face {
@@ -2714,9 +2698,12 @@ input[type=file] {
 }
 
 .breadcrumbs {
+  margin: 1rem 0 2rem;
+}
+
+.breadcrumbs__container {
   -moz-column-gap: 1rem;
        column-gap: 1rem;
-  margin: 1rem 0 2rem;
 }
 
 .breadcrumbs a {
@@ -2764,6 +2751,22 @@ input[type=file] {
 .textarea textarea::placeholder {
   color: #8b8d95;
   font-weight: 400;
+}
+
+.icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  flex-shrink: 0;
+}
+
+.icon-arrow-hover-orange,
+.icon-arrow-hover-white,
+.icon-arrow-slider {
+  fill: none;
+  stroke-width: 2px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #1a1a1a;
 }
 
 .header {
@@ -3593,7 +3596,7 @@ input[type=file] {
 }
 
 .favorites {
-  margin: 1rem 0 17rem 0;
+  margin-bottom: 17rem;
 }
 
 .favorites__empty-msg {
@@ -3696,7 +3699,7 @@ input[type=file] {
 }
 
 .add {
-  margin: 1rem 0 17rem;
+  margin-bottom: 17rem;
 }
 
 .no-webp .add__wrapper {
@@ -3804,6 +3807,12 @@ fieldset {
   .map:hover [class*=copyrights-pane],
   .map:hover [class*=controls__control] {
     opacity: 1;
+  }
+}
+
+@media (min-width: 1920px) {
+  html {
+    font-size: 10px;
   }
 }
 
@@ -3917,11 +3926,6 @@ fieldset {
 
   .title {
     font-size: 6.4rem;
-  }
-
-  .icon {
-    width: 3.6rem;
-    height: 3.6rem;
   }
 
   .btn {
@@ -4569,9 +4573,12 @@ fieldset {
   }
 
   .breadcrumbs {
+    margin: 6.4rem 0 4rem 0;
+  }
+
+  .breadcrumbs__container {
     -moz-column-gap: 2rem;
          column-gap: 2rem;
-    margin-bottom: 4rem;
   }
 
   .breadcrumbs a {
@@ -4606,6 +4613,11 @@ fieldset {
   .textarea textarea {
     width: 90%;
     font-size: 3rem;
+  }
+
+  .icon {
+    width: 3.6rem;
+    height: 3.6rem;
   }
 
   .header .--desc {
@@ -5566,7 +5578,7 @@ fieldset {
   }
 
   .favorites {
-    margin: 6.4rem 0 18rem 0;
+    margin-bottom: 18rem;
   }
 
   .favorites__content {
@@ -5581,8 +5593,8 @@ fieldset {
     display: block;
   }
 
-  .blog-cards {
-    margin: 6.4rem 0 16rem 0;
+  .blog-cards__container {
+    padding: 2rem 0 0 0;
   }
 
   .blog-cards__btns {
@@ -5664,7 +5676,7 @@ fieldset {
   }
 
   .add {
-    margin: 6.4rem 0 18rem;
+    margin-bottom: 18rem;
   }
 
   .add__wrapper {

@@ -146,6 +146,12 @@ input[type='number'] {
   -moz-appearance: textfield;
 }
 
+@media (min-width: 1920px) {
+  html {
+    font-size: 10px;
+  }
+}
+
 @media (max-width: 48em) {
   html {
     font-size: 5px;

@@ -5,7 +5,6 @@
 @import './general/extends.scss';
 @import './general/mixins.scss';
 @import './general/animation.scss';
-@import './general/icons.scss';
 
 @import './fonts.scss';
 @import './set.scss';
@@ -19,6 +18,7 @@
 @import './elements/map.scss';
 @import './elements/breadcrumbs.scss';
 @import './elements/textarea.scss';
+@import './elements/icons.scss';
 
 @import './blocks/header.scss';
 @import './blocks/footer.scss';
@@ -29,5 +29,6 @@
 @import './pages/favorites/index.scss';
 @import './pages/blog/index.scss';
 @import './pages/add/index.scss';
+@import './pages/about/index.scss';
 
 @import './general/base.scss';
