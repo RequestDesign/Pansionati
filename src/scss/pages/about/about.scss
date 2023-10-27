@@ -57,3 +57,56 @@
     }
   }
 }
+
+@media screen and (max-width: 48em) {
+  .about {
+    margin-bottom: 16rem;
+
+    &__container {
+      flex-direction: column;
+      margin-top: 5.4rem;
+    }
+
+    &__capas {
+      @include sizes(24rem, 14rem);
+
+      &:first-child {
+        right: -1rem;
+        top: -10rem;
+      }
+
+      &:last-child {
+        display: none;
+      }
+    }
+
+    &__img {
+      @include sizes(60rem, 38.4rem);
+      border-radius: 4.8rem;
+
+      img {
+        height: 100%;
+      }
+    }
+
+    &__capas {
+      @include sizes(33.3rem, 14rem);
+    }
+
+    &__desc {
+      @include sizes(60rem, 70.4rem);
+      border-radius: 4.8rem;
+      backdrop-filter: blur(3.8rem);
+      padding: 8.8rem 4rem 4rem 4rem;
+      margin-top: -4.8rem;
+      right: -8rem;
+      left: auto;
+
+      p {
+        &:not(:last-child) {
+          margin-bottom: 4rem;
+        }
+      }
+    }
+  }
+}

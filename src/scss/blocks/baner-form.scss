@@ -113,4 +113,18 @@
       max-width: 45rem;
     }
   }
+
+  .baner-form--about {
+    margin: 20rem 0;
+
+    .baner-form {
+      &__desc-text {
+        max-width: 100%;
+      }
+
+      &__container {
+        padding: 12rem 2.4rem 0 2.4rem;
+      }
+    }
+  }
 }
