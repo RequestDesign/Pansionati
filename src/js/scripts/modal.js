@@ -70,6 +70,22 @@ document.addEventListener('DOMContentLoaded', () => {
     };
   }
 
+  const willContactSoon = document.querySelector('[data-modal="will-contact-soon"]')
+    ? new Modal('will-contact-soon')
+    : null;
   const costServices = document.querySelector('[data-modal="cost-services"]') ? new Modal('cost-services') : null;
-  const notFoundBoard = document.querySelector('[data-modal="not-found-board"]') ? new Modal('not-found-board') : null;
+  const thanksApplication = document.querySelector('[data-modal="thanks-application"]')
+    ? new Modal('thanks-application')
+    : null;
+  const thanksReaching = document.querySelector('[data-modal="thanks-reaching"]') ? new Modal('thanks-reaching') : null;
+  const assistanceChoosing = document.querySelector('[data-modal="assistance-choosing"]')
+    ? new Modal('assistance-choosing')
+    : null;
+  const willSelectSuitable = document.querySelector('[data-modal="will-select-suitable"]')
+    ? new Modal('will-select-suitable')
+    : null;
+  const contactsData = document.querySelector('[data-modal="contacts-data"]') ? new Modal('contacts-data') : null;
+  const checkAvailability = document.querySelector('[data-modal="check-availability"]')
+    ? new Modal('check-availability')
+    : null;
 });

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=`, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.min.css?_v=20231028000317" />
+    <link rel="stylesheet" href="./css/style.min.css?_v=20231028165558" />
     <title>Пансионаты</title>
   </head>
 
@@ -90,24 +90,45 @@
     <h2>Модальные окна</h2>
     <ul class="menu">
       <li class="item">
+        <div data-modal-el="assistance-choosing">Нужна помощь в выборе пансионата</div>
+      </li>
+      <li class="item">
         <div data-modal-el="cost-services">Рассчитать стоимость услуг</div>
       </li>
       <li class="item">
-        <div data-modal-el="not-found-board">Не нашли пансионат</div>
+        <div data-modal-el="check-availability">Узнать о наличии мест</div>
+      </li>
+      <div class="item">
+        <div data-modal-el="will-contact-soon">Связь в ближайшее время</div>
+      </div>
+      <li class="item">
+        <div data-modal-el="contacts-data">Контактные данные</div>
+      </li>
+      <li class="item">
+        <div data-modal-el="thanks-application">Спасибо за Заявку</div>
+      </li>
+      <li class="item">
+        <div data-modal-el="will-select-suitable">Подобрать пансионат</div>
       </li>
     </ul>
   </body>
-  <!--Модалка рассчитать стоимость услуг-->
-  <div class="modal close-x" data-modal="cost-services">
+
+  <!--Модалка нужна помощь в выборе пансионата (Наш специалист свяжется с вами и сделает индивидуальную подборку пансионатов.)-->
+  <div class="modal close-x" data-modal="assistance-choosing">
     <div class="modal__inner">
       <div class="modal__content">
         <div class="modal__content-close close-x">
-          <img class="close-x" src="img/icons/close-modal.svg" alt="" />
+          <img class="close-x" src="img/icons/icons.svg#close-modal" alt="" />
         </div>
-        <div class="title modal__content-title">Спасибо за обращение</div>
-        <div class="modal__content-text">Наш специалист свяжется с вами и поможет подобрать подходящие варианты</div>
+        <div class="title modal__content-title">
+          Спасибо <br />
+          за обращение
+        </div>
+        <div class="modal__content-text">
+          Наш специалист свяжется с вами и сделает индивидуальную подборку пансионатов.
+        </div>
         <div class="modal__content-btns">
-          <a href="#" class="btn btn-primary">
+          <a href="./main.html" class="btn btn-primary">
             <span>Вернуться на главную</span>
           </a>
         </div>
@@ -115,24 +136,139 @@
     </div>
   </div>
 
-  <!--Модалка не нашли пансионат-->
-  <div class="modal close-x" data-modal="not-found-board">
+  <!--Модалка рассчитать стоимость услуг (Наш специалист свяжется с вами и поможет подобрать подходящие варианты)-->
+  <div class="modal close-x" data-modal="cost-services">
     <div class="modal__inner">
       <div class="modal__content">
         <div class="modal__content-close close-x">
-          <img class="close-x" src="img/icons/close-modal.svg" alt="" />
+          <img class="close-x" src="img/icons/icons.svg#close-modal" alt="" />
         </div>
-        <div class="title modal__content-title">Спасибо за обращение</div>
-        <div class="modal__content-text">
-          Наш специалист свяжется с вами и сделает индивидуальную подборку пансионатов.
+        <div class="title modal__content-title">
+          Спасибо <br />
+          за обращение
         </div>
+        <div class="modal__content-text">Наш специалист свяжется с вами и поможет подобрать подходящие варианты</div>
         <div class="modal__content-btns">
-          <a href="#" class="btn btn-primary">
+          <a href="./main.html" class="btn btn-primary">
             <span>Вернуться на главную</span>
           </a>
         </div>
       </div>
     </div>
   </div>
-  <script src="./js/app.min.js?_v=20231028000317"></script>
+
+  <!--Узнать о наличии мест-->
+  <div class="modal close-x" data-modal="check-availability">
+    <div class="modal__inner">
+      <div class="modal__content">
+        <div class="modal__content-close close-x">
+          <img class="close-x" src="img/icons/icons.svg#close-modal" alt="" />
+        </div>
+        <div class="title modal__content-title">Узнать о наличии мест</div>
+        <div class="modal__content-text">Оставьте ваш номер телефона, наш специалист перезвонит вам.</div>
+        <form class="modal__content-form">
+          <div class="input">
+            <div class="icon">
+              <img src="img/icons/icons.svg#phone-orange" alt="" />
+            </div>
+            <input type="tel" name="phone" placeholder="Введите номер телефона" autocomplete="off" />
+          </div>
+          <button type="submit" form="baner-form-phone" class="btn btn-primary">
+            <span>Заказать звонок</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!--Модалка связь в ближайшее время (Наш специалист свяжется с вами в ближайшее время.)-->
+  <div class="modal close-x" data-modal="will-contact-soon">
+    <div class="modal__inner">
+      <div class="modal__content">
+        <div class="modal__content-close close-x">
+          <img class="close-x" src="img/icons/icons.svg#close-modal" alt="" />
+        </div>
+        <div class="title modal__content-title">
+          Спасибо <br />
+          за обращение
+        </div>
+        <div class="modal__content-text">Наш специалист свяжется с вами в ближайшее время.</div>
+        <div class="modal__content-btns">
+          <a href="./main.html" class="btn btn-primary">
+            <span>Вернуться на главную</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Контактные данные-->
+  <div class="modal close-x" data-modal="contacts-data">
+    <div class="modal__inner">
+      <div class="modal__content">
+        <div class="modal__content-close close-x">
+          <img class="close-x" src="img/icons/icons.svg#close-modal" alt="" />
+        </div>
+        <div class="title modal__content-title">Контактные данные</div>
+        <div class="modal__content-text">
+          Оставьте ваш номер телефона, наш специалист подберет подходящие варианты и перезвонит вам.
+        </div>
+        <form class="modal__content-form">
+          <div class="input">
+            <div class="icon">
+              <img src="img/icons/icons.svg#phone-orange" alt="" />
+            </div>
+            <input type="tel" name="phone" placeholder="Введите номер телефона" autocomplete="off" />
+          </div>
+          <button type="submit" form="baner-form-phone" class="btn btn-primary">
+            <span>Заказать звонок</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!--Спасибо за заявку-->
+  <div class="modal close-x" data-modal="thanks-application">
+    <div class="modal__inner">
+      <div class="modal__content">
+        <div class="modal__content-close close-x">
+          <img class="close-x" src="img/icons/icons.svg#close-modal" alt="" />
+        </div>
+        <div class="title modal__content-title">
+          Спасибо <br />
+          за Заявку
+        </div>
+        <div class="modal__content-text">Наш специалист свяжется с вами в ближайшее время для уточнения деталей.</div>
+        <div class="modal__content-btns">
+          <a href="./main.html" class="btn btn-primary">
+            <span>Вернуться на главную</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Модалка подобрать пансионат-->
+  <div class="modal close-x" data-modal="will-select-suitable">
+    <div class="modal__inner">
+      <div class="modal__content">
+        <div class="modal__content-close close-x">
+          <img class="close-x" src="img/icons/icons.svg#close-modal" alt="" />
+        </div>
+        <div class="title modal__content-title">
+          Спасибо <br />
+          за обращение
+        </div>
+        <div class="modal__content-text">Наш специалист свяжется с вами как только подберет подходящие варианты</div>
+        <div class="modal__content-btns">
+          <a href="./main.html" class="btn btn-primary">
+            <span>Вернуться на главную</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/app.min.js?_v=20231028165558"></script>
 </html>

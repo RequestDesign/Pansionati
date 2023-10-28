@@ -1,5 +1,6 @@
 import { scroolMapList } from './functions.js';
 
+// Метки для карты со всеми пансионатами
 const PLACEMARKS = [
   {
     lalitude: 55.520003,
@@ -42,6 +43,17 @@ const PLACEMARKS = [
     attr: 'board-4',
   },
 ];
+
+// Метка для карты контактов
+const PLACEMARK_CONTACT = {
+  lalitude: 55.679798,
+  longitude: 37.623402,
+  // balloonContent: {
+  //   img: './img/boards/board-mayak.png',
+  //   title: 'Дом престарелых "Маяк"',
+  //   address: 'Варшавское шоссе, 36с.2, Москва',
+  // },
+};
 
 function removeContent(mainMap) {
   mainMap.controls.remove('geolocationControl');
@@ -94,8 +106,9 @@ function changeActiveClass(attrEl, attr, el) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Код для карты со всеми пансионатами
   function init() {
-    if (document.querySelector('.mainpage .map')) {
+    if (document.querySelector('.mainpage .mapMain')) {
       const boardsList = document.querySelectorAll('[data-board-list]');
       const boardsMap = document.querySelectorAll('[data-board-map]');
       const boardsDescContainer = document.querySelector('.map-descs');
@@ -202,5 +215,35 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // Код для карты контактов
+  function initContacts() {
+    if (document.querySelector('.contacts-map')) {
+      const contactsMap = new ymaps.Map('map', {
+        center: [PLACEMARK_CONTACT.lalitude, PLACEMARK_CONTACT.longitude],
+        zoom: 15,
+      });
+
+      const contactsPlacemark = new ymaps.Placemark(
+        [PLACEMARK_CONTACT.lalitude, PLACEMARK_CONTACT.longitude],
+        {
+          // balloonContent: createBalloon(PLACEMARK_CONTACT),
+        },
+        {
+          hideIconOnBalloonOpen: false,
+          iconLayout: 'default#image',
+          iconImageHref: './img/icons/location-pin-active.svg',
+          icon_imagesize: [62, 62],
+          iconImageOffset: [-20, -30],
+        }
+      );
+
+      contactsMap.geoObjects.add(contactsPlacemark);
+      // contactsPlacemark.balloon.open();
+
+      removeContent(contactsMap);
+    }
+  }
+
+  ymaps.ready(initContacts);
   ymaps.ready(init);
 });

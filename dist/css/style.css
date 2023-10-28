@@ -2452,6 +2452,10 @@ fieldset {
   transition: transform 700ms, opacity 250ms;
 }
 
+.modal br {
+  display: none;
+}
+
 .modal__inner {
   width: -moz-fit-content;
   width: fit-content;
@@ -2468,7 +2472,7 @@ fieldset {
 
 .modal__content {
   margin: 5rem auto;
-  padding: 9rem 25.5rem;
+  padding: 9rem 22rem;
   width: 112.4rem;
   background-color: #f0f3f7;
   border-radius: 3rem;
@@ -2492,19 +2496,26 @@ fieldset {
 
 .modal .title {
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 .modal__content-text {
   color: #36393d;
   text-align: center;
   margin: 0 auto 3rem auto;
-  max-width: 53rem;
+  max-width: 57rem;
 }
 
 .modal__content-btns {
   width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
+}
+
+.modal__content-form {
+  display: flex;
+  -moz-column-gap: 3rem;
+       column-gap: 3rem;
 }
 
 input[type=file] {
@@ -4656,27 +4667,42 @@ fieldset {
     display: none;
   }
 
+  .modal br {
+    display: block;
+  }
+
+  .no-webp .modal__content {
+    background-image: url("@img/bg/modal-bg-mob.png"); }
+
   .modal__content {
-    margin: 4.8rem auto;
-    padding: 3.2rem 10.5rem;
-    width: 68.5rem;
+    margin: 10rem auto;
+    padding: 12.8rem 3.2rem;
+    width: 70.6rem;
     border-radius: 4rem;
   }
 
   .modal__content-close {
     width: 4.8rem;
     height: 4.8rem;
-    top: 4rem;
-    right: 4rem;
+    top: 14rem;
   }
 
   .modal .title {
-    margin-bottom: 2.4rem;
+    margin: 0 auto 2.4rem auto;
+    font-size: 4.8rem;
+    max-width: 50rem;
+    line-height: 130%;
   }
 
   .modal__content-text {
     margin: 0 auto 4rem auto;
-    max-width: 100%;
+    max-width: 95%;
+  }
+
+  .modal__content-form {
+    flex-direction: column;
+    row-gap: 4rem;
+    align-items: center;
   }
 
   .input {
@@ -6235,6 +6261,15 @@ fieldset {
     font-size: 3.2rem;
   }
 
+  .contacts__map {
+    width: 100%;
+  }
+
+  .contacts .map {
+    width: 100%;
+    height: 81.2rem;
+  }
+
   .logo {
     font-size: 4rem;
   }
@@ -6267,6 +6302,11 @@ fieldset {
 .webp .baner-bg { background-image: url(@img/main/baner.webp); }
 
 .webp .add__wrapper { background: url(@img/bg/add-bg.webp) no-repeat center; }
+
+@media screen and (max-width: 48em) {
+
+  .webp .modal__content { background-image: url(@img/bg/modal-bg-mob.webp); }
+}
 
 @media screen and (max-width: 48em) {
 
