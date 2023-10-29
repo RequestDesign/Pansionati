@@ -1,0 +1,43 @@
+.info {
+  margin-top: 5.2rem;
+
+  &__container {
+    @extend %flexColumn;
+    row-gap: 5.2rem;
+  }
+
+  &__content-block {
+    display: none;
+    &.active {
+      display: flex;
+    }
+  }
+
+  &__btns {
+    @extend %flexCenterStart;
+    column-gap: 1.6rem;
+    margin-top: 2rem;
+
+    .btn-primary {
+      background: $lightGrey;
+      border: none;
+      padding: 1rem 3rem;
+      width: fit-content;
+
+      span {
+        @extend %textRegular18;
+        color: $black;
+      }
+
+      &:hover,
+      &.active {
+        background: $blue;
+        transition: $transition;
+
+        span {
+          color: $white;
+        }
+      }
+    }
+  }
+}

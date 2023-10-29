@@ -1178,6 +1178,7 @@ template {
   height: 100%;
 }
 
+.about-info__txt,
 .select-house__item:hover,
 .select-house__item:active,
 .footer__link:hover,
@@ -1197,6 +1198,8 @@ template {
 }
 
 body,
+.about-prices,
+.info__container,
 .offers__plush,
 .add__form-inputs,
 .blog-card,
@@ -1226,6 +1229,7 @@ body,
   flex-direction: column;
 }
 
+.about-facilities__icon,
 .contacts__item-circle,
 .offers__item-circle,
 .select-house__item-circle,
@@ -1250,6 +1254,9 @@ body,
   justify-content: center;
 }
 
+.about-prices__item,
+.about-prices__header,
+.board-navigation__container,
 .help__container,
 .blog-card__top,
 .boards-swipers__titles,
@@ -1303,6 +1310,10 @@ body,
   justify-content: center;
 }
 
+.about-facilities__item,
+.about-facilities__items,
+.info__btns,
+.board-navigation__btns,
 .contacts__item,
 .offers__item,
 .offers__container,
@@ -1321,6 +1332,7 @@ body,
   justify-content: flex-start;
 }
 
+.about-info,
 .contacts__container,
 .help__picture {
   display: flex;
@@ -1355,6 +1367,7 @@ body,
   line-height: normal;
 }
 
+.about-info__btn,
 .select-house__item-circle,
 .baner__doctor-text,
 .header__link,
@@ -1369,6 +1382,8 @@ body,
   line-height: 2.4rem;
 }
 
+.about-info__txt p,
+.info__btns .btn-primary span,
 .about__desc p,
 .offers__item-txt,
 .help__text p,
@@ -1394,6 +1409,8 @@ body,
   line-height: 2.4rem;
 }
 
+.about-prices__item div,
+.about-facilities__txt,
 .contacts__item-txt,
 .offers__plush-txt,
 .services__text,
@@ -1439,10 +1456,12 @@ body,
 }
 
 .title-h3,
+.about-prices__header div,
 .contacts__item-tit,
 .offers__plush-tit,
 .help__txt,
-.blog-card__title {
+.blog-card__title,
+.question--board .phones__phone-numbers div:last-child {
   font-size: 2.4rem;
   font-weight: 700;
   line-height: 2.8rem;
@@ -2670,7 +2689,9 @@ input[type=file] {
 
 .map__balloon-content {
   row-gap: 0.8rem;
-  max-width: 17.5rem;
+  min-width: 17.5rem;
+  max-width: 23rem;
+  width: auto;
 }
 
 .map__balloon-title {
@@ -2965,6 +2986,28 @@ input[type=file] {
 
 .question--blog .question__container {
   padding: 13.5rem;
+}
+
+.question--board .question {
+  margin: 17rem 0;
+}
+
+.question--board .question__container {
+  padding: 7rem 12.5rem;
+}
+
+.question--board .question__text {
+  max-width: 100%;
+  margin-bottom: 4rem;
+}
+
+.question--board .question__phones {
+  margin-bottom: 3rem;
+}
+
+.question--board .phones__phone-numbers div:last-child {
+  color: #1a1a1a;
+  margin-bottom: 0;
 }
 
 .baner-form {
@@ -4014,6 +4057,157 @@ input[type=file] {
   color: #8b8d95;
 }
 
+.board-navigation {
+  margin: 5rem 0;
+}
+
+.board-navigation__btns {
+  -moz-column-gap: 1.6rem;
+       column-gap: 1.6rem;
+}
+
+.board-navigation__btns .btn-round {
+  background-color: #f0f3f7;
+  border: #f0f3f7;
+}
+
+.board-navigation__scroll {
+  border: none;
+  background: linear-gradient(124deg, #2ecdf0 25.14%, rgba(46, 205, 240, 0.24) 90.92%);
+}
+
+.info {
+  margin-top: 5.2rem;
+}
+
+.info__container {
+  row-gap: 5.2rem;
+}
+
+.info__content-block {
+  display: none;
+}
+
+.info__content-block.active {
+  display: flex;
+}
+
+.info__btns {
+  -moz-column-gap: 1.6rem;
+       column-gap: 1.6rem;
+  margin-top: 2rem;
+}
+
+.info__btns .btn-primary {
+  background: #f0f3f7;
+  border: none;
+  padding: 1rem 3rem;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.info__btns .btn-primary span {
+  color: #1a1a1a;
+}
+
+.info__btns .btn-primary:hover,
+.info__btns .btn-primary.active {
+  background: #2ecdf0;
+  transition: all 0.3s ease-out;
+}
+
+.info__btns .btn-primary:hover span,
+.info__btns .btn-primary.active span {
+  color: #ffffff;
+}
+
+.about-info {
+  -moz-column-gap: 2.8rem;
+       column-gap: 2.8rem;
+}
+
+.about-info__desc,
+.about-info__map {
+  flex: 0 0 calc(50% - 1.4rem);
+}
+
+.about-info__txt {
+  margin-bottom: 1.2rem;
+  overflow: hidden;
+  height: 21.6rem;
+}
+
+.about-info__btn {
+  color: #2ecdf0;
+}
+
+.about-info__btn:hover {
+  transition: all 0.3s ease-out;
+  opacity: 0.5;
+}
+
+.about-info .map {
+  width: 83.4rem;
+  height: 40rem;
+}
+
+.about-facilities__items {
+  flex-wrap: wrap;
+  row-gap: 3rem;
+  -moz-column-gap: 17.4rem;
+       column-gap: 17.4rem;
+}
+
+.about-facilities__item {
+  -moz-column-gap: 1.2rem;
+       column-gap: 1.2rem;
+  width: 29.4rem;
+  flex-shrink: 0;
+}
+
+.about-facilities__icon {
+  width: 5.4rem;
+  height: 5.4rem;
+  box-shadow: 0 2.1rem 6rem 0 rgba(76, 98, 187, 0.13);
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.29) 0.22%, rgba(255, 255, 255, 0.12) 0.23%, rgba(46, 205, 240, 0.18) 100.01%, rgba(255, 255, 255, 0.29) 103.23%);
+}
+
+.about-facilities__icon img {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.about-facilities__txt {
+  flex-shrink: 0;
+}
+
+.about-prices__header {
+  width: 100%;
+  -moz-column-gap: 3rem;
+       column-gap: 3rem;
+  border-radius: 3rem;
+  padding: 3rem;
+  background: rgba(239, 247, 255, 0.84);
+}
+
+.about-prices__header div {
+  width: 52rem;
+  flex-shrink: 0;
+}
+
+.about-prices__item {
+  width: 100%;
+  padding: 3rem;
+  border-bottom: 1.4px solid #f0f3f7;
+}
+
+.about-prices__item div {
+  width: 52rem;
+  flex-shrink: 0;
+}
+
 * {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -4109,6 +4303,7 @@ fieldset {
     line-height: 130%;
   }
 
+  .about-info__btn,
   .select-house__item-circle,
   .baner__doctor-text,
   .header__link,
@@ -4122,6 +4317,8 @@ fieldset {
     line-height: 130%;
   }
 
+  .about-info__txt p,
+  .info__btns .btn-primary span,
   .about__desc p,
   .offers__item-txt,
   .help__text p,
@@ -4146,6 +4343,8 @@ fieldset {
     line-height: 130%;
   }
 
+  .about-prices__item div,
+  .about-facilities__txt,
   .contacts__item-txt,
   .offers__plush-txt,
   .services__text,
@@ -4187,10 +4386,12 @@ fieldset {
   }
 
   .title-h3,
+  .about-prices__header div,
   .contacts__item-tit,
   .offers__plush-tit,
   .help__txt,
-  .blog-card__title {
+  .blog-card__title,
+  .question--board .phones__phone-numbers div:last-child {
     font-size: 4.8rem;
     line-height: 130%;
   }
@@ -5163,6 +5364,31 @@ fieldset {
     margin-bottom: 2.4rem;
     font-size: 4.8rem;
     line-height: 130%;
+  }
+
+  .question--board .question {
+    margin: 18rem 0;
+  }
+
+  .question--board .question__container {
+    padding: 12.4rem 3.2rem;
+  }
+
+  .question--board .question__phones {
+    margin-bottom: 4rem;
+  }
+
+  .question--board .phones__phone {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .question--board .phones__phone-numbers {
+    padding: 0;
+  }
+
+  .question--board .phones__phone-numbers div:last-child {
+    font-size: 3.2rem;
   }
 
   .baner-form {
@@ -6268,6 +6494,25 @@ fieldset {
   .contacts .map {
     width: 100%;
     height: 81.2rem;
+  }
+
+  .board-navigation {
+    margin: 6rem 0 18rem 0;
+  }
+
+  .board-navigation__btns {
+    -moz-column-gap: 2.4rem;
+         column-gap: 2.4rem;
+  }
+
+  .board-navigation__btns .btn-round {
+    width: 9.6rem;
+    height: 9.6rem;
+  }
+
+  .board-navigation__btns .btn-round img {
+    width: 4.8rem;
+    height: 4.8rem;
   }
 
   .logo {

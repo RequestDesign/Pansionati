@@ -1,0 +1,39 @@
+.about-facilities {
+  &__items {
+    @extend %flexCenterStart;
+    flex-wrap: wrap;
+    row-gap: 3rem;
+    column-gap: 17.4rem;
+  }
+
+  &__item {
+    @extend %flexCenterStart;
+    column-gap: 1.2rem;
+    width: 29.4rem;
+    flex-shrink: 0;
+  }
+
+  &__icon {
+    @include sizes(5.4rem, 5.4rem);
+    @extend %flexCenter;
+    box-shadow: 0 2.1rem 6rem 0 rgba(76, 98, 187, 0.13);
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.29) 0.22%,
+      rgba(255, 255, 255, 0.12) 0.23%,
+      rgba(46, 205, 240, 0.18) 100.01%,
+      rgba(255, 255, 255, 0.29) 103.23%
+    );
+
+    img {
+      @include sizes(2.4rem, 2.4rem);
+    }
+  }
+
+  &__txt {
+    @extend %textRegular20;
+    flex-shrink: 0;
+  }
+}

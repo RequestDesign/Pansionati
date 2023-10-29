@@ -1,0 +1,34 @@
+.about-info {
+  @extend %flexStartBetween;
+  column-gap: 2.8rem;
+
+  &__desc,
+  &__map {
+    flex: 0 0 calc(50% - 2.8rem / 2);
+  }
+
+  &__txt {
+    @extend %hover;
+    margin-bottom: 1.2rem;
+    overflow: hidden;
+    height: 21.6rem;
+
+    p {
+      @extend %textRegular18;
+    }
+  }
+
+  &__btn {
+    @extend %textBold18;
+    color: $blue;
+
+    &:hover {
+      transition: $transition;
+      opacity: 0.5;
+    }
+  }
+
+  .map {
+    @include sizes(83.4rem, 40rem);
+  }
+}

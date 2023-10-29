@@ -1,0 +1,31 @@
+.about-prices {
+  @extend %flexColumn;
+
+  &__header {
+    width: 100%;
+    @extend %flexCenterBetween;
+    column-gap: 3rem;
+    border-radius: 3rem;
+    padding: 3rem;
+    background: rgba(239, 247, 255, 0.84);
+
+    div {
+      @extend %textH3;
+      width: 52rem;
+      flex-shrink: 0;
+    }
+  }
+
+  &__item {
+    width: 100%;
+    @extend %flexCenterBetween;
+    padding: 3rem;
+    border-bottom: 1.4px solid $lightGrey;
+
+    div {
+      @extend %textRegular20;
+      width: 52rem;
+      flex-shrink: 0;
+    }
+  }
+}

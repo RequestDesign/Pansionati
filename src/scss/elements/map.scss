@@ -112,7 +112,9 @@
   &__balloon-content {
     @extend %flexColumn;
     row-gap: 0.8rem;
-    max-width: 17.5rem;
+    min-width: 17.5rem;
+    max-width: 23rem;
+    width: auto;
   }
 
   &__balloon-title {

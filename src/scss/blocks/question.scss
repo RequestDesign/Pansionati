@@ -46,6 +46,33 @@
       padding: 13.5rem;
     }
   }
+
+  &--board {
+    .question {
+      margin: 17rem 0;
+
+      &__container {
+        padding: 7rem 12.5rem;
+      }
+
+      &__text {
+        max-width: 100%;
+        margin-bottom: 4rem;
+      }
+
+      &__phones {
+        margin-bottom: 3rem;
+      }
+    }
+
+    .phones__phone-numbers {
+      div:last-child {
+        @extend %textH3;
+        color: $black;
+        margin-bottom: 0;
+      }
+    }
+  }
 }
 
 //------------------Mob-----------------//
@@ -107,6 +134,32 @@
       margin-bottom: 2.4rem;
       font-size: 4.8rem;
       line-height: 130%;
+    }
+
+    &--board {
+      .question {
+        margin: 18rem 0;
+
+        &__container {
+          padding: 12.4rem 3.2rem;
+        }
+
+        &__phones {
+          margin-bottom: 4rem;
+        }
+      }
+
+      .phones__phone {
+        flex-direction: row;
+        align-items: center;
+      }
+
+      .phones__phone-numbers {
+        padding: 0;
+        div:last-child {
+          font-size: 3.2rem;
+        }
+      }
     }
   }
 }

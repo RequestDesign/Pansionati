@@ -1,0 +1,40 @@
+.board-navigation {
+  margin: 5rem 0;
+
+  &__container {
+    @extend %flexCenterBetween;
+  }
+
+  &__btns {
+    @extend %flexCenterStart;
+    column-gap: 1.6rem;
+
+    .btn-round {
+      background-color: $lightGrey;
+      border: $lightGrey;
+    }
+  }
+
+  &__scroll {
+    border: none;
+    background: linear-gradient(124deg, #2ecdf0 25.14%, rgba(46, 205, 240, 0.24) 90.92%);
+  }
+}
+
+@media screen and (max-width: 48em) {
+  .board-navigation {
+    margin: 6rem 0 18rem 0;
+
+    &__btns {
+      column-gap: 2.4rem;
+
+      .btn-round {
+        @include sizes(9.6rem, 9.6rem);
+
+        img {
+          @include sizes(4.8rem, 4.8rem);
+        }
+      }
+    }
+  }
+}
