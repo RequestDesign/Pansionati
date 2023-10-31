@@ -37,3 +37,25 @@
     flex-shrink: 0;
   }
 }
+
+@media screen and (max-width: 48em) {
+  .about-facilities {
+    &__items {
+      row-gap: 2.4rem;
+    }
+
+    &__item {
+      column-gap: 2.4rem;
+      width: 100%;
+    }
+
+    &__icon {
+      @include sizes(9.6rem, 9.6rem);
+      box-shadow: 0 4.2rem 12rem 0 rgba(76, 98, 187, 0.13);
+
+      img {
+        @include sizes(4.8rem, 4.8rem);
+      }
+    }
+  }
+}

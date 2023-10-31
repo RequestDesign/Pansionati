@@ -9,7 +9,7 @@
   &__content-block {
     display: none;
     &.active {
-      display: flex;
+      display: block;
     }
   }
 
@@ -38,6 +38,44 @@
           color: $white;
         }
       }
+    }
+  }
+}
+
+@media screen and (max-width: 48em) {
+  .info {
+    margin-top: 8rem;
+
+    .container {
+      padding: 0;
+    }
+
+    &__container {
+      row-gap: 4rem;
+    }
+
+    &__btns {
+      overflow: scroll;
+      column-gap: 0.8rem;
+      margin-top: 0;
+      padding: 0 4rem;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      .btn-primary {
+        padding: 3rem 4rem;
+
+        span {
+          font-size: 3rem;
+          line-height: 120%;
+        }
+      }
+    }
+
+    &__content {
+      padding: 0 4rem;
     }
   }
 }

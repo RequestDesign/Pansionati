@@ -123,6 +123,36 @@
   .select-mult .select__input {
     width: 22.8rem;
   }
+
+  &__filter-price {
+    @extend %flexCenter;
+
+    .title-h3 {
+      margin-right: 4rem;
+    }
+  }
+
+  &-catalog {
+    .maps__filter {
+      width: 74%;
+    }
+
+    .maps__title {
+      .title-h3:nth-child(2) {
+        display: none;
+      }
+    }
+
+    .input {
+      background: $lightGrey;
+      margin-right: 1.5rem;
+
+      input {
+        background: $lightGrey;
+        width: 13rem;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 48em) {
@@ -318,6 +348,21 @@
       font-size: 3.2rem;
       line-height: 130%;
       margin: 0;
+    }
+
+    &-catalog {
+      .maps__filter {
+        width: 100%;
+      }
+
+      .maps__title {
+        .title-h3:nth-child(2) {
+          display: block;
+          &.hide {
+            display: none;
+          }
+        }
+      }
     }
   }
 }

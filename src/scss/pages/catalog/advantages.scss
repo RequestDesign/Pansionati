@@ -1,0 +1,89 @@
+.advantages {
+  @include showDesc();
+  margin-top: 17rem;
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    row-gap: 7rem;
+
+    .title {
+      grid-area: 1/1/2/3;
+      margin-right: 1.5rem;
+    }
+  }
+
+  &__item {
+    @extend %flexColumn;
+    row-gap: 3rem;
+    width: 31rem;
+  }
+
+  &__icon {
+    @extend %flexCenter;
+    @include sizes(10rem, 10rem);
+    box-shadow: 0 2.1rem 6rem 0 rgba(76, 98, 187, 0.13);
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.29) 0.22%,
+      rgba(255, 255, 255, 0.12) 0.23%,
+      rgba(46, 205, 240, 0.18) 100.01%,
+      rgba(255, 255, 255, 0.29) 103.23%
+    );
+    img {
+      @include sizes(3.6rem, 3.6rem);
+    }
+  }
+
+  &__txt {
+    @extend %textRegular20;
+  }
+}
+
+@media screen and (max-width: 48em) {
+  .advantages {
+    .container {
+      padding: 0;
+    }
+
+    @include showMob();
+    margin-top: 18rem;
+
+    .title {
+      margin-bottom: 5.4rem;
+      padding: 0 4rem;
+    }
+
+    &__content {
+      display: flex;
+      column-gap: 3.2rem;
+      overflow: scroll;
+      padding: 0 4rem;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    &__item {
+      row-gap: 3.2rem;
+      width: 35.4rem;
+      flex-shrink: 0;
+    }
+
+    &__icon {
+      @include sizes(12rem, 12rem);
+      box-shadow: 0 4.2rem 12rem 0 rgba(76, 98, 187, 0.13);
+
+      img {
+        @include sizes(3.8rem, 3.8rem);
+      }
+    }
+
+    &__txt {
+      @extend %textRegular20;
+    }
+  }
+}

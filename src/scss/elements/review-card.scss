@@ -1,0 +1,46 @@
+.review-card {
+  @include sizes(83.5rem, auto);
+  border-radius: 10rem 0;
+  background: rgba(156, 171, 189, 0.15);
+  backdrop-filter: blur(1.9rem);
+  padding: 4rem 5rem;
+
+  &__top {
+    @extend %flexCenterBetween;
+    margin-bottom: 3rem;
+  }
+
+  &__stars {
+    @extend %flexCenter;
+    column-gap: 0.7rem;
+
+    img {
+      @include sizes(2.4rem, 2.4rem);
+    }
+  }
+
+  &__icon {
+    @include sizes(6rem, 6rem);
+  }
+
+  &__text {
+    @extend %textRegular20;
+    margin-bottom: 3rem;
+  }
+
+  &__desc {
+    @extend %flexCenterBetween;
+  }
+
+  &__author,
+  &__date {
+    @extend %textBold20;
+    color: $grey;
+  }
+}
+
+.reviews .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.reviews .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0;
+  column-gap: 1vw;
+}

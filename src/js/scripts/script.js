@@ -50,7 +50,12 @@ document.addEventListener('DOMContentLoaded', () => {
         btnTextFull.textContent = 'Свернуть';
         btnTextFull.classList.remove('__full');
       } else {
-        txt.style.height = '21.6rem';
+        console.log(window.innerWidth);
+        if (window.innerWidth < 768) {
+          txt.style.height = '36rem';
+        } else {
+          txt.style.height = '21.6rem';
+        }
         btnTextFull.textContent = 'Развернуть';
         btnTextFull.classList.add('__full');
       }
@@ -62,4 +67,5 @@ document.addEventListener('DOMContentLoaded', () => {
   clickToogleBlockCards();
   scrollPage();
   clickFullText();
+  // toggleBlockContent();
 });

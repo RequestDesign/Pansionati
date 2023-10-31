@@ -1,6 +1,7 @@
 import * as flsFunctions from './modules/gulp.js';
 
 import './libs/inputmask.min.js';
+// import './libs/swiper-bundle.js';
 
 import './scripts/functions.js';
 import './scripts/map.js';

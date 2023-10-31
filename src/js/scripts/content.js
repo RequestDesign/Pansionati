@@ -21,7 +21,9 @@ function changeContentMap() {
       content.classList.remove('hide');
     }
 
-    document.querySelector('.js-maps-maps').classList.add('hide');
+    if (document.querySelector('.js-maps-maps')) {
+      document.querySelector('.js-maps-maps').classList.add('hide');
+    }
   });
 }
 
@@ -34,8 +36,30 @@ function scroolListWithBoard() {
   }
 }
 
+function changeContentAboutBoard() {
+  const btns = document.querySelectorAll('.js-open-content');
+  const contents = document.querySelectorAll('.js-about-content');
+
+  btns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      btns.forEach((bt) => bt.classList.remove('active'));
+      contents.forEach((content) => content.classList.remove('active'));
+      btn.classList.add('active');
+
+      const attr = btn.getAttribute('data-open-content');
+
+      contents.forEach((content) => {
+        if (content.getAttribute('data-about-content') === attr) {
+          content.classList.add('active');
+        }
+      });
+    });
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   changeContentMap();
+  changeContentAboutBoard();
 
   const btns = document.querySelectorAll('.js-btn');
 

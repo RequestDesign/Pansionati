@@ -1,6 +1,8 @@
 .about-info {
-  @extend %flexStartBetween;
-  column-gap: 2.8rem;
+  &__content {
+    @extend %flexStartBetween;
+    column-gap: 2.8rem;
+  }
 
   &__desc,
   &__map {
@@ -22,13 +24,74 @@
     @extend %textBold18;
     color: $blue;
 
-    &:hover {
-      transition: $transition;
-      opacity: 0.5;
+    @media screen and (min-width: 48em) {
+      &:hover {
+        transition: $transition;
+        opacity: 0.5;
+      }
     }
   }
 
   .map {
     @include sizes(83.4rem, 40rem);
+  }
+
+  &__map-desc {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 48em) {
+  .about-info {
+    &__content {
+      flex-direction: column;
+      row-gap: 4rem;
+    }
+
+    &__desc,
+    &__map {
+      flex: 0 0 100%;
+    }
+
+    &__txt {
+      margin-bottom: 1.6rem;
+      height: 36rem;
+    }
+
+    .map {
+      @include sizes(68.6rem, 106.2rem);
+    }
+
+    &__map-desc {
+      display: block;
+      @include sizes(64rem, fit-content);
+      position: absolute;
+      z-index: 2;
+      bottom: 10.4rem;
+      left: 2.4rem;
+      padding: 3.2rem;
+      border-radius: 4rem;
+      background: $white;
+      box-shadow: -1.6rem 3.2rem 8rem 0 rgba(76, 98, 187, 0.2);
+    }
+
+    &__map-img {
+      border-radius: 2.4rem;
+      @include sizes(57.4rem, 25rem);
+      margin-bottom: 2rem;
+    }
+
+    &__map-title {
+      font-size: 3.2rem;
+      font-weight: 700;
+      line-height: 130%;
+      margin-bottom: 1.6rem;
+    }
+
+    &__map-text {
+      font-size: 3rem;
+      line-height: 120%;
+      color: $grey;
+    }
   }
 }

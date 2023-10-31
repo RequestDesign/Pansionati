@@ -1,0 +1,83 @@
+.about-questions {
+  &__content {
+    width: 83.5rem;
+    @extend %flexColumn;
+    row-gap: 1.2rem;
+  }
+
+  &__block {
+    border-radius: 3rem;
+    background-color: $lightGrey;
+    padding: 3rem;
+  }
+
+  &__inner {
+    @extend %flexCenterBetween;
+    flex-wrap: wrap;
+    column-gap: 5rem;
+
+    &.__full {
+      .about-questions__arrow {
+        transform: rotate(90deg);
+        svg path {
+          stroke: $blue;
+        }
+      }
+    }
+  }
+
+  &__title {
+    @extend %textBold20;
+    flex-shrink: 0;
+  }
+
+  &__arrow {
+    @include sizes(2.4rem, 2.4rem);
+    flex-shrink: 0;
+    transition: $transition;
+
+    svg path {
+      transition: $transition;
+    }
+  }
+
+  &__txt {
+    @extend %textRegular20;
+    color: $grey;
+    padding-top: 1.2rem;
+    overflow: hidden;
+    height: 0;
+    transition: $transition;
+  }
+}
+
+@media screen and (max-width: 48em) {
+  .about-questions {
+    &__content {
+      width: 100%;
+      row-gap: 1.6rem;
+    }
+
+    &__block {
+      border-radius: 4rem;
+      padding: 4rem;
+    }
+
+    &__inner {
+      column-gap: 2rem;
+      flex-wrap: nowrap;
+    }
+
+    &__title {
+      flex-shrink: 1;
+    }
+
+    &__arrow {
+      @include sizes(4.8rem, 4.8rem);
+    }
+
+    &__txt {
+      padding-top: 1.6rem;
+    }
+  }
+}

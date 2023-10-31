@@ -1,0 +1,64 @@
+.ideal-board {
+  margin-top: 17rem;
+
+  &__container {
+    @extend %flexCenter;
+    column-gap: 8rem;
+  }
+
+  &__img {
+    @include sizes(54.5rem, 57.9rem);
+    flex-shrink: 0;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  &__desc {
+    width: 69rem;
+
+    .title {
+      margin-bottom: 2rem;
+    }
+
+    p {
+      @extend %textRegular20;
+
+      &:not(:last-child) {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 48em) {
+  .ideal-board {
+    margin-top: 18rem;
+
+    &__container {
+      flex-direction: column-reverse;
+      row-gap: 6rem;
+    }
+
+    &__img {
+      @include sizes(100%, 64.4rem);
+    }
+
+    &__desc {
+      width: 100%;
+
+      .title {
+        margin-bottom: 5.4rem;
+      }
+
+      p {
+        @extend %textRegular20;
+
+        &:not(:last-child) {
+          margin-bottom: 1.6rem;
+        }
+      }
+    }
+  }
+}

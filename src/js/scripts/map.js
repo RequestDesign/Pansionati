@@ -118,7 +118,7 @@ function changeActiveClass(attrEl, attr, el) {
 
 // Код для карты со всеми пансионатами
 function init() {
-  if (document.querySelector('.mainpage .mapMain')) {
+  if (document.querySelector('.mapMain')) {
     const boardsList = document.querySelectorAll('[data-board-list]');
     const boardsMap = document.querySelectorAll('[data-board-map]');
     const boardsDescContainer = document.querySelector('.map-descs');
@@ -258,7 +258,10 @@ function initContacts() {
 function initBoard() {
   if (document.querySelector('.board-map')) {
     const boardMap = new ymaps.Map('map', {
-      center: [PLACEMARK_BOARD.lalitude, PLACEMARK_BOARD.longitude],
+      center:
+        window.innerWidth < 768
+          ? [PLACEMARK_BOARD.lalitude - 0.003, PLACEMARK_BOARD.longitude]
+          : [PLACEMARK_BOARD.lalitude, PLACEMARK_BOARD.longitude],
       zoom: 15,
     });
 
