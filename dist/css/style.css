@@ -1164,6 +1164,7 @@ template {
 }
 
 .overlay,
+.not-found__img-capas img,
 .blog-card__img img,
 .maps__list-item-footer-item-img svg,
 .desc__img-capas img,
@@ -1198,6 +1199,8 @@ template {
 }
 
 body,
+.not-found__imgs,
+.not-found__desc,
 .advantages__item,
 .about-questions__content,
 .about-prices,
@@ -1391,6 +1394,7 @@ body,
   line-height: 2.4rem;
 }
 
+.not-found__desc p,
 .about-info__txt p,
 .info__btns .btn-primary span,
 .about__desc p,
@@ -3072,6 +3076,10 @@ input[type=file] {
   margin-bottom: 0;
 }
 
+.question--not-found .question__container {
+  padding: 13.5rem;
+}
+
 .baner-form {
   margin-top: 20.5rem;
 }
@@ -4441,6 +4449,68 @@ input[type=file] {
   height: 3.6rem;
 }
 
+.not-found {
+  margin: 1rem 0 28rem 0;
+}
+
+.not-found__container {
+  display: flex;
+  position: relative;
+}
+
+.not-found__desc {
+  padding: 18.4rem 9rem;
+  border-radius: 4rem;
+  background: #f0f3f7;
+  -webkit-backdrop-filter: blur(2rem);
+          backdrop-filter: blur(2rem);
+  width: 120rem;
+  row-gap: 0;
+}
+
+.not-found__desc p:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.not-found__desc-grey {
+  color: #8b8d95;
+}
+
+.not-found__desc-black {
+  color: #1a1a1a;
+}
+
+.not-found__imgs {
+  position: absolute;
+  width: 69.1rem;
+  top: 1.3rem;
+  right: 0;
+}
+
+.not-found__imgs-people {
+  width: 69.1rem;
+  height: 56.9rem;
+  position: relative;
+}
+
+.not-found__img-capas {
+  width: 33.3rem;
+  height: 14rem;
+  position: relative;
+  top: 4rem;
+  right: -26rem;
+}
+
+.not-found .btn-primary {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-top: 2rem;
+}
+
+.not-found .title {
+  margin-bottom: 2rem;
+}
+
 * {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -4555,6 +4625,7 @@ fieldset {
     line-height: 130%;
   }
 
+  .not-found__desc p,
   .about-info__txt p,
   .info__btns .btn-primary span,
   .about__desc p,
@@ -5635,6 +5706,18 @@ fieldset {
 
   .question--board .phones__phone-numbers div:last-child {
     font-size: 3.2rem;
+  }
+
+  .question--not-found {
+    margin-bottom: 15rem;
+  }
+
+  .question--not-found .question__container {
+    padding: 12.4rem 2.4rem;
+  }
+
+  .question--not-found .question__form {
+    row-gap: 6rem;
   }
 
   .baner-form {
@@ -7033,6 +7116,64 @@ fieldset {
   .advantages__icon img {
     width: 3.8rem;
     height: 3.8rem;
+  }
+
+  .not-found {
+    margin: 6.4rem 0 -8rem;
+  }
+
+  .not-found__container {
+    flex-direction: column;
+    row-gap: 0;
+  }
+
+  .not-found__desc {
+    padding: 12rem 8rem 19rem 4rem;
+    width: 60rem;
+  }
+
+  .not-found__desc p {
+    max-width: 90%;
+    line-height: 128%;
+  }
+
+  .not-found__desc p:not(:last-child) {
+    margin-bottom: 2.4rem;
+  }
+
+  .not-found__desc .title {
+    margin-bottom: 2.4rem;
+  }
+
+  .not-found__imgs {
+    width: 60rem;
+    height: 37rem;
+    position: relative;
+    right: -9rem;
+    top: -7rem;
+  }
+
+  .not-found__imgs-people {
+    width: 100%;
+    height: 38.6rem;
+  }
+
+  .not-found__imgs-people img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 4rem;
+  }
+
+  .not-found__img-capas {
+    position: absolute;
+    left: -9rem;
+    top: 29.5rem;
+  }
+
+  .not-found .btn-primary {
+    margin-top: 4rem;
   }
 
   .logo {

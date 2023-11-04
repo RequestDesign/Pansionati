@@ -73,6 +73,12 @@
       }
     }
   }
+
+  &--not-found {
+    .question__container {
+      padding: 13.5rem;
+    }
+  }
 }
 
 //------------------Mob-----------------//
@@ -159,6 +165,16 @@
         div:last-child {
           font-size: 3.2rem;
         }
+      }
+    }
+
+    &--not-found {
+      margin-bottom: 15rem;
+      .question__container {
+        padding: 12.4rem 2.4rem;
+      }
+      .question__form {
+        row-gap: 6rem;
       }
     }
   }
