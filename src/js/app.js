@@ -12,5 +12,6 @@ import './scripts/script.js';
 import './scripts/header.js';
 import './scripts/content.js';
 import './scripts/blog.js';
+import './scripts/gallery.js';
 
 flsFunctions.isWebp();

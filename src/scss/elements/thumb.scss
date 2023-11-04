@@ -1,0 +1,9 @@
+.lg-thumb-outer {
+  display: flex;
+  justify-content: center;
+}
+
+.lg-outer .lg-thumb-item.active,
+.lg-outer .lg-thumb-item:hover {
+  border-color: $blue;
+}

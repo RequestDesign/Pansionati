@@ -1,0 +1,422 @@
+.board-main {
+  @include showDesc();
+
+  &__container {
+    @extend %flexColumn;
+    row-gap: 3rem;
+  }
+
+  &__main {
+    @extend %flexStartBetween;
+    column-gap: 3rem;
+  }
+
+  &__main-left {
+    width: 100%;
+  }
+
+  &__desc,
+  &__form {
+    padding: 3rem;
+    border-radius: 3rem;
+    width: 40rem;
+    border: 1.4px solid $lightGrey;
+  }
+
+  &__desc {
+    background-color: $white;
+    margin-bottom: 3rem;
+  }
+
+  &__desc-phone {
+    justify-content: flex-start;
+    margin: 2rem 0;
+
+    .phones__phone {
+      align-items: flex-start;
+      column-gap: 0.8rem;
+    }
+    .phones__phone-numbers {
+      text-align: left;
+      div {
+        margin: 0;
+      }
+    }
+  }
+
+  &__desc-btn {
+    span {
+      color: $blue;
+    }
+  }
+
+  .btn-tertiary:not(:disabled) {
+    .icon-arrow-hover-white {
+      stroke: $blue;
+    }
+    &:hover .icon-arrow-hover-white {
+      stroke: $orange;
+    }
+  }
+
+  &__form {
+    background: rgba(156, 171, 189, 0.15);
+    flex-direction: column;
+  }
+
+  &__form-txt {
+    @extend %textRegular18;
+    margin-bottom: 2rem;
+  }
+
+  &__form-form {
+    input {
+      width: 24rem;
+    }
+
+    .input {
+      margin-bottom: 2rem;
+    }
+
+    .btn-secondary {
+      @include sizes(100%, 7rem);
+    }
+  }
+
+  &__desc-prices {
+    @extend %flexCenterBetween;
+    padding-bottom: 2rem;
+    border-bottom: 1.4px solid $lightGrey;
+  }
+
+  &__desc-price {
+    @extend %textH3;
+    color: $black;
+
+    span {
+      &:first-child {
+        @extend %textBold15;
+      }
+      &:last-child {
+        @extend %textRegular20;
+        color: $grey;
+      }
+    }
+  }
+
+  &__desc-sale {
+    @extend %textRegular20;
+    color: $white;
+    padding: 0.4rem 1.2rem;
+    border-radius: 0.8rem;
+    background-color: $orange;
+  }
+
+  &__title {
+    @extend %textH1;
+    margin-bottom: 1.2rem;
+  }
+
+  &__subtitle {
+    @extend %textRegular20;
+    color: $grey;
+  }
+}
+
+.board-rating {
+  @extend %flexCenterBetween;
+
+  &__desc {
+    @extend %flexCenterStart;
+    column-gap: 2rem;
+  }
+
+  &__plushs {
+    @extend %flexCenter;
+    column-gap: 0.8rem;
+  }
+
+  &__plush {
+    @extend %textBold18;
+    border-radius: 0.8rem;
+    padding: 0.8rem 1rem;
+    background: rgba(240, 243, 247, 0.51);
+    backdrop-filter: blur(0.8rem);
+  }
+
+  &__rec {
+    @extend %flexCenter;
+    column-gap: 0.4rem;
+  }
+
+  &__rec-txt {
+    @extend %textRegular18;
+    color: $grey;
+  }
+
+  &__rec-icon {
+    @include sizes(2.4rem, 2.4rem);
+    transform: translateY(-0.4rem);
+  }
+
+  &__marks {
+    @extend %flexCenter;
+    column-gap: 0.8rem;
+  }
+
+  &__num {
+    @extend %textH3;
+    color: $grey;
+    padding: 0.8rem 1rem;
+    border-radius: 0.8rem;
+    background: rgba(240, 243, 247, 0.51);
+    backdrop-filter: blur(0.8rem);
+  }
+
+  &__like {
+    @include sizes(4rem, 4rem);
+    border-radius: 1.2rem;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(0.2rem);
+    padding: 0.8rem;
+    z-index: 10;
+
+    &.active {
+      .board-rating__like-img {
+        @extend %fullSize;
+        background: url('@img/icons/icons.svg#like-active') no-repeat center;
+        background-size: cover;
+      }
+    }
+  }
+
+  &__like-img {
+    display: block;
+    @extend %fullSize;
+    background: url('@img/icons/icons.svg#like') no-repeat center;
+    background-size: cover;
+  }
+}
+
+.board-gallery {
+  margin-bottom: 3rem;
+  column-gap: 1.2rem;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 1.2rem;
+
+  a {
+    overflow: hidden;
+    display: none;
+
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
+      display: block;
+    }
+
+    img {
+      transition: $transition;
+    }
+
+    &:nth-child(1) {
+      @include sizes(83.6rem, 49.8rem);
+      grid-row: 1 / span 3;
+      grid-column: 1 / span 2;
+      border-radius: 3rem 0 0 3rem;
+    }
+
+    &:nth-child(2) {
+      grid-row: 1 / span 1;
+      grid-column: 2 / span 1;
+      border-radius: 0 3rem 0 0;
+    }
+
+    &:nth-child(3) {
+      grid-row: 2 / span 1;
+      grid-column: 2 / span 1;
+    }
+
+    &:nth-child(4) {
+      grid-row: 3 / span 1;
+      grid-column: 2 / span 1;
+      border-radius: 0 0 3rem 0;
+      position: relative;
+    }
+
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
+      @include sizes(41.9rem, 15.8rem);
+    }
+
+    &:hover img {
+      transform: scale(1.1);
+    }
+  }
+
+  &__lg {
+    @include sizes(83.6rem, 49.8rem);
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 3rem 0 0 3rem;
+    img {
+      transition: $transition;
+    }
+
+    &:hover img {
+      transform: scale(1.1);
+    }
+  }
+
+  &__yet {
+    @extend %flexCenter;
+    position: absolute;
+    width: 100%;
+    height: 101%;
+    top: 0;
+    left: 0;
+    opacity: 0.92;
+    background: linear-gradient(180deg, rgba(240, 243, 247, 0.65) 0%, #f0f3f7 100%);
+    backdrop-filter: blur(4.5rem);
+
+    span {
+      @extend %textH3;
+      color: $grey;
+    }
+  }
+}
+
+@media screen and (max-width: 48em) {
+  .board-main {
+    @include showMob();
+
+    &__container {
+      flex-direction: column-reverse;
+      row-gap: 4rem;
+    }
+
+    &__main {
+      flex-direction: column;
+      row-gap: 4rem;
+    }
+
+    &__main-left {
+      width: 100%;
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    &__desc {
+      padding: 2.4rem;
+      border-radius: 4rem;
+      width: 100%;
+    }
+
+    &__main-asides {
+      width: 100%;
+    }
+
+    &__desc {
+      margin-bottom: 0;
+    }
+
+    &__desc-phone {
+      margin: 2.4rem 0;
+
+      .phones__phone {
+        flex-direction: row;
+        column-gap: 1.6rem;
+      }
+
+      .phones__phone-numbers {
+        text-align: left;
+        padding: 0;
+        div:last-child {
+          text-align: start;
+        }
+      }
+
+      .phones__icon {
+        @include sizes(5.2rem, 5.2rem);
+      }
+    }
+
+    &__desc-prices {
+      padding-bottom: 2.4rem;
+    }
+
+    &__desc-price {
+      font-size: 3.2rem;
+
+      span {
+        &:last-child {
+          font-size: 2.8rem;
+        }
+      }
+    }
+
+    &__desc-sale {
+      padding: 0.8rem 2.4rem;
+      border-radius: 1.6rem;
+    }
+
+    &__title {
+      margin-bottom: 1.6rem;
+    }
+  }
+
+  .board-rating {
+    &__desc {
+      column-gap: 3.2rem;
+    }
+
+    &__plushs {
+      column-gap: 1.6rem;
+      justify-content: flex-start;
+    }
+
+    &__plush {
+      border-radius: 1.6rem;
+      padding: 1.6rem 2rem;
+      backdrop-filter: blur(2.3rem);
+    }
+
+    &__rec {
+      column-gap: 0.8rem;
+    }
+
+    &__rec-txt {
+      color: $grey;
+    }
+
+    &__rec-icon {
+      @include sizes(4.8rem, 4.8rem);
+      transform: translateY(-0.8rem);
+    }
+
+    &__marks {
+      flex-direction: row-reverse;
+      column-gap: 1.6rem;
+    }
+
+    &__num {
+      font-size: 2.8rem;
+      padding: 1.6rem 2rem;
+      border-radius: 1.6rem;
+      backdrop-filter: blur(2.3rem);
+    }
+
+    &__like {
+      @include sizes(6.8rem, 6.8rem);
+      padding: 1.6rem;
+    }
+
+    &__star {
+      @include sizes(4.8rem, 4.8rem);
+    }
+  }
+}
