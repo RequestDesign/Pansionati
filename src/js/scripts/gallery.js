@@ -1,4 +1,10 @@
-$(document).ready(() => {
+function setCountDopFotos() {
+  const { length } = document.querySelectorAll('.board-gallery__slider a');
+  const count = length - 3;
+  document.querySelector('.board-gallery__yet span').innerText = `+${count} фото`;
+}
+
+function initGallery() {
   $('#gallery').lightGallery({
     selector: 'a',
     thumbnail: true,
@@ -17,4 +23,9 @@ $(document).ready(() => {
     rotate: false,
     fullScreen: false,
   });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  initGallery();
+  setCountDopFotos();
 });

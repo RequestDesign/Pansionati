@@ -213,12 +213,20 @@ function initSliders() {
       }
     }
   });
+
+  if (document.querySelector('.board-gallery__slider') && window.innerWidth < 768) {
+    new Swiper('.board-gallery__swiper', {
+      modules: [Pagination],
+      slidesPerView: 1,
+      allowTouchMove: true,
+      spaceBetween: 30,
+      pagination: {
+        el: '.board-gallery__bullets',
+        clickable: true,
+      },
+    });
+  }
 }
 
-window.addEventListener('DOMContentLoaded', () => {
-  initSliders();
-});
-
-window.addEventListener('resize', () => {
-  initSliders();
-});
+window.addEventListener('DOMContentLoaded', initSliders);
+window.addEventListener('resize', initSliders);

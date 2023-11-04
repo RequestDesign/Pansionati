@@ -8,30 +8,37 @@
             <div class="board-rating__plush">Лицензия проверена</div>
           </div>
           <div id="gallery" class="board-main__main-gallery board-gallery">
-            <a href="@img/boards/garmonia.png" data-sub-html="Описание - 1">
-              <img src="@img/boards/garmonia.png" alt="" />
-            </a>
-            <a href="@img/boards/garmonia-sm.png" data-sub-html="Описание - 2">
-              <img src="@img/boards/garmonia-sm.png" alt="" />
-            </a>
-            <a href="@img/boards/garmonia-sm.png" data-sub-html="Описание - 3">
-              <img src="@img/boards/garmonia-sm.png" alt="" />
-            </a>
-            <a href="@img/boards/garmonia-sm.png" data-sub-html="Описание - 4">
-              <img src="@img/boards/garmonia-sm.png" alt="" />
-              <div class="board-gallery__yet">
-                <span>+12 фото</span>
+            <div class="swiper board-gallery__swiper">
+              <div class="swiper-wrapper board-gallery__slider">
+                <a href="@img/boards/garmonia.png" class="swiper-slide" data-sub-html="Описание - 1">
+                  <img src="@img/boards/garmonia.png" alt="" />
+                </a>
+                <a href="@img/boards/garmonia-sm.png" class="swiper-slide" data-sub-html="Описание - 2">
+                  <img src="@img/boards/garmonia-sm.png" alt="" />
+                </a>
+                <a href="@img/boards/garmonia-sm.png" class="swiper-slide" data-sub-html="Описание - 3">
+                  <img src="@img/boards/garmonia-sm.png" alt="" />
+                </a>
+                <a href="@img/boards/garmonia-sm.png" class="swiper-slide" data-sub-html="Описание - 4">
+                  <img src="@img/boards/garmonia-sm.png" alt="" />
+                  <div class="board-gallery__yet --desc">
+                    <span></span>
+                  </div>
+                </a>
+                <a href="@img/boards/garmonia.png" class="swiper-slide" data-sub-html="Описание - 1">
+                  <img src="@img/boards/garmonia.png" alt="" />
+                </a>
+                <a href="@img/boards/garmonia-sm.png" class="swiper-slide" data-sub-html="Описание - 2">
+                  <img src="@img/boards/garmonia-sm.png" alt="" />
+                </a>
+                <a href="@img/boards/garmonia-sm.png" class="swiper-slide" data-sub-html="Описание - 3">
+                  <img src="@img/boards/garmonia-sm.png" alt="" />
+                </a>
               </div>
-            </a>
-            <a href="@img/boards/garmonia.png" data-sub-html="Описание - 1">
-              <img src="@img/boards/garmonia.png" alt="" />
-            </a>
-            <a href="@img/boards/garmonia-sm.png" data-sub-html="Описание - 2">
-              <img src="@img/boards/garmonia-sm.png" alt="" />
-            </a>
-            <a href="@img/boards/garmonia-sm.png" data-sub-html="Описание - 3">
-              <img src="@img/boards/garmonia-sm.png" alt="" />
-            </a>
+              <div class="pagination board-gallery__pagination --mob">
+                <div class="pagination__bullets board-gallery__bullets"></div>
+              </div>
+            </div>
           </div>
           <div class="board-main__main-rating board-rating">
             <div class="board-rating__desc">
@@ -133,6 +140,9 @@
         <div class="board-main__title">Пансионат «Гармония жизни» в Москве, ул. Тенистая</div>
         <div class="board-main__subtitle">Город Домодедово, СНТ Искра-Старосьяново, Берёзовая улица, 4</div>
       </div>
+      <button type="submit" class="board-main__btn btn btn-primary --mob">
+        <span>Узнать о наличии мест</span>
+      </button>
     </div>
   </div>
 </seaction>

@@ -48,20 +48,29 @@
   }
 
   &--board {
+    margin: 17rem 0;
     .question {
-      margin: 17rem 0;
-
       &__container {
-        padding: 7rem 12.5rem;
+        padding: 9rem 12.5rem 7rem 12.5rem;
       }
 
       &__text {
         max-width: 100%;
-        margin-bottom: 4rem;
+        margin-bottom: 2rem;
+        font-size: 1.8rem;
       }
 
       &__phones {
         margin-bottom: 3rem;
+      }
+
+      &__form {
+        width: 50%;
+
+        .input {
+          justify-content: flex-start;
+          width: 100%;
+        }
       }
     }
 
@@ -143,6 +152,7 @@
     }
 
     &--board {
+      margin: 18rem 0;
       .question {
         margin: 18rem 0;
 
@@ -150,8 +160,17 @@
           padding: 12.4rem 3.2rem;
         }
 
+        &__text {
+          font-size: 3rem;
+          margin-bottom: 4rem;
+        }
+
         &__phones {
           margin-bottom: 4rem;
+        }
+
+        &__form {
+          width: 100%;
         }
       }
 

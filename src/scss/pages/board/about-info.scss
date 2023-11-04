@@ -67,7 +67,7 @@
       @include sizes(64rem, fit-content);
       position: absolute;
       z-index: 2;
-      bottom: 10.4rem;
+      bottom: 12.4rem;
       left: 2.4rem;
       padding: 3.2rem;
       border-radius: 4rem;
@@ -79,6 +79,11 @@
       border-radius: 2.4rem;
       @include sizes(57.4rem, 25rem);
       margin-bottom: 2rem;
+
+      img {
+        height: 100%;
+        border-radius: 2.4rem;
+      }
     }
 
     &__map-title {

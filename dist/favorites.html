@@ -1,1035 +1,1034 @@
 <!doctype html>
 <html lang="ru">
   <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Избранное</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css?_v=20231104205550" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lg-thumbnail.min.css?_v=20231104205550" />
-  <link rel="stylesheet" href="css/style.min.css?_v=20231104205550" />
-</head>
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Избранное</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lg-thumbnail.min.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
+  </head>
 
   <body>
     <header class="header">
-  <div class="container">
-    <div class="header__container">
-      <div class="header__burger js-burger-open --mob">
-        <button type="button" class="btn btn-round">
-          <span class="header__burger-icon">
-            <img src="img/icons/icons.svg#burger" alt="burger-open" />
-          </span>
-        </button>
-      </div>
-      <div class="header__logo logo">
-        <a href="#">Пансионаты</a>
-      </div>
-      <div class="header__panel js-burger-menu">
-        <div class="header__logo logo --mob">
-          <a href="#">Пансионаты</a>
-        </div>
-        <div class="header__region">
-          <div class="header__region-title">Ваш регион:</div>
-          <div class="select select-region js-select">
-            <div class="select__header js-select-inner">
-              <div class="select__icon">
-                <img src="img/icons/icons.svg#location" alt="" />
-              </div>
-              <div class="select__value js-select-value">Москва</div>
-              <button type="button" class="select__btn">
-                <img src="img/icons/icons.svg#arrow-down" alt="arrow" />
-              </button>
+      <div class="container">
+        <div class="header__container">
+          <div class="header__burger js-burger-open --mob">
+            <button type="button" class="btn btn-round">
+              <span class="header__burger-icon">
+                <img src="img/icons/icons.svg#burger" alt="burger-open" />
+              </span>
+            </button>
+          </div>
+          <div class="header__logo logo">
+            <a href="#">Пансионаты</a>
+          </div>
+          <div class="header__panel js-burger-menu">
+            <div class="header__logo logo --mob">
+              <a href="#">Пансионаты</a>
             </div>
-            <div class="select__content">
-              <div class="select__items">
-                <div class="select__item js-select-item">
-                  <input id="city-1" type="radio" name="city" value="Москва" checked />
-                  <label for="city-1">Москва</label>
+            <div class="header__region">
+              <div class="header__region-title">Ваш регион:</div>
+              <div class="select select-region js-select">
+                <div class="select__header js-select-inner">
+                  <div class="select__icon">
+                    <img src="img/icons/icons.svg#location" alt="" />
+                  </div>
+                  <div class="select__value js-select-value">Москва</div>
+                  <button type="button" class="select__btn">
+                    <img src="img/icons/icons.svg#arrow-down" alt="arrow" />
+                  </button>
                 </div>
-                <div class="select__item js-select-item">
-                  <input id="city-2" type="radio" value="Санкт-Петербург" name="city" />
-                  <label for="city-2">Санкт-Петербург</label>
-                </div>
-                <div class="select__item js-select-item">
-                  <input id="city-3" type="radio" value="Брянск" name="city" />
-                  <label for="city-3">Брянск</label>
-                </div>
-                <div class="select__item js-select-item">
-                  <input id="city-4" type="radio" value="Сочи" name="city" />
-                  <label for="city-4">Сочи</label>
-                </div>
-                <div class="select__item js-select-item">
-                  <input id="city-5" type="radio" value="Ростов" name="city" />
-                  <label for="city-5">Ростов</label>
-                </div>
-                <div class="select__item js-select-item">
-                  <input id="city-6" type="radio" value="Краснодар" name="city" />
-                  <label for="city-6">Краснодар</label>
-                </div>
-                <div class="select__item js-select-item">
-                  <input id="city-7" type="radio" value="Тула" name="city" />
-                  <label for="city-7">Тула</label>
+                <div class="select__content">
+                  <div class="select__items">
+                    <div class="select__item js-select-item">
+                      <input id="city-1" type="radio" name="city" value="Москва" checked />
+                      <label for="city-1">Москва</label>
+                    </div>
+                    <div class="select__item js-select-item">
+                      <input id="city-2" type="radio" value="Санкт-Петербург" name="city" />
+                      <label for="city-2">Санкт-Петербург</label>
+                    </div>
+                    <div class="select__item js-select-item">
+                      <input id="city-3" type="radio" value="Брянск" name="city" />
+                      <label for="city-3">Брянск</label>
+                    </div>
+                    <div class="select__item js-select-item">
+                      <input id="city-4" type="radio" value="Сочи" name="city" />
+                      <label for="city-4">Сочи</label>
+                    </div>
+                    <div class="select__item js-select-item">
+                      <input id="city-5" type="radio" value="Ростов" name="city" />
+                      <label for="city-5">Ростов</label>
+                    </div>
+                    <div class="select__item js-select-item">
+                      <input id="city-6" type="radio" value="Краснодар" name="city" />
+                      <label for="city-6">Краснодар</label>
+                    </div>
+                    <div class="select__item js-select-item">
+                      <input id="city-7" type="radio" value="Тула" name="city" />
+                      <label for="city-7">Тула</label>
+                    </div>
+                  </div>
                 </div>
               </div>
+            </div>
+            <nav class="header__menu">
+              <ul class="header__list">
+                <li class="header__item">
+                  <a href="#" class="header__link">Каталог</a>
+                </li>
+                <li class="header__item">
+                  <a href="#" class="header__link">О нас</a>
+                </li>
+                <li class="header__item">
+                  <a href="#" class="header__link">Контакты</a>
+                </li>
+                <li class="header__item">
+                  <a href="#" class="header__link">Статьи</a>
+                </li>
+                <li class="header__item">
+                  <a href="#" class="header__link">Избранное</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="header__phones phones">
+              <button type="button" class="btn btn-primary">
+                <span>Заказать звонок</span>
+              </button>
+              <div class="phones__phone">
+                <div class="phones__phone-numbers">
+                  <div>8 495 567 45 05</div>
+                  <div>9:00 - 21:00</div>
+                </div>
+                <a href="tel:84955674505" class="btn btn-round">
+                  <img src="img/icons/icons.svg#phone" alt="phone" />
+                </a>
+              </div>
+            </div>
+            <div class="header__socials --mob">
+              <a href="#" class="btn btn-round">
+                <img src="img/icons/icons.svg#telegram" alt="telegram" />
+              </a>
+              <a href="#" class="btn btn-round">
+                <img src="img/icons/icons.svg#whatsapp" alt="telegram" />
+              </a>
             </div>
           </div>
-        </div>
-        <nav class="header__menu">
-          <ul class="header__list">
-            <li class="header__item">
-              <a href="#" class="header__link">Каталог</a>
-            </li>
-            <li class="header__item">
-              <a href="#" class="header__link">О нас</a>
-            </li>
-            <li class="header__item">
-              <a href="#" class="header__link">Контакты</a>
-            </li>
-            <li class="header__item">
-              <a href="#" class="header__link">Статьи</a>
-            </li>
-            <li class="header__item">
-              <a href="#" class="header__link">Избранное</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="header__phones phones">
-          <button type="button" class="btn btn-primary">
-            <span>Заказать звонок</span>
-          </button>
-          <div class="phones__phone">
-            <div class="phones__phone-numbers">
-              <div>8 495 567 45 05</div>
-              <div>9:00 - 21:00</div>
-            </div>
+          <div class="header__phones phones --mob">
             <a href="tel:84955674505" class="btn btn-round">
               <img src="img/icons/icons.svg#phone" alt="phone" />
             </a>
           </div>
-        </div>
-        <div class="header__socials --mob">
-          <a href="#" class="btn btn-round">
-            <img src="img/icons/icons.svg#telegram" alt="telegram" />
-          </a>
-          <a href="#" class="btn btn-round">
-            <img src="img/icons/icons.svg#whatsapp" alt="telegram" />
-          </a>
+          <div class="overlay"></div>
         </div>
       </div>
-      <div class="header__phones phones --mob">
-        <a href="tel:84955674505" class="btn btn-round">
-          <img src="img/icons/icons.svg#phone" alt="phone" />
-        </a>
-      </div>
-      <div class="overlay"></div>
-    </div>
-  </div>
-</header>
- <main><section class="breadcrumbs">
-  <div class="container">
-    <div class="breadcrumbs__container">
-      <a href="./main.html">Главная</a>
-      <span>Избранное</span>
-    </div>
-  </div>
-</section>
- <section class="favorites">
-  <div class="container">
-    <div class="favorites__container">
-      <div class="title">Избранное</div>
+    </header>
+    <main>
+      <section class="breadcrumbs">
+        <div class="container">
+          <div class="breadcrumbs__container">
+            <a href="./main.html">Главная</a>
+            <span>Избранное</span>
+          </div>
+        </div>
+      </section>
+      <section class="favorites">
+        <div class="container">
+          <div class="favorites__container">
+            <div class="title">Избранное</div>
 
-      <!--Если есть пансионаты в избранном-->
-      <div class="favorites__content">
-        <div class="favorites__cards js-cards">
-          <div class="card card-vert">
-            <div class="card-slider js-card__slider">
-              <div class="js-card__swiper card__swiper">
-                <div class="swiper-wrapper card__slider-wrapper">
-                  <div class="swiper-slide card__slider-slide">
-                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
+            <!--Если есть пансионаты в избранном-->
+            <div class="favorites__content">
+              <div class="favorites__cards js-cards">
+                <div class="card card-vert">
+                  <div class="card-slider js-card__slider">
+                    <div class="js-card__swiper card__swiper">
+                      <div class="swiper-wrapper card__slider-wrapper">
+                        <div class="swiper-slide card__slider-slide">
+                          <img src="img/cards/board-hostel-1.png" alt="" />
+                        </div>
+                        <div class="swiper-slide card__slider-slide">
+                          <img src="img/cards/board-hostel-1.png" alt="" />
+                        </div>
+                        <div class="swiper-slide card__slider-slide">
+                          <img src="img/cards/board-hostel-1.png" alt="" />
+                        </div>
+                      </div>
+                      <div class="pagination card__pagination js-card__pagination">
+                        <div class="pagination__bullets card__bullets js-card__bullets"></div>
+                      </div>
+                    </div>
                   </div>
-                  <div class="swiper-slide card__slider-slide">
-                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
+                  <div class="card__items card__items-top">
+                    <div class="card__item">Комфорт</div>
+                    <div class="card__item">Лицензия проверена</div>
                   </div>
-                  <div class="swiper-slide card__slider-slide">
-                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
+                  <button type="button" class="card__like js-toggle">
+                    <span class="card__like-img"></span>
+                  </button>
+                  <div class="card__items card__items-bottom">
+                    <div class="card__item">от 1 700₽ <span>/сутки</span></div>
+                    <div class="card__item">
+                      <img src="img/icons/icons.svg#star" alt="" />
+                      <div>4.8</div>
+                    </div>
+                  </div>
+                  <div class="card__substract">
+                    <div class="card__desc">
+                      <div class="card__desc-top">
+                        <div class="title-h3">Пушкино пансионат</div>
+                        <div class="card__desc-rec">
+                          <div class="card__desc-rec-like">
+                            <img src="img/icons/icons.svg#like-finger" alt="" />
+                            <span>81%</span>
+                          </div>
+                          <div class="card__desc-rec-text">Рекомендуют</div>
+                        </div>
+                      </div>
+                      <div class="card__desc-location">
+                        <div class="card__desc-location-address">
+                          <div class="card__icon">
+                            <img src="img/icons/icons.svg#location-blue" alt="" />
+                          </div>
+                          <div class="card__desc-location-text">
+                            Город Домодедово, СНТ Искра-Старосьяново, Берёзовая улица, 4
+                          </div>
+                        </div>
+                        <a href="#" class="btn btn-tertiary">
+                          <span>Узнать о наличии мест</span>
+                          <svg class="icon icon-arrow-hover-orange">
+                            <use xlink:href="img/icons/icons.svg#arrow-right"></use>
+                          </svg>
+                        </a>
+                      </div>
+                      <div class="card__items card__items-services">
+                        <div class="card__items-shadow">
+                          <img src="img/bg/card-items-shadow.png" alt="" />
+                        </div>
+                        <div class="card__item">Одноместные</div>
+                        <div class="card__item">Восстановление после инсульта</div>
+                        <div class="card__item">Одноместные</div>
+                        <div class="card__item">Восстановление после инсульта</div>
+                        <div class="card__item">Одноместные</div>
+                        <div class="card__item">Восстановление после инсульта</div>
+                      </div>
+                      <div class="card__icon-items">
+                        <div class="card__items-shadow">
+                          <img src="img/bg/card-items-shadow.png" alt="" />
+                        </div>
+                        <div class="card__icon-item">
+                          <div class="card__icon">
+                            <img src="img/icons/icons.svg#nurses" alt="" />
+                          </div>
+                          <div class="card__icon-text">Медсестры</div>
+                        </div>
+                        <div class="card__icon-item">
+                          <div class="card__icon">
+                            <img src="img/icons/icons.svg#leisure" alt="" />
+                          </div>
+                          <div class="card__icon-text">Досуг</div>
+                        </div>
+                        <div class="card__icon-item">
+                          <div class="card__icon">
+                            <img src="img/icons/icons.svg#nutrition" alt="" />
+                          </div>
+                          <div class="card__icon-text">3х разовое питание</div>
+                        </div>
+                        <div class="card__icon-item">
+                          <div class="card__icon">
+                            <img src="img/icons/icons.svg#nurses" alt="" />
+                          </div>
+                          <div class="card__icon-text">Медсестры</div>
+                        </div>
+                        <div class="card__icon-item">
+                          <div class="card__icon">
+                            <img src="img/icons/icons.svg#leisure" alt="" />
+                          </div>
+                          <div class="card__icon-text">Досуг</div>
+                        </div>
+                        <div class="card__icon-item">
+                          <div class="card__icon">
+                            <img src="img/icons/icons.svg#nutrition" alt="" />
+                          </div>
+                          <div class="card__icon-text">3х разовое питание</div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="pagination card__pagination js-card__pagination">
-                  <div class="pagination__bullets card__bullets js-card__bullets"></div>
+                <div class="card card-vert">
+                  <div class="card-slider js-card__slider">
+                    <div class="js-card__swiper card__swiper">
+                      <div class="swiper-wrapper card__slider-wrapper">
+                        <div class="swiper-slide card__slider-slide">
+                          <img src="img/cards/board-hostel-1.png" alt="" />
+                        </div>
+                        <div class="swiper-slide card__slider-slide">
+                          <img src="img/cards/board-hostel-1.png" alt="" />
+                        </div>
+                        <div class="swiper-slide card__slider-slide">
+                          <img src="img/cards/board-hostel-1.png" alt="" />
+                        </div>
+                      </div>
+                      <div class="pagination card__pagination js-card__pagination">
+                        <div class="pagination__bullets card__bullets js-card__bullets"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card__items card__items-top">
+                    <div class="card__item">Комфорт</div>
+                    <div class="card__item">Лицензия проверена</div>
+                  </div>
+                  <button type="button" class="card__like js-toggle">
+                    <span class="card__like-img"></span>
+                  </button>
+                  <div class="card__items card__items-bottom">
+                    <div class="card__item">от 1 700₽ <span>/сутки</span></div>
+                    <div class="card__item">
+                      <img src="img/icons/icons.svg#star" alt="" />
+                      <div>4.8</div>
+                    </div>
+                  </div>
+                  <div class="card__substract">
+                    <div class="card__desc">
+                      <div class="card__desc-top">
+                        <div class="title-h3">Пушкино пансионат</div>
+                        <div class="card__desc-rec">
+                          <div class="card__desc-rec-like">
+                            <img src="img/icons/icons.svg#like-finger" alt="" />
+                            <span>81%</span>
+                          </div>
+                          <div class="card__desc-rec-text">Рекомендуют</div>
+                        </div>
+                      </div>
+                      <div class="card__desc-location">
+                        <div class="card__desc-location-address">
+                          <div class="card__icon">
+                            <img src="img/icons/icons.svg#location-blue" alt="" />
+                          </div>
+                          <div class="card__desc-location-text">
+                            Город Домодедово, СНТ Искра-Старосьяново, Берёзовая улица, 4
+                          </div>
+                        </div>
+                        <a href="#" class="btn btn-tertiary">
+                          <span>Узнать о наличии мест</span>
+                          <svg class="icon icon-arrow-hover-orange">
+                            <use xlink:href="img/icons/icons.svg#arrow-right"></use>
+                          </svg>
+                        </a>
+                      </div>
+                      <div class="card__items card__items-services">
+                        <div class="card__items-shadow">
+                          <img src="img/bg/card-items-shadow.png" alt="" />
+                        </div>
+                        <div class="card__item">Одноместные</div>
+                        <div class="card__item">Восстановление после инсульта</div>
+                        <div class="card__item">Одноместные</div>
+                        <div class="card__item">Восстановление после инсульта</div>
+                        <div class="card__item">Одноместные</div>
+                        <div class="card__item">Восстановление после инсульта</div>
+                      </div>
+                      <div class="card__icon-items">
+                        <div class="card__items-shadow">
+                          <img src="img/bg/card-items-shadow.png" alt="" />
+                        </div>
+                        <div class="card__icon-item">
+                          <div class="card__icon">
+                            <img src="img/icons/icons.svg#nurses" alt="" />
+                          </div>
+                          <div class="card__icon-text">Медсестры</div>
+                        </div>
+                        <div class="card__icon-item">
+                          <div class="card__icon">
+                            <img src="img/icons/icons.svg#leisure" alt="" />
+                          </div>
+                          <div class="card__icon-text">Досуг</div>
+                        </div>
+                        <div class="card__icon-item">
+                          <div class="card__icon">
+                            <img src="img/icons/icons.svg#nutrition" alt="" />
+                          </div>
+                          <div class="card__icon-text">3х разовое питание</div>
+                        </div>
+                        <div class="card__icon-item">
+                          <div class="card__icon">
+                            <img src="img/icons/icons.svg#nurses" alt="" />
+                          </div>
+                          <div class="card__icon-text">Медсестры</div>
+                        </div>
+                        <div class="card__icon-item">
+                          <div class="card__icon">
+                            <img src="img/icons/icons.svg#leisure" alt="" />
+                          </div>
+                          <div class="card__icon-text">Досуг</div>
+                        </div>
+                        <div class="card__icon-item">
+                          <div class="card__icon">
+                            <img src="img/icons/icons.svg#nutrition" alt="" />
+                          </div>
+                          <div class="card__icon-text">3х разовое питание</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card card-vert">
+                  <div class="card-slider js-card__slider">
+                    <div class="js-card__swiper card__swiper">
+                      <div class="swiper-wrapper card__slider-wrapper">
+                        <div class="swiper-slide card__slider-slide">
+                          <img src="img/cards/board-hostel-1.png" alt="" />
+                        </div>
+                        <div class="swiper-slide card__slider-slide">
+                          <img src="img/cards/board-hostel-1.png" alt="" />
+                        </div>
+                        <div class="swiper-slide card__slider-slide">
+                          <img src="img/cards/board-hostel-1.png" alt="" />
+                        </div>
+                      </div>
+                      <div class="pagination card__pagination js-card__pagination">
+                        <div class="pagination__bullets card__bullets js-card__bullets"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card__items card__items-top">
+                    <div class="card__item">Комфорт</div>
+                    <div class="card__item">Лицензия проверена</div>
+                  </div>
+                  <button type="button" class="card__like js-toggle">
+                    <span class="card__like-img"></span>
+                  </button>
+                  <div class="card__items card__items-bottom">
+                    <div class="card__item">от 1 700₽ <span>/сутки</span></div>
+                    <div class="card__item">
+                      <img src="img/icons/icons.svg#star" alt="" />
+                      <div>4.8</div>
+                    </div>
+                  </div>
+                  <div class="card__substract">
+                    <div class="card__desc">
+                      <div class="card__desc-top">
+                        <div class="title-h3">Пушкино пансионат</div>
+                        <div class="card__desc-rec">
+                          <div class="card__desc-rec-like">
+                            <img src="img/icons/icons.svg#like-finger" alt="" />
+                            <span>81%</span>
+                          </div>
+                          <div class="card__desc-rec-text">Рекомендуют</div>
+                        </div>
+                      </div>
+                      <div class="card__desc-location">
+                        <div class="card__desc-location-address">
+                          <div class="card__icon">
+                            <img src="img/icons/icons.svg#location-blue" alt="" />
+                          </div>
+                          <div class="card__desc-location-text">
+                            Город Домодедово, СНТ Искра-Старосьяново, Берёзовая улица, 4
+                          </div>
+                        </div>
+                        <a href="#" class="btn btn-tertiary">
+                          <span>Узнать о наличии мест</span>
+                          <svg class="icon icon-arrow-hover-orange">
+                            <use xlink:href="img/icons/icons.svg#arrow-right"></use>
+                          </svg>
+                        </a>
+                      </div>
+                      <div class="card__items card__items-services">
+                        <div class="card__items-shadow">
+                          <img src="img/bg/card-items-shadow.png" alt="" />
+                        </div>
+                        <div class="card__item">Одноместные</div>
+                        <div class="card__item">Восстановление после инсульта</div>
+                        <div class="card__item">Одноместные</div>
+                        <div class="card__item">Восстановление после инсульта</div>
+                        <div class="card__item">Одноместные</div>
+                        <div class="card__item">Восстановление после инсульта</div>
+                      </div>
+                      <div class="card__icon-items">
+                        <div class="card__items-shadow">
+                          <img src="img/bg/card-items-shadow.png" alt="" />
+                        </div>
+                        <div class="card__icon-item">
+                          <div class="card__icon">
+                            <img src="img/icons/icons.svg#nurses" alt="" />
+                          </div>
+                          <div class="card__icon-text">Медсестры</div>
+                        </div>
+                        <div class="card__icon-item">
+                          <div class="card__icon">
+                            <img src="img/icons/icons.svg#leisure" alt="" />
+                          </div>
+                          <div class="card__icon-text">Досуг</div>
+                        </div>
+                        <div class="card__icon-item">
+                          <div class="card__icon">
+                            <img src="img/icons/icons.svg#nutrition" alt="" />
+                          </div>
+                          <div class="card__icon-text">3х разовое питание</div>
+                        </div>
+                        <div class="card__icon-item">
+                          <div class="card__icon">
+                            <img src="img/icons/icons.svg#nurses" alt="" />
+                          </div>
+                          <div class="card__icon-text">Медсестры</div>
+                        </div>
+                        <div class="card__icon-item">
+                          <div class="card__icon">
+                            <img src="img/icons/icons.svg#leisure" alt="" />
+                          </div>
+                          <div class="card__icon-text">Досуг</div>
+                        </div>
+                        <div class="card__icon-item">
+                          <div class="card__icon">
+                            <img src="img/icons/icons.svg#nutrition" alt="" />
+                          </div>
+                          <div class="card__icon-text">3х разовое питание</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card card-vert">
+                  <div class="card-slider js-card__slider">
+                    <div class="js-card__swiper card__swiper">
+                      <div class="swiper-wrapper card__slider-wrapper">
+                        <div class="swiper-slide card__slider-slide">
+                          <img src="img/cards/board-hostel-1.png" alt="" />
+                        </div>
+                        <div class="swiper-slide card__slider-slide">
+                          <img src="img/cards/board-hostel-1.png" alt="" />
+                        </div>
+                        <div class="swiper-slide card__slider-slide">
+                          <img src="img/cards/board-hostel-1.png" alt="" />
+                        </div>
+                      </div>
+                      <div class="pagination card__pagination js-card__pagination">
+                        <div class="pagination__bullets card__bullets js-card__bullets"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card__items card__items-top">
+                    <div class="card__item">Комфорт</div>
+                    <div class="card__item">Лицензия проверена</div>
+                  </div>
+                  <button type="button" class="card__like js-toggle">
+                    <span class="card__like-img"></span>
+                  </button>
+                  <div class="card__items card__items-bottom">
+                    <div class="card__item">от 1 700₽ <span>/сутки</span></div>
+                    <div class="card__item">
+                      <img src="img/icons/icons.svg#star" alt="" />
+                      <div>4.8</div>
+                    </div>
+                  </div>
+                  <div class="card__substract">
+                    <div class="card__desc">
+                      <div class="card__desc-top">
+                        <div class="title-h3">Пушкино пансионат</div>
+                        <div class="card__desc-rec">
+                          <div class="card__desc-rec-like">
+                            <img src="img/icons/icons.svg#like-finger" alt="" />
+                            <span>81%</span>
+                          </div>
+                          <div class="card__desc-rec-text">Рекомендуют</div>
+                        </div>
+                      </div>
+                      <div class="card__desc-location">
+                        <div class="card__desc-location-address">
+                          <div class="card__icon">
+                            <img src="img/icons/icons.svg#location-blue" alt="" />
+                          </div>
+                          <div class="card__desc-location-text">
+                            Город Домодедово, СНТ Искра-Старосьяново, Берёзовая улица, 4
+                          </div>
+                        </div>
+                        <a href="#" class="btn btn-tertiary">
+                          <span>Узнать о наличии мест</span>
+                          <svg class="icon icon-arrow-hover-orange">
+                            <use xlink:href="img/icons/icons.svg#arrow-right"></use>
+                          </svg>
+                        </a>
+                      </div>
+                      <div class="card__items card__items-services">
+                        <div class="card__items-shadow">
+                          <img src="img/bg/card-items-shadow.png" alt="" />
+                        </div>
+                        <div class="card__item">Одноместные</div>
+                        <div class="card__item">Восстановление после инсульта</div>
+                        <div class="card__item">Одноместные</div>
+                        <div class="card__item">Восстановление после инсульта</div>
+                        <div class="card__item">Одноместные</div>
+                        <div class="card__item">Восстановление после инсульта</div>
+                      </div>
+                      <div class="card__icon-items">
+                        <div class="card__items-shadow">
+                          <img src="img/bg/card-items-shadow.png" alt="" />
+                        </div>
+                        <div class="card__icon-item">
+                          <div class="card__icon">
+                            <img src="img/icons/icons.svg#nurses" alt="" />
+                          </div>
+                          <div class="card__icon-text">Медсестры</div>
+                        </div>
+                        <div class="card__icon-item">
+                          <div class="card__icon">
+                            <img src="img/icons/icons.svg#leisure" alt="" />
+                          </div>
+                          <div class="card__icon-text">Досуг</div>
+                        </div>
+                        <div class="card__icon-item">
+                          <div class="card__icon">
+                            <img src="img/icons/icons.svg#nutrition" alt="" />
+                          </div>
+                          <div class="card__icon-text">3х разовое питание</div>
+                        </div>
+                        <div class="card__icon-item">
+                          <div class="card__icon">
+                            <img src="img/icons/icons.svg#nurses" alt="" />
+                          </div>
+                          <div class="card__icon-text">Медсестры</div>
+                        </div>
+                        <div class="card__icon-item">
+                          <div class="card__icon">
+                            <img src="img/icons/icons.svg#leisure" alt="" />
+                          </div>
+                          <div class="card__icon-text">Досуг</div>
+                        </div>
+                        <div class="card__icon-item">
+                          <div class="card__icon">
+                            <img src="img/icons/icons.svg#nutrition" alt="" />
+                          </div>
+                          <div class="card__icon-text">3х разовое питание</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card card-vert">
+                  <div class="card-slider js-card__slider">
+                    <div class="js-card__swiper card__swiper">
+                      <div class="swiper-wrapper card__slider-wrapper">
+                        <div class="swiper-slide card__slider-slide">
+                          <img src="img/cards/board-hostel-1.png" alt="" />
+                        </div>
+                        <div class="swiper-slide card__slider-slide">
+                          <img src="img/cards/board-hostel-1.png" alt="" />
+                        </div>
+                        <div class="swiper-slide card__slider-slide">
+                          <img src="img/cards/board-hostel-1.png" alt="" />
+                        </div>
+                      </div>
+                      <div class="pagination card__pagination js-card__pagination">
+                        <div class="pagination__bullets card__bullets js-card__bullets"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card__items card__items-top">
+                    <div class="card__item">Комфорт</div>
+                    <div class="card__item">Лицензия проверена</div>
+                  </div>
+                  <button type="button" class="card__like js-toggle">
+                    <span class="card__like-img"></span>
+                  </button>
+                  <div class="card__items card__items-bottom">
+                    <div class="card__item">от 1 700₽ <span>/сутки</span></div>
+                    <div class="card__item">
+                      <img src="img/icons/icons.svg#star" alt="" />
+                      <div>4.8</div>
+                    </div>
+                  </div>
+                  <div class="card__substract">
+                    <div class="card__desc">
+                      <div class="card__desc-top">
+                        <div class="title-h3">Пушкино пансионат</div>
+                        <div class="card__desc-rec">
+                          <div class="card__desc-rec-like">
+                            <img src="img/icons/icons.svg#like-finger" alt="" />
+                            <span>81%</span>
+                          </div>
+                          <div class="card__desc-rec-text">Рекомендуют</div>
+                        </div>
+                      </div>
+                      <div class="card__desc-location">
+                        <div class="card__desc-location-address">
+                          <div class="card__icon">
+                            <img src="img/icons/icons.svg#location-blue" alt="" />
+                          </div>
+                          <div class="card__desc-location-text">
+                            Город Домодедово, СНТ Искра-Старосьяново, Берёзовая улица, 4
+                          </div>
+                        </div>
+                        <a href="#" class="btn btn-tertiary">
+                          <span>Узнать о наличии мест</span>
+                          <svg class="icon icon-arrow-hover-orange">
+                            <use xlink:href="img/icons/icons.svg#arrow-right"></use>
+                          </svg>
+                        </a>
+                      </div>
+                      <div class="card__items card__items-services">
+                        <div class="card__items-shadow">
+                          <img src="img/bg/card-items-shadow.png" alt="" />
+                        </div>
+                        <div class="card__item">Одноместные</div>
+                        <div class="card__item">Восстановление после инсульта</div>
+                        <div class="card__item">Одноместные</div>
+                        <div class="card__item">Восстановление после инсульта</div>
+                        <div class="card__item">Одноместные</div>
+                        <div class="card__item">Восстановление после инсульта</div>
+                      </div>
+                      <div class="card__icon-items">
+                        <div class="card__items-shadow">
+                          <img src="img/bg/card-items-shadow.png" alt="" />
+                        </div>
+                        <div class="card__icon-item">
+                          <div class="card__icon">
+                            <img src="img/icons/icons.svg#nurses" alt="" />
+                          </div>
+                          <div class="card__icon-text">Медсестры</div>
+                        </div>
+                        <div class="card__icon-item">
+                          <div class="card__icon">
+                            <img src="img/icons/icons.svg#leisure" alt="" />
+                          </div>
+                          <div class="card__icon-text">Досуг</div>
+                        </div>
+                        <div class="card__icon-item">
+                          <div class="card__icon">
+                            <img src="img/icons/icons.svg#nutrition" alt="" />
+                          </div>
+                          <div class="card__icon-text">3х разовое питание</div>
+                        </div>
+                        <div class="card__icon-item">
+                          <div class="card__icon">
+                            <img src="img/icons/icons.svg#nurses" alt="" />
+                          </div>
+                          <div class="card__icon-text">Медсестры</div>
+                        </div>
+                        <div class="card__icon-item">
+                          <div class="card__icon">
+                            <img src="img/icons/icons.svg#leisure" alt="" />
+                          </div>
+                          <div class="card__icon-text">Досуг</div>
+                        </div>
+                        <div class="card__icon-item">
+                          <div class="card__icon">
+                            <img src="img/icons/icons.svg#nutrition" alt="" />
+                          </div>
+                          <div class="card__icon-text">3х разовое питание</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="card__items card__items-top">
-              <div class="card__item">Комфорт</div>
-              <div class="card__item">Лицензия проверена</div>
-            </div>
-            <button type="button" class="card__like js-toggle">
-              <span class="card__like-img"></span>
-            </button>
-            <div class="card__items card__items-bottom">
-              <div class="card__item">от 1 700₽ <span>/сутки</span></div>
-              <div class="card__item">
-                <img src="img/icons/icons.svg#star" alt="" />
-                <div>4.8</div>
-              </div>
-            </div>
-            <div class="card__substract">
-              <div class="card__desc">
-                <div class="card__desc-top">
-                  <div class="title-h3">Пушкино пансионат</div>
-                  <div class="card__desc-rec">
-                    <div class="card__desc-rec-like">
-                      <img src="img/icons/icons.svg#like-finger" alt="" />
-                      <span>81%</span>
-                    </div>
-                    <div class="card__desc-rec-text">Рекомендуют</div>
-                  </div>
-                </div>
-                <div class="card__desc-location">
-                  <div class="card__desc-location-address">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#location-blue" alt="" />
-                    </div>
-                    <div class="card__desc-location-text">
-                      Город Домодедово, СНТ Искра-Старосьяново, Берёзовая улица, 4
-                    </div>
-                  </div>
-                  <a href="#" class="btn btn-tertiary">
-                    <span>Узнать о наличии мест</span>
-                    <svg class="icon icon-arrow-hover-orange">
-                      <use xlink:href="img/icons/icons.svg#arrow-right"></use>
-                    </svg>
-                  </a>
-                </div>
-                <div class="card__items card__items-services">
-                  <div class="card__items-shadow">
-                    <picture><source srcset="img/bg/card-items-shadow.webp" type="image/webp"><img src="img/bg/card-items-shadow.png" alt="" /></picture>
-                  </div>
-                  <div class="card__item">Одноместные</div>
-                  <div class="card__item">Восстановление после инсульта</div>
-                  <div class="card__item">Одноместные</div>
-                  <div class="card__item">Восстановление после инсульта</div>
-                  <div class="card__item">Одноместные</div>
-                  <div class="card__item">Восстановление после инсульта</div>
-                </div>
-                <div class="card__icon-items">
-                  <div class="card__items-shadow">
-                    <picture><source srcset="img/bg/card-items-shadow.webp" type="image/webp"><img src="img/bg/card-items-shadow.png" alt="" /></picture>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#nurses" alt="" />
-                    </div>
-                    <div class="card__icon-text">Медсестры</div>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#leisure" alt="" />
-                    </div>
-                    <div class="card__icon-text">Досуг</div>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#nutrition" alt="" />
-                    </div>
-                    <div class="card__icon-text">3х разовое питание</div>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#nurses" alt="" />
-                    </div>
-                    <div class="card__icon-text">Медсестры</div>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#leisure" alt="" />
-                    </div>
-                    <div class="card__icon-text">Досуг</div>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#nutrition" alt="" />
-                    </div>
-                    <div class="card__icon-text">3х разовое питание</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card card-vert">
-            <div class="card-slider js-card__slider">
-              <div class="js-card__swiper card__swiper">
-                <div class="swiper-wrapper card__slider-wrapper">
-                  <div class="swiper-slide card__slider-slide">
-                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
-                  </div>
-                  <div class="swiper-slide card__slider-slide">
-                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
-                  </div>
-                  <div class="swiper-slide card__slider-slide">
-                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
-                  </div>
-                </div>
-                <div class="pagination card__pagination js-card__pagination">
-                  <div class="pagination__bullets card__bullets js-card__bullets"></div>
-                </div>
-              </div>
-            </div>
-            <div class="card__items card__items-top">
-              <div class="card__item">Комфорт</div>
-              <div class="card__item">Лицензия проверена</div>
-            </div>
-            <button type="button" class="card__like js-toggle">
-              <span class="card__like-img"></span>
-            </button>
-            <div class="card__items card__items-bottom">
-              <div class="card__item">от 1 700₽ <span>/сутки</span></div>
-              <div class="card__item">
-                <img src="img/icons/icons.svg#star" alt="" />
-                <div>4.8</div>
-              </div>
-            </div>
-            <div class="card__substract">
-              <div class="card__desc">
-                <div class="card__desc-top">
-                  <div class="title-h3">Пушкино пансионат</div>
-                  <div class="card__desc-rec">
-                    <div class="card__desc-rec-like">
-                      <img src="img/icons/icons.svg#like-finger" alt="" />
-                      <span>81%</span>
-                    </div>
-                    <div class="card__desc-rec-text">Рекомендуют</div>
-                  </div>
-                </div>
-                <div class="card__desc-location">
-                  <div class="card__desc-location-address">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#location-blue" alt="" />
-                    </div>
-                    <div class="card__desc-location-text">
-                      Город Домодедово, СНТ Искра-Старосьяново, Берёзовая улица, 4
-                    </div>
-                  </div>
-                  <a href="#" class="btn btn-tertiary">
-                    <span>Узнать о наличии мест</span>
-                    <svg class="icon icon-arrow-hover-orange">
-                      <use xlink:href="img/icons/icons.svg#arrow-right"></use>
-                    </svg>
-                  </a>
-                </div>
-                <div class="card__items card__items-services">
-                  <div class="card__items-shadow">
-                    <picture><source srcset="img/bg/card-items-shadow.webp" type="image/webp"><img src="img/bg/card-items-shadow.png" alt="" /></picture>
-                  </div>
-                  <div class="card__item">Одноместные</div>
-                  <div class="card__item">Восстановление после инсульта</div>
-                  <div class="card__item">Одноместные</div>
-                  <div class="card__item">Восстановление после инсульта</div>
-                  <div class="card__item">Одноместные</div>
-                  <div class="card__item">Восстановление после инсульта</div>
-                </div>
-                <div class="card__icon-items">
-                  <div class="card__items-shadow">
-                    <picture><source srcset="img/bg/card-items-shadow.webp" type="image/webp"><img src="img/bg/card-items-shadow.png" alt="" /></picture>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#nurses" alt="" />
-                    </div>
-                    <div class="card__icon-text">Медсестры</div>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#leisure" alt="" />
-                    </div>
-                    <div class="card__icon-text">Досуг</div>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#nutrition" alt="" />
-                    </div>
-                    <div class="card__icon-text">3х разовое питание</div>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#nurses" alt="" />
-                    </div>
-                    <div class="card__icon-text">Медсестры</div>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#leisure" alt="" />
-                    </div>
-                    <div class="card__icon-text">Досуг</div>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#nutrition" alt="" />
-                    </div>
-                    <div class="card__icon-text">3х разовое питание</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card card-vert">
-            <div class="card-slider js-card__slider">
-              <div class="js-card__swiper card__swiper">
-                <div class="swiper-wrapper card__slider-wrapper">
-                  <div class="swiper-slide card__slider-slide">
-                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
-                  </div>
-                  <div class="swiper-slide card__slider-slide">
-                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
-                  </div>
-                  <div class="swiper-slide card__slider-slide">
-                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
-                  </div>
-                </div>
-                <div class="pagination card__pagination js-card__pagination">
-                  <div class="pagination__bullets card__bullets js-card__bullets"></div>
-                </div>
-              </div>
-            </div>
-            <div class="card__items card__items-top">
-              <div class="card__item">Комфорт</div>
-              <div class="card__item">Лицензия проверена</div>
-            </div>
-            <button type="button" class="card__like js-toggle">
-              <span class="card__like-img"></span>
-            </button>
-            <div class="card__items card__items-bottom">
-              <div class="card__item">от 1 700₽ <span>/сутки</span></div>
-              <div class="card__item">
-                <img src="img/icons/icons.svg#star" alt="" />
-                <div>4.8</div>
-              </div>
-            </div>
-            <div class="card__substract">
-              <div class="card__desc">
-                <div class="card__desc-top">
-                  <div class="title-h3">Пушкино пансионат</div>
-                  <div class="card__desc-rec">
-                    <div class="card__desc-rec-like">
-                      <img src="img/icons/icons.svg#like-finger" alt="" />
-                      <span>81%</span>
-                    </div>
-                    <div class="card__desc-rec-text">Рекомендуют</div>
-                  </div>
-                </div>
-                <div class="card__desc-location">
-                  <div class="card__desc-location-address">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#location-blue" alt="" />
-                    </div>
-                    <div class="card__desc-location-text">
-                      Город Домодедово, СНТ Искра-Старосьяново, Берёзовая улица, 4
-                    </div>
-                  </div>
-                  <a href="#" class="btn btn-tertiary">
-                    <span>Узнать о наличии мест</span>
-                    <svg class="icon icon-arrow-hover-orange">
-                      <use xlink:href="img/icons/icons.svg#arrow-right"></use>
-                    </svg>
-                  </a>
-                </div>
-                <div class="card__items card__items-services">
-                  <div class="card__items-shadow">
-                    <picture><source srcset="img/bg/card-items-shadow.webp" type="image/webp"><img src="img/bg/card-items-shadow.png" alt="" /></picture>
-                  </div>
-                  <div class="card__item">Одноместные</div>
-                  <div class="card__item">Восстановление после инсульта</div>
-                  <div class="card__item">Одноместные</div>
-                  <div class="card__item">Восстановление после инсульта</div>
-                  <div class="card__item">Одноместные</div>
-                  <div class="card__item">Восстановление после инсульта</div>
-                </div>
-                <div class="card__icon-items">
-                  <div class="card__items-shadow">
-                    <picture><source srcset="img/bg/card-items-shadow.webp" type="image/webp"><img src="img/bg/card-items-shadow.png" alt="" /></picture>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#nurses" alt="" />
-                    </div>
-                    <div class="card__icon-text">Медсестры</div>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#leisure" alt="" />
-                    </div>
-                    <div class="card__icon-text">Досуг</div>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#nutrition" alt="" />
-                    </div>
-                    <div class="card__icon-text">3х разовое питание</div>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#nurses" alt="" />
-                    </div>
-                    <div class="card__icon-text">Медсестры</div>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#leisure" alt="" />
-                    </div>
-                    <div class="card__icon-text">Досуг</div>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#nutrition" alt="" />
-                    </div>
-                    <div class="card__icon-text">3х разовое питание</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card card-vert">
-            <div class="card-slider js-card__slider">
-              <div class="js-card__swiper card__swiper">
-                <div class="swiper-wrapper card__slider-wrapper">
-                  <div class="swiper-slide card__slider-slide">
-                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
-                  </div>
-                  <div class="swiper-slide card__slider-slide">
-                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
-                  </div>
-                  <div class="swiper-slide card__slider-slide">
-                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
-                  </div>
-                </div>
-                <div class="pagination card__pagination js-card__pagination">
-                  <div class="pagination__bullets card__bullets js-card__bullets"></div>
-                </div>
-              </div>
-            </div>
-            <div class="card__items card__items-top">
-              <div class="card__item">Комфорт</div>
-              <div class="card__item">Лицензия проверена</div>
-            </div>
-            <button type="button" class="card__like js-toggle">
-              <span class="card__like-img"></span>
-            </button>
-            <div class="card__items card__items-bottom">
-              <div class="card__item">от 1 700₽ <span>/сутки</span></div>
-              <div class="card__item">
-                <img src="img/icons/icons.svg#star" alt="" />
-                <div>4.8</div>
-              </div>
-            </div>
-            <div class="card__substract">
-              <div class="card__desc">
-                <div class="card__desc-top">
-                  <div class="title-h3">Пушкино пансионат</div>
-                  <div class="card__desc-rec">
-                    <div class="card__desc-rec-like">
-                      <img src="img/icons/icons.svg#like-finger" alt="" />
-                      <span>81%</span>
-                    </div>
-                    <div class="card__desc-rec-text">Рекомендуют</div>
-                  </div>
-                </div>
-                <div class="card__desc-location">
-                  <div class="card__desc-location-address">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#location-blue" alt="" />
-                    </div>
-                    <div class="card__desc-location-text">
-                      Город Домодедово, СНТ Искра-Старосьяново, Берёзовая улица, 4
-                    </div>
-                  </div>
-                  <a href="#" class="btn btn-tertiary">
-                    <span>Узнать о наличии мест</span>
-                    <svg class="icon icon-arrow-hover-orange">
-                      <use xlink:href="img/icons/icons.svg#arrow-right"></use>
-                    </svg>
-                  </a>
-                </div>
-                <div class="card__items card__items-services">
-                  <div class="card__items-shadow">
-                    <picture><source srcset="img/bg/card-items-shadow.webp" type="image/webp"><img src="img/bg/card-items-shadow.png" alt="" /></picture>
-                  </div>
-                  <div class="card__item">Одноместные</div>
-                  <div class="card__item">Восстановление после инсульта</div>
-                  <div class="card__item">Одноместные</div>
-                  <div class="card__item">Восстановление после инсульта</div>
-                  <div class="card__item">Одноместные</div>
-                  <div class="card__item">Восстановление после инсульта</div>
-                </div>
-                <div class="card__icon-items">
-                  <div class="card__items-shadow">
-                    <picture><source srcset="img/bg/card-items-shadow.webp" type="image/webp"><img src="img/bg/card-items-shadow.png" alt="" /></picture>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#nurses" alt="" />
-                    </div>
-                    <div class="card__icon-text">Медсестры</div>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#leisure" alt="" />
-                    </div>
-                    <div class="card__icon-text">Досуг</div>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#nutrition" alt="" />
-                    </div>
-                    <div class="card__icon-text">3х разовое питание</div>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#nurses" alt="" />
-                    </div>
-                    <div class="card__icon-text">Медсестры</div>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#leisure" alt="" />
-                    </div>
-                    <div class="card__icon-text">Досуг</div>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#nutrition" alt="" />
-                    </div>
-                    <div class="card__icon-text">3х разовое питание</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card card-vert">
-            <div class="card-slider js-card__slider">
-              <div class="js-card__swiper card__swiper">
-                <div class="swiper-wrapper card__slider-wrapper">
-                  <div class="swiper-slide card__slider-slide">
-                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
-                  </div>
-                  <div class="swiper-slide card__slider-slide">
-                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
-                  </div>
-                  <div class="swiper-slide card__slider-slide">
-                    <picture><source srcset="img/cards/board-hostel-1.webp" type="image/webp"><img src="img/cards/board-hostel-1.png" alt="" /></picture>
-                  </div>
-                </div>
-                <div class="pagination card__pagination js-card__pagination">
-                  <div class="pagination__bullets card__bullets js-card__bullets"></div>
-                </div>
-              </div>
-            </div>
-            <div class="card__items card__items-top">
-              <div class="card__item">Комфорт</div>
-              <div class="card__item">Лицензия проверена</div>
-            </div>
-            <button type="button" class="card__like js-toggle">
-              <span class="card__like-img"></span>
-            </button>
-            <div class="card__items card__items-bottom">
-              <div class="card__item">от 1 700₽ <span>/сутки</span></div>
-              <div class="card__item">
-                <img src="img/icons/icons.svg#star" alt="" />
-                <div>4.8</div>
-              </div>
-            </div>
-            <div class="card__substract">
-              <div class="card__desc">
-                <div class="card__desc-top">
-                  <div class="title-h3">Пушкино пансионат</div>
-                  <div class="card__desc-rec">
-                    <div class="card__desc-rec-like">
-                      <img src="img/icons/icons.svg#like-finger" alt="" />
-                      <span>81%</span>
-                    </div>
-                    <div class="card__desc-rec-text">Рекомендуют</div>
-                  </div>
-                </div>
-                <div class="card__desc-location">
-                  <div class="card__desc-location-address">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#location-blue" alt="" />
-                    </div>
-                    <div class="card__desc-location-text">
-                      Город Домодедово, СНТ Искра-Старосьяново, Берёзовая улица, 4
-                    </div>
-                  </div>
-                  <a href="#" class="btn btn-tertiary">
-                    <span>Узнать о наличии мест</span>
-                    <svg class="icon icon-arrow-hover-orange">
-                      <use xlink:href="img/icons/icons.svg#arrow-right"></use>
-                    </svg>
-                  </a>
-                </div>
-                <div class="card__items card__items-services">
-                  <div class="card__items-shadow">
-                    <picture><source srcset="img/bg/card-items-shadow.webp" type="image/webp"><img src="img/bg/card-items-shadow.png" alt="" /></picture>
-                  </div>
-                  <div class="card__item">Одноместные</div>
-                  <div class="card__item">Восстановление после инсульта</div>
-                  <div class="card__item">Одноместные</div>
-                  <div class="card__item">Восстановление после инсульта</div>
-                  <div class="card__item">Одноместные</div>
-                  <div class="card__item">Восстановление после инсульта</div>
-                </div>
-                <div class="card__icon-items">
-                  <div class="card__items-shadow">
-                    <picture><source srcset="img/bg/card-items-shadow.webp" type="image/webp"><img src="img/bg/card-items-shadow.png" alt="" /></picture>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#nurses" alt="" />
-                    </div>
-                    <div class="card__icon-text">Медсестры</div>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#leisure" alt="" />
-                    </div>
-                    <div class="card__icon-text">Досуг</div>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#nutrition" alt="" />
-                    </div>
-                    <div class="card__icon-text">3х разовое питание</div>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#nurses" alt="" />
-                    </div>
-                    <div class="card__icon-text">Медсестры</div>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#leisure" alt="" />
-                    </div>
-                    <div class="card__icon-text">Досуг</div>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#nutrition" alt="" />
-                    </div>
-                    <div class="card__icon-text">3х разовое питание</div>
-                  </div>
-                </div>
-              </div>
+
+            <!--Если нет пансонатов в избранном-->
+            <div class="favorites__content" style="display: none">
+              <div class="favorites__empty-msg">В избранном пока ничего нет</div>
             </div>
           </div>
         </div>
-      </div>
-
-      <!--Если нет пансонатов в избранном-->
-      <div class="favorites__content" style="display: none">
-        <div class="favorites__empty-msg">В избранном пока ничего нет</div>
-      </div>
-    </div>
-  </div>
-</section>
-</main>
+      </section>
+    </main>
 
     <footer class="footer">
-  <div class="container">
-    <div class="footer__container">
-      <div class="footer__left">
-        <div class="footer__logo logo">
-          <a href="#">Пансионаты</a>
-        </div>
-        <button type="button" class="btn btn-tertiary">
-          <span>Добавить пансионат</span>
-          <svg class="icon icon-arrow-hover-orange">
-            <use xlink:href="img/icons/icons.svg#arrow-right"></use>
-          </svg>
-        </button>
-        <a href="#" class="footer__link"> Карта сайта </a>
-      </div>
-      <div class="footer__menu --desc">
-        <ul class="footer__items">
-          <li class="footer__item">
-            <a href="#" class="footer__link">Каталог</a>
-          </li>
-          <li class="footer__item">
-            <a href="#" class="footer__link">О нас</a>
-          </li>
-          <li class="footer__item">
-            <a href="#" class="footer__link">Блог</a>
-          </li>
-          <li class="footer__item">
-            <a href="#" class="footer__link">Контакты</a>
-          </li>
-          <li class="footer__item">
-            <a href="#" class="footer__link">Избранное</a>
-          </li>
-        </ul>
-        <ul class="footer__items">
-          <li class="footer__item">
-            <a href="#" class="footer__link">Рассчитать стоимость услуг</a>
-          </li>
-          <li class="footer__item">
-            <a href="#" class="footer__link">Награды</a>
-          </li>
-          <li class="footer__item">
-            <a href="#" class="footer__link">Пансионаты рядом с вами</a>
-          </li>
-          <li class="footer__item">
-            <a href="#" class="footer__link">Проверенные пансионаты</a>
-          </li>
-          <li class="footer__item">
-            <a href="#" class="footer__link">Услуги по транспортировке больных</a>
-          </li>
-        </ul>
-        <ul class="footer__items">
-          <li class="footer__item">
-            <a href="#" class="footer__link">Лучшие предложения</a>
-          </li>
-          <li class="footer__item">
-            <a href="#" class="footer__link">Подбор пансионата по рейтингу</a>
-          </li>
-          <li class="footer__item">
-            <a href="#" class="footer__link">Подбор пансионата по заболеванию</a>
-          </li>
-          <li class="footer__item">
-            <a href="#" class="footer__link">Подбор пансионата по особенности</a>
-          </li>
-          <li class="footer__item">
-            <a href="#" class="footer__link">Подбор пансионата по городу</a>
-          </li>
-        </ul>
-      </div>
-      <div class="footer__menu --mob">
-        <ul class="footer__items">
-          <li class="footer__item">
-            <a href="#" class="footer__link">Каталог</a>
-          </li>
-          <li class="footer__item">
-            <a href="#" class="footer__link">О нас</a>
-          </li>
-          <li class="footer__item">
-            <a href="#" class="footer__link">Блог</a>
-          </li>
-          <li class="footer__item">
-            <a href="#" class="footer__link">Контакты</a>
-          </li>
-          <li class="footer__item">
-            <a href="#" class="footer__link">Награды</a>
-          </li>
-          <li class="footer__item">
-            <a href="#" class="footer__link">Рассчитать стоимость услуг</a>
-          </li>
-          <li class="footer__item">
-            <a href="#" class="footer__link">Подбор пансионата по заболеванию</a>
-          </li>
-          <li class="footer__item">
-            <a href="#" class="footer__link">Подбор пансионата по городу</a>
-          </li>
-        </ul>
-        <ul class="footer__items">
-          <li class="footer__item">
-            <a href="#" class="footer__link">Пансионаты рядом с вами</a>
-          </li>
-          <li class="footer__item">
-            <a href="#" class="footer__link">Проверенные пансионаты</a>
-          </li>
-          <li class="footer__item">
-            <a href="#" class="footer__link">Услуги по транспортировке больных</a>
-          </li>
-          <li class="footer__item">
-            <a href="#" class="footer__link">Лучшие предложения</a>
-          </li>
-          <li class="footer__item">
-            <a href="#" class="footer__link">Подбор пансионата по рейтингу</a>
-          </li>
-          <li class="footer__item">
-            <a href="#" class="footer__link">Подбор пансионата по особенности</a>
-          </li>
-        </ul>
-      </div>
-      <div class="footer__phones phones">
-        <button type="button" class="btn btn-primary">
-          <span>Заказать звонок</span>
-        </button>
-        <div class="phones__phone">
-          <div class="phones__phone-numbers">
-            <div>8 495 567 45 05</div>
-            <div>9:00 - 21:00</div>
+      <div class="container">
+        <div class="footer__container">
+          <div class="footer__left">
+            <div class="footer__logo logo">
+              <a href="#">Пансионаты</a>
+            </div>
+            <button type="button" class="btn btn-tertiary">
+              <span>Добавить пансионат</span>
+              <svg class="icon icon-arrow-hover-orange">
+                <use xlink:href="img/icons/icons.svg#arrow-right"></use>
+              </svg>
+            </button>
+            <a href="#" class="footer__link"> Карта сайта </a>
           </div>
-          <a href="tel:84955674505" class="btn btn-round">
-            <svg class="icon icon-white">
-              <use xlink:href="img/icons/icons.svg#phone"></use>
-            </svg>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
- <!--Модалка нужна помощь в выборе пансионата (Наш специалист свяжется с вами и сделает индивидуальную подборку пансионатов.)-->
-<div class="modal close-x" data-modal="assistance-choosing">
-  <div class="modal__inner">
-    <div class="modal__content">
-      <div class="modal__content-close close-x">
-        <img class="close-x" src="img/icons/icons.svg#close-modal" alt="" />
-      </div>
-      <div class="title modal__content-title">
-        Спасибо <br />
-        за обращение
-      </div>
-      <div class="modal__content-text">
-        Наш специалист свяжется с вами и сделает индивидуальную подборку пансионатов.
-      </div>
-      <div class="modal__content-btns">
-        <a href="./main.html" class="btn btn-primary">
-          <span>Вернуться на главную</span>
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!--Модалка рассчитать стоимость услуг (Наш специалист свяжется с вами и поможет подобрать подходящие варианты)-->
-<div class="modal close-x" data-modal="cost-services">
-  <div class="modal__inner">
-    <div class="modal__content">
-      <div class="modal__content-close close-x">
-        <img class="close-x" src="img/icons/icons.svg#close-modal" alt="" />
-      </div>
-      <div class="title modal__content-title">
-        Спасибо <br />
-        за обращение
-      </div>
-      <div class="modal__content-text">Наш специалист свяжется с вами и поможет подобрать подходящие варианты</div>
-      <div class="modal__content-btns">
-        <a href="./main.html" class="btn btn-primary">
-          <span>Вернуться на главную</span>
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!--Узнать о наличии мест-->
-<div class="modal close-x" data-modal="check-availability">
-  <div class="modal__inner">
-    <div class="modal__content">
-      <div class="modal__content-close close-x">
-        <img class="close-x" src="img/icons/icons.svg#close-modal" alt="" />
-      </div>
-      <div class="title modal__content-title">Узнать о наличии мест</div>
-      <div class="modal__content-text">Оставьте ваш номер телефона, наш специалист перезвонит вам.</div>
-      <form class="modal__content-form">
-        <div class="input">
-          <div class="icon">
-            <img src="img/icons/icons.svg#phone-orange" alt="" />
+          <div class="footer__menu --desc">
+            <ul class="footer__items">
+              <li class="footer__item">
+                <a href="#" class="footer__link">Каталог</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">О нас</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Блог</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Контакты</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Избранное</a>
+              </li>
+            </ul>
+            <ul class="footer__items">
+              <li class="footer__item">
+                <a href="#" class="footer__link">Рассчитать стоимость услуг</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Награды</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Пансионаты рядом с вами</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Проверенные пансионаты</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Услуги по транспортировке больных</a>
+              </li>
+            </ul>
+            <ul class="footer__items">
+              <li class="footer__item">
+                <a href="#" class="footer__link">Лучшие предложения</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Подбор пансионата по рейтингу</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Подбор пансионата по заболеванию</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Подбор пансионата по особенности</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Подбор пансионата по городу</a>
+              </li>
+            </ul>
           </div>
-          <input type="tel" name="phone" placeholder="Введите номер телефона" autocomplete="off" />
-        </div>
-        <button type="submit" form="baner-form-phone" class="btn btn-primary">
-          <span>Заказать звонок</span>
-        </button>
-      </form>
-    </div>
-  </div>
-</div>
-
-<!--Модалка связь в ближайшее время (Наш специалист свяжется с вами в ближайшее время.)-->
-<div class="modal close-x" data-modal="will-contact-soon">
-  <div class="modal__inner">
-    <div class="modal__content">
-      <div class="modal__content-close close-x">
-        <img class="close-x" src="img/icons/icons.svg#close-modal" alt="" />
-      </div>
-      <div class="title modal__content-title">
-        Спасибо <br />
-        за обращение
-      </div>
-      <div class="modal__content-text">Наш специалист свяжется с вами в ближайшее время.</div>
-      <div class="modal__content-btns">
-        <a href="./main.html" class="btn btn-primary">
-          <span>Вернуться на главную</span>
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!--Контактные данные-->
-<div class="modal close-x" data-modal="contacts-data">
-  <div class="modal__inner">
-    <div class="modal__content">
-      <div class="modal__content-close close-x">
-        <img class="close-x" src="img/icons/icons.svg#close-modal" alt="" />
-      </div>
-      <div class="title modal__content-title">Контактные данные</div>
-      <div class="modal__content-text">
-        Оставьте ваш номер телефона, наш специалист подберет подходящие варианты и перезвонит вам.
-      </div>
-      <form class="modal__content-form">
-        <div class="input">
-          <div class="icon">
-            <img src="img/icons/icons.svg#phone-orange" alt="" />
+          <div class="footer__menu --mob">
+            <ul class="footer__items">
+              <li class="footer__item">
+                <a href="#" class="footer__link">Каталог</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">О нас</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Блог</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Контакты</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Награды</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Рассчитать стоимость услуг</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Подбор пансионата по заболеванию</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Подбор пансионата по городу</a>
+              </li>
+            </ul>
+            <ul class="footer__items">
+              <li class="footer__item">
+                <a href="#" class="footer__link">Пансионаты рядом с вами</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Проверенные пансионаты</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Услуги по транспортировке больных</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Лучшие предложения</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Подбор пансионата по рейтингу</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Подбор пансионата по особенности</a>
+              </li>
+            </ul>
           </div>
-          <input type="tel" name="phone" placeholder="Введите номер телефона" autocomplete="off" />
+          <div class="footer__phones phones">
+            <button type="button" class="btn btn-primary">
+              <span>Заказать звонок</span>
+            </button>
+            <div class="phones__phone">
+              <div class="phones__phone-numbers">
+                <div>8 495 567 45 05</div>
+                <div>9:00 - 21:00</div>
+              </div>
+              <a href="tel:84955674505" class="btn btn-round">
+                <svg class="icon icon-white">
+                  <use xlink:href="img/icons/icons.svg#phone"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
         </div>
-        <button type="submit" form="baner-form-phone" class="btn btn-primary">
-          <span>Заказать звонок</span>
-        </button>
-      </form>
-    </div>
-  </div>
-</div>
-
-<!--Спасибо за заявку-->
-<div class="modal close-x" data-modal="thanks-application">
-  <div class="modal__inner">
-    <div class="modal__content">
-      <div class="modal__content-close close-x">
-        <img class="close-x" src="img/icons/icons.svg#close-modal" alt="" />
       </div>
-      <div class="title modal__content-title">
-        Спасибо <br />
-        за Заявку
-      </div>
-      <div class="modal__content-text">Наш специалист свяжется с вами в ближайшее время для уточнения деталей.</div>
-      <div class="modal__content-btns">
-        <a href="./main.html" class="btn btn-primary">
-          <span>Вернуться на главную</span>
-        </a>
+    </footer>
+    <!--Модалка нужна помощь в выборе пансионата (Наш специалист свяжется с вами и сделает индивидуальную подборку пансионатов.)-->
+    <div class="modal close-x" data-modal="assistance-choosing">
+      <div class="modal__inner">
+        <div class="modal__content">
+          <div class="modal__content-close close-x">
+            <img class="close-x" src="img/icons/icons.svg#close-modal" alt="" />
+          </div>
+          <div class="title modal__content-title">
+            Спасибо <br />
+            за обращение
+          </div>
+          <div class="modal__content-text">
+            Наш специалист свяжется с вами и сделает индивидуальную подборку пансионатов.
+          </div>
+          <div class="modal__content-btns">
+            <a href="./main.html" class="btn btn-primary">
+              <span>Вернуться на главную</span>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
-<!--Модалка подобрать пансионат-->
-<div class="modal close-x" data-modal="will-select-suitable">
-  <div class="modal__inner">
-    <div class="modal__content">
-      <div class="modal__content-close close-x">
-        <img class="close-x" src="img/icons/icons.svg#close-modal" alt="" />
-      </div>
-      <div class="title modal__content-title">
-        Спасибо <br />
-        за обращение
-      </div>
-      <div class="modal__content-text">Наш специалист свяжется с вами как только подберет подходящие варианты</div>
-      <div class="modal__content-btns">
-        <a href="./main.html" class="btn btn-primary">
-          <span>Вернуться на главную</span>
-        </a>
+    <!--Модалка рассчитать стоимость услуг (Наш специалист свяжется с вами и поможет подобрать подходящие варианты)-->
+    <div class="modal close-x" data-modal="cost-services">
+      <div class="modal__inner">
+        <div class="modal__content">
+          <div class="modal__content-close close-x">
+            <img class="close-x" src="img/icons/icons.svg#close-modal" alt="" />
+          </div>
+          <div class="title modal__content-title">
+            Спасибо <br />
+            за обращение
+          </div>
+          <div class="modal__content-text">Наш специалист свяжется с вами и поможет подобрать подходящие варианты</div>
+          <div class="modal__content-btns">
+            <a href="./main.html" class="btn btn-primary">
+              <span>Вернуться на главную</span>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=e1d17623-ee55-4c9d-8251-85ab8eb1263e&lang=ru_RU&_v=20231104205550"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js?_v=20231104205550"></script>
-<script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery-all.min.js?_v=20231104205550"></script>
-<script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lg-thumbnail.min.js?_v=20231104205550"></script>
-<script src="js/app.min.js?_v=20231104205550"></script>
+    <!--Узнать о наличии мест-->
+    <div class="modal close-x" data-modal="check-availability">
+      <div class="modal__inner">
+        <div class="modal__content">
+          <div class="modal__content-close close-x">
+            <img class="close-x" src="img/icons/icons.svg#close-modal" alt="" />
+          </div>
+          <div class="title modal__content-title">Узнать о наличии мест</div>
+          <div class="modal__content-text">Оставьте ваш номер телефона, наш специалист перезвонит вам.</div>
+          <form class="modal__content-form">
+            <div class="input">
+              <div class="icon">
+                <img src="img/icons/icons.svg#phone-orange" alt="" />
+              </div>
+              <input type="tel" name="phone" placeholder="Введите номер телефона" autocomplete="off" />
+            </div>
+            <button type="submit" form="baner-form-phone" class="btn btn-primary">
+              <span>Заказать звонок</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
 
+    <!--Модалка связь в ближайшее время (Наш специалист свяжется с вами в ближайшее время.)-->
+    <div class="modal close-x" data-modal="will-contact-soon">
+      <div class="modal__inner">
+        <div class="modal__content">
+          <div class="modal__content-close close-x">
+            <img class="close-x" src="img/icons/icons.svg#close-modal" alt="" />
+          </div>
+          <div class="title modal__content-title">
+            Спасибо <br />
+            за обращение
+          </div>
+          <div class="modal__content-text">Наш специалист свяжется с вами в ближайшее время.</div>
+          <div class="modal__content-btns">
+            <a href="./main.html" class="btn btn-primary">
+              <span>Вернуться на главную</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Контактные данные-->
+    <div class="modal close-x" data-modal="contacts-data">
+      <div class="modal__inner">
+        <div class="modal__content">
+          <div class="modal__content-close close-x">
+            <img class="close-x" src="img/icons/icons.svg#close-modal" alt="" />
+          </div>
+          <div class="title modal__content-title">Контактные данные</div>
+          <div class="modal__content-text">
+            Оставьте ваш номер телефона, наш специалист подберет подходящие варианты и перезвонит вам.
+          </div>
+          <form class="modal__content-form">
+            <div class="input">
+              <div class="icon">
+                <img src="img/icons/icons.svg#phone-orange" alt="" />
+              </div>
+              <input type="tel" name="phone" placeholder="Введите номер телефона" autocomplete="off" />
+            </div>
+            <button type="submit" form="baner-form-phone" class="btn btn-primary">
+              <span>Заказать звонок</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!--Спасибо за заявку-->
+    <div class="modal close-x" data-modal="thanks-application">
+      <div class="modal__inner">
+        <div class="modal__content">
+          <div class="modal__content-close close-x">
+            <img class="close-x" src="img/icons/icons.svg#close-modal" alt="" />
+          </div>
+          <div class="title modal__content-title">
+            Спасибо <br />
+            за Заявку
+          </div>
+          <div class="modal__content-text">Наш специалист свяжется с вами в ближайшее время для уточнения деталей.</div>
+          <div class="modal__content-btns">
+            <a href="./main.html" class="btn btn-primary">
+              <span>Вернуться на главную</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Модалка подобрать пансионат-->
+    <div class="modal close-x" data-modal="will-select-suitable">
+      <div class="modal__inner">
+        <div class="modal__content">
+          <div class="modal__content-close close-x">
+            <img class="close-x" src="img/icons/icons.svg#close-modal" alt="" />
+          </div>
+          <div class="title modal__content-title">
+            Спасибо <br />
+            за обращение
+          </div>
+          <div class="modal__content-text">Наш специалист свяжется с вами как только подберет подходящие варианты</div>
+          <div class="modal__content-btns">
+            <a href="./main.html" class="btn btn-primary">
+              <span>Вернуться на главную</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=e1d17623-ee55-4c9d-8251-85ab8eb1263e&lang=ru_RU"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery-all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lg-thumbnail.min.js"></script>
+    <script src="js/app.min.js"></script>
   </body>
 </html>
