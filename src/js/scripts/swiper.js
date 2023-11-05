@@ -12,6 +12,7 @@ function initSliders() {
         new Swiper(slider, {
           modules: [Navigation, Pagination],
           slidesPerView: 1,
+          spaceBetween: 20,
           allowTouchMove: true,
           pagination: {
             el: pagination,

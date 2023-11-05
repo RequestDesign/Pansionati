@@ -1,0 +1,1306 @@
+<section class="catalog">
+  <div class="container">
+    <div class="title">Каталог пансионатов</div>
+    <div class="catalog__container">
+      <div class="catalog__form">
+        <form action="">
+          <fieldset class="catalog__fieldset">
+            <div class="catalog__fieldset-top">
+              <div class="catalog__fieldset-title">Местоположение</div>
+              <button type="button" class="catalog__fieldset-reset">Сбросить</button>
+            </div>
+            <div class="catalog__fieldset-select select-catalog js-select">
+              <div class="select__header js-select-inner">
+                <input
+                  name="town"
+                  type="text"
+                  class="select__input js-select-search"
+                  autocomplete="off"
+                  placeholder="Быстрый поиск"
+                />
+                <button type="button" class="select__btn">
+                  <img src="@img/icons/icons.svg#search-blue" alt="search" />
+                </button>
+              </div>
+              <div class="select__content">
+                <div class="select__items">
+                  <div class="select__empty js-select-empty">Ничего не найдено</div>
+                  <div class="select__item js-select-item">
+                    <input id="town-1" type="checkbox" name="town" value="Бронинцы" />
+                    <label for="town-1">Бронинцы <span>(3)</span></label>
+                  </div>
+                  <div class="select__item js-select-item">
+                    <input id="town-2" type="checkbox" name="town" value="Видное" />
+                    <label for="town-2">Видное <span>(3)</span></label>
+                  </div>
+                  <div class="select__item js-select-item">
+                    <input id="town-3" type="checkbox" name="town" value="Дедовск" />
+                    <label for="town-3">Дедовск <span>(3)</span></label>
+                  </div>
+                  <div class="select__item js-select-item">
+                    <input id="town-4" type="checkbox" name="town" value="Жуковский" />
+                    <label for="town-4">Жуковский <span>(3)</span></label>
+                  </div>
+                  <div class="select__item js-select-item">
+                    <input id="town-5" type="checkbox" name="town" value="Домодедово" />
+                    <label for="town-5">Домодедово <span>(3)</span></label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button type="button" class="catalog__fieldset-yet">Еще 18 фильтров</button>
+          </fieldset>
+          <fieldset class="catalog__fieldset">
+            <div class="catalog__fieldset-top">
+              <div class="catalog__fieldset-title">Метро</div>
+              <button type="button" class="catalog__fieldset-reset">Сбросить</button>
+            </div>
+            <div class="catalog__fieldset-select select-catalog js-select">
+              <div class="select__header js-select-inner">
+                <input
+                  name="metro"
+                  type="text"
+                  class="select__input js-select-search"
+                  autocomplete="off"
+                  placeholder="Быстрый поиск"
+                />
+                <button type="button" class="select__btn">
+                  <img src="@img/icons/icons.svg#search-blue" alt="search" />
+                </button>
+              </div>
+              <div class="select__content">
+                <div class="select__items">
+                  <div class="select__empty js-select-empty">Ничего не найдено</div>
+                  <div class="select__item js-select-item">
+                    <input id="metro-1" type="checkbox" name="metro" value="Автозаводская" />
+                    <label for="metro-1">Автозаводская <span>(1)</span></label>
+                  </div>
+                  <div class="select__item js-select-item">
+                    <input id="metro-2" type="checkbox" name="metro" value="Аннино" />
+                    <label for="metro-2">Аннино <span>(3)</span></label>
+                  </div>
+                  <div class="select__item js-select-item">
+                    <input id="metro-3" type="checkbox" name="metro" value="ВДНХ" />
+                    <label for="metro-3">ВДНХ <span>(2)</span></label>
+                  </div>
+                  <div class="select__item js-select-item">
+                    <input id="metro-4" type="checkbox" name="metro" value="Коньково" />
+                    <label for="metro-4">Коньково <span>(2)</span></label>
+                  </div>
+                  <div class="select__item js-select-item">
+                    <input id="metro-5" type="checkbox" name="metro" value="Московская" />
+                    <label for="metro-5">Московская <span>(3)</span></label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button type="button" class="catalog__fieldset-yet">Показать еще</button>
+          </fieldset>
+          <fieldset class="catalog__fieldset">
+            <div class="catalog__fieldset-top">
+              <div class="catalog__fieldset-title">Физическое состояние</div>
+              <button type="button" class="catalog__fieldset-reset">Сбросить</button>
+            </div>
+            <div class="catalog__fieldset-select select-catalog js-select">
+              <div class="select__header js-select-inner">
+                <input
+                  name="sost"
+                  type="text"
+                  class="select__input js-select-search"
+                  autocomplete="off"
+                  placeholder="Быстрый поиск"
+                />
+                <button type="button" class="select__btn">
+                  <img src="@img/icons/icons.svg#search-blue" alt="search" />
+                </button>
+              </div>
+              <div class="select__content">
+                <div class="select__items">
+                  <div class="select__empty js-select-empty">Ничего не найдено</div>
+                  <div class="select__item js-select-item">
+                    <input id="sost-1" type="checkbox" name="sost" value="Ходячий" />
+                    <label for="sost-1">Ходячий <span>(1)</span></label>
+                  </div>
+                  <div class="select__item js-select-item">
+                    <input id="sost-2" type="checkbox" name="sost" value="Лежащий" />
+                    <label for="sost-2">Лежащий <span>(3)</span></label>
+                  </div>
+                  <div class="select__item js-select-item">
+                    <input id="sost-3" type="checkbox" name="sost" value="Глухонемой" />
+                    <label for="sost-3">Глухонемой <span>(2)</span></label>
+                  </div>
+                  <div class="select__item js-select-item">
+                    <input id="sost-4" type="checkbox" name="sost" value="Проблемы с памятью" />
+                    <label for="sost-4">Проблемы с памятью <span>(2)</span></label>
+                  </div>
+                  <div class="select__item js-select-item">
+                    <input id="sost-5" type="checkbox" name="sost" value="Глухонемой" />
+                    <label for="sost-5">Глухонемой <span>(3)</span></label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button type="button" class="catalog__fieldset-yet">Показать еще</button>
+          </fieldset>
+          <fieldset class="catalog__fieldset">
+            <div class="catalog__fieldset-top">
+              <div class="catalog__fieldset-title">Физическое состояние</div>
+              <button type="button" class="catalog__fieldset-reset">Сбросить</button>
+            </div>
+            <div class="catalog__fieldset-select select-catalog js-select">
+              <div class="select__header js-select-inner">
+                <input
+                  name="uslovia"
+                  type="text"
+                  class="select__input js-select-search"
+                  autocomplete="off"
+                  placeholder="Быстрый поиск"
+                />
+                <button type="button" class="select__btn">
+                  <img src="@img/icons/icons.svg#search-blue" alt="search" />
+                </button>
+              </div>
+              <div class="select__content">
+                <div class="select__items">
+                  <div class="select__empty js-select-empty">Ничего не найдено</div>
+                  <div class="select__item js-select-item">
+                    <input id="uslovia-1" type="checkbox" name="uslovia" value="Адаптивные душевые" />
+                    <label for="uslovia-1">Адаптивные душевые <span>(1)</span></label>
+                  </div>
+                  <div class="select__item js-select-item">
+                    <input id="uslovia-2" type="checkbox" name="uslovia" value="Номера с ТВ" />
+                    <label for="uslovia-2">Номера с ТВ <span>(3)</span></label>
+                  </div>
+                  <div class="select__item js-select-item">
+                    <input id="uslovia-3" type="checkbox" name="uslovia" value="Круглосуточный уход" />
+                    <label for="uslovia-3">Круглосуточный уход <span>(2)</span></label>
+                  </div>
+                  <div class="select__item js-select-item">
+                    <input id="uslovia-4" type="checkbox" name="uslovia" value="Контроль лекарств" />
+                    <label for="uslovia-4">Контроль лекарств <span>(2)</span></label>
+                  </div>
+                  <div class="select__item js-select-item">
+                    <input id="uslovia-5" type="checkbox" name="uslovia" value="Пятиразовое питание" />
+                    <label for="uslovia-5">Пятиразовое питание <span>(3)</span></label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button type="button" class="catalog__fieldset-yet">Показать еще</button>
+          </fieldset>
+          <button type="button" class="catalog__yet">Показать все фильтры</button>
+        </form>
+      </div>
+      <div class="catalog__find">
+        <div class="catalog__sear">
+          <div class="catalog__top">
+            <div class="catalog__search">
+              <div class="input">
+                <input type="text" placeholder="Поиск по домам престарелых, направлениям, условиям и другое" />
+                <div class="catalog__search-icons">
+                  <div class="catalog__search-icon">
+                    <img src="@img/icons/icons.svg#search-blue" alt="" />
+                  </div>
+                  <!-- <div class="catalog__search-icon">
+										<img src="@img/icons/icons.svg#close-modal" alt="">
+									</div> -->
+                </div>
+              </div>
+            </div>
+            <div class="catalog__top-right">
+              <div class="select select-sort js-select">
+                <div class="select__header js-select-inner">
+                  <div class="select__value js-select-value">Сначала дешевые</div>
+                  <button type="button" class="select__btn">
+                    <img src="@img/icons/icons.svg#arrow-down" alt="arrow" />
+                  </button>
+                </div>
+                <div class="select__content">
+                  <div class="select__items">
+                    <div class="select__item js-select-item">
+                      <input id="sort-1" type="radio" name="sort" value="Сначала дешевые" checked />
+                      <label for="sort-1">Сначала дешевые</label>
+                    </div>
+                    <div class="select__item js-select-item">
+                      <input id="sort-2" type="radio" name="sort" value="Сначала дорогие" />
+                      <label for="sort-2">Сначала дорогие</label>
+                    </div>
+                    <div class="select__item js-select-item">
+                      <input id="sort-3" type="radio" name="sort" value="По популярности" />
+                      <label for="sort-3">По популярности</label>
+                    </div>
+                    <div class="select__item js-select-item">
+                      <input id="sort-4" type="radio" name="sort" value="Новинки" />
+                      <label for="sort-4">Новинки</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button type="button" class="catalog__top-map btn btn-round">
+                <img src="@img/icons/icons.svg#maps-marker" alt="" />
+              </button>
+            </div>
+          </div>
+          <div class="catalog__items">
+            <div class="catalog__item-shadow">
+              <img src="@img/catalog/catalog-item-shadow.svg" alt="" />
+            </div>
+            <div class="catalog__item">В Подмосковье</div>
+            <div class="catalog__item">Дома от 700руб/сутки</div>
+            <div class="catalog__item">Для лежачих больных</div>
+            <div class="catalog__item">Для ветеранов</div>
+            <div class="catalog__item">Элитные</div>
+            <div class="catalog__item">За пенсию</div>
+            <div class="catalog__item">Одноместные</div>
+            <div class="catalog__item">В Подмосковье</div>
+            <div class="catalog__item">Дома от 700руб/сутки</div>
+            <div class="catalog__item">Для лежачих больных</div>
+            <div class="catalog__item">Для ветеранов</div>
+            <div class="catalog__item">Элитные</div>
+            <div class="catalog__item">За пенсию</div>
+            <div class="catalog__item">Одноместные</div>
+          </div>
+        </div>
+        <div class="cards">
+          <div class="swiper-slide card card-hor">
+            <div class="card-slider js-card__slider">
+              <div class="js-card__swiper card__swiper">
+                <div class="swiper-wrapper card__slider-wrapper">
+                  <div class="swiper-slide card__slider-slide">
+                    <picture>
+                      <source media="(max-width: 769px)" srcset="@img/cards/board-hostel-3.png" />
+                      <source media="(min-width: 768px)" srcset="@img/cards/pushkino.png" />
+                      <img src="@img/cards/pushkino.png" alt="" />
+                    </picture>
+                  </div>
+                  <div class="swiper-slide card__slider-slide">
+                    <picture>
+                      <source media="(max-width: 769px)" srcset="@img/cards/board-hostel-3.png" />
+                      <source media="(min-width: 768px)" srcset="@img/cards/pushkino.png" />
+                      <img src="@img/cards/pushkino.png" alt="" />
+                    </picture>
+                  </div>
+                  <div class="swiper-slide card__slider-slide">
+                    <picture>
+                      <source media="(max-width: 769px)" srcset="@img/cards/board-hostel-3.png" />
+                      <source media="(min-width: 768px)" srcset="@img/cards/pushkino.png" />
+                      <img src="@img/cards/pushkino.png" alt="" />
+                    </picture>
+                  </div>
+                </div>
+                <div class="pagination card__pagination js-card__pagination">
+                  <div class="pagination__bullets card__bullets js-card__bullets"></div>
+                </div>
+              </div>
+            </div>
+            <div class="card__items card__items-top">
+              <div class="card__item">Комфорт</div>
+              <div class="card__item">Лицензия проверена</div>
+            </div>
+            <button type="button" class="card__like js-toggle">
+              <span class="card__like-img"></span>
+            </button>
+            <div class="card__items card__items-bottom --mob">
+              <div class="card__item">от 1 700₽ <span>/сутки</span></div>
+              <div class="card__item">
+                <img src="@img/icons/icons.svg#star" alt="" />
+                <div>4.8</div>
+              </div>
+            </div>
+            <div class="card__substract">
+              <div class="card__desc">
+                <div class="card__desc-top">
+                  <div class="title-h3">Пушкино пансионат</div>
+                  <div class="card__desc-recs">
+                    <div class="card__item --desc">
+                      <img src="@img/icons/icons.svg#star" alt="" />
+                      <div>4.8</div>
+                    </div>
+                    <div class="card__desc-rec">
+                      <div class="card__desc-rec-like">
+                        <img src="@img/icons/icons.svg#like-finger" alt="" />
+                        <span>81%</span>
+                      </div>
+                      <div class="card__desc-rec-text">Рекомендуют</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card__desc-location">
+                  <div class="card__desc-location-address">
+                    <div class="card__icon">
+                      <img src="@img/icons/icons.svg#location-blue" alt="" />
+                    </div>
+                    <div class="card__desc-location-text">
+                      Город Домодедово, СНТ Искра-Старосьяново, Берёзовая улица, 4
+                    </div>
+                  </div>
+                  <a href="#" class="btn btn-tertiary --mob">
+                    <span>Узнать о наличии мест</span>
+                    <svg class="icon icon-arrow-hover-orange">
+                      <use xlink:href="@img/icons/icons.svg#arrow-right"></use>
+                    </svg>
+                  </a>
+                </div>
+                <div class="card__items card__items-services">
+                  <div class="card__items-shadow">
+                    <img src="@img/bg/cards-items-shadow-catalog.png" class="--desc" alt="" />
+                    <img src="@img/bg/card-items-shadow.png" class="--mob" alt="" />
+                  </div>
+                  <div class="card__item">Одноместные</div>
+                  <div class="card__item">Восстановление после инсульта</div>
+                  <div class="card__item">Одноместные</div>
+                  <div class="card__item">Восстановление после инсульта</div>
+                  <div class="card__item">Одноместные</div>
+                  <div class="card__item">Восстановление после инсульта</div>
+                </div>
+                <div class="card__icon-items">
+                  <div class="card__items-shadow">
+                    <img src="@img/bg/cards-items-shadow-catalog.png" class="--desc" alt="" />
+                    <img src="@img/bg/card-items-shadow.png" class="--mob" alt="" />
+                  </div>
+                  <div class="card__icon-item">
+                    <div class="card__icon">
+                      <img src="@img/icons/icons.svg#nurses" alt="" />
+                    </div>
+                    <div class="card__icon-text">Медсестры</div>
+                  </div>
+                  <div class="card__icon-item">
+                    <div class="card__icon">
+                      <img src="@img/icons/icons.svg#leisure" alt="" />
+                    </div>
+                    <div class="card__icon-text">Досуг</div>
+                  </div>
+                  <div class="card__icon-item">
+                    <div class="card__icon">
+                      <img src="@img/icons/icons.svg#nutrition" alt="" />
+                    </div>
+                    <div class="card__icon-text">3х разовое питание</div>
+                  </div>
+                  <div class="card__icon-item">
+                    <div class="card__icon">
+                      <img src="@img/icons/icons.svg#nurses" alt="" />
+                    </div>
+                    <div class="card__icon-text">Медсестры</div>
+                  </div>
+                  <div class="card__icon-item">
+                    <div class="card__icon">
+                      <img src="@img/icons/icons.svg#leisure" alt="" />
+                    </div>
+                    <div class="card__icon-text">Досуг</div>
+                  </div>
+                  <div class="card__icon-item">
+                    <div class="card__icon">
+                      <img src="@img/icons/icons.svg#nutrition" alt="" />
+                    </div>
+                    <div class="card__icon-text">3х разовое питание</div>
+                  </div>
+                </div>
+                <div class="card__costs --desc">
+                  <div class="card__cost"><span>от </span>1700<span>₽</span><span>/ сутки</span></div>
+                  <a href="#" class="btn btn-tertiary">
+                    <span>Узнать о наличии мест</span>
+                    <svg class="icon icon-arrow-hover-orange">
+                      <use xlink:href="@img/icons/icons.svg#arrow-right"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide card card-hor">
+            <div class="card-slider js-card__slider">
+              <div class="js-card__swiper card__swiper">
+                <div class="swiper-wrapper card__slider-wrapper">
+                  <div class="swiper-slide card__slider-slide">
+                    <picture>
+                      <source media="(max-width: 769px)" srcset="@img/cards/board-hostel-3.png" />
+                      <source media="(min-width: 768px)" srcset="@img/cards/pushkino.png" />
+                      <img src="@img/cards/pushkino.png" alt="" />
+                    </picture>
+                  </div>
+                  <div class="swiper-slide card__slider-slide">
+                    <picture>
+                      <source media="(max-width: 769px)" srcset="@img/cards/board-hostel-3.png" />
+                      <source media="(min-width: 768px)" srcset="@img/cards/pushkino.png" />
+                      <img src="@img/cards/pushkino.png" alt="" />
+                    </picture>
+                  </div>
+                  <div class="swiper-slide card__slider-slide">
+                    <picture>
+                      <source media="(max-width: 769px)" srcset="@img/cards/board-hostel-3.png" />
+                      <source media="(min-width: 768px)" srcset="@img/cards/pushkino.png" />
+                      <img src="@img/cards/pushkino.png" alt="" />
+                    </picture>
+                  </div>
+                </div>
+                <div class="pagination card__pagination js-card__pagination">
+                  <div class="pagination__bullets card__bullets js-card__bullets"></div>
+                </div>
+              </div>
+            </div>
+            <div class="card__items card__items-top">
+              <div class="card__item">Комфорт</div>
+              <div class="card__item">Лицензия проверена</div>
+            </div>
+            <button type="button" class="card__like js-toggle">
+              <span class="card__like-img"></span>
+            </button>
+            <div class="card__items card__items-bottom --mob">
+              <div class="card__item">от 1 700₽ <span>/сутки</span></div>
+              <div class="card__item">
+                <img src="@img/icons/icons.svg#star" alt="" />
+                <div>4.8</div>
+              </div>
+            </div>
+            <div class="card__substract">
+              <div class="card__desc">
+                <div class="card__desc-top">
+                  <div class="title-h3">Пушкино пансионат</div>
+                  <div class="card__desc-recs">
+                    <div class="card__item --desc">
+                      <img src="@img/icons/icons.svg#star" alt="" />
+                      <div>4.8</div>
+                    </div>
+                    <div class="card__desc-rec">
+                      <div class="card__desc-rec-like">
+                        <img src="@img/icons/icons.svg#like-finger" alt="" />
+                        <span>81%</span>
+                      </div>
+                      <div class="card__desc-rec-text">Рекомендуют</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card__desc-location">
+                  <div class="card__desc-location-address">
+                    <div class="card__icon">
+                      <img src="@img/icons/icons.svg#location-blue" alt="" />
+                    </div>
+                    <div class="card__desc-location-text">
+                      Город Домодедово, СНТ Искра-Старосьяново, Берёзовая улица, 4
+                    </div>
+                  </div>
+                  <a href="#" class="btn btn-tertiary --mob">
+                    <span>Узнать о наличии мест</span>
+                    <svg class="icon icon-arrow-hover-orange">
+                      <use xlink:href="@img/icons/icons.svg#arrow-right"></use>
+                    </svg>
+                  </a>
+                </div>
+                <div class="card__items card__items-services">
+                  <div class="card__items-shadow">
+                    <img src="@img/bg/cards-items-shadow-catalog.png" class="--desc" alt="" />
+                    <img src="@img/bg/card-items-shadow.png" class="--mob" alt="" />
+                  </div>
+                  <div class="card__item">Одноместные</div>
+                  <div class="card__item">Восстановление после инсульта</div>
+                  <div class="card__item">Одноместные</div>
+                  <div class="card__item">Восстановление после инсульта</div>
+                  <div class="card__item">Одноместные</div>
+                  <div class="card__item">Восстановление после инсульта</div>
+                </div>
+                <div class="card__icon-items">
+                  <div class="card__items-shadow">
+                    <img src="@img/bg/cards-items-shadow-catalog.png" class="--desc" alt="" />
+                    <img src="@img/bg/card-items-shadow.png" class="--mob" alt="" />
+                  </div>
+                  <div class="card__icon-item">
+                    <div class="card__icon">
+                      <img src="@img/icons/icons.svg#nurses" alt="" />
+                    </div>
+                    <div class="card__icon-text">Медсестры</div>
+                  </div>
+                  <div class="card__icon-item">
+                    <div class="card__icon">
+                      <img src="@img/icons/icons.svg#leisure" alt="" />
+                    </div>
+                    <div class="card__icon-text">Досуг</div>
+                  </div>
+                  <div class="card__icon-item">
+                    <div class="card__icon">
+                      <img src="@img/icons/icons.svg#nutrition" alt="" />
+                    </div>
+                    <div class="card__icon-text">3х разовое питание</div>
+                  </div>
+                  <div class="card__icon-item">
+                    <div class="card__icon">
+                      <img src="@img/icons/icons.svg#nurses" alt="" />
+                    </div>
+                    <div class="card__icon-text">Медсестры</div>
+                  </div>
+                  <div class="card__icon-item">
+                    <div class="card__icon">
+                      <img src="@img/icons/icons.svg#leisure" alt="" />
+                    </div>
+                    <div class="card__icon-text">Досуг</div>
+                  </div>
+                  <div class="card__icon-item">
+                    <div class="card__icon">
+                      <img src="@img/icons/icons.svg#nutrition" alt="" />
+                    </div>
+                    <div class="card__icon-text">3х разовое питание</div>
+                  </div>
+                </div>
+                <div class="card__costs --desc">
+                  <div class="card__cost"><span>от </span>1700<span>₽</span><span>/ сутки</span></div>
+                  <a href="#" class="btn btn-tertiary">
+                    <span>Узнать о наличии мест</span>
+                    <svg class="icon icon-arrow-hover-orange">
+                      <use xlink:href="@img/icons/icons.svg#arrow-right"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide card card-hor">
+            <div class="card-slider js-card__slider">
+              <div class="js-card__swiper card__swiper">
+                <div class="swiper-wrapper card__slider-wrapper">
+                  <div class="swiper-slide card__slider-slide">
+                    <picture>
+                      <source media="(max-width: 769px)" srcset="@img/cards/board-hostel-3.png" />
+                      <source media="(min-width: 768px)" srcset="@img/cards/pushkino.png" />
+                      <img src="@img/cards/pushkino.png" alt="" />
+                    </picture>
+                  </div>
+                  <div class="swiper-slide card__slider-slide">
+                    <picture>
+                      <source media="(max-width: 769px)" srcset="@img/cards/board-hostel-3.png" />
+                      <source media="(min-width: 768px)" srcset="@img/cards/pushkino.png" />
+                      <img src="@img/cards/pushkino.png" alt="" />
+                    </picture>
+                  </div>
+                  <div class="swiper-slide card__slider-slide">
+                    <picture>
+                      <source media="(max-width: 769px)" srcset="@img/cards/board-hostel-3.png" />
+                      <source media="(min-width: 768px)" srcset="@img/cards/pushkino.png" />
+                      <img src="@img/cards/pushkino.png" alt="" />
+                    </picture>
+                  </div>
+                </div>
+                <div class="pagination card__pagination js-card__pagination">
+                  <div class="pagination__bullets card__bullets js-card__bullets"></div>
+                </div>
+              </div>
+            </div>
+            <div class="card__items card__items-top">
+              <div class="card__item">Комфорт</div>
+              <div class="card__item">Лицензия проверена</div>
+            </div>
+            <button type="button" class="card__like js-toggle">
+              <span class="card__like-img"></span>
+            </button>
+            <div class="card__items card__items-bottom --mob">
+              <div class="card__item">от 1 700₽ <span>/сутки</span></div>
+              <div class="card__item">
+                <img src="@img/icons/icons.svg#star" alt="" />
+                <div>4.8</div>
+              </div>
+            </div>
+            <div class="card__substract">
+              <div class="card__desc">
+                <div class="card__desc-top">
+                  <div class="title-h3">Пушкино пансионат</div>
+                  <div class="card__desc-recs">
+                    <div class="card__item --desc">
+                      <img src="@img/icons/icons.svg#star" alt="" />
+                      <div>4.8</div>
+                    </div>
+                    <div class="card__desc-rec">
+                      <div class="card__desc-rec-like">
+                        <img src="@img/icons/icons.svg#like-finger" alt="" />
+                        <span>81%</span>
+                      </div>
+                      <div class="card__desc-rec-text">Рекомендуют</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card__desc-location">
+                  <div class="card__desc-location-address">
+                    <div class="card__icon">
+                      <img src="@img/icons/icons.svg#location-blue" alt="" />
+                    </div>
+                    <div class="card__desc-location-text">
+                      Город Домодедово, СНТ Искра-Старосьяново, Берёзовая улица, 4
+                    </div>
+                  </div>
+                  <a href="#" class="btn btn-tertiary --mob">
+                    <span>Узнать о наличии мест</span>
+                    <svg class="icon icon-arrow-hover-orange">
+                      <use xlink:href="@img/icons/icons.svg#arrow-right"></use>
+                    </svg>
+                  </a>
+                </div>
+                <div class="card__items card__items-services">
+                  <div class="card__items-shadow">
+                    <img src="@img/bg/cards-items-shadow-catalog.png" class="--desc" alt="" />
+                    <img src="@img/bg/card-items-shadow.png" class="--mob" alt="" />
+                  </div>
+                  <div class="card__item">Одноместные</div>
+                  <div class="card__item">Восстановление после инсульта</div>
+                  <div class="card__item">Одноместные</div>
+                  <div class="card__item">Восстановление после инсульта</div>
+                  <div class="card__item">Одноместные</div>
+                  <div class="card__item">Восстановление после инсульта</div>
+                </div>
+                <div class="card__icon-items">
+                  <div class="card__items-shadow">
+                    <img src="@img/bg/cards-items-shadow-catalog.png" class="--desc" alt="" />
+                    <img src="@img/bg/card-items-shadow.png" class="--mob" alt="" />
+                  </div>
+                  <div class="card__icon-item">
+                    <div class="card__icon">
+                      <img src="@img/icons/icons.svg#nurses" alt="" />
+                    </div>
+                    <div class="card__icon-text">Медсестры</div>
+                  </div>
+                  <div class="card__icon-item">
+                    <div class="card__icon">
+                      <img src="@img/icons/icons.svg#leisure" alt="" />
+                    </div>
+                    <div class="card__icon-text">Досуг</div>
+                  </div>
+                  <div class="card__icon-item">
+                    <div class="card__icon">
+                      <img src="@img/icons/icons.svg#nutrition" alt="" />
+                    </div>
+                    <div class="card__icon-text">3х разовое питание</div>
+                  </div>
+                  <div class="card__icon-item">
+                    <div class="card__icon">
+                      <img src="@img/icons/icons.svg#nurses" alt="" />
+                    </div>
+                    <div class="card__icon-text">Медсестры</div>
+                  </div>
+                  <div class="card__icon-item">
+                    <div class="card__icon">
+                      <img src="@img/icons/icons.svg#leisure" alt="" />
+                    </div>
+                    <div class="card__icon-text">Досуг</div>
+                  </div>
+                  <div class="card__icon-item">
+                    <div class="card__icon">
+                      <img src="@img/icons/icons.svg#nutrition" alt="" />
+                    </div>
+                    <div class="card__icon-text">3х разовое питание</div>
+                  </div>
+                </div>
+                <div class="card__costs --desc">
+                  <div class="card__cost"><span>от </span>1700<span>₽</span><span>/ сутки</span></div>
+                  <a href="#" class="btn btn-tertiary">
+                    <span>Узнать о наличии мест</span>
+                    <svg class="icon icon-arrow-hover-orange">
+                      <use xlink:href="@img/icons/icons.svg#arrow-right"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="catalog-question">
+            <div class="catalog-question__container">
+              <div class="catalog-question__bg">
+                <picture>
+                  <source media="(max-width: 769px)" srcset="@img/bg/catalog-question-bg-mob.svg" />
+                  <source media="(min-width: 768px)" srcset="@img/bg/catalog-question-bg.svg" />
+                  <img src="@img/bg/catalog-question-bg.svg" alt="" />
+                </picture>
+              </div>
+              <div class="catalog-question__img"><img src="@img/catalog/catalog-question-img.png" alt="" /></div>
+              <div class="catalog-question__desc">
+                <div class="catalog-question__title">Затрудняетесь с выбором?</div>
+                <div class="catalog-question__txt">
+                  Наш специалист проведет бесплатную консультацию по вашему запросу
+                </div>
+                <button type="button" class="btn btn-primary"><span>Получить консультацию</span></button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide card card-hor">
+            <div class="card-slider js-card__slider">
+              <div class="js-card__swiper card__swiper">
+                <div class="swiper-wrapper card__slider-wrapper">
+                  <div class="swiper-slide card__slider-slide">
+                    <picture>
+                      <source media="(max-width: 769px)" srcset="@img/cards/board-hostel-3.png" />
+                      <source media="(min-width: 768px)" srcset="@img/cards/pushkino.png" />
+                      <img src="@img/cards/pushkino.png" alt="" />
+                    </picture>
+                  </div>
+                  <div class="swiper-slide card__slider-slide">
+                    <picture>
+                      <source media="(max-width: 769px)" srcset="@img/cards/board-hostel-3.png" />
+                      <source media="(min-width: 768px)" srcset="@img/cards/pushkino.png" />
+                      <img src="@img/cards/pushkino.png" alt="" />
+                    </picture>
+                  </div>
+                  <div class="swiper-slide card__slider-slide">
+                    <picture>
+                      <source media="(max-width: 769px)" srcset="@img/cards/board-hostel-3.png" />
+                      <source media="(min-width: 768px)" srcset="@img/cards/pushkino.png" />
+                      <img src="@img/cards/pushkino.png" alt="" />
+                    </picture>
+                  </div>
+                </div>
+                <div class="pagination card__pagination js-card__pagination">
+                  <div class="pagination__bullets card__bullets js-card__bullets"></div>
+                </div>
+              </div>
+            </div>
+            <div class="card__items card__items-top">
+              <div class="card__item">Комфорт</div>
+              <div class="card__item">Лицензия проверена</div>
+            </div>
+            <button type="button" class="card__like js-toggle">
+              <span class="card__like-img"></span>
+            </button>
+            <div class="card__items card__items-bottom --mob">
+              <div class="card__item">от 1 700₽ <span>/сутки</span></div>
+              <div class="card__item">
+                <img src="@img/icons/icons.svg#star" alt="" />
+                <div>4.8</div>
+              </div>
+            </div>
+            <div class="card__substract">
+              <div class="card__desc">
+                <div class="card__desc-top">
+                  <div class="title-h3">Пушкино пансионат</div>
+                  <div class="card__desc-recs">
+                    <div class="card__item --desc">
+                      <img src="@img/icons/icons.svg#star" alt="" />
+                      <div>4.8</div>
+                    </div>
+                    <div class="card__desc-rec">
+                      <div class="card__desc-rec-like">
+                        <img src="@img/icons/icons.svg#like-finger" alt="" />
+                        <span>81%</span>
+                      </div>
+                      <div class="card__desc-rec-text">Рекомендуют</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card__desc-location">
+                  <div class="card__desc-location-address">
+                    <div class="card__icon">
+                      <img src="@img/icons/icons.svg#location-blue" alt="" />
+                    </div>
+                    <div class="card__desc-location-text">
+                      Город Домодедово, СНТ Искра-Старосьяново, Берёзовая улица, 4
+                    </div>
+                  </div>
+                  <a href="#" class="btn btn-tertiary --mob">
+                    <span>Узнать о наличии мест</span>
+                    <svg class="icon icon-arrow-hover-orange">
+                      <use xlink:href="@img/icons/icons.svg#arrow-right"></use>
+                    </svg>
+                  </a>
+                </div>
+                <div class="card__items card__items-services">
+                  <div class="card__items-shadow">
+                    <img src="@img/bg/cards-items-shadow-catalog.png" class="--desc" alt="" />
+                    <img src="@img/bg/card-items-shadow.png" class="--mob" alt="" />
+                  </div>
+                  <div class="card__item">Одноместные</div>
+                  <div class="card__item">Восстановление после инсульта</div>
+                  <div class="card__item">Одноместные</div>
+                  <div class="card__item">Восстановление после инсульта</div>
+                  <div class="card__item">Одноместные</div>
+                  <div class="card__item">Восстановление после инсульта</div>
+                </div>
+                <div class="card__icon-items">
+                  <div class="card__items-shadow">
+                    <img src="@img/bg/cards-items-shadow-catalog.png" class="--desc" alt="" />
+                    <img src="@img/bg/card-items-shadow.png" class="--mob" alt="" />
+                  </div>
+                  <div class="card__icon-item">
+                    <div class="card__icon">
+                      <img src="@img/icons/icons.svg#nurses" alt="" />
+                    </div>
+                    <div class="card__icon-text">Медсестры</div>
+                  </div>
+                  <div class="card__icon-item">
+                    <div class="card__icon">
+                      <img src="@img/icons/icons.svg#leisure" alt="" />
+                    </div>
+                    <div class="card__icon-text">Досуг</div>
+                  </div>
+                  <div class="card__icon-item">
+                    <div class="card__icon">
+                      <img src="@img/icons/icons.svg#nutrition" alt="" />
+                    </div>
+                    <div class="card__icon-text">3х разовое питание</div>
+                  </div>
+                  <div class="card__icon-item">
+                    <div class="card__icon">
+                      <img src="@img/icons/icons.svg#nurses" alt="" />
+                    </div>
+                    <div class="card__icon-text">Медсестры</div>
+                  </div>
+                  <div class="card__icon-item">
+                    <div class="card__icon">
+                      <img src="@img/icons/icons.svg#leisure" alt="" />
+                    </div>
+                    <div class="card__icon-text">Досуг</div>
+                  </div>
+                  <div class="card__icon-item">
+                    <div class="card__icon">
+                      <img src="@img/icons/icons.svg#nutrition" alt="" />
+                    </div>
+                    <div class="card__icon-text">3х разовое питание</div>
+                  </div>
+                </div>
+                <div class="card__costs --desc">
+                  <div class="card__cost"><span>от </span>1700<span>₽</span><span>/ сутки</span></div>
+                  <a href="#" class="btn btn-tertiary">
+                    <span>Узнать о наличии мест</span>
+                    <svg class="icon icon-arrow-hover-orange">
+                      <use xlink:href="@img/icons/icons.svg#arrow-right"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide card card-hor">
+            <div class="card-slider js-card__slider">
+              <div class="js-card__swiper card__swiper">
+                <div class="swiper-wrapper card__slider-wrapper">
+                  <div class="swiper-slide card__slider-slide">
+                    <picture>
+                      <source media="(max-width: 769px)" srcset="@img/cards/board-hostel-3.png" />
+                      <source media="(min-width: 768px)" srcset="@img/cards/pushkino.png" />
+                      <img src="@img/cards/pushkino.png" alt="" />
+                    </picture>
+                  </div>
+                  <div class="swiper-slide card__slider-slide">
+                    <picture>
+                      <source media="(max-width: 769px)" srcset="@img/cards/board-hostel-3.png" />
+                      <source media="(min-width: 768px)" srcset="@img/cards/pushkino.png" />
+                      <img src="@img/cards/pushkino.png" alt="" />
+                    </picture>
+                  </div>
+                  <div class="swiper-slide card__slider-slide">
+                    <picture>
+                      <source media="(max-width: 769px)" srcset="@img/cards/board-hostel-3.png" />
+                      <source media="(min-width: 768px)" srcset="@img/cards/pushkino.png" />
+                      <img src="@img/cards/pushkino.png" alt="" />
+                    </picture>
+                  </div>
+                </div>
+                <div class="pagination card__pagination js-card__pagination">
+                  <div class="pagination__bullets card__bullets js-card__bullets"></div>
+                </div>
+              </div>
+            </div>
+            <div class="card__items card__items-top">
+              <div class="card__item">Комфорт</div>
+              <div class="card__item">Лицензия проверена</div>
+            </div>
+            <button type="button" class="card__like js-toggle">
+              <span class="card__like-img"></span>
+            </button>
+            <div class="card__items card__items-bottom --mob">
+              <div class="card__item">от 1 700₽ <span>/сутки</span></div>
+              <div class="card__item">
+                <img src="@img/icons/icons.svg#star" alt="" />
+                <div>4.8</div>
+              </div>
+            </div>
+            <div class="card__substract">
+              <div class="card__desc">
+                <div class="card__desc-top">
+                  <div class="title-h3">Пушкино пансионат</div>
+                  <div class="card__desc-recs">
+                    <div class="card__item --desc">
+                      <img src="@img/icons/icons.svg#star" alt="" />
+                      <div>4.8</div>
+                    </div>
+                    <div class="card__desc-rec">
+                      <div class="card__desc-rec-like">
+                        <img src="@img/icons/icons.svg#like-finger" alt="" />
+                        <span>81%</span>
+                      </div>
+                      <div class="card__desc-rec-text">Рекомендуют</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card__desc-location">
+                  <div class="card__desc-location-address">
+                    <div class="card__icon">
+                      <img src="@img/icons/icons.svg#location-blue" alt="" />
+                    </div>
+                    <div class="card__desc-location-text">
+                      Город Домодедово, СНТ Искра-Старосьяново, Берёзовая улица, 4
+                    </div>
+                  </div>
+                  <a href="#" class="btn btn-tertiary --mob">
+                    <span>Узнать о наличии мест</span>
+                    <svg class="icon icon-arrow-hover-orange">
+                      <use xlink:href="@img/icons/icons.svg#arrow-right"></use>
+                    </svg>
+                  </a>
+                </div>
+                <div class="card__items card__items-services">
+                  <div class="card__items-shadow">
+                    <img src="@img/bg/cards-items-shadow-catalog.png" class="--desc" alt="" />
+                    <img src="@img/bg/card-items-shadow.png" class="--mob" alt="" />
+                  </div>
+                  <div class="card__item">Одноместные</div>
+                  <div class="card__item">Восстановление после инсульта</div>
+                  <div class="card__item">Одноместные</div>
+                  <div class="card__item">Восстановление после инсульта</div>
+                  <div class="card__item">Одноместные</div>
+                  <div class="card__item">Восстановление после инсульта</div>
+                </div>
+                <div class="card__icon-items">
+                  <div class="card__items-shadow">
+                    <img src="@img/bg/cards-items-shadow-catalog.png" class="--desc" alt="" />
+                    <img src="@img/bg/card-items-shadow.png" class="--mob" alt="" />
+                  </div>
+                  <div class="card__icon-item">
+                    <div class="card__icon">
+                      <img src="@img/icons/icons.svg#nurses" alt="" />
+                    </div>
+                    <div class="card__icon-text">Медсестры</div>
+                  </div>
+                  <div class="card__icon-item">
+                    <div class="card__icon">
+                      <img src="@img/icons/icons.svg#leisure" alt="" />
+                    </div>
+                    <div class="card__icon-text">Досуг</div>
+                  </div>
+                  <div class="card__icon-item">
+                    <div class="card__icon">
+                      <img src="@img/icons/icons.svg#nutrition" alt="" />
+                    </div>
+                    <div class="card__icon-text">3х разовое питание</div>
+                  </div>
+                  <div class="card__icon-item">
+                    <div class="card__icon">
+                      <img src="@img/icons/icons.svg#nurses" alt="" />
+                    </div>
+                    <div class="card__icon-text">Медсестры</div>
+                  </div>
+                  <div class="card__icon-item">
+                    <div class="card__icon">
+                      <img src="@img/icons/icons.svg#leisure" alt="" />
+                    </div>
+                    <div class="card__icon-text">Досуг</div>
+                  </div>
+                  <div class="card__icon-item">
+                    <div class="card__icon">
+                      <img src="@img/icons/icons.svg#nutrition" alt="" />
+                    </div>
+                    <div class="card__icon-text">3х разовое питание</div>
+                  </div>
+                </div>
+                <div class="card__costs --desc">
+                  <div class="card__cost"><span>от </span>1700<span>₽</span><span>/ сутки</span></div>
+                  <a href="#" class="btn btn-tertiary">
+                    <span>Узнать о наличии мест</span>
+                    <svg class="icon icon-arrow-hover-orange">
+                      <use xlink:href="@img/icons/icons.svg#arrow-right"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide card card-hor">
+            <div class="card-slider js-card__slider">
+              <div class="js-card__swiper card__swiper">
+                <div class="swiper-wrapper card__slider-wrapper">
+                  <div class="swiper-slide card__slider-slide">
+                    <picture>
+                      <source media="(max-width: 769px)" srcset="@img/cards/board-hostel-3.png" />
+                      <source media="(min-width: 768px)" srcset="@img/cards/pushkino.png" />
+                      <img src="@img/cards/pushkino.png" alt="" />
+                    </picture>
+                  </div>
+                  <div class="swiper-slide card__slider-slide">
+                    <picture>
+                      <source media="(max-width: 769px)" srcset="@img/cards/board-hostel-3.png" />
+                      <source media="(min-width: 768px)" srcset="@img/cards/pushkino.png" />
+                      <img src="@img/cards/pushkino.png" alt="" />
+                    </picture>
+                  </div>
+                  <div class="swiper-slide card__slider-slide">
+                    <picture>
+                      <source media="(max-width: 769px)" srcset="@img/cards/board-hostel-3.png" />
+                      <source media="(min-width: 768px)" srcset="@img/cards/pushkino.png" />
+                      <img src="@img/cards/pushkino.png" alt="" />
+                    </picture>
+                  </div>
+                </div>
+                <div class="pagination card__pagination js-card__pagination">
+                  <div class="pagination__bullets card__bullets js-card__bullets"></div>
+                </div>
+              </div>
+            </div>
+            <div class="card__items card__items-top">
+              <div class="card__item">Комфорт</div>
+              <div class="card__item">Лицензия проверена</div>
+            </div>
+            <button type="button" class="card__like js-toggle">
+              <span class="card__like-img"></span>
+            </button>
+            <div class="card__items card__items-bottom --mob">
+              <div class="card__item">от 1 700₽ <span>/сутки</span></div>
+              <div class="card__item">
+                <img src="@img/icons/icons.svg#star" alt="" />
+                <div>4.8</div>
+              </div>
+            </div>
+            <div class="card__substract">
+              <div class="card__desc">
+                <div class="card__desc-top">
+                  <div class="title-h3">Пушкино пансионат</div>
+                  <div class="card__desc-recs">
+                    <div class="card__item --desc">
+                      <img src="@img/icons/icons.svg#star" alt="" />
+                      <div>4.8</div>
+                    </div>
+                    <div class="card__desc-rec">
+                      <div class="card__desc-rec-like">
+                        <img src="@img/icons/icons.svg#like-finger" alt="" />
+                        <span>81%</span>
+                      </div>
+                      <div class="card__desc-rec-text">Рекомендуют</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card__desc-location">
+                  <div class="card__desc-location-address">
+                    <div class="card__icon">
+                      <img src="@img/icons/icons.svg#location-blue" alt="" />
+                    </div>
+                    <div class="card__desc-location-text">
+                      Город Домодедово, СНТ Искра-Старосьяново, Берёзовая улица, 4
+                    </div>
+                  </div>
+                  <a href="#" class="btn btn-tertiary --mob">
+                    <span>Узнать о наличии мест</span>
+                    <svg class="icon icon-arrow-hover-orange">
+                      <use xlink:href="@img/icons/icons.svg#arrow-right"></use>
+                    </svg>
+                  </a>
+                </div>
+                <div class="card__items card__items-services">
+                  <div class="card__items-shadow">
+                    <img src="@img/bg/cards-items-shadow-catalog.png" class="--desc" alt="" />
+                    <img src="@img/bg/card-items-shadow.png" class="--mob" alt="" />
+                  </div>
+                  <div class="card__item">Одноместные</div>
+                  <div class="card__item">Восстановление после инсульта</div>
+                  <div class="card__item">Одноместные</div>
+                  <div class="card__item">Восстановление после инсульта</div>
+                  <div class="card__item">Одноместные</div>
+                  <div class="card__item">Восстановление после инсульта</div>
+                </div>
+                <div class="card__icon-items">
+                  <div class="card__items-shadow">
+                    <img src="@img/bg/cards-items-shadow-catalog.png" class="--desc" alt="" />
+                    <img src="@img/bg/card-items-shadow.png" class="--mob" alt="" />
+                  </div>
+                  <div class="card__icon-item">
+                    <div class="card__icon">
+                      <img src="@img/icons/icons.svg#nurses" alt="" />
+                    </div>
+                    <div class="card__icon-text">Медсестры</div>
+                  </div>
+                  <div class="card__icon-item">
+                    <div class="card__icon">
+                      <img src="@img/icons/icons.svg#leisure" alt="" />
+                    </div>
+                    <div class="card__icon-text">Досуг</div>
+                  </div>
+                  <div class="card__icon-item">
+                    <div class="card__icon">
+                      <img src="@img/icons/icons.svg#nutrition" alt="" />
+                    </div>
+                    <div class="card__icon-text">3х разовое питание</div>
+                  </div>
+                  <div class="card__icon-item">
+                    <div class="card__icon">
+                      <img src="@img/icons/icons.svg#nurses" alt="" />
+                    </div>
+                    <div class="card__icon-text">Медсестры</div>
+                  </div>
+                  <div class="card__icon-item">
+                    <div class="card__icon">
+                      <img src="@img/icons/icons.svg#leisure" alt="" />
+                    </div>
+                    <div class="card__icon-text">Досуг</div>
+                  </div>
+                  <div class="card__icon-item">
+                    <div class="card__icon">
+                      <img src="@img/icons/icons.svg#nutrition" alt="" />
+                    </div>
+                    <div class="card__icon-text">3х разовое питание</div>
+                  </div>
+                </div>
+                <div class="card__costs --desc">
+                  <div class="card__cost"><span>от </span>1700<span>₽</span><span>/ сутки</span></div>
+                  <a href="#" class="btn btn-tertiary">
+                    <span>Узнать о наличии мест</span>
+                    <svg class="icon icon-arrow-hover-orange">
+                      <use xlink:href="@img/icons/icons.svg#arrow-right"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide card card-hor">
+            <div class="card-slider js-card__slider">
+              <div class="js-card__swiper card__swiper">
+                <div class="swiper-wrapper card__slider-wrapper">
+                  <div class="swiper-slide card__slider-slide">
+                    <picture>
+                      <source media="(max-width: 769px)" srcset="@img/cards/board-hostel-3.png" />
+                      <source media="(min-width: 768px)" srcset="@img/cards/pushkino.png" />
+                      <img src="@img/cards/pushkino.png" alt="" />
+                    </picture>
+                  </div>
+                  <div class="swiper-slide card__slider-slide">
+                    <picture>
+                      <source media="(max-width: 769px)" srcset="@img/cards/board-hostel-3.png" />
+                      <source media="(min-width: 768px)" srcset="@img/cards/pushkino.png" />
+                      <img src="@img/cards/pushkino.png" alt="" />
+                    </picture>
+                  </div>
+                  <div class="swiper-slide card__slider-slide">
+                    <picture>
+                      <source media="(max-width: 769px)" srcset="@img/cards/board-hostel-3.png" />
+                      <source media="(min-width: 768px)" srcset="@img/cards/pushkino.png" />
+                      <img src="@img/cards/pushkino.png" alt="" />
+                    </picture>
+                  </div>
+                </div>
+                <div class="pagination card__pagination js-card__pagination">
+                  <div class="pagination__bullets card__bullets js-card__bullets"></div>
+                </div>
+              </div>
+            </div>
+            <div class="card__items card__items-top">
+              <div class="card__item">Комфорт</div>
+              <div class="card__item">Лицензия проверена</div>
+            </div>
+            <button type="button" class="card__like js-toggle">
+              <span class="card__like-img"></span>
+            </button>
+            <div class="card__items card__items-bottom --mob">
+              <div class="card__item">от 1 700₽ <span>/сутки</span></div>
+              <div class="card__item">
+                <img src="@img/icons/icons.svg#star" alt="" />
+                <div>4.8</div>
+              </div>
+            </div>
+            <div class="card__substract">
+              <div class="card__desc">
+                <div class="card__desc-top">
+                  <div class="title-h3">Пушкино пансионат</div>
+                  <div class="card__desc-recs">
+                    <div class="card__item --desc">
+                      <img src="@img/icons/icons.svg#star" alt="" />
+                      <div>4.8</div>
+                    </div>
+                    <div class="card__desc-rec">
+                      <div class="card__desc-rec-like">
+                        <img src="@img/icons/icons.svg#like-finger" alt="" />
+                        <span>81%</span>
+                      </div>
+                      <div class="card__desc-rec-text">Рекомендуют</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card__desc-location">
+                  <div class="card__desc-location-address">
+                    <div class="card__icon">
+                      <img src="@img/icons/icons.svg#location-blue" alt="" />
+                    </div>
+                    <div class="card__desc-location-text">
+                      Город Домодедово, СНТ Искра-Старосьяново, Берёзовая улица, 4
+                    </div>
+                  </div>
+                  <a href="#" class="btn btn-tertiary --mob">
+                    <span>Узнать о наличии мест</span>
+                    <svg class="icon icon-arrow-hover-orange">
+                      <use xlink:href="@img/icons/icons.svg#arrow-right"></use>
+                    </svg>
+                  </a>
+                </div>
+                <div class="card__items card__items-services">
+                  <div class="card__items-shadow">
+                    <img src="@img/bg/cards-items-shadow-catalog.png" class="--desc" alt="" />
+                    <img src="@img/bg/card-items-shadow.png" class="--mob" alt="" />
+                  </div>
+                  <div class="card__item">Одноместные</div>
+                  <div class="card__item">Восстановление после инсульта</div>
+                  <div class="card__item">Одноместные</div>
+                  <div class="card__item">Восстановление после инсульта</div>
+                  <div class="card__item">Одноместные</div>
+                  <div class="card__item">Восстановление после инсульта</div>
+                </div>
+                <div class="card__icon-items">
+                  <div class="card__items-shadow">
+                    <img src="@img/bg/cards-items-shadow-catalog.png" class="--desc" alt="" />
+                    <img src="@img/bg/card-items-shadow.png" class="--mob" alt="" />
+                  </div>
+                  <div class="card__icon-item">
+                    <div class="card__icon">
+                      <img src="@img/icons/icons.svg#nurses" alt="" />
+                    </div>
+                    <div class="card__icon-text">Медсестры</div>
+                  </div>
+                  <div class="card__icon-item">
+                    <div class="card__icon">
+                      <img src="@img/icons/icons.svg#leisure" alt="" />
+                    </div>
+                    <div class="card__icon-text">Досуг</div>
+                  </div>
+                  <div class="card__icon-item">
+                    <div class="card__icon">
+                      <img src="@img/icons/icons.svg#nutrition" alt="" />
+                    </div>
+                    <div class="card__icon-text">3х разовое питание</div>
+                  </div>
+                  <div class="card__icon-item">
+                    <div class="card__icon">
+                      <img src="@img/icons/icons.svg#nurses" alt="" />
+                    </div>
+                    <div class="card__icon-text">Медсестры</div>
+                  </div>
+                  <div class="card__icon-item">
+                    <div class="card__icon">
+                      <img src="@img/icons/icons.svg#leisure" alt="" />
+                    </div>
+                    <div class="card__icon-text">Досуг</div>
+                  </div>
+                  <div class="card__icon-item">
+                    <div class="card__icon">
+                      <img src="@img/icons/icons.svg#nutrition" alt="" />
+                    </div>
+                    <div class="card__icon-text">3х разовое питание</div>
+                  </div>
+                </div>
+                <div class="card__costs --desc">
+                  <div class="card__cost"><span>от </span>1700<span>₽</span><span>/ сутки</span></div>
+                  <a href="#" class="btn btn-tertiary">
+                    <span>Узнать о наличии мест</span>
+                    <svg class="icon icon-arrow-hover-orange">
+                      <use xlink:href="@img/icons/icons.svg#arrow-right"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="btn btn-secondary">
+          <span>Загрузить еще</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

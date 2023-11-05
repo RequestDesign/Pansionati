@@ -1,0 +1,256 @@
+.catalog {
+  .title {
+    margin-bottom: 5rem;
+  }
+
+  &__container {
+    display: flex;
+    column-gap: 3rem;
+  }
+
+  &__form {
+    width: 40.2rem;
+    flex-shrink: 0;
+  }
+
+  &__find {
+    overflow: hidden;
+    .btn-secondary {
+      margin: 4rem auto 0 auto;
+      display: block;
+      width: fit-content;
+      padding: 2rem 6rem;
+    }
+  }
+
+  &-question {
+    margin-bottom: 3rem;
+  }
+
+  &-question__container {
+    display: flex;
+    align-items: center;
+    column-gap: 3.4rem;
+    border-radius: 3rem;
+    position: relative;
+    background: rgba(182, 194, 207, 0.15);
+    backdrop-filter: blur(2rem);
+
+    &::after {
+      content: '';
+      background: url(../img/bg/baner-bg-2.png) no-repeat;
+      position: absolute;
+      background-size: contain;
+      left: 0;
+      top: 0;
+      border-radius: 3rem;
+      z-index: -2;
+      @extend %fullSize;
+    }
+
+    .btn-primary {
+      margin: 0 auto;
+    }
+  }
+
+  &-question__title {
+    font-size: 4.2rem;
+    font-weight: 700;
+    line-height: 105%;
+    margin-bottom: 2rem;
+  }
+
+  &-question__desc {
+    width: 50.2rem;
+    @extend %flexColumn;
+    align-items: center;
+  }
+
+  &-question__txt {
+    @extend %textRegular18;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  &-question__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 100%;
+    img {
+      border-radius: 3rem;
+    }
+  }
+
+  &-question__img {
+    @include sizes(51.9rem, 35.4rem);
+  }
+
+  &__sear {
+    margin-bottom: 3.2rem;
+  }
+
+  &__items {
+    @extend %flexCenterBetween;
+    column-gap: 1.6rem;
+    overflow-x: scroll;
+    padding-right: 2rem;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__item {
+    border-radius: 7.8rem;
+    background: $lightGrey;
+    backdrop-filter: blur(2.3rem);
+    flex-shrink: 0;
+    width: fit-content;
+    padding: 0.8rem 1.6rem;
+    @extend %textRegular18;
+  }
+
+  &__item-shadow {
+    position: absolute;
+    right: 0;
+    z-index: 2;
+  }
+
+  &__top {
+    @extend %flexCenterBetween;
+    column-gap: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  &__top-map {
+    background-color: $lightGrey;
+    border-color: $lightGrey;
+  }
+
+  .select-baner .select__header {
+    background-color: $lightGrey;
+  }
+
+  &__top-right {
+    @extend %flexCenterBetween;
+    column-gap: 2.5rem;
+    flex-shrink: 0;
+  }
+
+  &__search-icon {
+    @include sizes(2.4rem, 2.4rem);
+  }
+
+  &__search {
+    @extend %flexCenterBetween;
+    width: 100%;
+
+    .input {
+      background-color: $lightGrey;
+      width: 100%;
+
+      input {
+        width: 79.6rem;
+        background-color: $lightGrey;
+      }
+    }
+  }
+
+  &__fieldset {
+    border-radius: 3rem;
+    background: $white;
+    box-shadow: 0.5rem 1.5rem 7rem 0 $lightGrey;
+    padding: 4rem;
+    margin-bottom: 2rem;
+  }
+
+  &__yet {
+    @extend %textBold20;
+    color: $orange;
+  }
+
+  &__fieldset-top {
+    @extend %flexCenterBetween;
+    margin-bottom: 1.6rem;
+  }
+
+  &__fieldset-title {
+    @extend %textBold20;
+  }
+
+  &__fieldset-reset {
+    @extend %textRegular15;
+    color: $orange;
+  }
+
+  &__fieldset-yet {
+    @extend %textBold18;
+  }
+}
+
+@media screen and (max-width: 48em) {
+  .catalog {
+    &__container {
+      flex-direction: column;
+    }
+
+    .card {
+      &:not(:last-child) {
+        margin-bottom: 3.2rem;
+      }
+    }
+
+    &__find {
+      .btn-secondary {
+        margin: 6rem auto 0 auto;
+        display: block;
+        width: fit-content;
+        padding: 2.6rem 12rem;
+      }
+    }
+
+    &-question {
+      margin-bottom: 3.2rem;
+    }
+
+    &-question__img {
+      @include sizes(52.2rem, 43rem);
+      position: relative;
+      right: -6rem;
+      img {
+        object-fit: cover;
+        height: 100%;
+      }
+    }
+
+    &-question__container {
+      flex-direction: column-reverse;
+      border-radius: 6rem;
+      padding: 12rem 2.4rem 0 2.4rem;
+
+      &::after {
+        border-radius: 6rem;
+      }
+    }
+
+    &-question__title {
+      font-size: 4.8rem;
+      margin-bottom: 2.4rem;
+    }
+
+    &-question__desc {
+      width: 100%;
+    }
+
+    &-question__txt {
+      margin-bottom: 4rem;
+    }
+
+    &-question__bg {
+      top: auto;
+      bottom: 0;
+    }
+  }
+}

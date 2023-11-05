@@ -1,7 +1,10 @@
 function setCountDopFotos() {
   const { length } = document.querySelectorAll('.board-gallery__slider a');
   const count = length - 3;
-  document.querySelector('.board-gallery__yet span').innerText = `+${count} фото`;
+
+  if (document.querySelector('.board-gallery__yet span')) {
+    document.querySelector('.board-gallery__yet span').innerText = `+${count} фото`;
+  }
 }
 
 function initGallery() {

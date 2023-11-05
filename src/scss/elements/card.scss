@@ -24,7 +24,7 @@
     background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(0.2rem);
     padding: 0.8rem;
-    z-index: 10;
+    z-index: 8;
 
     &.active {
       .card__like-img {
@@ -384,9 +384,9 @@
     @include showMob();
     border-radius: 4rem;
 
-    &:not(:nth-child(-n + 3)) {
-      display: none;
-    }
+    // &:not(:nth-child(-n + 3)) {
+    //   display: none;
+    // }
 
     &__like {
       @include sizes(6.8rem, 6.8rem);
@@ -578,6 +578,159 @@
     &__navigation,
     &__bullets {
       display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .card-hor {
+    &:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+
+    .btn-tertiary {
+      column-gap: 1.2rem;
+
+      span {
+        font-size: 2rem;
+        color: $blue;
+      }
+
+      svg {
+        @include sizes(2.6rem, 2.6rem);
+        stroke: $blue;
+      }
+    }
+
+    display: flex;
+    @include sizes(126.5rem, 35.2rem);
+    @include showDesc();
+
+    .card {
+      &__swiper {
+        height: 100%;
+      }
+
+      &-slider,
+      &__swiper {
+        overflow: hidden;
+        width: 70.7rem;
+        height: 35.2rem;
+
+        img {
+          height: 100%;
+        }
+      }
+
+      &__items-top {
+        bottom: 2.4rem;
+        top: auto;
+      }
+
+      &__pagination {
+        top: auto;
+        bottom: 8rem;
+        left: 18.4rem;
+      }
+
+      &__like {
+        left: 2.4rem;
+      }
+
+      &__substract {
+        position: absolute;
+        height: 100%;
+        width: 86rem;
+        right: 0;
+        left: auto;
+        background: url(../img/cards/card-substract-hor.svg) no-repeat center;
+        background-size: cover;
+      }
+
+      &__desc {
+        top: 0;
+        padding-top: 2.8rem;
+        width: 90%;
+        left: auto;
+        right: 0;
+      }
+
+      &__desc-top {
+        margin-bottom: 1.2rem;
+        padding: 0 2.8rem 0 0;
+      }
+
+      &__desc-location {
+        margin-bottom: 2rem;
+        padding: 0;
+      }
+
+      &__desc-recs {
+        display: flex;
+        flex-shrink: 0;
+        column-gap: 0.8rem;
+      }
+
+      &__item {
+        padding: 1.2rem 1rem;
+      }
+
+      &__items {
+        .card__item {
+          padding: 0.6rem 1rem;
+        }
+      }
+
+      &__items-services {
+        margin-bottom: 2rem;
+        padding: 0 2.8rem 0 0;
+      }
+
+      &__icon-items {
+        margin-bottom: 3.2rem;
+        padding: 0 2.8rem 0 0;
+      }
+
+      &__icon-item {
+        column-gap: 1.2rem;
+      }
+
+      &__desc-location-text {
+        width: 100%;
+      }
+
+      &__costs {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2.8rem 0 0;
+      }
+
+      &__cost {
+        padding: 0.6rem 1rem;
+        border-radius: 1.2rem;
+        background: $white;
+        backdrop-filter: blur(0.2rem);
+        font-size: 2.4rem;
+        font-weight: 700;
+        line-height: 120%;
+
+        span {
+          &:nth-child(2) {
+            font-size: 1.5rem;
+            font-weight: 700;
+            line-height: 125%;
+          }
+
+          &:nth-child(1),
+          &:nth-child(3) {
+            color: $grey;
+            font-weight: 400;
+            font-size: 2.4rem;
+            line-height: 120%;
+          }
+        }
+      }
     }
   }
 }
