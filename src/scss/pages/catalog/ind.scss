@@ -1,0 +1,107 @@
+.ind {
+  margin-top: 17rem;
+
+  &__container {
+    @extend %flexStartBetween;
+    column-gap: 6rem;
+    border-radius: 3rem;
+    background: url('@img/bg/ind-bg.svg') no-repeat center;
+    background-color: $lightBlack;
+    padding: 4.3rem 6rem 0 8rem;
+  }
+
+  &__img {
+    @include sizes(75.4rem, 66.5rem);
+  }
+
+  &__desc {
+    width: 73.2rem;
+    padding-top: 2.7rem;
+  }
+
+  .title {
+    margin-bottom: 2rem;
+  }
+
+  &__txt {
+    @extend %textRegular18;
+    width: 49.7rem;
+    margin-bottom: 3rem;
+  }
+
+  .select {
+    width: 54.1rem;
+
+    &:not(:last-child) {
+      margin-bottom: 1.2rem;
+    }
+  }
+
+  .select-mult .select__header {
+    background: $white;
+    justify-content: space-between;
+  }
+
+  .select-mult .select__input::placeholder {
+    color: $grey;
+  }
+
+  &__form-btn {
+    margin-top: 2.8rem;
+  }
+}
+
+@media screen and (max-width: 48em) {
+  .ind {
+    margin-top: 18rem;
+
+    &__container {
+      position: relative;
+      flex-direction: column;
+      border-radius: 4rem;
+      padding: 12rem 3.2rem 46rem 3.2rem;
+    }
+
+    &__img {
+      @include sizes(100%, 61.8rem);
+      border-radius: 4rem;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    &__desc {
+      width: 100%;
+      padding-top: 0;
+    }
+
+    .title {
+      margin-bottom: 2.4rem;
+      font-size: 4.8rem;
+      text-align: center;
+    }
+
+    &__txt {
+      width: 100%;
+      margin-bottom: 4rem;
+      text-align: center;
+    }
+
+    .select {
+      width: 100%;
+
+      &:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+    }
+
+    .select-mult .select__input {
+      width: 100%;
+    }
+
+    &__form-btn {
+      margin-top: 2rem;
+      width: 100%;
+    }
+  }
+}

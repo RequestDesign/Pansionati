@@ -3,11 +3,11 @@
   border-radius: 10rem 0;
   background: rgba(156, 171, 189, 0.15);
   backdrop-filter: blur(1.9rem);
-  padding: 4rem 5rem;
 
   &__top {
     @extend %flexCenterBetween;
     margin-bottom: 3rem;
+    padding: 4rem 5rem 0 5rem;
   }
 
   &__stars {
@@ -26,10 +26,12 @@
   &__text {
     @extend %textRegular20;
     margin-bottom: 3rem;
+    padding: 0 5rem;
   }
 
   &__desc {
     @extend %flexCenterBetween;
+    padding: 0 5rem 1.4rem 5rem;
   }
 
   &__author,
@@ -37,10 +39,85 @@
     @extend %textBold20;
     color: $grey;
   }
+
+  &__board {
+    border-bottom-right-radius: 10rem;
+    background: rgba(156, 171, 189, 0.15);
+    backdrop-filter: blur(1.9rem);
+    @extend %flexCenterBetween;
+    column-gap: 2.3rem;
+    padding: 3rem 5rem;
+  }
+
+  &__img {
+    @include sizes(7.7rem, 7.7rem);
+    flex-shrink: 0;
+  }
+
+  .btn-tertiary {
+    span {
+      font-size: 2.4rem;
+      font-weight: 700;
+      white-space: break-spaces;
+      text-align: left;
+    }
+  }
 }
 
 .reviews .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
 .reviews .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 0;
   column-gap: 1vw;
+}
+
+@media screen and (max-width: 48em) {
+  .review-card {
+    @include sizes(100%, auto);
+    border-radius: 8rem 0;
+    backdrop-filter: blur(3.8rem);
+
+    &__top {
+      @extend %flexCenterBetween;
+      margin-bottom: 4rem;
+      padding: 4rem 2.4rem 0 2.4rem;
+    }
+
+    &__stars {
+      column-gap: 1.4rem;
+
+      img {
+        @include sizes(4rem, 4rem);
+      }
+    }
+
+    &__icon {
+      @include sizes(8rem, 8rem);
+    }
+
+    &__text {
+      margin-bottom: 4rem;
+      padding: 0 2.4rem;
+    }
+
+    &__desc {
+      padding: 0 2.4rem 4rem 2.4rem;
+    }
+
+    &__board {
+      border-bottom-right-radius: 8rem;
+      backdrop-filter: blur(3.8rem);
+      column-gap: 3.2rem;
+      padding: 4rem;
+    }
+
+    &__img {
+      @include sizes(10rem, 10rem);
+    }
+
+    .btn-tertiary {
+      span {
+        font-size: 3.2rem;
+      }
+    }
+  }
 }

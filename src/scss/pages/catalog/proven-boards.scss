@@ -1,0 +1,64 @@
+.proven-boards {
+  margin: 17rem 0;
+  @include showDesc();
+
+  &__titles {
+    @extend %flexCenterBetween;
+    margin-bottom: 5.4rem;
+  }
+
+  &__btn {
+    margin: 6rem auto 0 auto;
+  }
+
+  .reviews__slider {
+    padding-top: 7.6rem;
+    position: relative;
+  }
+
+  .review-card {
+    width: 54.7rem;
+  }
+
+  .swiper-slide {
+    transition: all 0.5s ease-in-out;
+
+    &-next {
+      transform: translateY(-7.6rem);
+    }
+  }
+
+  .cards__navigation {
+    position: absolute;
+    bottom: -2.5rem;
+    left: 37%;
+    z-index: 4;
+  }
+}
+
+@media screen and (max-width: 48em) {
+  .proven-boards {
+    @include showMob();
+    margin: 18rem 0;
+
+    &__titles {
+      margin-bottom: 5.6rem;
+    }
+
+    .reviews__slider {
+      padding-top: 0;
+      flex-direction: column;
+      row-gap: 3.2rem;
+    }
+
+    .review-card {
+      width: 100%;
+    }
+
+    .reviews__slide {
+      &:nth-child(n + 4) {
+        display: none;
+      }
+    }
+  }
+}
