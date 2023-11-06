@@ -20,15 +20,16 @@
           </div>
         </div>
 
-        <form class="maps__filter" id="main-filter">
+        <form class="maps__filter js-maps-filter" id="main-filter">
           <div class="maps__filter-header --mob">
             <div class="maps__filter-title">Фильтры</div>
-            <div class="maps__filter-close">
+            <div class="maps__filter-close js-filter-close">
               <img src="@img/icons/icons.svg#close" alt="" />
             </div>
           </div>
           <div class="maps__filter-filters">
             <fieldset class="select select-mult js-select">
+              <div class="select__tit --mob">Особенности</div>
               <div class="select__header js-select-inner">
                 <input
                   name="search"
@@ -37,8 +38,11 @@
                   autocomplete="off"
                   placeholder="Особенности"
                 />
-                <button type="button" class="select__btn">
+                <button type="button" class="select__btn --desc">
                   <img src="@img/icons/icons.svg#arrow-down" alt="arrow" />
+                </button>
+                <button type="button" class="select__btn --mob">
+                  <img src="@img/icons/icons.svg#search-blue" alt="search" />
                 </button>
               </div>
               <div class="select__content">
@@ -64,14 +68,12 @@
                     <input id="peculiarities-5" type="checkbox" name="peculiarities" value="Сиделки" />
                     <label for="peculiarities-5">Сиделки</label>
                   </div>
-                  <div class="select__item js-select-item">
-                    <input id="peculiarities-6" type="checkbox" name="peculiarities" value="С животными" />
-                    <label for="peculiarities-6">С животными</label>
-                  </div>
                 </div>
               </div>
+              <button type="button" class="select__yet --mob">Показать еще</button>
             </fieldset>
             <fieldset class="select select-mult js-select">
+              <div class="select__tit --mob">Заболевания</div>
               <div class="select__header js-select-inner">
                 <input
                   name="search"
@@ -80,8 +82,11 @@
                   autocomplete="off"
                   placeholder="Заболевания"
                 />
-                <button type="button" class="select__btn">
+                <button type="button" class="select__btn --desc">
                   <img src="@img/icons/icons.svg#arrow-down" alt="arrow" />
+                </button>
+                <button type="button" class="select__btn --mob">
+                  <img src="@img/icons/icons.svg#search-blue" alt="search" />
                 </button>
               </div>
               <div class="select__content">
@@ -107,12 +112,9 @@
                     <input id="diseases-5" type="checkbox" name="diseases" value="Склероз" />
                     <label for="diseases-5">Склероз</label>
                   </div>
-                  <div class="select__item js-select-item">
-                    <input id="diseases-6" type="checkbox" name="diseases" value="Паркинскон" />
-                    <label for="diseases-6">Паркинскон</label>
-                  </div>
                 </div>
               </div>
+              <button type="button" class="select__yet --mob">Показать еще</button>
             </fieldset>
           </div>
           <div class="maps__filter-items --mob">

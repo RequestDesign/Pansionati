@@ -88,14 +88,19 @@
   &__block-icon {
     border-radius: 2rem;
     @include sizes(8.1rem, 6.7rem);
+    flex-shrink: 0;
+
+    img {
+      height: 100%;
+    }
   }
 
-  &__block-title {
+  &__block-desc-title {
     @extend %textRegular20;
     margin-bottom: 1.2rem;
   }
 
-  &__block-price {
+  &__block-desc-price {
     @extend %textBold20;
 
     span {
@@ -107,6 +112,46 @@
         @extend %textRegular20;
         color: $grey;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 48em) {
+  .search {
+    border-radius: 6rem;
+    box-shadow: 0.5rem 1.5rem 7rem 0 rgba(143, 155, 205, 0.25);
+    top: 11rem;
+
+    &__block {
+      &:not(:last-child) {
+        margin-bottom: 3.2rem;
+        padding-bottom: 3.2rem;
+      }
+    }
+
+    &__block-title {
+      font-size: 3.2rem;
+    }
+
+    &__block-categorys {
+      a {
+        column-gap: 2rem;
+      }
+    }
+
+    &__block-categorys-icon {
+      @include sizes(4rem, 4rem);
+    }
+
+    &__block-boards {
+      a {
+        column-gap: 2rem;
+      }
+    }
+
+    &__block-icon {
+      border-radius: 4rem;
+      @include sizes(12rem, 10rem);
     }
   }
 }

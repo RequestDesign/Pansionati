@@ -1,5 +1,6 @@
 .select {
   position: relative;
+  @include showDesc();
 
   &.active {
     .select__content {
@@ -340,11 +341,27 @@
 @media screen and (max-width: 48em) {
   .select {
     width: 100%;
+    @include showMob();
 
     &.active {
       .select__content {
         max-height: 40rem;
       }
+    }
+
+    &__tit {
+      font-size: 4rem;
+      font-weight: 700;
+      line-height: 130%;
+      margin-bottom: 3.2rem;
+    }
+
+    &__yet {
+      color: $orange;
+      font-size: 3.6rem;
+      font-weight: 700;
+      line-height: 133%;
+      margin-top: 3.2rem;
     }
 
     &__btn {
@@ -467,6 +484,56 @@
 
     .select__content {
       top: 10rem;
+    }
+  }
+
+  .select-catalog {
+    .select {
+      &__header {
+        padding: 2rem 4rem;
+        border-radius: 11.8rem;
+      }
+
+      &__input {
+        width: 100%;
+        font-size: 3rem;
+      }
+
+      &__btn {
+        @include sizes(4.8rem, 4.8rem);
+      }
+
+      &__content {
+        padding: 2.4rem 0 0 0;
+        height: 48.4rem;
+        margin-bottom: 3.2rem;
+      }
+
+      &__items {
+        max-height: 48.4rem;
+      }
+
+      &__item {
+        margin-bottom: 0.4rem;
+        label {
+          font-size: 3rem;
+          column-gap: 2rem;
+          padding: 2rem;
+
+          span {
+            font-size: 3rem;
+          }
+          &::before {
+            content: '';
+            border-radius: 1rem;
+            @include sizes(4.8rem, 4.8rem);
+          }
+        }
+
+        input[type='checkbox']:checked + label:before {
+          background-size: 4.8rem 4.8rem;
+        }
+      }
     }
   }
 }

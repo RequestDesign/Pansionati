@@ -97,6 +97,18 @@
     column-gap: 4rem;
   }
 
+  &__filter-inputs {
+    display: flex;
+    width: 100%;
+  }
+
+  &__filter-price {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    row-gap: 3rem;
+  }
+
   &__list-item-footer {
     @extend %flexCenterBetween;
     column-gap: 4.5rem;
@@ -122,6 +134,10 @@
 
   .select-mult .select__input {
     width: 22.8rem;
+
+    &::placeholder {
+      color: $grey;
+    }
   }
 
   &__filter-price {
@@ -251,7 +267,7 @@
     }
 
     &__filter {
-      display: none;
+      display: flex;
       position: fixed;
       left: 0;
       top: 0;
@@ -259,9 +275,40 @@
       height: 100%;
       background: #ffffff;
       z-index: 4;
-      padding: 2.4rem 0 9.6rem;
+      padding: 2.4rem 0 5.8rem;
       flex-direction: column;
       justify-content: flex-start;
+      transform: translateX(100%);
+      transition: $transition;
+
+      &.active {
+        z-index: 4;
+        transform: translateX(0);
+      }
+
+      .select__content {
+        opacity: 1;
+        visibility: visible;
+        max-height: 100%;
+        position: relative;
+        top: 0;
+        padding: 0;
+        border: 0;
+        background: 0;
+        box-shadow: none;
+        border-radius: 0;
+        z-index: 2;
+        margin-top: 2.4rem;
+      }
+
+      .select.active .select__btn {
+        transform: rotate(0);
+      }
+
+      .select__items {
+        height: 43.5rem;
+        max-height: 43.5rem;
+      }
     }
 
     &__filter-header {
@@ -331,6 +378,8 @@
       justify-content: space-between;
       align-items: center;
       padding: 0 3.2rem;
+      position: relative;
+      z-index: 2;
     }
 
     &__filter-filters {
@@ -338,6 +387,14 @@
       flex-direction: column;
       row-gap: 6rem;
       margin-bottom: 6rem;
+      flex: 1 1;
+      justify-content: flex-start;
+      overflow-y: scroll;
+      overflow-x: hidden;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
     }
 
     .title {
@@ -366,5 +423,3 @@
     }
   }
 }
-
-// <div class="maps__title-btns --mob"><button type="button" class="btn btn-round maps__title-btn js-filter-open"><img src="@img/icons/icons.svg#filter" alt="filter"></button><button type="button" class="btn btn-round maps__title-btn js-btn" data-open-content="list"><img src="@img/icons/icons.svg#maps-list" alt="maps-list"></button></div>

@@ -20,65 +20,68 @@
           </div>
         </div>
 
-        <form class="maps__filter" id="main-filter">
+        <form class="maps__filter js-maps-filter" id="main-filter">
           <div class="maps__filter-header --mob">
             <div class="maps__filter-title">Фильтры</div>
-            <div class="maps__filter-close">
+            <div class="maps__filter-close js-filter-close">
               <img src="@img/icons/icons.svg#close" alt="" />
             </div>
           </div>
           <div class="maps__filter-filters">
             <fieldset class="maps__filter-price">
               <div class="title-h3">Цены за сутки</div>
-              <div class="input">
-                <input type="number" placeholder="от" />
-              </div>
-              <div class="input">
-                <input type="number" placeholder="до" />
+              <div class="maps__filter-inputs">
+                <div class="input">
+                  <input type="number" placeholder="от" />
+                </div>
+                <div class="input">
+                  <input type="number" placeholder="до" />
+                </div>
               </div>
             </fieldset>
             <fieldset class="select select-mult js-select">
+              <div class="select__tit --mob">Заболевания</div>
               <div class="select__header js-select-inner">
                 <input
                   name="search"
                   type="text"
                   class="select__input js-select-search"
                   autocomplete="off"
-                  placeholder="Местоположение"
+                  placeholder="Заболевания"
                 />
-                <button type="button" class="select__btn">
+                <button type="button" class="select__btn --desc">
                   <img src="@img/icons/icons.svg#arrow-down" alt="arrow" />
+                </button>
+                <button type="button" class="select__btn --mob">
+                  <img src="@img/icons/icons.svg#search-blue" alt="search" />
                 </button>
               </div>
               <div class="select__content">
                 <div class="select__items">
                   <div class="select__empty js-select-empty">Ничего не найдено</div>
                   <div class="select__item js-select-item">
-                    <input id="location-1" type="checkbox" name="location" value="Домодедово" />
-                    <label for="location-1">Домодедово</label>
+                    <input id="diseases-1" type="checkbox" name="diseases" value="Альцгеймер" />
+                    <label for="diseases-1">Альцгеймер</label>
                   </div>
                   <div class="select__item js-select-item">
-                    <input id="location-2" type="checkbox" name="location" value="Видное" />
-                    <label for="location-2">Видное</label>
+                    <input id="diseases-2" type="checkbox" name="diseases" value="Онкология" />
+                    <label for="diseases-2">Онкология</label>
                   </div>
                   <div class="select__item js-select-item">
-                    <input id="location-3" type="checkbox" name="location" value="Жуковский" />
-                    <label for="location-3">Жуковский</label>
+                    <input id="diseases-3" type="checkbox" name="diseases" value="После инсульта" />
+                    <label for="diseases-3">После инсульта</label>
                   </div>
                   <div class="select__item js-select-item">
-                    <input id="location-4" type="checkbox" name="location" value="Рублевка" />
-                    <label for="location-4">Рублевка</label>
+                    <input id="diseases-4" type="checkbox" name="diseases" value="После травм" />
+                    <label for="diseases-4">После травм</label>
                   </div>
                   <div class="select__item js-select-item">
-                    <input id="location-5" type="checkbox" name="location" value="Москва" />
-                    <label for="location-5">Москва</label>
-                  </div>
-                  <div class="select__item js-select-item">
-                    <input id="location-6" type="checkbox" name="location" value="Ростов" />
-                    <label for="location-6">Ростов</label>
+                    <input id="diseases-5" type="checkbox" name="diseases" value="Склероз" />
+                    <label for="diseases-5">Склероз</label>
                   </div>
                 </div>
               </div>
+              <button type="button" class="select__yet --mob">Показать еще</button>
             </fieldset>
           </div>
           <div class="maps__filter-items --mob">

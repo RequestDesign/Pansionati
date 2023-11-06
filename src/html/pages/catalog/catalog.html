@@ -3,12 +3,72 @@
     <div class="title">Каталог пансионатов</div>
 
     <div class="catalog__container">
-      <div class="catalog__form">
+      <div class="catalog__header --mob">
+        <div class="catalog__header-top">
+          <button type="button" class="btn btn-round">
+            <span class="catalog__header-top-burger">
+              <img src="@img/icons/icons.svg#burger" alt="burger-open" />
+            </span>
+          </button>
+          <div class="catalog__header-top-input input">
+            <input type="text" placeholder="Поиск по домам престарелых" />
+            <div class="catalog__header-top-icons">
+              <div class="catalog__header-top-icon">
+                <img src="@img/icons/icons.svg#search-blue" alt="" />
+              </div>
+              <button type="button" class="catalog__header-top-icon catalog__search-reset js-search-reset">
+                <img src="@img/icons/icons.svg#close-modal" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="catalog__header-bottom">
+          <button type="button" class="catalog__header-bottom-btn js-sort-open">
+            <div class="catalog__header-bottom-icon">
+              <img src="@img/icons/icons.svg#sort" alt="" />
+            </div>
+            <div class="catalog__header-bottom-txt js-select-value">Сначала дешевые</div>
+          </button>
+          <button type="button" class="catalog__header-bottom-btn js-filt-open">
+            <div class="catalog__header-bottom-icon">
+              <img src="@img/icons/icons.svg#filter-2" alt="" />
+            </div>
+            <div class="catalog__header-bottom-txt">Фильтры</div>
+          </button>
+        </div>
+      </div>
+      <div class="catalog__sort js-sort-content --mob">
+        <div class="catalog__sort-content sort">
+          <div class="sort__item js-select-item">
+            <input id="sort-1" type="radio" name="sort" value="Сначала дешевые" checked />
+            <label for="sort-1">Сначала дешевые</label>
+          </div>
+          <div class="sort__item js-select-item">
+            <input id="sort-2" type="radio" name="sort" value="Сначала дорогие" />
+            <label for="sort-2">Сначала дорогие</label>
+          </div>
+          <div class="sort__item js-select-item">
+            <input id="sort-3" type="radio" name="sort" value="По популярности" />
+            <label for="sort-3">По популярности</label>
+          </div>
+          <div class="sort__item js-select-item">
+            <input id="sort-4" type="radio" name="sort" value="Новинки" />
+            <label for="sort-4">Новинки</label>
+          </div>
+        </div>
+      </div>
+      <div class="catalog__form js-filt-content">
+        <div class="catalog__form-header --mob">
+          <div class="catalog__form-title">Фильтры</div>
+          <div class="catalog__form-close js-filt-close">
+            <img src="@img/icons/icons.svg#close" alt="" />
+          </div>
+        </div>
         <form action="">
           <fieldset class="catalog__fieldset">
             <div class="catalog__fieldset-top">
               <div class="catalog__fieldset-title">Цена</div>
-              <button type="button" class="catalog__fieldset-reset">Сбросить</button>
+              <button type="button" class="catalog__fieldset-reset --desc">Сбросить</button>
             </div>
             <div class="catalog__fieldset-content">
               <div class="range__inputs">
@@ -47,7 +107,7 @@
           <fieldset class="catalog__fieldset">
             <div class="catalog__fieldset-top">
               <div class="catalog__fieldset-title">Местоположение</div>
-              <button type="button" class="catalog__fieldset-reset">Сбросить</button>
+              <button type="button" class="catalog__fieldset-reset --desc">Сбросить</button>
             </div>
             <div class="catalog__fieldset-select select-catalog js-select">
               <div class="select__header js-select-inner">
@@ -93,7 +153,7 @@
           <fieldset class="catalog__fieldset">
             <div class="catalog__fieldset-top">
               <div class="catalog__fieldset-title">Метро</div>
-              <button type="button" class="catalog__fieldset-reset">Сбросить</button>
+              <button type="button" class="catalog__fieldset-reset --desc">Сбросить</button>
             </div>
             <div class="catalog__fieldset-select select-catalog js-select">
               <div class="select__header js-select-inner">
@@ -139,7 +199,7 @@
           <fieldset class="catalog__fieldset">
             <div class="catalog__fieldset-top">
               <div class="catalog__fieldset-title">Физическое состояние</div>
-              <button type="button" class="catalog__fieldset-reset">Сбросить</button>
+              <button type="button" class="catalog__fieldset-reset --desc">Сбросить</button>
             </div>
             <div class="catalog__fieldset-select select-catalog js-select">
               <div class="select__header js-select-inner">
@@ -185,7 +245,7 @@
           <fieldset class="catalog__fieldset">
             <div class="catalog__fieldset-top">
               <div class="catalog__fieldset-title">Физическое состояние</div>
-              <button type="button" class="catalog__fieldset-reset">Сбросить</button>
+              <button type="button" class="catalog__fieldset-reset --desc">Сбросить</button>
             </div>
             <div class="catalog__fieldset-select select-catalog js-select">
               <div class="select__header js-select-inner">
@@ -228,15 +288,60 @@
             </div>
             <button type="button" class="catalog__fieldset-yet">Показать еще</button>
           </fieldset>
-          <button type="button" class="catalog__yet">Показать все фильтры</button>
+          <button type="button" class="catalog__yet --desc">Показать все фильтры</button>
         </form>
+        <div class="catalog__form-panel --mob">
+          <div class="catalog__form-items">
+            <div class="catalog__form-item">
+              <span>Одноместные</span>
+              <button type="button">
+                <img src="@img/icons/icons.svg#close" alt="" />
+              </button>
+            </div>
+            <div class="catalog__form-item">
+              <span>Номера с ТВ</span>
+              <button type="button">
+                <img src="@img/icons/icons.svg#close" alt="" />
+              </button>
+            </div>
+            <div class="catalog__form-item">
+              <span>Одноместные</span>
+              <button type="button">
+                <img src="@img/icons/icons.svg#close" alt="" />
+              </button>
+            </div>
+            <div class="catalog__form-item">
+              <span>Номера с ТВ</span>
+              <button type="button">
+                <img src="@img/icons/icons.svg#close" alt="" />
+              </button>
+            </div>
+            <div class="catalog__form-item">
+              <span>Одноместные</span>
+              <button type="button">
+                <img src="@img/icons/icons.svg#close" alt="" />
+              </button>
+            </div>
+          </div>
+          <div class="catalog__form-btns">
+            <button class="btn btn-primary" type="submit" form="main-filter">
+              <span>Применить</span>
+            </button>
+            <button class="btn btn-tertiary" type="reset" form="main-filter">
+              <span>Сбросить</span>
+              <svg class="icon icon-arrow-hover-orange">
+                <use xlink:href="@img/icons/icons.svg#arrow-right"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
       </div>
       <div class="catalog__find">
         <div class="catalog__sear js-sear">
           <div class="catalog__top">
             <div class="catalog__search js-search">
               <div class="input">
-                <input type="text" placeholder="Поиск по домам престарелых, направлениям, условиям и другое" />
+                <input type="text" placeholder="Поиск" />
                 <div class="catalog__search-icons">
                   <div class="catalog__search-icon">
                     <img src="@img/icons/icons.svg#search-blue" alt="" />
@@ -304,8 +409,10 @@
                           <img src="@img/boards/pushk.png" alt="" />
                         </div>
                         <div class="search__block-desc">
-                          <div class="search__block-title">«Пушкино» пансионат»</div>
-                          <div class="search__block-price"><span>от</span>1 700<span>₽</span><span>/ сутки</span></div>
+                          <div class="search__block-desc-title">«Пушкино» пансионат»</div>
+                          <div class="search__block-desc-price">
+                            <span>от </span>1 700<span>₽</span><span>/ сутки</span>
+                          </div>
                         </div>
                       </a>
                     </li>
@@ -315,8 +422,10 @@
                           <img src="@img/boards/park-board.png" alt="" />
                         </div>
                         <div class="search__block-desc">
-                          <div class="search__block-title">«Парк здоровья» пансионат</div>
-                          <div class="search__block-price"><span>от</span>1 700<span>₽</span><span>/ сутки</span></div>
+                          <div class="search__block-desc-title">«Парк здоровья» пансионат</div>
+                          <div class="search__block-desc-price">
+                            <span>от </span>1 700<span>₽</span><span>/ сутки</span>
+                          </div>
                         </div>
                       </a>
                     </li>
@@ -353,9 +462,14 @@
                   </div>
                 </div>
               </div>
-              <button type="button" class="catalog__top-map btn btn-round js-scroll-map">
-                <img src="@img/icons/icons.svg#maps-marker" alt="" />
-              </button>
+              <div class="catalog__top-btns --mob">
+                <button type="button" class="catalog__top-map btn btn-round js-filt-open --mob">
+                  <img src="@img/icons/icons.svg#filter" alt="filter" />
+                </button>
+                <button type="button" class="catalog__top-map btn btn-round js-scroll-map">
+                  <img src="@img/icons/icons.svg#maps-marker" alt="map" />
+                </button>
+              </div>
             </div>
           </div>
           <div class="catalog__items">

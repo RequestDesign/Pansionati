@@ -69,9 +69,59 @@ document.addEventListener('DOMContentLoaded', () => {
   function clickScrollMap() {
     const btn = document.querySelector('.js-scroll-map');
 
-    btn.addEventListener('click', () => {
-      const map = document.querySelector('.maps');
-      map.scrollIntoView({ behavior: 'smooth' });
+    if (btn) {
+      btn.addEventListener('click', () => {
+        const map = document.querySelector('.maps');
+        map.scrollIntoView({ behavior: 'smooth' });
+      });
+    }
+  }
+
+  function clickFilter() {
+    const btnFilterOpen = document.querySelector('.js-filter-open');
+    const btnFilterClose = document.querySelector('.js-filter-close');
+
+    btnFilterOpen.addEventListener('click', () => {
+      const content = document.querySelector('.js-maps-filter');
+      content.classList.add('active');
+    });
+
+    btnFilterClose.addEventListener('click', () => {
+      const content = document.querySelector('.js-maps-filter');
+      content.classList.remove('active');
+    });
+  }
+
+  function clickFilt() {
+    const btnsFilterOpen = document.querySelectorAll('.js-filt-open');
+    const btnFilterClose = document.querySelector('.js-filt-close');
+
+    btnsFilterOpen.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const content = document.querySelector('.js-filt-content');
+        content.classList.add('active');
+      });
+    });
+
+    btnFilterClose.addEventListener('click', () => {
+      const content = document.querySelector('.js-filt-content');
+      content.classList.remove('active');
+    });
+  }
+
+  function clickSort() {
+    const btnSortOpen = document.querySelector('.js-sort-open');
+
+    btnSortOpen.addEventListener('click', () => {
+      const content = document.querySelector('.js-sort-content');
+      content.classList.add('active');
+    });
+
+    document.addEventListener('click', (event) => {
+      if (event.target.closest('.js-sort-content')) {
+        const content = document.querySelector('.js-sort-content');
+        content.classList.remove('active');
+      }
     });
   }
 
@@ -81,5 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
   scrollPage();
   clickFullText();
   clickScrollMap();
-  // toggleBlockContent();
+  clickFilter();
+  clickFilt();
+  clickSort();
 });
