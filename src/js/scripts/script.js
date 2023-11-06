@@ -66,10 +66,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  function clickScrollMap() {
+    const btn = document.querySelector('.js-scroll-map');
+
+    btn.addEventListener('click', () => {
+      const map = document.querySelector('.maps');
+      map.scrollIntoView({ behavior: 'smooth' });
+    });
+  }
+
   setPhoneMask();
   clickToogle();
   clickToogleBlockCards();
   scrollPage();
   clickFullText();
+  clickScrollMap();
   // toggleBlockContent();
 });

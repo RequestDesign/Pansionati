@@ -1,5 +1,6 @@
 @import './libs/swiper.scss';
 @import './libs/normalize.scss';
+@import './libs/nouislider.min.scss';
 
 @import './general/consts.scss';
 @import './general/extends.scss';
@@ -21,6 +22,8 @@
 @import './elements/textarea.scss';
 @import './elements/icons.scss';
 @import './elements/thumb.scss';
+@import './elements/range.scss';
+@import './elements/search.scss';
 
 @import './blocks/header.scss';
 @import './blocks/footer.scss';

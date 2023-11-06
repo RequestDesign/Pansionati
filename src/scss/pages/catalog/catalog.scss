@@ -14,7 +14,8 @@
   }
 
   &__find {
-    overflow: hidden;
+    width: 126.5rem;
+    position: relative;
     .btn-secondary {
       margin: 4rem auto 0 auto;
       display: block;
@@ -25,6 +26,7 @@
 
   &-question {
     margin-bottom: 3rem;
+    width: 126.5rem;
   }
 
   &-question__container {
@@ -80,6 +82,7 @@
     height: 100%;
     img {
       border-radius: 3rem;
+      height: 100%;
     }
   }
 
@@ -89,9 +92,27 @@
 
   &__sear {
     margin-bottom: 3.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 4;
+    transition: $transition;
+
+    &.scroll {
+      width: 108.5%;
+      margin-left: -1rem;
+      padding: 1rem;
+      border-radius: 0 0 3rem 3rem;
+      background: $white;
+      box-shadow: 0.5rem 1.5rem 7rem 0 $lightGrey;
+
+      .catalog__item-shadow {
+        right: 0;
+      }
+    }
   }
 
   &__items {
+    width: 126.5rem;
     @extend %flexCenterBetween;
     column-gap: 1.6rem;
     overflow-x: scroll;
@@ -114,11 +135,12 @@
 
   &__item-shadow {
     position: absolute;
-    right: 0;
+    right: -10rem;
     z-index: 2;
   }
 
   &__top {
+    width: 126.5rem;
     @extend %flexCenterBetween;
     column-gap: 2.5rem;
     margin-bottom: 2rem;
@@ -140,12 +162,34 @@
   }
 
   &__search-icon {
-    @include sizes(2.4rem, 2.4rem);
+    @include sizes(2rem, 2rem);
+
+    margin: 0;
+    padding: 0;
+
+    &:first-child {
+      opacity: 1px;
+      display: block;
+      position: absolute;
+      z-index: 2;
+      transition: $transition;
+    }
+
+    &:last-child {
+      opacity: 0;
+    }
+  }
+
+  &__search-reset {
+    cursor: pointer;
+    z-index: 4;
+    position: relative;
   }
 
   &__search {
     @extend %flexCenterBetween;
     width: 100%;
+    position: relative;
 
     .input {
       background-color: $lightGrey;
@@ -154,6 +198,23 @@
       input {
         width: 79.6rem;
         background-color: $lightGrey;
+      }
+    }
+
+    &.active {
+      .catalog__search-icon {
+        &:first-child {
+          opacity: 0;
+        }
+        &:last-child {
+          opacity: 1;
+        }
+      }
+
+      .search {
+        opacity: 1;
+        z-index: 4;
+        visibility: visible;
       }
     }
   }
@@ -187,6 +248,14 @@
 
   &__fieldset-yet {
     @extend %textBold18;
+  }
+
+  .select-sort {
+    width: 25.7rem;
+  }
+
+  .select__header {
+    justify-content: space-between;
   }
 }
 

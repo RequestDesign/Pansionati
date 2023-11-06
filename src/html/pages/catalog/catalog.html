@@ -1,9 +1,49 @@
 <section class="catalog">
   <div class="container">
     <div class="title">Каталог пансионатов</div>
+
     <div class="catalog__container">
       <div class="catalog__form">
         <form action="">
+          <fieldset class="catalog__fieldset">
+            <div class="catalog__fieldset-top">
+              <div class="catalog__fieldset-title">Цена</div>
+              <button type="button" class="catalog__fieldset-reset">Сбросить</button>
+            </div>
+            <div class="catalog__fieldset-content">
+              <div class="range__inputs">
+                <label class="range__inputs-field">
+                  <input
+                    name="#"
+                    id="range__input-min"
+                    min="0"
+                    max="100000"
+                    type="number"
+                    autocomplete="off"
+                    class="range__inputs-field-min"
+                    placeholder="От"
+                    value="0"
+                  />
+                  <span>₽</span>
+                </label>
+                <label class="range__inputs-field">
+                  <input
+                    name="#"
+                    id="range__input-max"
+                    min="0"
+                    max="100000"
+                    type="number"
+                    autocomplete="off"
+                    class="range__inputs-field-max"
+                    placeholder="До"
+                    value="1000"
+                  />
+                  <span>₽</span>
+                </label>
+              </div>
+              <div class="range__slider" id="range-slider"></div>
+            </div>
+          </fieldset>
           <fieldset class="catalog__fieldset">
             <div class="catalog__fieldset-top">
               <div class="catalog__fieldset-title">Местоположение</div>
@@ -192,18 +232,95 @@
         </form>
       </div>
       <div class="catalog__find">
-        <div class="catalog__sear">
+        <div class="catalog__sear js-sear">
           <div class="catalog__top">
-            <div class="catalog__search">
+            <div class="catalog__search js-search">
               <div class="input">
                 <input type="text" placeholder="Поиск по домам престарелых, направлениям, условиям и другое" />
                 <div class="catalog__search-icons">
                   <div class="catalog__search-icon">
                     <img src="@img/icons/icons.svg#search-blue" alt="" />
                   </div>
-                  <!-- <div class="catalog__search-icon">
-										<img src="@img/icons/icons.svg#close-modal" alt="">
-									</div> -->
+                  <button type="button" class="catalog__search-icon catalog__search-reset js-search-reset">
+                    <img src="@img/icons/icons.svg#close-modal" alt="" />
+                  </button>
+                </div>
+              </div>
+              <div class="search">
+                <div class="search__block">
+                  <div class="search__block-title">Популярные запросы</div>
+                  <ul class="search__block-list">
+                    <li>
+                      <a href="#"> <span>П</span>ереломы </a>
+                    </li>
+                    <li>
+                      <a href="#"> «Опека <span>П</span>етровский» </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="search__block">
+                  <div class="search__block-title">Категории</div>
+                  <ul class="search__block-categorys">
+                    <li>
+                      <a href="#">
+                        <div class="search__block-categorys-icon">
+                          <img src="@img/icons/icons.svg#leisure" alt="" />
+                        </div>
+                        <div class="search__block-categorys-txt">Перевозка лежачих</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="search__block-categorys-icon">
+                          <img src="@img/icons/icons.svg#infrastructure" alt="" />
+                        </div>
+                        <div class="search__block-categorys-txt">Паркинсон</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="search__block-categorys-icon">
+                          <img src="@img/icons/icons.svg#nutrition" alt="" />
+                        </div>
+                        <div class="search__block-categorys-txt">После инсульта</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="search__block-categorys-icon">
+                          <img src="@img/icons/icons.svg#infrastructure" alt="" />
+                        </div>
+                        <div class="search__block-categorys-txt">После перелома шейки бедра</div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="search__block">
+                  <div class="search__block-title">Пансионаты</div>
+                  <ul class="search__block-boards">
+                    <li>
+                      <a href="#">
+                        <div class="search__block-icon">
+                          <img src="@img/boards/pushk.png" alt="" />
+                        </div>
+                        <div class="search__block-desc">
+                          <div class="search__block-title">«Пушкино» пансионат»</div>
+                          <div class="search__block-price"><span>от</span>1 700<span>₽</span><span>/ сутки</span></div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="search__block-icon">
+                          <img src="@img/boards/park-board.png" alt="" />
+                        </div>
+                        <div class="search__block-desc">
+                          <div class="search__block-title">«Парк здоровья» пансионат</div>
+                          <div class="search__block-price"><span>от</span>1 700<span>₽</span><span>/ сутки</span></div>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -236,7 +353,7 @@
                   </div>
                 </div>
               </div>
-              <button type="button" class="catalog__top-map btn btn-round">
+              <button type="button" class="catalog__top-map btn btn-round js-scroll-map">
                 <img src="@img/icons/icons.svg#maps-marker" alt="" />
               </button>
             </div>
