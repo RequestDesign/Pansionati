@@ -1,5 +1,5 @@
 .contacts {
-  margin-bottom: 17rem;
+  margin-bottom: 16rem;
 
   &__container {
     @extend %flexStartBetween;
@@ -8,7 +8,7 @@
   }
 
   &__desc {
-    margin-top: 5rem;
+    margin-top: 4rem;
     flex-shrink: 0;
   }
 
@@ -46,6 +46,10 @@
 @media screen and (max-width: 48em) {
   .contacts {
     margin-bottom: 18rem;
+
+    &-page {
+      margin-top: 11.4rem;
+    }
 
     &__container {
       flex-direction: column;

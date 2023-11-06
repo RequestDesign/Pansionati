@@ -1,4 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
+  function focusInput() {
+    const inputs = document.querySelectorAll('.input');
+
+    inputs.forEach((input) => {
+      input.addEventListener('click', () => {
+        console.log(input);
+        const inp = input.querySelector('input');
+        inp.focus();
+      });
+    });
+  }
+
   function clickToogle() {
     const toggleElements = document.querySelectorAll('.js-toggle');
 
@@ -26,19 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.classList.add('active');
       });
     });
-  }
-
-  function scrollPage() {
-    const btnScroll = document.querySelector('.js-btn-scroll');
-
-    if (btnScroll) {
-      btnScroll.addEventListener('click', () => {
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth',
-        });
-      });
-    }
   }
 
   function clickFullText() {
@@ -81,57 +80,67 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnFilterOpen = document.querySelector('.js-filter-open');
     const btnFilterClose = document.querySelector('.js-filter-close');
 
-    btnFilterOpen.addEventListener('click', () => {
-      const content = document.querySelector('.js-maps-filter');
-      content.classList.add('active');
-    });
+    if (btnFilterOpen) {
+      btnFilterOpen.addEventListener('click', () => {
+        const content = document.querySelector('.js-maps-filter');
+        content.classList.add('active');
+      });
+    }
 
-    btnFilterClose.addEventListener('click', () => {
-      const content = document.querySelector('.js-maps-filter');
-      content.classList.remove('active');
-    });
+    if (btnFilterClose) {
+      btnFilterClose.addEventListener('click', () => {
+        const content = document.querySelector('.js-maps-filter');
+        content.classList.remove('active');
+      });
+    }
   }
 
   function clickFilt() {
     const btnsFilterOpen = document.querySelectorAll('.js-filt-open');
     const btnFilterClose = document.querySelector('.js-filt-close');
 
-    btnsFilterOpen.forEach((btn) => {
-      btn.addEventListener('click', () => {
-        const content = document.querySelector('.js-filt-content');
-        content.classList.add('active');
+    if (btnsFilterOpen) {
+      btnsFilterOpen.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const content = document.querySelector('.js-filt-content');
+          content.classList.add('active');
+        });
       });
-    });
+    }
 
-    btnFilterClose.addEventListener('click', () => {
-      const content = document.querySelector('.js-filt-content');
-      content.classList.remove('active');
-    });
+    if (btnFilterClose) {
+      btnFilterClose.addEventListener('click', () => {
+        const content = document.querySelector('.js-filt-content');
+        content.classList.remove('active');
+      });
+    }
   }
 
   function clickSort() {
     const btnSortOpen = document.querySelector('.js-sort-open');
 
-    btnSortOpen.addEventListener('click', () => {
-      const content = document.querySelector('.js-sort-content');
-      content.classList.add('active');
-    });
-
-    document.addEventListener('click', (event) => {
-      if (event.target.closest('.js-sort-content')) {
+    if (btnSortOpen) {
+      btnSortOpen.addEventListener('click', () => {
         const content = document.querySelector('.js-sort-content');
-        content.classList.remove('active');
-      }
-    });
+        content.classList.add('active');
+      });
+
+      document.addEventListener('click', (event) => {
+        if (event.target.closest('.js-sort-content')) {
+          const content = document.querySelector('.js-sort-content');
+          content.classList.remove('active');
+        }
+      });
+    }
   }
 
   setPhoneMask();
   clickToogle();
   clickToogleBlockCards();
-  scrollPage();
   clickFullText();
   clickScrollMap();
   clickFilter();
   clickFilt();
   clickSort();
+  focusInput();
 });

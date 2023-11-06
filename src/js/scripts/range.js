@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+function initRanger() {
   const rangeSlider = document.getElementById('range-slider');
 
   if (rangeSlider) {
@@ -34,4 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  initRanger();
 });

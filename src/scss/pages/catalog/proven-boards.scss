@@ -1,5 +1,5 @@
 .proven-boards {
-  margin: 17rem 0;
+  margin: 17rem 0 8.5rem 0;
   @include showDesc();
 
   &__titles {
@@ -12,7 +12,7 @@
   }
 
   .reviews__slider {
-    padding-top: 7.6rem;
+    padding: 7.6rem 0 8.5rem 0;
     position: relative;
   }
 
@@ -46,7 +46,7 @@
     }
 
     .reviews__slider {
-      padding-top: 0;
+      padding: 0;
       flex-direction: column;
       row-gap: 3.2rem;
     }

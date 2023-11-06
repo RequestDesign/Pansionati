@@ -163,6 +163,7 @@
   .baner {
     @include showMob();
     background-color: transparent;
+    margin-top: 10.8rem;
 
     &-bg {
       @include sizes(100%, 71rem);

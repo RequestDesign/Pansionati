@@ -10,11 +10,19 @@
     @extend %flexCenterBetween;
     margin-bottom: 5rem;
   }
+
+  br {
+    display: none;
+  }
 }
 
 //-----------------Mob---------------//
 @media screen and (max-width: 48em) {
   .boards-swipers {
+    br {
+      display: block;
+    }
+
     @include showMob();
     position: relative;
     margin-top: 17rem;
@@ -28,6 +36,7 @@
       margin-bottom: 5.6rem;
       text-align: center;
       flex-direction: column;
+      width: 100%;
 
       .title {
         max-width: 100%;

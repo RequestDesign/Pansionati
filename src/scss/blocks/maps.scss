@@ -134,10 +134,6 @@
 
   .select-mult .select__input {
     width: 22.8rem;
-
-    &::placeholder {
-      color: $grey;
-    }
   }
 
   &__filter-price {

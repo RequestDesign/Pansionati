@@ -1,4 +1,4 @@
-import { scroolMapList } from './functions.js';
+import { scroolMapList } from './scroll.js';
 
 function changeHideClass(item, attr, el) {
   if (item === attr) {

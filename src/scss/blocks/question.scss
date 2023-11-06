@@ -48,7 +48,7 @@
   }
 
   &--board {
-    margin: 17rem 0;
+    margin: 10rem 0;
     .question {
       &__container {
         padding: 9rem 12.5rem 7rem 12.5rem;
@@ -87,6 +87,20 @@
     .question__container {
       padding: 13.5rem;
     }
+  }
+
+  &--main {
+    margin-top: 7rem;
+  }
+
+  &--contacts {
+    .question__container {
+      padding: 13.5rem;
+    }
+  }
+
+  &--catalog {
+    margin-top: 7rem;
   }
 }
 
@@ -145,6 +159,12 @@
       }
     }
 
+    &--contacts {
+      .question__container {
+        padding: 10.5rem 2rem 11.5rem;
+      }
+    }
+
     .title {
       margin-bottom: 2.4rem;
       font-size: 4.8rem;
@@ -188,7 +208,7 @@
     }
 
     &--not-found {
-      margin-bottom: 15rem;
+      margin-bottom: 16rem;
       .question__container {
         padding: 12.4rem 2.4rem;
       }

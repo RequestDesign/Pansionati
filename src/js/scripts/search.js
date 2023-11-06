@@ -1,5 +1,14 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const search = document.querySelector('.js-search');
+const search = document.querySelector('.js-search');
+
+function setPlaceholder() {
+  const input = search.querySelector('input');
+
+  if (window.innerWidth > 768 && input) {
+    input.placeholder = 'Поиск по домам престарелых, направлениям, условиям и другое';
+  }
+}
+
+function showSearch() {
   if (search) {
     const inputBlock = search.querySelector('.input');
     const input = search.querySelector('input');
@@ -19,9 +28,10 @@ document.addEventListener('DOMContentLoaded', () => {
         search.classList.remove('active');
       }
     });
-
-    if (window.innerWidth > 768) {
-      input.placeholder = 'Поиск по домам престарелых, направлениям, условиям и другое';
-    }
   }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  showSearch();
+  setPlaceholder();
 });

@@ -1,4 +1,4 @@
-import { scroolMapList } from './functions.js';
+import { scroolMapList } from './scroll.js';
 
 // Метки для карты со всеми пансионатами
 const PLACEMARKS = [

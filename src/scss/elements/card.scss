@@ -4,6 +4,20 @@
   border-radius: 3rem;
   position: relative;
   overflow: hidden;
+  transition: $transition;
+
+  @media screen and (min-width: 48em) {
+    &:hover {
+      box-shadow:
+        0.2rem 0.4rem 1rem 0 rgba(221, 229, 236, 0.5),
+        -0.2rem -0.2rem 1rem 0 rgba(221, 229, 236, 0.48);
+
+      .card__bullets {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
 
   &__swiper {
     display: flex;
@@ -90,10 +104,13 @@
 
   &__bullets {
     @extend %flexCenter;
-    column-gap: 0.4rem;
+    column-gap: 0.8rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: $transition;
 
     span {
-      @include sizes(2.4rem, 0.8rem);
+      @include sizes(0.8rem, 0.8rem);
       border-radius: 2rem;
       opacity: 1;
       cursor: pointer;
@@ -135,7 +152,7 @@
     }
 
     img {
-      @include sizes(2rem, 2rem);
+      @include sizes(1.6rem, 1.6rem);
     }
   }
 
@@ -150,21 +167,34 @@
       font-size: 2.4rem;
 
       &:first-child {
-        padding: 0.6rem 1.6rem;
+        padding: 1rem 1.6rem;
         column-gap: 0;
+        align-items: baseline;
       }
 
       &:last-child {
-        padding: 1.2rem 1.4rem;
+        padding: 0.9rem 1.4rem;
       }
 
       div {
         @extend %textBold20;
+
+        margin-top: 0.4rem;
       }
 
       span {
-        font-size: 2.4rem;
-        font-weight: 400;
+        &:first-child {
+          @extend %textBold15;
+          color: $black;
+        }
+
+        &:last-child {
+          font-size: 2.4rem;
+          font-weight: 400;
+          line-height: 120%;
+          color: $grey;
+          padding-left: 0.4rem;
+        }
       }
     }
   }
@@ -202,7 +232,7 @@
 
   &__desc-location-address {
     @extend %flexCenter;
-    column-gap: 1.3rem;
+    column-gap: 0.5rem;
   }
 
   &__desc-location-text {
@@ -238,7 +268,7 @@
 
   &__icon-item {
     @extend %flexCenter;
-    column-gap: 0.7rem;
+    column-gap: 0.5rem;
   }
 
   &__icon-text {
@@ -281,9 +311,9 @@
     padding: 1.6rem 2rem;
     border-radius: 7.2rem;
     background-color: $white;
-    margin: 0 auto 2rem auto;
+    margin: 0 auto 10rem auto;
     column-gap: 3rem;
-    box-shadow: 0 0 1rem rgba(143, 155, 205, 0.25);
+    box-shadow: 0.5rem 1.5rem 7rem 0 $lightGrey;
 
     &-btn {
       @include sizes(2.4rem, 2.4rem);
@@ -384,9 +414,9 @@
     @include showMob();
     border-radius: 4rem;
 
-    // &:not(:nth-child(-n + 3)) {
-    //   display: none;
-    // }
+    &:not(:nth-child(-n + 3)) {
+      display: none;
+    }
 
     &__like {
       @include sizes(6.8rem, 6.8rem);
@@ -440,9 +470,11 @@
 
     &__bullets {
       column-gap: 0.6rem;
+      opacity: 1;
+      visibility: visible;
 
       span {
-        @include sizes(2.4rem, 0.825);
+        @include sizes(0.8rem, 0.8rem);
         border-radius: 4rem;
       }
     }
@@ -469,7 +501,7 @@
 
     &__items-bottom {
       column-gap: 1.6rem;
-      top: 29.6rem;
+      top: 29.4rem;
       left: 2.4rem;
 
       .card__item {
@@ -484,8 +516,16 @@
           padding: 1.8rem 1.6rem;
         }
 
+        div {
+          margin: 0;
+        }
+
         span {
           font-size: 3.2rem;
+
+          &:last-child {
+            font-size: 3.2rem;
+          }
         }
       }
     }
@@ -588,6 +628,13 @@
       margin-bottom: 3rem;
     }
 
+    transition: $transition;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: -5rem 2.2rem 10rem 0 rgba(76, 98, 187, 0.18);
+    }
+
     .btn-tertiary {
       column-gap: 1.2rem;
 
@@ -609,6 +656,10 @@
     .card {
       &__swiper {
         height: 100%;
+      }
+
+      &__desc-location-address {
+        column-gap: 1.3rem;
       }
 
       &-slider,

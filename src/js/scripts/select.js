@@ -82,6 +82,10 @@ document.addEventListener('DOMContentLoaded', () => {
         labels[index].addEventListener('click', (e) => {
           if (title) {
             title.textContent = e.target.textContent;
+
+            if (document.querySelector('.catalog__header-bottom-txt')) {
+              document.querySelector('.catalog__header-bottom-txt').innerHTML = title.textContent;
+            }
           }
           if (!isSelectMult(select)) {
             select.classList.remove('active');
