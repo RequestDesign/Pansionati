@@ -5450,6 +5450,10 @@ input[type=file] {
   margin-right: 1.5rem;
 }
 
+.advantages__content .title br {
+  display: block;
+}
+
 .advantages__item {
   row-gap: 3rem;
   width: 31rem;
@@ -9676,7 +9680,7 @@ fieldset {
   }
 
   .catalog__top-map {
-    border-color: none;
+    border: 0;
   }
 
   .catalog__top-btns {
