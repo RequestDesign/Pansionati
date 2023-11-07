@@ -266,6 +266,7 @@
   &__items-shadow {
     position: absolute;
     right: 0;
+    z-index: 2;
 
     img {
       @include sizes(8.8rem, 4rem);
