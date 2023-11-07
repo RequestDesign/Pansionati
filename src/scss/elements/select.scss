@@ -9,6 +9,10 @@
       z-index: 10;
     }
 
+    .select__header {
+      border: 1px solid $blue;
+    }
+
     .select__btn {
       transform: rotate(180deg);
     }
@@ -27,6 +31,7 @@
     @extend %flexCenter;
     @extend %hover;
     position: relative;
+    border: 1px solid transparent;
 
     &.active {
       button {
@@ -117,11 +122,18 @@
 .select-sort {
   .select__items {
     width: 100%;
+    height: fit-content;
+    max-height: fit-content !important;
     &::-webkit-scrollbar,
     &::-webkit-scrollbar-track,
     &::-webkit-scrollbar-thumb {
       display: none;
     }
+  }
+  .select__content {
+    width: 110%;
+    height: fit-content;
+    max-height: fit-content !important;
   }
 }
 
