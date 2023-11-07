@@ -2693,6 +2693,11 @@ fieldset {
   cursor: pointer;
 }
 
+.card-slider {
+  position: relative;
+  z-index: -2;
+}
+
 .card__like {
   width: 4rem;
   height: 4rem;
@@ -2770,6 +2775,7 @@ fieldset {
   border-radius: 2rem;
   opacity: 1;
   cursor: pointer;
+  margin: 0;
 }
 
 .card__bullets .swiper-pagination-bullet {
@@ -3232,6 +3238,7 @@ input[type=file] {
 .map-desc {
   display: none;
   padding: 2.5rem;
+  width: 100%;
 }
 
 .map-desc.active {
@@ -3642,6 +3649,10 @@ input[type=file] {
   color: #8b8d95;
 }
 
+.bottom-zakrep {
+  display: none;
+}
+
 .header {
   position: relative;
 }
@@ -4016,6 +4027,10 @@ input[type=file] {
 .maps__list-item-header-desc {
   justify-content: space-between;
   row-gap: 0.6rem;
+}
+
+.maps__list-item-header-desc a {
+  white-space: pre-line;
 }
 
 .maps__list-item-header-desc p {
@@ -5920,6 +5935,11 @@ fieldset {
   display: none;
 }
 
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0;
+}
+
 @media screen and (min-width: 48em) {
   .card:hover {
     box-shadow: 0.2rem 0.4rem 1rem 0 rgba(221, 229, 236, 0.5), -0.2rem -0.2rem 1rem 0 rgba(221, 229, 236, 0.48);
@@ -6859,8 +6879,8 @@ fieldset {
   }
 
   .card__bullets {
-    -moz-column-gap: 0.6rem;
-         column-gap: 0.6rem;
+    -moz-column-gap: 0.8rem;
+         column-gap: 0.8rem;
     opacity: 1;
     visibility: visible;
   }
@@ -7355,6 +7375,54 @@ fieldset {
     border-radius: 4rem;
     width: 12rem;
     height: 10rem;
+  }
+
+  .bottom-zakrep {
+    position: fixed;
+    bottom: 0;
+    z-index: 3;
+    margin: 0 auto;
+    left: 0;
+    transition: all 0.3s ease-out;
+    padding: 4rem 0;
+    border-radius: 4rem 4rem 0 0;
+    background: rgba(182, 194, 207, 0.15);
+    box-shadow: -0.2rem 0 2rem 0 rgba(76, 98, 187, 0.17);
+    -webkit-backdrop-filter: blur(3.8rem);
+            backdrop-filter: blur(3.8rem);
+    width: 100%;
+    justify-content: center;
+    display: flex;
+  }
+
+  .bottom-zakrep.scroll {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .bottom-zakrep__phones {
+    flex-direction: row-reverse;
+    -moz-column-gap: 5.6rem;
+         column-gap: 5.6rem;
+    justify-content: space-between;
+  }
+
+  .bottom-zakrep__phones .phones__phone {
+    flex-direction: row-reverse;
+    -moz-column-gap: 2.4rem;
+         column-gap: 2.4rem;
+    align-items: center;
+  }
+
+  .bottom-zakrep__phones .phones__phone-numbers div:first-child {
+    margin: 0;
+    color: #1a1a1a;
+    font-size: 3.2rem;
+  }
+
+  .bottom-zakrep__phones .btn-primary {
+    width: 30rem;
+    padding: 2.5rem 0;
   }
 
   .header {
@@ -8895,6 +8963,10 @@ fieldset {
     height: 4.8rem;
   }
 
+  .board-navigation__scroll {
+    border: none;
+  }
+
   .info {
     margin-top: 8rem;
   }
@@ -9097,20 +9169,6 @@ fieldset {
 
   .board-main .--mob {
     display: flex;
-  }
-
-  .board-main__btn {
-    position: fixed;
-    bottom: 6rem;
-    z-index: 3;
-    margin: 0 auto;
-    left: calc(50% - 20.2rem);
-    transition: all 0.3s ease-out;
-  }
-
-  .board-main__btn.scroll {
-    opacity: 0;
-    visibility: hidden;
   }
 
   .board-main__container {
@@ -9614,6 +9672,10 @@ fieldset {
 
   .catalog__top-right {
     width: 100%;
+  }
+
+  .catalog__top-map .btn-round {
+    border-color: none;
   }
 
   .catalog__top-btns {

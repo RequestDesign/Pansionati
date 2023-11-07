@@ -14,7 +14,6 @@
     border-radius: 2rem;
     background-color: $white;
     align-items: center;
-    // box-shadow: 0 0 1rem rgba(143, 155, 205, 0.25);
     box-shadow: -0.8rem 1.6rem 4rem 0 rgba(76, 98, 187, 0.2);
     display: none;
 
@@ -26,6 +25,7 @@
   &-desc {
     display: none;
     padding: 2.5rem;
+    width: 100%;
 
     &.active {
       display: flex;

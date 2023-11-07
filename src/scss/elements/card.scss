@@ -29,6 +29,11 @@
     cursor: pointer;
   }
 
+  &-slider {
+    position: relative;
+    z-index: -2;
+  }
+
   &__like {
     @include sizes(4rem, 4rem);
     position: absolute;
@@ -114,6 +119,7 @@
       border-radius: 2rem;
       opacity: 1;
       cursor: pointer;
+      margin: 0;
     }
 
     .swiper-pagination-bullet {
@@ -469,7 +475,7 @@
     }
 
     &__bullets {
-      column-gap: 0.6rem;
+      column-gap: 0.8rem;
       opacity: 1;
       visibility: visible;
 

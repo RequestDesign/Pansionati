@@ -316,20 +316,6 @@
   .board-main {
     @include showMob();
 
-    &__btn {
-      position: fixed;
-      bottom: 6rem;
-      z-index: 3;
-      margin: 0 auto;
-      left: calc(50% - 40.4rem / 2);
-      transition: $transition;
-
-      &.scroll {
-        opacity: 0;
-        visibility: hidden;
-      }
-    }
-
     &__container {
       flex-direction: column-reverse;
       row-gap: 4rem;

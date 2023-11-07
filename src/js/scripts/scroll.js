@@ -21,7 +21,7 @@ function scrollPage() {
 }
 
 function changeShowBtnBoard() {
-  const fixedElement = document.querySelector('.board-main__btn ');
+  const fixedElement = document.querySelector('.bottom-zakrep');
 
   if (fixedElement) {
     const footer = document.querySelector('.footer');
@@ -42,11 +42,17 @@ function changeShowPanelCatalogHeader() {
   if (mapsCatalog) {
     const { top } = mapsCatalog.getBoundingClientRect();
     const catalogHeader = document.querySelector('.js-catalog-header');
+    const header = document.querySelector('.header');
+    const catalogPage = document.querySelector('.catalog-page');
 
     if (top < 100) {
       catalogHeader.classList.remove('scroll');
+      header.style.position = '';
+      catalogPage.style.marginTop = '';
     } else {
       catalogHeader.classList.add('scroll');
+      header.style.position = 'relative';
+      catalogPage.style.marginTop = '0';
     }
   }
 }
