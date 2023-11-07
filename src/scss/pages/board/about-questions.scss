@@ -9,6 +9,7 @@
     border-radius: 3rem;
     background-color: $lightGrey;
     padding: 3rem;
+    cursor: pointer;
   }
 
   &__inner {
@@ -45,9 +46,7 @@
     @extend %textRegular20;
     color: $grey;
     padding-top: 1.2rem;
-    overflow: hidden;
-    height: 0;
-    transition: $transition;
+    display: none;
   }
 }
 

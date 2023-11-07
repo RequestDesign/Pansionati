@@ -51,6 +51,17 @@ function changeShowPanelCatalogHeader() {
   }
 }
 
+function clickScrollMap() {
+  const btn = document.querySelector('.js-scroll-map');
+
+  if (btn) {
+    btn.addEventListener('click', () => {
+      const map = document.querySelector('.maps');
+      map.scrollIntoView({ behavior: 'smooth' });
+    });
+  }
+}
+
 function changeShowPanelFilt() {
   const search = document.querySelector('.js-sear');
 
@@ -77,4 +88,5 @@ document.addEventListener('DOMContentLoaded', () => {
   changeShowBtnBoard();
   changeShowPanelCatalogHeader();
   scrollPage();
+  clickScrollMap();
 });

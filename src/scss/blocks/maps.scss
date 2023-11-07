@@ -102,13 +102,6 @@
     width: 100%;
   }
 
-  &__filter-price {
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    row-gap: 3rem;
-  }
-
   &__list-item-footer {
     @extend %flexCenterBetween;
     column-gap: 4.5rem;
@@ -141,6 +134,7 @@
 
     .title-h3 {
       margin-right: 4rem;
+      flex-shrink: 0;
     }
   }
 
@@ -197,6 +191,13 @@
     &__title-btns {
       display: flex;
       column-gap: 2rem;
+    }
+
+    &__filter-price {
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+      row-gap: 3rem;
     }
 
     &__title-btn {

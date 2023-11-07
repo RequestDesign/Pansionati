@@ -116,6 +116,7 @@
 
 .select-sort {
   .select__items {
+    width: 100%;
     &::-webkit-scrollbar,
     &::-webkit-scrollbar-track,
     &::-webkit-scrollbar-thumb {
@@ -274,6 +275,7 @@
     &__items {
       width: 100%;
       max-height: 26.4rem;
+      height: 100%;
     }
 
     &__item {
@@ -334,6 +336,17 @@
         background-image: url('@img/icons/icons.svg#checkbox-active');
       }
     }
+  }
+}
+
+.select-sort {
+  .select__content {
+    height: fit-content;
+    max-height: fit-content;
+  }
+  .select__items {
+    height: fit-content;
+    max-height: fit-content;
   }
 }
 
@@ -413,6 +426,18 @@
 
     .select__content {
       top: 10.5rem;
+    }
+  }
+
+  .select-sort {
+    .select__items {
+      overflow-y: unset;
+      height: fit-content;
+      max-height: fit-content;
+    }
+    .select__content {
+      height: fit-content;
+      max-height: fit-content !important;
     }
   }
 

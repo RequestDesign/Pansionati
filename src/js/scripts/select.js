@@ -83,12 +83,25 @@ document.addEventListener('DOMContentLoaded', () => {
           if (title) {
             title.textContent = e.target.textContent;
 
+            if (document.querySelector('.select-sort') && window.innerWidth < 768) {
+              document.querySelector('.select-sort .select__content').classList.remove('active');
+            }
+
             if (document.querySelector('.catalog__header-bottom-txt')) {
               document.querySelector('.catalog__header-bottom-txt').innerHTML = title.textContent;
             }
           }
           if (!isSelectMult(select)) {
             select.classList.remove('active');
+          }
+        });
+      }
+
+      if (document.querySelector('.select-sort') && window.innerWidth < 768) {
+        document.addEventListener('click', (event) => {
+          if (event.target.closest('.select__content')) {
+            document.querySelector('.select-sort .select__content').classList.remove('active');
+            document.querySelector('.select-sort').classList.remove('active');
           }
         });
       }
