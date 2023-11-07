@@ -53,6 +53,10 @@ fieldset {
 
 .title {
   @extend %textH1;
+
+  br {
+    display: none;
+  }
 }
 
 .title-h3 {
@@ -67,5 +71,11 @@ fieldset {
 @media screen and (max-width: 48em) {
   .logo {
     font-size: 4rem;
+  }
+
+  .title {
+    br {
+      display: block;
+    }
   }
 }

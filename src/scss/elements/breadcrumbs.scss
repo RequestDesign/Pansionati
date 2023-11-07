@@ -34,9 +34,23 @@
   .breadcrumbs {
     margin: 6.4rem 0 4rem 0;
 
+    .container {
+      padding: 0;
+    }
+
+    span,
+    a {
+      flex-shrink: 0;
+    }
+
     &__container {
       column-gap: 2rem;
-      flex-wrap: wrap;
+      overflow-x: scroll;
+      padding: 0 3.2rem;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
     }
 
     a {

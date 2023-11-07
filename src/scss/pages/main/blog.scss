@@ -78,10 +78,13 @@
     }
 
     &__items {
-      @include noScrollLine();
       column-gap: 3.2rem;
       overflow-x: scroll;
       padding: 0 4.27vw;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
     }
 
     &__item {

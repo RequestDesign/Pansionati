@@ -69,6 +69,10 @@
     width: 32.3rem;
     z-index: -1;
     margin-top: -3rem;
+
+    br {
+      display: none;
+    }
   }
 
   &__count-boards {
@@ -172,6 +176,12 @@
       top: 16rem;
     }
 
+    &__text {
+      font-size: 2.8rem;
+      font-weight: 700;
+      line-height: 130%;
+    }
+
     &__container {
       padding: 6rem 0 0 0;
       flex-direction: column;
@@ -199,6 +209,10 @@
       width: 100%;
       column-gap: 3.2rem;
       margin-top: 3.2rem;
+
+      br {
+        display: block;
+      }
     }
 
     &__count-boards {

@@ -28,6 +28,10 @@
     text-align: center;
     margin-bottom: 3.8rem;
     max-width: 72rem;
+
+    strong {
+      font-weight: 700;
+    }
   }
 
   &__form {

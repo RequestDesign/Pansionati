@@ -54,6 +54,14 @@
     margin-right: 1.2rem;
     flex-shrink: 0;
   }
+
+  .select.active .select__header {
+    border: 0;
+  }
+
+  .select__header {
+    border: 0;
+  }
 }
 
 //----------------Mob----------------

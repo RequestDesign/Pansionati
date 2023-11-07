@@ -53,15 +53,17 @@
     margin-top: 18rem;
 
     .title {
-      margin-bottom: 5.4rem;
+      margin-bottom: 0;
       padding: 0 4rem;
     }
 
     &__content {
       display: flex;
       column-gap: 3.2rem;
-      overflow: scroll;
+      overflow-x: scroll;
+      overflow-y: hidden;
       padding: 0 4rem;
+      padding-top: 5.4rem;
       &::-webkit-scrollbar {
         display: none;
       }
@@ -78,7 +80,7 @@
       box-shadow: 0 4.2rem 12rem 0 rgba(76, 98, 187, 0.13);
 
       img {
-        @include sizes(3.8rem, 3.8rem);
+        @include sizes(4.8rem, 4.8rem);
       }
     }
 
