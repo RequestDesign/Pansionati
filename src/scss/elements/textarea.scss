@@ -25,6 +25,10 @@
       font-weight: 400;
     }
   }
+
+  &:focus-within {
+    border: 1px solid $blue;
+  }
 }
 
 @media screen and (max-width: 48em) {

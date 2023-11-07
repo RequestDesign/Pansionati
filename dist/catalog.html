@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Каталог</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css?_v=20231107162604" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lg-thumbnail.min.css?_v=20231107162604" />
-  <link rel="stylesheet" href="css/style.min.css?_v=20231107162604" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css?_v=20231107165433" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lg-thumbnail.min.css?_v=20231107165433" />
+  <link rel="stylesheet" href="css/style.min.css?_v=20231107165433" />
 </head>
 
 
@@ -160,16 +160,16 @@
         </div>
         <div class="catalog__header-bottom">
           <button type="button" class="catalog__header-bottom-btn js-sort-open">
-            <div class="catalog__header-bottom-icon">
+            <span class="catalog__header-bottom-icon">
               <img src="img/icons/icons.svg#sort" alt="" />
-            </div>
-            <div class="catalog__header-bottom-txt js-select-value">Сначала дешевые</div>
+            </span>
+            <span class="catalog__header-bottom-txt js-select-value">Сначала дешевые</span>
           </button>
           <button type="button" class="catalog__header-bottom-btn js-filt-open">
-            <div class="catalog__header-bottom-icon">
+            <span class="catalog__header-bottom-icon">
               <img src="img/icons/icons.svg#filter-2" alt="" />
-            </div>
-            <div class="catalog__header-bottom-txt">Фильтры</div>
+            </span>
+            <span class="catalog__header-bottom-txt">Фильтры</span>
           </button>
         </div>
       </div>
@@ -180,7 +180,7 @@
             <img src="img/icons/icons.svg#close" alt="" />
           </div>
         </div>
-        <form action="">
+        <form>
           <fieldset class="catalog__fieldset">
             <div class="catalog__fieldset-top">
               <div class="catalog__fieldset-title">Цена</div>
@@ -2172,7 +2172,7 @@
       <div class="ind__desc">
         <div class="title">Получите индивидуальное предложение</div>
         <div class="ind__txt">Задайте интересующие вас параметры и мы подберем 3 подходящих для вас варианта.</div>
-        <form action="" id="ind-form" class="ind__form">
+        <form id="ind-form" class="ind__form">
           <div class="select select-mult js-select">
             <div class="select__header js-select-inner">
               <input
@@ -2190,43 +2190,43 @@
               <div class="select__items">
                 <div class="select__empty js-select-empty">Ничего не найдено</div>
                 <div class="select__item js-select-item">
-                  <input id="town-1" type="checkbox" name="town" value="Домодедово" />
-                  <label for="town-1">
+                  <input id="citys-1" type="checkbox" name="citys" value="Домодедово" />
+                  <label for="citys-1">
                     Домодедово
                     <span>(2)</span>
                   </label>
                 </div>
                 <div class="select__item js-select-item">
-                  <input id="town-2" type="checkbox" name="town" value="Видное" />
-                  <label for="town-2">
+                  <input id="citys-2" type="checkbox" name="citys" value="Видное" />
+                  <label for="citys-2">
                     Видное
                     <span>(5)</span>
                   </label>
                 </div>
                 <div class="select__item js-select-item">
-                  <input id="town-3" type="checkbox" name="town" value="Броннинцы" />
-                  <label for="town-3">
+                  <input id="citys-3" type="checkbox" name="citys" value="Броннинцы" />
+                  <label for="citys-3">
                     Броннинцы
                     <span>(4)</span>
                   </label>
                 </div>
                 <div class="select__item js-select-item">
-                  <input id="town-4" type="checkbox" name="town" value="Дедовск" />
-                  <label for="town-4">
+                  <input id="citys-4" type="checkbox" name="citys" value="Дедовск" />
+                  <label for="citys-4">
                     Дедовск
                     <span>(6)</span>
                   </label>
                 </div>
                 <div class="select__item js-select-item">
-                  <input id="town-5" type="checkbox" name="town" value="Жуковский" />
-                  <label for="town-5">
+                  <input id="citys-5" type="checkbox" name="citys" value="Жуковский" />
+                  <label for="citys-5">
                     Жуковский
                     <span>(8)</span>
                   </label>
                 </div>
                 <div class="select__item js-select-item">
-                  <input id="town-6" type="checkbox" name="town" value="Химки" />
-                  <label for="town-6">
+                  <input id="citys-6" type="checkbox" name="citys" value="Химки" />
+                  <label for="citys-6">
                     Химки
                     <span>(7)</span>
                   </label>
@@ -4476,11 +4476,11 @@
   </div>
 </div>
 
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=e1d17623-ee55-4c9d-8251-85ab8eb1263e&lang=ru_RU&_v=20231107162604"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js?_v=20231107162604"></script>
-<script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery-all.min.js?_v=20231107162604"></script>
-<script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lg-thumbnail.min.js?_v=20231107162604"></script>
-<script src="js/app.min.js?_v=20231107162604"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=e1d17623-ee55-4c9d-8251-85ab8eb1263e&lang=ru_RU&_v=20231107165433"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js?_v=20231107165433"></script>
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery-all.min.js?_v=20231107165433"></script>
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lg-thumbnail.min.js?_v=20231107165433"></script>
+<script src="js/app.min.js?_v=20231107165433"></script>
 
   </body>
 </html>

@@ -2340,6 +2340,10 @@ fieldset {
   transform: rotate(180deg);
 }
 
+.select__header:focus-within {
+  border: 1px solid #2ecdf0;
+}
+
 .select__btn {
   width: 2.4rem;
   height: 2.4rem;
@@ -3189,6 +3193,10 @@ input[type=file] {
   font-weight: 400;
 }
 
+.input:focus-within {
+  border: 1px solid #2ecdf0;
+}
+
 .map {
   width: 126rem;
   height: 57rem;
@@ -3435,6 +3443,10 @@ input[type=file] {
 .textarea textarea::placeholder {
   color: #8b8d95;
   font-weight: 400;
+}
+
+.textarea:focus-within {
+  border: 1px solid #2ecdf0;
 }
 
 .icon {
@@ -6182,7 +6194,7 @@ fieldset {
   .catalog__sear {
     position: sticky;
     top: 0;
-    z-index: 4;
+    z-index: 3;
     transition: all 0.3s ease-out;
   }
 
@@ -9767,6 +9779,10 @@ fieldset {
     align-items: center;
     -moz-column-gap: 1.2rem;
          column-gap: 1.2rem;
+  }
+
+  .catalog__header-bottom-btn span {
+    display: block;
   }
 
   .catalog__header-bottom-icon {

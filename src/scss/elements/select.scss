@@ -38,6 +38,10 @@
         transform: rotate(180deg);
       }
     }
+
+    &:focus-within {
+      border: 1px solid $blue;
+    }
   }
 
   &__btn {
