@@ -28,9 +28,16 @@
         transition: $transition;
       }
 
-      .awards__circle-img::before {
-        background-image: url('@img/icons/icons.svg#document');
-        background-size: cover;
+      .awards__circle-img {
+        img {
+          &:first-child {
+            opacity: 0;
+          }
+
+          &:last-child {
+            opacity: 1;
+          }
+        }
       }
 
       .btn-tertiary {
@@ -60,15 +67,20 @@
 
   &__circle-img {
     position: relative;
-    &::before {
-      content: '';
+
+    img {
       @include sizes(5rem, 5rem);
       position: absolute;
       right: -4.3rem;
       bottom: -4rem;
       transition: $transition;
-      background-image: url('@img/icons/icons.svg#award');
-      background-size: cover;
+
+      &:first-child {
+        opacity: 1;
+      }
+      &:last-child {
+        opacity: 0;
+      }
     }
   }
 

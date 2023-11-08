@@ -55,7 +55,7 @@
     &.active {
       .card__like-img {
         @extend %fullSize;
-        background: url('@img/icons/icons.svg#like-active') no-repeat center;
+        background-image: url('@img/icons/icons.svg#like-active');
         background-size: cover;
       }
     }
@@ -64,7 +64,7 @@
   &__like-img {
     display: block;
     @extend %fullSize;
-    background: url('@img/icons/icons.svg#like') no-repeat center;
+    background-image: url('@img/icons/icons.svg#like');
     background-size: cover;
   }
 
@@ -300,6 +300,8 @@
     column-gap: 2.8rem;
     overflow-x: scroll;
     padding: 0 2.4rem;
+    position: relative;
+    z-index: 2;
   }
 
   .btn-tertiary {
@@ -485,6 +487,10 @@
       top: 38.4rem;
     }
 
+    &-slider {
+      z-index: 0;
+    }
+
     &__bullets {
       column-gap: 0.8rem;
       opacity: 1;
@@ -594,7 +600,7 @@
 
     &__items-shadow {
       display: none;
-      top: 20.8rem;
+      top: 0;
 
       img {
         @include sizes(18rem, 6.8rem);

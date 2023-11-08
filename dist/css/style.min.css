@@ -3098,12 +3098,12 @@ fieldset {
   z-index: 2;
 }
 .card__like.active .card__like-img {
-  background: url('../img/icons/icons.svg#like-active') no-repeat center;
+  background-image: url('../img/icons/icons.svg#like-active');
   background-size: cover;
 }
 .card__like-img {
   display: block;
-  background: url('../img/icons/icons.svg#like') no-repeat center;
+  background-image: url('../img/icons/icons.svg#like');
   background-size: cover;
 }
 .card__desc {
@@ -3284,6 +3284,8 @@ fieldset {
   column-gap: 2.8rem;
   overflow-x: scroll;
   padding: 0 2.4rem;
+  position: relative;
+  z-index: 2;
 }
 .card__icon-items::-webkit-scrollbar {
   width: 0;
@@ -3449,6 +3451,9 @@ fieldset {
   .card__pagination {
     top: 38.4rem;
   }
+  .card-slider {
+    z-index: 0;
+  }
   .card__bullets {
     column-gap: 0.8rem;
     opacity: 1;
@@ -3538,7 +3543,7 @@ fieldset {
   }
   .card__items-shadow {
     display: none;
-    top: 20.8rem;
+    top: 0;
   }
   .card__items-shadow img {
     width: 18rem;
@@ -5675,9 +5680,11 @@ input[type='file'] {
   background: #ffffff;
   transition: all 0.3s ease-out;
 }
-.awards__item:hover .awards__circle-img::before {
-  background-image: url('../img/icons/icons.svg#document');
-  background-size: cover;
+.awards__item:hover .awards__circle-img img:first-child {
+  opacity: 0;
+}
+.awards__item:hover .awards__circle-img img:last-child {
+  opacity: 1;
 }
 .awards__item:hover .btn-tertiary span {
   color: #ffffff;
@@ -5700,16 +5707,19 @@ input[type='file'] {
 .awards__circle-img {
   position: relative;
 }
-.awards__circle-img::before {
-  content: '';
+.awards__circle-img img {
   width: 5rem;
   height: 5rem;
   position: absolute;
   right: -4.3rem;
   bottom: -4rem;
   transition: all 0.3s ease-out;
-  background-image: url('../img/icons/icons.svg#award');
-  background-size: cover;
+}
+.awards__circle-img img:first-child {
+  opacity: 1;
+}
+.awards__circle-img img:last-child {
+  opacity: 0;
 }
 .awards .title {
   margin-bottom: 5rem;
@@ -6125,10 +6135,6 @@ input[type='file'] {
     height: 6.8rem;
   }
 }
-.mainpage .card__items-shadow {
-  position: fixed;
-}
-
 .boards-swipers {
   margin-top: 17rem;
 }
@@ -8634,5 +8640,11 @@ fieldset {
   }
   .title br {
     display: block;
+  }
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
+    top: 0;
   }
 }
