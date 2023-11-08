@@ -2695,7 +2695,7 @@ fieldset {
 
 .card-slider {
   position: relative;
-  z-index: 0;
+  z-index: -2;
 }
 
 .card__slider-slide {
@@ -2911,6 +2911,8 @@ fieldset {
   overflow-x: scroll;
   margin-bottom: 1.6rem;
   padding: 0 2.4rem;
+  position: relative;
+  z-index: 2;
 }
 
 .card__items-services::-webkit-scrollbar {
@@ -2924,7 +2926,7 @@ fieldset {
 }
 
 .card__items-shadow {
-  position: absolute;
+  position: fixed;
   right: 0;
 }
 
@@ -2945,6 +2947,8 @@ fieldset {
 
 .card__icon-items {
   display: flex;
+  position: relative;
+  z-index: 2;
   -moz-column-gap: 2.8rem;
        column-gap: 2.8rem;
   overflow-x: scroll;
@@ -4305,7 +4309,7 @@ input[type=file] {
   transition: all 0.3s ease-out;
 }
 
-.awards__item:hover .awards__circle-img {
+.awards__item:hover .awards__circle-img::before {
   background: url("@img/icons/icons.svg#document") no-repeat center;
   background-size: cover;
 }
@@ -4332,11 +4336,16 @@ input[type=file] {
 }
 
 .awards__circle-img {
+  position: relative;
+}
+
+.awards__circle-img::before {
+  content: "";
   width: 5rem;
   height: 5rem;
-  position: relative;
-  right: -2.3rem;
-  bottom: -1.3rem;
+  position: absolute;
+  right: -4.3rem;
+  bottom: -4rem;
   transition: all 0.3s ease-out;
   background: url("@img/icons/icons.svg#award") no-repeat center;
   background-size: cover;
@@ -4494,11 +4503,11 @@ input[type=file] {
 }
 
 .blog__substract {
-  width: 100%;
+  width: calc(100% + 0.2rem);
   height: 39rem;
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: -0.2rem;
   z-index: 0;
   background: url("@img/blog/blog-substract.svg") no-repeat center;
   background-size: cover;
@@ -8264,11 +8273,11 @@ fieldset {
     right: -2rem;
   }
 
-  .awards__circle-img {
+  .awards__circle-img::before {
     width: 5.625rem;
     height: 5.625rem;
-    right: -0.5rem;
-    bottom: 0rem;
+    right: -4rem;
+    bottom: -3rem;
   }
 
   .awards .btn-tertiary svg {

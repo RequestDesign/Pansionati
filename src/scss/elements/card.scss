@@ -31,7 +31,7 @@
 
   &-slider {
     position: relative;
-    z-index: 0;
+    z-index: -2;
   }
 
   &__slider-slide {
@@ -260,6 +260,8 @@
     overflow-x: scroll;
     margin-bottom: 1.6rem;
     padding: 0 2.4rem;
+    position: relative;
+    z-index: 2;
 
     .card__item {
       @extend %textRegular18;
@@ -269,7 +271,7 @@
   }
 
   &__items-shadow {
-    position: absolute;
+    position: fixed;
     right: 0;
 
     img {
@@ -291,6 +293,8 @@
   &__icon-items {
     @include noScrollLine();
     display: flex;
+    position: relative;
+    z-index: 2;
     column-gap: 2.8rem;
     overflow-x: scroll;
     padding: 0 2.4rem;
