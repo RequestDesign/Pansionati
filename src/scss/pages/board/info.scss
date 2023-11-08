@@ -60,10 +60,7 @@
       column-gap: 0.8rem;
       margin-top: 0;
       padding: 0 3.2em;
-
-      &::-webkit-scrollbar {
-        display: none;
-      }
+      @include noScrollLine();
 
       .btn-primary {
         padding: 3rem 4rem;

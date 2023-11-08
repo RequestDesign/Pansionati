@@ -130,10 +130,7 @@
     column-gap: 1.6rem;
     overflow-x: scroll;
     padding-right: 2rem;
-
-    &::-webkit-scrollbar {
-      display: none;
-    }
+    @include noScrollLine();
   }
 
   &__item {
@@ -500,9 +497,7 @@
         overflow-y: scroll;
         overflow-x: hidden;
         padding: 0 3.2rem;
-        &::-webkit-scrollbar {
-          display: none;
-        }
+        @include noScrollLine();
       }
     }
 
@@ -514,9 +509,7 @@
       overflow-x: scroll;
       padding: 0 3.2rem;
 
-      &::-webkit-scrollbar {
-        display: none;
-      }
+      @include noScrollLine();
     }
 
     &__form-item {

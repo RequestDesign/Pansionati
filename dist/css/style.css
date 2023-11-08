@@ -2367,6 +2367,9 @@ fieldset {
 }
 
 .select__items {
+  scroll-snap-type: y proximity;
+  scrollbar-width: thin;
+  scrollbar-color: #ffa41c #f0f3f7;
   max-height: 20rem;
   overflow-y: auto;
   width: -moz-max-content;
@@ -2442,7 +2445,14 @@ fieldset {
 .select-sort .select__items::-webkit-scrollbar,
 .select-sort .select__items::-webkit-scrollbar-track,
 .select-sort .select__items::-webkit-scrollbar-thumb {
-  display: none;
+  scrollbar-width: none;
+}
+
+.select-sort .select__items::-webkit-scrollbar::-webkit-scrollbar,
+.select-sort .select__items::-webkit-scrollbar-track::-webkit-scrollbar,
+.select-sort .select__items::-webkit-scrollbar-thumb::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 
 .select-sort .select__content {
@@ -2748,6 +2758,12 @@ fieldset {
   margin-bottom: 0.8rem;
 }
 
+.card__desc-top .title-h3 {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
 .card__desc-rec {
   padding: 0.9rem 0.9rem 0.3rem 0.9rem;
   border-radius: 1.2rem;
@@ -2915,6 +2931,7 @@ fieldset {
 }
 
 .card__items-services {
+  scrollbar-width: none;
   overflow-x: scroll;
   margin-bottom: 1.6rem;
   padding: 0 2.4rem;
@@ -2940,6 +2957,14 @@ fieldset {
   height: 4rem;
 }
 
+.card__items-shadow-services {
+  top: 12.5rem;
+}
+
+.card__items-shadow-icons {
+  top: 17.7rem;
+}
+
 .card__icon-item {
   -moz-column-gap: 0.5rem;
        column-gap: 0.5rem;
@@ -2951,6 +2976,7 @@ fieldset {
 }
 
 .card__icon-items {
+  scrollbar-width: none;
   display: flex;
   -moz-column-gap: 2.8rem;
        column-gap: 2.8rem;
@@ -3449,10 +3475,12 @@ input[type=file] {
   border: 0;
   flex-shrink: 0;
   resize: none;
+  scrollbar-width: none;
 }
 
 .textarea textarea::-webkit-scrollbar {
-  display: none;
+  width: 0;
+  height: 0;
 }
 
 .textarea textarea::-moz-placeholder {
@@ -3985,6 +4013,9 @@ input[type=file] {
 }
 
 .maps__list-items {
+  scroll-snap-type: y proximity;
+  scrollbar-width: thin;
+  scrollbar-color: #ffa41c #f0f3f7;
   row-gap: 2.2rem;
   overflow-y: scroll;
   max-height: 57rem;
@@ -4148,6 +4179,8 @@ input[type=file] {
   width: 91%;
   height: 91.2rem;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
   position: absolute;
   overflow: hidden;
   left: 1rem;
@@ -5732,10 +5765,12 @@ input[type=file] {
        column-gap: 1.6rem;
   overflow-x: scroll;
   padding-right: 2rem;
+  scrollbar-width: none;
 }
 
 .catalog__items::-webkit-scrollbar {
-  display: none;
+  width: 0;
+  height: 0;
 }
 
 .catalog__item {
@@ -7023,7 +7058,7 @@ fieldset {
   .card__icon {
     width: 6.4rem;
     height: 6.4rem;
-    padding: 1.2rem;
+    padding: 1.4rem;
     border-radius: 1.2rem;
   }
 
@@ -7057,7 +7092,7 @@ fieldset {
 
   .card__items-shadow {
     display: none;
-    top: 0;
+    top: 20.6rem;
   }
 
   .card__items-shadow img {
@@ -7321,10 +7356,12 @@ fieldset {
          column-gap: 2rem;
     overflow-x: scroll;
     padding: 0 3.2rem;
+    scrollbar-width: none;
   }
 
   .breadcrumbs__container::-webkit-scrollbar {
-    display: none;
+    width: 0;
+    height: 0;
   }
 
   .breadcrumbs a {
@@ -8057,10 +8094,12 @@ fieldset {
     -moz-column-gap: 1.6rem;
          column-gap: 1.6rem;
     overflow-x: scroll;
+    scrollbar-width: none;
   }
 
   .maps__filter-items::-webkit-scrollbar {
-    display: none;
+    width: 0;
+    height: 0;
   }
 
   .maps__filter-item {
@@ -8106,10 +8145,12 @@ fieldset {
     justify-content: flex-start;
     overflow-y: scroll;
     overflow-x: hidden;
+    scrollbar-width: none;
   }
 
   .maps__filter-filters::-webkit-scrollbar {
-    display: none;
+    width: 0;
+    height: 0;
   }
 
   .maps .title {
@@ -8288,6 +8329,7 @@ fieldset {
   }
 
   .awards__list {
+    scrollbar-width: none;
     overflow-x: scroll;
     padding: 0 4.27vw;
     padding-right: 3.2rem;
@@ -8450,10 +8492,12 @@ fieldset {
          column-gap: 3.2rem;
     overflow-x: scroll;
     padding: 0 4.27vw;
+    scrollbar-width: none;
   }
 
   .blog__items::-webkit-scrollbar {
-    display: none;
+    width: 0;
+    height: 0;
   }
 
   .blog__item {
@@ -8624,10 +8668,12 @@ fieldset {
     margin-top: 5.4rem;
     padding: 0 3.2rem;
     overflow: scroll;
+    scrollbar-width: none;
   }
 
   .blog-cards__btns::-webkit-scrollbar {
-    display: none;
+    width: 0;
+    height: 0;
   }
 
   .blog-cards__items {
@@ -9046,10 +9092,12 @@ fieldset {
          column-gap: 0.8rem;
     margin-top: 0;
     padding: 0 3.2em;
+    scrollbar-width: none;
   }
 
   .info__btns::-webkit-scrollbar {
-    display: none;
+    width: 0;
+    height: 0;
   }
 
   .info__btns .btn-primary {
@@ -9471,10 +9519,12 @@ fieldset {
     overflow-y: hidden;
     padding: 0 4rem;
     padding-top: 5.4rem;
+    scrollbar-width: none;
   }
 
   .advantages__content::-webkit-scrollbar {
-    display: none;
+    width: 0;
+    height: 0;
   }
 
   .advantages__item {
@@ -9815,10 +9865,12 @@ fieldset {
     overflow-y: scroll;
     overflow-x: hidden;
     padding: 0 3.2rem;
+    scrollbar-width: none;
   }
 
   .catalog__form form::-webkit-scrollbar {
-    display: none;
+    width: 0;
+    height: 0;
   }
 
   .catalog__form-items {
@@ -9829,10 +9881,12 @@ fieldset {
          column-gap: 1.6rem;
     overflow-x: scroll;
     padding: 0 3.2rem;
+    scrollbar-width: none;
   }
 
   .catalog__form-items::-webkit-scrollbar {
-    display: none;
+    width: 0;
+    height: 0;
   }
 
   .catalog__form-item {

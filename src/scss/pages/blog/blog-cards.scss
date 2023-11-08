@@ -49,10 +49,7 @@
       margin-top: 5.4rem;
       padding: 0 3.2rem;
       overflow: scroll;
-
-      &::-webkit-scrollbar {
-        display: none;
-      }
+      @include noScrollLine();
     }
 
     &__items {

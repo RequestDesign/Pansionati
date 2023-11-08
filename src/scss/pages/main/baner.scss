@@ -10,6 +10,8 @@
     @include sizes(91%, 91.2rem);
     background-image: url('@img/main/baner.png');
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
     position: absolute;
     overflow: hidden;
     left: 1rem;

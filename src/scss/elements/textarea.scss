@@ -16,9 +16,7 @@
     flex-shrink: 0;
     resize: none;
 
-    &::-webkit-scrollbar {
-      display: none;
-    }
+    @include noScrollLine();
 
     &::placeholder {
       color: $grey;

@@ -131,7 +131,7 @@
     &::-webkit-scrollbar,
     &::-webkit-scrollbar-track,
     &::-webkit-scrollbar-thumb {
-      display: none;
+      @include noScrollLine();
     }
   }
   .select__content {

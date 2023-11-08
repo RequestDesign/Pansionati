@@ -68,9 +68,7 @@
       overflow-y: hidden;
       padding: 0 4rem;
       padding-top: 5.4rem;
-      &::-webkit-scrollbar {
-        display: none;
-      }
+      @include noScrollLine();
     }
 
     &__item {

@@ -348,10 +348,7 @@
       padding: 0 3.2rem;
       column-gap: 1.6rem;
       overflow-x: scroll;
-
-      &::-webkit-scrollbar {
-        display: none;
-      }
+      @include noScrollLine();
     }
 
     &__filter-item {
@@ -394,10 +391,7 @@
       justify-content: flex-start;
       overflow-y: scroll;
       overflow-x: hidden;
-
-      &::-webkit-scrollbar {
-        display: none;
-      }
+      @include noScrollLine();
     }
 
     .title {

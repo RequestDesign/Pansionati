@@ -81,6 +81,12 @@
     column-gap: 5rem;
     padding: 0 2.4rem;
     margin-bottom: 0.8rem;
+
+    .title-h3 {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
   }
 
   &__desc-rec {
@@ -279,6 +285,14 @@
     img {
       @include sizes(8.8rem, 4rem);
     }
+  }
+
+  &__items-shadow-services {
+    top: 12.5rem;
+  }
+
+  &__items-shadow-icons {
+    top: 17.7rem;
   }
 
   &__icon-item {
@@ -564,7 +578,7 @@
 
     &__icon {
       @include sizes(6.4rem, 6.4rem);
-      padding: 1.2rem;
+      padding: 1.4rem;
       border-radius: 1.2rem;
     }
 
@@ -596,7 +610,7 @@
 
     &__items-shadow {
       display: none;
-      top: 0;
+      top: 20.6rem;
 
       img {
         @include sizes(18rem, 6.8rem);
