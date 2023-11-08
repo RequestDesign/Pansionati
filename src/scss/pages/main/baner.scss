@@ -171,7 +171,7 @@
 
     &-bg {
       @include sizes(100%, 71rem);
-      background: url('@img/main/baner-mob.png') no-repeat center;
+      background-image: url('@img/main/baner-mob.png');
       left: 0;
       top: 16rem;
     }

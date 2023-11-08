@@ -13,7 +13,7 @@
     &::after {
       @extend %fullSize;
       content: '';
-      background: url('@img/bg/baner-bg-2.png') no-repeat;
+      background-image: url('@img/bg/baner-bg-2.png');
       position: absolute;
       background-size: cover;
       left: 0;
@@ -121,7 +121,7 @@
       &::after {
         @extend %fullSize;
         content: '';
-        background: url('@img/bg/baner-bg-2-mob.png');
+        background-image: url('@img/bg/baner-bg-2-mob.png');
         position: absolute;
         left: 0;
         top: 0;

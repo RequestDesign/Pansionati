@@ -52,9 +52,9 @@
 
     &::after {
       content: '';
-      background: url(../img/bg/baner-bg-2.png) no-repeat;
+      background-image: url(../img/bg/baner-bg-2.png);
       position: absolute;
-      background-size: contain;
+      background-size: cover;
       left: 0;
       top: 0;
       border-radius: 3rem;
@@ -87,11 +87,11 @@
   }
 
   &-question__bg {
+    @include sizes(67%, 100%);
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
-    height: 100%;
     img {
       border-radius: 3rem;
       height: 100%;
