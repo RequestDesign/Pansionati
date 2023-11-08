@@ -4,9 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Главная</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css?_v=20231108205631" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lg-thumbnail.min.css?_v=20231108205631" />
-  <link rel="stylesheet" href="css/style.min.css?_v=20231108205631" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css?_v=20231108232108" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lg-thumbnail.min.css?_v=20231108232108" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css?_v=20231108232108" />
+  <link rel="stylesheet" href="css/style.min.css?_v=20231108232108" />
 </head>
 
   <body>
@@ -40,7 +41,7 @@
               </button>
             </div>
             <div class="select__content">
-              <div class="select__items">
+              <div class="select__items" data-simplebar>
                 <div class="select__item js-select-item">
                   <input id="city-1" type="radio" name="city" value="Москва" checked />
                   <label for="city-1">Москва</label>
@@ -165,7 +166,7 @@
                 </button>
               </div>
               <div class="select__content">
-                <div class="select__items">
+                <div class="select__items" data-simplebar>
                   <div class="select__item js-select-item">
                     <input id="location-1" type="radio" name="location" value="Москва" />
                     <label for="location-1">Москва</label>
@@ -208,7 +209,7 @@
                 </button>
               </div>
               <div class="select__content">
-                <div class="select__items">
+                <div class="select__items" data-simplebar>
                   <div class="select__item js-select-item">
                     <input id="treatment-1" type="radio" name="treatment" value="Альцгеймер" />
                     <label for="treatment-1">Альцгеймер</label>
@@ -407,7 +408,7 @@
                 </button>
               </div>
               <div class="select__content">
-                <div class="select__items">
+                <div class="select__items" data-simplebar>
                   <div class="select__empty js-select-empty">Ничего не найдено</div>
                   <div class="select__item js-select-item">
                     <input id="peculiarities-1" type="checkbox" name="peculiarities" value="Временнное размещение" />
@@ -451,7 +452,7 @@
                 </button>
               </div>
               <div class="select__content">
-                <div class="select__items">
+                <div class="select__items" data-simplebar>
                   <div class="select__empty js-select-empty">Ничего не найдено</div>
                   <div class="select__item js-select-item">
                     <input id="diseases-1" type="checkbox" name="diseases" value="Альцгеймер" />
@@ -525,7 +526,7 @@
       </div>
       <div class="maps__content">
         <div class="maps__list js-maps-list" data-content="list">
-          <div class="maps__list-items">
+          <div class="maps__list-items" data-simplebar>
             <div class="maps__list-item" data-board-list="board-1">
               <div class="maps__list-item-header">
                 <div class="maps__list-item-header-img">
@@ -930,7 +931,7 @@
             </button>
           </div>
           <div class="select__content">
-            <div class="select__items">
+            <div class="select__items" data-simplebar>
               <div class="select__empty js-select-empty">Ничего не найдено</div>
               <div class="select__item js-select-item">
                 <input id="town-1" type="checkbox" name="town" value="Домодедово" />
@@ -2233,7 +2234,7 @@
             </button>
           </div>
           <div class="select__content">
-            <div class="select__items">
+            <div class="select__items" data-simplebar>
               <div class="select__item js-select-item">
                 <input id="sort-1" type="radio" name="sort" value="По умолчанию" checked />
                 <label for="sort-1">По умолчанию</label>
@@ -6505,11 +6506,12 @@
   </div>
 </div>
 
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=e1d17623-ee55-4c9d-8251-85ab8eb1263e&lang=ru_RU&_v=20231108205631"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js?_v=20231108205631"></script>
-<script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery-all.min.js?_v=20231108205631"></script>
-<script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lg-thumbnail.min.js?_v=20231108205631"></script>
-<script src="js/app.min.js?_v=20231108205631"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=e1d17623-ee55-4c9d-8251-85ab8eb1263e&lang=ru_RU&_v=20231108232108"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js?_v=20231108232108"></script>
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery-all.min.js?_v=20231108232108"></script>
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lg-thumbnail.min.js?_v=20231108232108"></script>
+<script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js?_v=20231108232108"></script>
+<script src="js/app.min.js?_v=20231108232108"></script>
 
   </body>
 </html>

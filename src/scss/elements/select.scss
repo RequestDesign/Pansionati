@@ -68,11 +68,11 @@
   }
 
   &__items {
-    @include customScrol();
     max-height: 20rem;
     overflow-y: auto;
     width: max-content;
     padding-right: 2rem;
+    @include noScrollLine();
   }
 
   &__item {
@@ -433,7 +433,7 @@
     }
 
     .select__items {
-      width: 100%;
+      width: 99%;
       overflow-y: auto;
       &::-webkit-scrollbar,
       &::-webkit-scrollbar-track,
@@ -443,9 +443,12 @@
     }
 
     .select__content {
-      top: 10.5rem;
-      width: 100%;
+      top: 11rem;
     }
+  }
+
+  .select__items {
+    width: auto;
   }
 
   .select-sort {
@@ -457,6 +460,7 @@
     .select__content {
       height: fit-content;
       max-height: fit-content !important;
+      width: 100%;
     }
   }
 
@@ -527,7 +531,7 @@
     }
 
     .select__content {
-      top: 10rem;
+      top: 11rem;
     }
   }
 

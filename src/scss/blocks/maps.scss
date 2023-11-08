@@ -22,11 +22,11 @@
 
   &__list-items {
     @extend %flexColumn;
-    @include customScrol();
     row-gap: 2.2rem;
     overflow-y: scroll;
     max-height: 57rem;
     padding-right: 4.3rem;
+    @include noScrollLine();
   }
 
   &__list-item {
@@ -41,6 +41,7 @@
   }
 
   &__list {
+    width: 100%;
     .title-h3 {
       margin: 1.7rem 0 4.5rem 0;
     }
@@ -230,7 +231,7 @@
     }
 
     &__list-items {
-      padding-right: 1.4rem;
+      padding-right: 2.4rem;
       max-height: 102rem;
     }
 

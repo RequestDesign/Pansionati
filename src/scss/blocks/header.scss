@@ -45,7 +45,11 @@
     width: 33rem;
 
     .select__content {
-      width: fit-content;
+      width: 24rem;
+    }
+
+    .select__items {
+      width: 100%;
     }
   }
 
@@ -133,6 +137,7 @@
       .select__content {
         top: 6rem;
         right: 1rem;
+        width: 100%;
       }
 
       .select__value {

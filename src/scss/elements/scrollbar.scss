@@ -1,0 +1,35 @@
+.simplebar-track.simplebar-vertical {
+  background-color: rgba(232, 237, 242, 0.5);
+  width: 0.5rem;
+  border-radius: 10rem;
+}
+
+.simplebar-scrollbar::before {
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+  background-color: $orange;
+  border-radius: 10rem;
+}
+
+.simplebar-track.simplebar-vertical .simplebar-scrollbar::before {
+  top: 0;
+  bottom: 0;
+}
+
+.simplebar-scrollbar.simplebar-visible::before {
+  opacity: 1;
+}
+
+@media screen and (max-width: 48em) {
+  .simplebar-track.simplebar-vertical {
+    width: 1rem;
+    border-radius: 1rem;
+  }
+
+  .simplebar-scrollbar::before {
+    border-radius: 1rem;
+  }
+}
