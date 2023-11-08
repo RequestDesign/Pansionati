@@ -37,6 +37,10 @@
     flex-shrink: 0;
     transition: $transition;
 
+    svg {
+      @extend %fullSize;
+    }
+
     svg path {
       transition: $transition;
     }

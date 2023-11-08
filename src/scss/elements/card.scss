@@ -143,8 +143,6 @@
   &__items {
     display: flex;
     column-gap: 0.8rem;
-    position: relative;
-    z-index: 2;
   }
 
   &__items-top {
@@ -300,8 +298,6 @@
     column-gap: 2.8rem;
     overflow-x: scroll;
     padding: 0 2.4rem;
-    position: relative;
-    z-index: 2;
   }
 
   .btn-tertiary {

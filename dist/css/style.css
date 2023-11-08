@@ -1475,6 +1475,7 @@ template {
 .catalog-question__container::after,
 .board-rating__like-img,
 .board-rating__like.active .board-rating__like-img,
+.about-questions__arrow svg,
 .blog-card__img img,
 .desc__img-capas img,
 .services__img img,
@@ -2801,8 +2802,6 @@ fieldset {
   display: flex;
   -moz-column-gap: 0.8rem;
        column-gap: 0.8rem;
-  position: relative;
-  z-index: 2;
 }
 
 .card__items-top {
@@ -2957,8 +2956,6 @@ fieldset {
        column-gap: 2.8rem;
   overflow-x: scroll;
   padding: 0 2.4rem;
-  position: relative;
-  z-index: 2;
 }
 
 .card__icon-items::-webkit-scrollbar {
@@ -3142,6 +3139,7 @@ fieldset {
   width: 112.4rem;
   background-color: #f0f3f7;
   border-radius: 3rem;
+  background-size: cover;
 }
 
 .modal__content-close {
@@ -4635,6 +4633,10 @@ input[type=file] {
   flex-wrap: wrap;
 }
 
+.favorites .card-slider {
+  z-index: 0;
+}
+
 .blog-cards__btns {
   -moz-column-gap: 1.6rem;
        column-gap: 1.6rem;
@@ -5354,6 +5356,11 @@ input[type=file] {
        column-gap: 0.4rem;
 }
 
+.board-rating__stars svg {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
 .board-rating__desc {
   -moz-column-gap: 2rem;
        column-gap: 2rem;
@@ -5743,6 +5750,8 @@ input[type=file] {
 }
 
 .catalog__item-shadow {
+  width: 18.4rem;
+  height: 4rem;
   position: absolute;
   right: -10rem;
   z-index: 2;
@@ -5977,6 +5986,13 @@ fieldset {
 .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 0;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  top: 0;
 }
 
 @media screen and (min-width: 48em) {
@@ -7101,6 +7117,7 @@ fieldset {
     padding: 12.8rem 3.2rem;
     width: 70.6rem;
     border-radius: 4rem;
+    background-size: cover;
   }
 
   .modal__content-close {
@@ -10104,13 +10121,6 @@ fieldset {
 
   .title br {
     display: block;
-  }
-
-  .swiper-horizontal > .swiper-pagination-bullets,
-  .swiper-pagination-bullets.swiper-pagination-horizontal,
-  .swiper-pagination-custom,
-  .swiper-pagination-fraction {
-    top: 0;
   }
 }
 

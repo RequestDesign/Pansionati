@@ -16,6 +16,10 @@
     column-gap: 2.9rem;
     flex-wrap: wrap;
   }
+
+  .card-slider {
+    z-index: 0;
+  }
 }
 
 @media screen and (max-width: 48em) {

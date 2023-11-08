@@ -147,6 +147,7 @@
   }
 
   &__item-shadow {
+    @include sizes(18.4rem, 4rem);
     position: absolute;
     right: -10rem;
     z-index: 2;

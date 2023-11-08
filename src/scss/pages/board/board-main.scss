@@ -133,6 +133,10 @@
 
   &__stars {
     column-gap: 0.4rem;
+
+    svg {
+      @include sizes(2.4rem, 2.4rem);
+    }
   }
 
   &__desc {

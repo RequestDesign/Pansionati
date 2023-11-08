@@ -53,6 +53,7 @@
     background-color: $lightGrey;
     border-radius: 3rem;
     background-image: url('@img/bg/modal-bg.png');
+    background-size: cover;
   }
 
   &__content-close {
@@ -107,6 +108,7 @@
       width: 70.6rem;
       border-radius: 4rem;
       background-image: url('@img/bg/modal-bg-mob.png');
+      background-size: cover;
     }
 
     &__content-close {

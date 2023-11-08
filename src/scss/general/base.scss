@@ -72,6 +72,13 @@ fieldset {
   margin: 0;
 }
 
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  top: 0;
+}
+
 //------------------Mob----------------//
 @media screen and (max-width: 48em) {
   .logo {
@@ -82,12 +89,5 @@ fieldset {
     br {
       display: block;
     }
-  }
-
-  .swiper-horizontal > .swiper-pagination-bullets,
-  .swiper-pagination-bullets.swiper-pagination-horizontal,
-  .swiper-pagination-custom,
-  .swiper-pagination-fraction {
-    top: 0;
   }
 }
