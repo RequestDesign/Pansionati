@@ -118,6 +118,7 @@
   }
 
   &__list-item-footer-item-img {
+    flex-shrink: 0;
     @include sizes(1.6rem, 1.6rem);
     svg {
       @extend %fullSize;
@@ -127,6 +128,7 @@
   &__list-item-footer-item-text {
     @extend %textRegular15;
     color: $grey;
+    flex-shrink: 0;
   }
 
   .select-mult .select__input {

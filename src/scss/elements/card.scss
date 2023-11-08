@@ -37,6 +37,10 @@
   &__slider-slide {
     position: relative;
     z-index: -2;
+
+    img {
+      width: 99.8%;
+    }
   }
 
   &__like {
@@ -260,8 +264,6 @@
     overflow-x: scroll;
     margin-bottom: 1.6rem;
     padding: 0 2.4rem;
-    position: relative;
-    z-index: 2;
 
     .card__item {
       @extend %textRegular18;
@@ -271,7 +273,7 @@
   }
 
   &__items-shadow {
-    position: fixed;
+    position: absolute;
     right: 0;
 
     img {
@@ -293,8 +295,6 @@
   &__icon-items {
     @include noScrollLine();
     display: flex;
-    position: relative;
-    z-index: 2;
     column-gap: 2.8rem;
     overflow-x: scroll;
     padding: 0 2.4rem;

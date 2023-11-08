@@ -4,3 +4,9 @@
 @import './desc.scss';
 @import './blog.scss';
 @import './select-house.scss';
+
+.mainpage {
+  .card__items-shadow {
+    position: fixed;
+  }
+}

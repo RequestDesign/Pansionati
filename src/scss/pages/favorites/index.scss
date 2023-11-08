@@ -16,6 +16,10 @@
     column-gap: 2.9rem;
     flex-wrap: wrap;
   }
+
+  .card__items-shadow {
+    position: absolute;
+  }
 }
 
 @media screen and (max-width: 48em) {

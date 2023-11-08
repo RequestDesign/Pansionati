@@ -29,7 +29,7 @@
       }
 
       .awards__circle-img::before {
-        background: url('@img/icons/icons.svg#document') no-repeat center;
+        background-image: url('@img/icons/icons.svg#document');
         background-size: cover;
       }
 
@@ -67,7 +67,7 @@
       right: -4.3rem;
       bottom: -4rem;
       transition: $transition;
-      background: url('@img/icons/icons.svg#award') no-repeat center;
+      background-image: url('@img/icons/icons.svg#award');
       background-size: cover;
     }
   }
