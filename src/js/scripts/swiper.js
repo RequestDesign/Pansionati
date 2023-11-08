@@ -67,13 +67,13 @@ function initSliders() {
         const total = this.slides.length - 2;
         if (index === 0) {
           return `
-  						<span class="${className}">${index + 1}</span>
-  					`;
+              <span class="${className}">${index + 1}</span>
+            `;
         }
         if (index === total - 1) {
           return `
-  						<span class="${className}">${index + 1}</span>
-  					`;
+              <span class="${className}">${index + 1}</span>
+            `;
         }
         return `<span class="${className}">${index + 1}</span>`;
       },
@@ -106,7 +106,8 @@ function initSliders() {
     document.querySelectorAll('.js-cards').forEach((cards) => {
       cards.querySelectorAll('.js-card__slider').forEach((card) => {
         const slider = card.querySelector('.js-card__swiper');
-        const pagination = card.querySelector('.js-card__bullets');
+        console.log(card.parentElement.querySelector('.js-card__bullets'));
+        const pagination = card.parentElement.querySelector('.js-card__bullets');
 
         new Swiper(slider, {
           modules: [Navigation, Pagination],

@@ -25,13 +25,12 @@
   }
 
   &__slider-wrapper {
-    z-index: 0;
     cursor: pointer;
   }
 
   &-slider {
-    // z-index: -2;
     position: relative;
+    z-index: -1;
   }
 
   &__slider-slide {
@@ -112,6 +111,7 @@
   &__pagination {
     position: absolute;
     top: 21.6rem;
+    left: calc(50% - 4rem / 2);
     z-index: 4;
   }
 

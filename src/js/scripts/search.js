@@ -1,10 +1,12 @@
 const search = document.querySelector('.js-search');
 
 function setPlaceholder() {
-  const input = search.querySelector('input');
+  if (search) {
+    const input = search.querySelector('input');
 
-  if (window.innerWidth > 768 && input) {
-    input.placeholder = 'Поиск по домам престарелых, направлениям, условиям и другое';
+    if (window.innerWidth > 768 && input) {
+      input.placeholder = 'Поиск по домам престарелых, направлениям, условиям и другое';
+    }
   }
 }
 
