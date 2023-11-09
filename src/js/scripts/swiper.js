@@ -114,8 +114,8 @@ function initSliders() {
           slidesPerView: 1,
           spaceBetween: 20,
           touch: true,
-          // nested: true,
-          // direction: 'horizontal',
+          nested: true,
+          direction: 'horizontal',
           allowTouchMove: true,
           pagination: {
             el: pagination,
@@ -127,8 +127,6 @@ function initSliders() {
 
     if (document.querySelector('.js-plush-slider')) {
       document.querySelectorAll('.js-plush-slider').forEach((slider) => {
-        console.log(slider);
-
         new Swiper(slider, {
           slidesPerView: 'auto',
           allowTouchMove: true,
@@ -143,8 +141,6 @@ function initSliders() {
 
     if (document.querySelector('.js-icons-slider')) {
       document.querySelectorAll('.js-icons-slider').forEach((slider) => {
-        console.log(slider);
-
         new Swiper(slider, {
           slidesPerView: 'auto',
           allowTouchMove: true,
@@ -171,8 +167,8 @@ function initSliders() {
           allowTouchMove: true,
           touch: true,
           watchSlidesProgress: true,
-          // nested: true,
-          // direction: 'horizontal',
+          nested: true,
+          direction: 'horizontal',
           spaceBetween: 30,
           navigation: {
             nextEl: btnNext,

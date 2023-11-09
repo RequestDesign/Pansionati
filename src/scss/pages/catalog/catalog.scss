@@ -128,12 +128,11 @@
     width: 126.5rem;
     @extend %flexCenterBetween;
     column-gap: 1.6rem;
-    overflow-x: scroll;
     padding-right: 2rem;
-    @include noScrollLine();
   }
 
   &__item {
+    user-select: none;
     border-radius: 7.8rem;
     background: $lightGrey;
     backdrop-filter: blur(2.3rem);
@@ -509,9 +508,8 @@
       display: flex;
       align-items: center;
       column-gap: 1.6rem;
-      overflow-x: scroll;
       padding: 0 3.2rem;
-
+      overflow-x: scroll;
       @include noScrollLine();
     }
 
@@ -639,6 +637,7 @@
         -webkit-transform: translateY(0);
         display: flex;
         opacity: 1;
+        visibility: visible;
       }
 
       .select__content {
@@ -650,6 +649,7 @@
         height: 100%;
         background: #ffffff;
         z-index: 8;
+        visibility: visible;
         background: rgba(194, 199, 200, 0.79);
         backdrop-filter: blur(1rem);
         transition: $transition;

@@ -30,7 +30,7 @@
 
   &-slider {
     position: relative;
-    z-index: 0;
+    z-index: -1;
   }
 
   &__slider-slide {
@@ -76,6 +76,8 @@
 
   &__slider-plushs {
     padding: 0 2.4rem;
+    user-select: none;
+    cursor: default;
 
     .card__items {
       column-gap: 0;
@@ -240,33 +242,13 @@
   }
 
   &__substract {
-    // @include sizes(100%, 37.2rem);
-    // // background: url('@img/cards/card-substract.svg') no-repeat center;
-    // background-size: cover;
-    // position: absolute;
-    // bottom: 0;
-    // left: 0;
-    // z-index: 2;
-    position: absolute;
-    z-index: 4;
-    bottom: 0;
     @include sizes(100%, 37.2rem);
-  }
-
-  &__substract-bg {
-    position: absolute;
-    width: 100%;
-
-    height: 100%;
+    background: url('@img/cards/card-substract.svg') no-repeat center;
     background-size: cover;
     position: absolute;
     bottom: 0;
     left: 0;
     z-index: 2;
-  }
-
-  &__desc {
-    z-index: 4;
   }
 
   &__icon {
@@ -729,8 +711,16 @@
         height: 100%;
       }
 
+      &__item div {
+        margin-top: 0.3rem;
+      }
+
       &__desc-location-address {
         column-gap: 1.3rem;
+      }
+
+      &__slider-plushs {
+        padding: 0;
       }
 
       &-slider,
@@ -794,7 +784,7 @@
       }
 
       &__item {
-        padding: 1.2rem 1rem;
+        padding: 1rem 1rem;
       }
 
       &__items {
