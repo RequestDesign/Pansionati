@@ -113,6 +113,8 @@ function initSliders() {
           modules: [Navigation, Pagination],
           slidesPerView: 1,
           spaceBetween: 20,
+          nested: true,
+          direction: 'horizontal',
           allowTouchMove: true,
           pagination: {
             el: pagination,

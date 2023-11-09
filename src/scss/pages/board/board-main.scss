@@ -195,20 +195,26 @@
     padding: 0.8rem;
     z-index: 2;
 
-    &.active {
-      .board-rating__like-img {
-        @extend %fullSize;
-        background: url('@img/icons/icons.svg#like-active') no-repeat center;
-        background-size: cover;
+    img {
+      &:first-child {
+        display: block;
+      }
+
+      &:last-child {
+        display: none;
       }
     }
-  }
 
-  &__like-img {
-    display: block;
-    @extend %fullSize;
-    background: url('@img/icons/icons.svg#like') no-repeat center;
-    background-size: cover;
+    &.active {
+      img {
+        &:first-child {
+          display: none;
+        }
+        &:last-child {
+          display: block;
+        }
+      }
+    }
   }
 }
 

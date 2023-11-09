@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Избранное</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css?_v=20231109175715" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lg-thumbnail.min.css?_v=20231109175715" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css?_v=20231109175715" />
-  <link rel="stylesheet" href="css/style.min.css?_v=20231109175715" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css?_v=20231109184258" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lg-thumbnail.min.css?_v=20231109184258" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css?_v=20231109184258" />
+  <link rel="stylesheet" href="css/style.min.css?_v=20231109184258" />
 </head>
 
 
@@ -166,8 +166,9 @@
               <div class="card__item">Комфорт</div>
               <div class="card__item">Лицензия проверена</div>
             </div>
-            <button type="button" class="card__like js-toggle active">
-              <span class="card__like-img"></span>
+            <button type="button" class="card__like active js-toggle">
+              <img src="img/icons/icons.svg#like" alt="like" />
+              <img src="img/icons/icons.svg#like-active" alt="unlike" />
             </button>
             <div class="card__items card__items-bottom">
               <div class="card__item">от 1 700<span>₽</span> <span>/сутки</span></div>
@@ -208,52 +209,60 @@
                   <div class="card__items-shadow">
                     <picture><source srcset="img/bg/card-items-shadow.webp" type="image/webp"><img src="img/bg/card-items-shadow.png" alt="" /></picture>
                   </div>
-                  <div class="card__item">Одноместные</div>
-                  <div class="card__item">Восстановление после инсульта</div>
-                  <div class="card__item">Одноместные</div>
-                  <div class="card__item">Восстановление после инсульта</div>
-                  <div class="card__item">Одноместные</div>
-                  <div class="card__item">Восстановление после инсульта</div>
+                  <div class="swiper card__slider-plushs js-plush-slider">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide card__item">Одноместные</div>
+                      <div class="swiper-slide card__item">Восстановление после инсульта</div>
+                      <div class="swiper-slide card__item">Одноместные</div>
+                      <div class="swiper-slide card__item">Восстановление после инсульта</div>
+                      <div class="swiper-slide card__item">Одноместные</div>
+                      <div class="swiper-slide card__item">Восстановление после инсульта</div>
+                    </div>
+                  </div>
                 </div>
                 <div class="card__icon-items">
                   <div class="card__items-shadow">
                     <picture><source srcset="img/bg/card-items-shadow.webp" type="image/webp"><img src="img/bg/card-items-shadow.png" alt="" /></picture>
                   </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#nurses" alt="" />
+                  <div class="swiper card__slider-plushs js-icons-slider">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide card__icon-item">
+                        <div class="card__icon">
+                          <img src="img/icons/icons.svg#nurses" alt="" />
+                        </div>
+                        <div class="card__icon-text">Медсестры</div>
+                      </div>
+                      <div class="swiper-slide card__icon-item">
+                        <div class="card__icon">
+                          <img src="img/icons/icons.svg#leisure" alt="" />
+                        </div>
+                        <div class="card__icon-text">Досуг</div>
+                      </div>
+                      <div class="swiper-slide card__icon-item">
+                        <div class="card__icon">
+                          <img src="img/icons/icons.svg#nutrition" alt="" />
+                        </div>
+                        <div class="card__icon-text">3х разовое питание</div>
+                      </div>
+                      <div class="swiper-slide card__icon-item">
+                        <div class="card__icon">
+                          <img src="img/icons/icons.svg#nurses" alt="" />
+                        </div>
+                        <div class="card__icon-text">Медсестры</div>
+                      </div>
+                      <div class="swiper-slide card__icon-item">
+                        <div class="card__icon">
+                          <img src="img/icons/icons.svg#leisure" alt="" />
+                        </div>
+                        <div class="card__icon-text">Досуг</div>
+                      </div>
+                      <div class="swiper-slide card__icon-item">
+                        <div class="card__icon">
+                          <img src="img/icons/icons.svg#nutrition" alt="" />
+                        </div>
+                        <div class="card__icon-text">3х разовое питание</div>
+                      </div>
                     </div>
-                    <div class="card__icon-text">Медсестры</div>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#leisure" alt="" />
-                    </div>
-                    <div class="card__icon-text">Досуг</div>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#nutrition" alt="" />
-                    </div>
-                    <div class="card__icon-text">3х разовое питание</div>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#nurses" alt="" />
-                    </div>
-                    <div class="card__icon-text">Медсестры</div>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#leisure" alt="" />
-                    </div>
-                    <div class="card__icon-text">Досуг</div>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#nutrition" alt="" />
-                    </div>
-                    <div class="card__icon-text">3х разовое питание</div>
                   </div>
                 </div>
               </div>
@@ -282,8 +291,9 @@
               <div class="card__item">Комфорт</div>
               <div class="card__item">Лицензия проверена</div>
             </div>
-            <button type="button" class="card__like js-toggle active">
-              <span class="card__like-img"></span>
+            <button type="button" class="card__like active js-toggle">
+              <img src="img/icons/icons.svg#like" alt="like" />
+              <img src="img/icons/icons.svg#like-active" alt="unlike" />
             </button>
             <div class="card__items card__items-bottom">
               <div class="card__item">от 1 700<span>₽</span> <span>/сутки</span></div>
@@ -324,52 +334,60 @@
                   <div class="card__items-shadow">
                     <picture><source srcset="img/bg/card-items-shadow.webp" type="image/webp"><img src="img/bg/card-items-shadow.png" alt="" /></picture>
                   </div>
-                  <div class="card__item">Одноместные</div>
-                  <div class="card__item">Восстановление после инсульта</div>
-                  <div class="card__item">Одноместные</div>
-                  <div class="card__item">Восстановление после инсульта</div>
-                  <div class="card__item">Одноместные</div>
-                  <div class="card__item">Восстановление после инсульта</div>
+                  <div class="swiper card__slider-plushs js-plush-slider">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide card__item">Одноместные</div>
+                      <div class="swiper-slide card__item">Восстановление после инсульта</div>
+                      <div class="swiper-slide card__item">Одноместные</div>
+                      <div class="swiper-slide card__item">Восстановление после инсульта</div>
+                      <div class="swiper-slide card__item">Одноместные</div>
+                      <div class="swiper-slide card__item">Восстановление после инсульта</div>
+                    </div>
+                  </div>
                 </div>
                 <div class="card__icon-items">
                   <div class="card__items-shadow">
                     <picture><source srcset="img/bg/card-items-shadow.webp" type="image/webp"><img src="img/bg/card-items-shadow.png" alt="" /></picture>
                   </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#nurses" alt="" />
+                  <div class="swiper card__slider-plushs js-icons-slider">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide card__icon-item">
+                        <div class="card__icon">
+                          <img src="img/icons/icons.svg#nurses" alt="" />
+                        </div>
+                        <div class="card__icon-text">Медсестры</div>
+                      </div>
+                      <div class="swiper-slide card__icon-item">
+                        <div class="card__icon">
+                          <img src="img/icons/icons.svg#leisure" alt="" />
+                        </div>
+                        <div class="card__icon-text">Досуг</div>
+                      </div>
+                      <div class="swiper-slide card__icon-item">
+                        <div class="card__icon">
+                          <img src="img/icons/icons.svg#nutrition" alt="" />
+                        </div>
+                        <div class="card__icon-text">3х разовое питание</div>
+                      </div>
+                      <div class="swiper-slide card__icon-item">
+                        <div class="card__icon">
+                          <img src="img/icons/icons.svg#nurses" alt="" />
+                        </div>
+                        <div class="card__icon-text">Медсестры</div>
+                      </div>
+                      <div class="swiper-slide card__icon-item">
+                        <div class="card__icon">
+                          <img src="img/icons/icons.svg#leisure" alt="" />
+                        </div>
+                        <div class="card__icon-text">Досуг</div>
+                      </div>
+                      <div class="swiper-slide card__icon-item">
+                        <div class="card__icon">
+                          <img src="img/icons/icons.svg#nutrition" alt="" />
+                        </div>
+                        <div class="card__icon-text">3х разовое питание</div>
+                      </div>
                     </div>
-                    <div class="card__icon-text">Медсестры</div>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#leisure" alt="" />
-                    </div>
-                    <div class="card__icon-text">Досуг</div>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#nutrition" alt="" />
-                    </div>
-                    <div class="card__icon-text">3х разовое питание</div>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#nurses" alt="" />
-                    </div>
-                    <div class="card__icon-text">Медсестры</div>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#leisure" alt="" />
-                    </div>
-                    <div class="card__icon-text">Досуг</div>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#nutrition" alt="" />
-                    </div>
-                    <div class="card__icon-text">3х разовое питание</div>
                   </div>
                 </div>
               </div>
@@ -398,8 +416,9 @@
               <div class="card__item">Комфорт</div>
               <div class="card__item">Лицензия проверена</div>
             </div>
-            <button type="button" class="card__like js-toggle active">
-              <span class="card__like-img"></span>
+            <button type="button" class="card__like active js-toggle">
+              <img src="img/icons/icons.svg#like" alt="like" />
+              <img src="img/icons/icons.svg#like-active" alt="unlike" />
             </button>
             <div class="card__items card__items-bottom">
               <div class="card__item">от 1 700<span>₽</span> <span>/сутки</span></div>
@@ -440,52 +459,60 @@
                   <div class="card__items-shadow">
                     <picture><source srcset="img/bg/card-items-shadow.webp" type="image/webp"><img src="img/bg/card-items-shadow.png" alt="" /></picture>
                   </div>
-                  <div class="card__item">Одноместные</div>
-                  <div class="card__item">Восстановление после инсульта</div>
-                  <div class="card__item">Одноместные</div>
-                  <div class="card__item">Восстановление после инсульта</div>
-                  <div class="card__item">Одноместные</div>
-                  <div class="card__item">Восстановление после инсульта</div>
+                  <div class="swiper card__slider-plushs js-plush-slider">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide card__item">Одноместные</div>
+                      <div class="swiper-slide card__item">Восстановление после инсульта</div>
+                      <div class="swiper-slide card__item">Одноместные</div>
+                      <div class="swiper-slide card__item">Восстановление после инсульта</div>
+                      <div class="swiper-slide card__item">Одноместные</div>
+                      <div class="swiper-slide card__item">Восстановление после инсульта</div>
+                    </div>
+                  </div>
                 </div>
                 <div class="card__icon-items">
                   <div class="card__items-shadow">
                     <picture><source srcset="img/bg/card-items-shadow.webp" type="image/webp"><img src="img/bg/card-items-shadow.png" alt="" /></picture>
                   </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#nurses" alt="" />
+                  <div class="swiper card__slider-plushs js-icons-slider">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide card__icon-item">
+                        <div class="card__icon">
+                          <img src="img/icons/icons.svg#nurses" alt="" />
+                        </div>
+                        <div class="card__icon-text">Медсестры</div>
+                      </div>
+                      <div class="swiper-slide card__icon-item">
+                        <div class="card__icon">
+                          <img src="img/icons/icons.svg#leisure" alt="" />
+                        </div>
+                        <div class="card__icon-text">Досуг</div>
+                      </div>
+                      <div class="swiper-slide card__icon-item">
+                        <div class="card__icon">
+                          <img src="img/icons/icons.svg#nutrition" alt="" />
+                        </div>
+                        <div class="card__icon-text">3х разовое питание</div>
+                      </div>
+                      <div class="swiper-slide card__icon-item">
+                        <div class="card__icon">
+                          <img src="img/icons/icons.svg#nurses" alt="" />
+                        </div>
+                        <div class="card__icon-text">Медсестры</div>
+                      </div>
+                      <div class="swiper-slide card__icon-item">
+                        <div class="card__icon">
+                          <img src="img/icons/icons.svg#leisure" alt="" />
+                        </div>
+                        <div class="card__icon-text">Досуг</div>
+                      </div>
+                      <div class="swiper-slide card__icon-item">
+                        <div class="card__icon">
+                          <img src="img/icons/icons.svg#nutrition" alt="" />
+                        </div>
+                        <div class="card__icon-text">3х разовое питание</div>
+                      </div>
                     </div>
-                    <div class="card__icon-text">Медсестры</div>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#leisure" alt="" />
-                    </div>
-                    <div class="card__icon-text">Досуг</div>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#nutrition" alt="" />
-                    </div>
-                    <div class="card__icon-text">3х разовое питание</div>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#nurses" alt="" />
-                    </div>
-                    <div class="card__icon-text">Медсестры</div>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#leisure" alt="" />
-                    </div>
-                    <div class="card__icon-text">Досуг</div>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#nutrition" alt="" />
-                    </div>
-                    <div class="card__icon-text">3х разовое питание</div>
                   </div>
                 </div>
               </div>
@@ -514,8 +541,9 @@
               <div class="card__item">Комфорт</div>
               <div class="card__item">Лицензия проверена</div>
             </div>
-            <button type="button" class="card__like js-toggle active">
-              <span class="card__like-img"></span>
+            <button type="button" class="card__like active js-toggle">
+              <img src="img/icons/icons.svg#like" alt="like" />
+              <img src="img/icons/icons.svg#like-active" alt="unlike" />
             </button>
             <div class="card__items card__items-bottom">
               <div class="card__item">от 1 700<span>₽</span> <span>/сутки</span></div>
@@ -556,52 +584,60 @@
                   <div class="card__items-shadow">
                     <picture><source srcset="img/bg/card-items-shadow.webp" type="image/webp"><img src="img/bg/card-items-shadow.png" alt="" /></picture>
                   </div>
-                  <div class="card__item">Одноместные</div>
-                  <div class="card__item">Восстановление после инсульта</div>
-                  <div class="card__item">Одноместные</div>
-                  <div class="card__item">Восстановление после инсульта</div>
-                  <div class="card__item">Одноместные</div>
-                  <div class="card__item">Восстановление после инсульта</div>
+                  <div class="swiper card__slider-plushs js-plush-slider">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide card__item">Одноместные</div>
+                      <div class="swiper-slide card__item">Восстановление после инсульта</div>
+                      <div class="swiper-slide card__item">Одноместные</div>
+                      <div class="swiper-slide card__item">Восстановление после инсульта</div>
+                      <div class="swiper-slide card__item">Одноместные</div>
+                      <div class="swiper-slide card__item">Восстановление после инсульта</div>
+                    </div>
+                  </div>
                 </div>
                 <div class="card__icon-items">
                   <div class="card__items-shadow">
                     <picture><source srcset="img/bg/card-items-shadow.webp" type="image/webp"><img src="img/bg/card-items-shadow.png" alt="" /></picture>
                   </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#nurses" alt="" />
+                  <div class="swiper card__slider-plushs js-icons-slider">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide card__icon-item">
+                        <div class="card__icon">
+                          <img src="img/icons/icons.svg#nurses" alt="" />
+                        </div>
+                        <div class="card__icon-text">Медсестры</div>
+                      </div>
+                      <div class="swiper-slide card__icon-item">
+                        <div class="card__icon">
+                          <img src="img/icons/icons.svg#leisure" alt="" />
+                        </div>
+                        <div class="card__icon-text">Досуг</div>
+                      </div>
+                      <div class="swiper-slide card__icon-item">
+                        <div class="card__icon">
+                          <img src="img/icons/icons.svg#nutrition" alt="" />
+                        </div>
+                        <div class="card__icon-text">3х разовое питание</div>
+                      </div>
+                      <div class="swiper-slide card__icon-item">
+                        <div class="card__icon">
+                          <img src="img/icons/icons.svg#nurses" alt="" />
+                        </div>
+                        <div class="card__icon-text">Медсестры</div>
+                      </div>
+                      <div class="swiper-slide card__icon-item">
+                        <div class="card__icon">
+                          <img src="img/icons/icons.svg#leisure" alt="" />
+                        </div>
+                        <div class="card__icon-text">Досуг</div>
+                      </div>
+                      <div class="swiper-slide card__icon-item">
+                        <div class="card__icon">
+                          <img src="img/icons/icons.svg#nutrition" alt="" />
+                        </div>
+                        <div class="card__icon-text">3х разовое питание</div>
+                      </div>
                     </div>
-                    <div class="card__icon-text">Медсестры</div>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#leisure" alt="" />
-                    </div>
-                    <div class="card__icon-text">Досуг</div>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#nutrition" alt="" />
-                    </div>
-                    <div class="card__icon-text">3х разовое питание</div>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#nurses" alt="" />
-                    </div>
-                    <div class="card__icon-text">Медсестры</div>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#leisure" alt="" />
-                    </div>
-                    <div class="card__icon-text">Досуг</div>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#nutrition" alt="" />
-                    </div>
-                    <div class="card__icon-text">3х разовое питание</div>
                   </div>
                 </div>
               </div>
@@ -630,8 +666,9 @@
               <div class="card__item">Комфорт</div>
               <div class="card__item">Лицензия проверена</div>
             </div>
-            <button type="button" class="card__like js-toggle active">
-              <span class="card__like-img"></span>
+            <button type="button" class="card__like active js-toggle">
+              <img src="img/icons/icons.svg#like" alt="like" />
+              <img src="img/icons/icons.svg#like-active" alt="unlike" />
             </button>
             <div class="card__items card__items-bottom">
               <div class="card__item">от 1 700<span>₽</span> <span>/сутки</span></div>
@@ -672,52 +709,60 @@
                   <div class="card__items-shadow">
                     <picture><source srcset="img/bg/card-items-shadow.webp" type="image/webp"><img src="img/bg/card-items-shadow.png" alt="" /></picture>
                   </div>
-                  <div class="card__item">Одноместные</div>
-                  <div class="card__item">Восстановление после инсульта</div>
-                  <div class="card__item">Одноместные</div>
-                  <div class="card__item">Восстановление после инсульта</div>
-                  <div class="card__item">Одноместные</div>
-                  <div class="card__item">Восстановление после инсульта</div>
+                  <div class="swiper card__slider-plushs js-plush-slider">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide card__item">Одноместные</div>
+                      <div class="swiper-slide card__item">Восстановление после инсульта</div>
+                      <div class="swiper-slide card__item">Одноместные</div>
+                      <div class="swiper-slide card__item">Восстановление после инсульта</div>
+                      <div class="swiper-slide card__item">Одноместные</div>
+                      <div class="swiper-slide card__item">Восстановление после инсульта</div>
+                    </div>
+                  </div>
                 </div>
                 <div class="card__icon-items">
                   <div class="card__items-shadow">
                     <picture><source srcset="img/bg/card-items-shadow.webp" type="image/webp"><img src="img/bg/card-items-shadow.png" alt="" /></picture>
                   </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#nurses" alt="" />
+                  <div class="swiper card__slider-plushs js-icons-slider">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide card__icon-item">
+                        <div class="card__icon">
+                          <img src="img/icons/icons.svg#nurses" alt="" />
+                        </div>
+                        <div class="card__icon-text">Медсестры</div>
+                      </div>
+                      <div class="swiper-slide card__icon-item">
+                        <div class="card__icon">
+                          <img src="img/icons/icons.svg#leisure" alt="" />
+                        </div>
+                        <div class="card__icon-text">Досуг</div>
+                      </div>
+                      <div class="swiper-slide card__icon-item">
+                        <div class="card__icon">
+                          <img src="img/icons/icons.svg#nutrition" alt="" />
+                        </div>
+                        <div class="card__icon-text">3х разовое питание</div>
+                      </div>
+                      <div class="swiper-slide card__icon-item">
+                        <div class="card__icon">
+                          <img src="img/icons/icons.svg#nurses" alt="" />
+                        </div>
+                        <div class="card__icon-text">Медсестры</div>
+                      </div>
+                      <div class="swiper-slide card__icon-item">
+                        <div class="card__icon">
+                          <img src="img/icons/icons.svg#leisure" alt="" />
+                        </div>
+                        <div class="card__icon-text">Досуг</div>
+                      </div>
+                      <div class="swiper-slide card__icon-item">
+                        <div class="card__icon">
+                          <img src="img/icons/icons.svg#nutrition" alt="" />
+                        </div>
+                        <div class="card__icon-text">3х разовое питание</div>
+                      </div>
                     </div>
-                    <div class="card__icon-text">Медсестры</div>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#leisure" alt="" />
-                    </div>
-                    <div class="card__icon-text">Досуг</div>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#nutrition" alt="" />
-                    </div>
-                    <div class="card__icon-text">3х разовое питание</div>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#nurses" alt="" />
-                    </div>
-                    <div class="card__icon-text">Медсестры</div>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#leisure" alt="" />
-                    </div>
-                    <div class="card__icon-text">Досуг</div>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#nutrition" alt="" />
-                    </div>
-                    <div class="card__icon-text">3х разовое питание</div>
                   </div>
                 </div>
               </div>
@@ -746,8 +791,9 @@
               <div class="card__item">Комфорт</div>
               <div class="card__item">Лицензия проверена</div>
             </div>
-            <button type="button" class="card__like js-toggle active">
-              <span class="card__like-img"></span>
+            <button type="button" class="card__like active js-toggle">
+              <img src="img/icons/icons.svg#like" alt="like" />
+              <img src="img/icons/icons.svg#like-active" alt="unlike" />
             </button>
             <div class="card__items card__items-bottom">
               <div class="card__item">от 1 700<span>₽</span> <span>/сутки</span></div>
@@ -788,52 +834,60 @@
                   <div class="card__items-shadow">
                     <picture><source srcset="img/bg/card-items-shadow.webp" type="image/webp"><img src="img/bg/card-items-shadow.png" alt="" /></picture>
                   </div>
-                  <div class="card__item">Одноместные</div>
-                  <div class="card__item">Восстановление после инсульта</div>
-                  <div class="card__item">Одноместные</div>
-                  <div class="card__item">Восстановление после инсульта</div>
-                  <div class="card__item">Одноместные</div>
-                  <div class="card__item">Восстановление после инсульта</div>
+                  <div class="swiper card__slider-plushs js-plush-slider">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide card__item">Одноместные</div>
+                      <div class="swiper-slide card__item">Восстановление после инсульта</div>
+                      <div class="swiper-slide card__item">Одноместные</div>
+                      <div class="swiper-slide card__item">Восстановление после инсульта</div>
+                      <div class="swiper-slide card__item">Одноместные</div>
+                      <div class="swiper-slide card__item">Восстановление после инсульта</div>
+                    </div>
+                  </div>
                 </div>
                 <div class="card__icon-items">
                   <div class="card__items-shadow">
                     <picture><source srcset="img/bg/card-items-shadow.webp" type="image/webp"><img src="img/bg/card-items-shadow.png" alt="" /></picture>
                   </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#nurses" alt="" />
+                  <div class="swiper card__slider-plushs js-icons-slider">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide card__icon-item">
+                        <div class="card__icon">
+                          <img src="img/icons/icons.svg#nurses" alt="" />
+                        </div>
+                        <div class="card__icon-text">Медсестры</div>
+                      </div>
+                      <div class="swiper-slide card__icon-item">
+                        <div class="card__icon">
+                          <img src="img/icons/icons.svg#leisure" alt="" />
+                        </div>
+                        <div class="card__icon-text">Досуг</div>
+                      </div>
+                      <div class="swiper-slide card__icon-item">
+                        <div class="card__icon">
+                          <img src="img/icons/icons.svg#nutrition" alt="" />
+                        </div>
+                        <div class="card__icon-text">3х разовое питание</div>
+                      </div>
+                      <div class="swiper-slide card__icon-item">
+                        <div class="card__icon">
+                          <img src="img/icons/icons.svg#nurses" alt="" />
+                        </div>
+                        <div class="card__icon-text">Медсестры</div>
+                      </div>
+                      <div class="swiper-slide card__icon-item">
+                        <div class="card__icon">
+                          <img src="img/icons/icons.svg#leisure" alt="" />
+                        </div>
+                        <div class="card__icon-text">Досуг</div>
+                      </div>
+                      <div class="swiper-slide card__icon-item">
+                        <div class="card__icon">
+                          <img src="img/icons/icons.svg#nutrition" alt="" />
+                        </div>
+                        <div class="card__icon-text">3х разовое питание</div>
+                      </div>
                     </div>
-                    <div class="card__icon-text">Медсестры</div>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#leisure" alt="" />
-                    </div>
-                    <div class="card__icon-text">Досуг</div>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#nutrition" alt="" />
-                    </div>
-                    <div class="card__icon-text">3х разовое питание</div>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#nurses" alt="" />
-                    </div>
-                    <div class="card__icon-text">Медсестры</div>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#leisure" alt="" />
-                    </div>
-                    <div class="card__icon-text">Досуг</div>
-                  </div>
-                  <div class="card__icon-item">
-                    <div class="card__icon">
-                      <img src="img/icons/icons.svg#nutrition" alt="" />
-                    </div>
-                    <div class="card__icon-text">3х разовое питание</div>
                   </div>
                 </div>
               </div>
@@ -1159,12 +1213,12 @@
   </div>
 </div>
 
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=e1d17623-ee55-4c9d-8251-85ab8eb1263e&lang=ru_RU&_v=20231109175715"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js?_v=20231109175715"></script>
-<script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery-all.min.js?_v=20231109175715"></script>
-<script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lg-thumbnail.min.js?_v=20231109175715"></script>
-<script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js?_v=20231109175715"></script>
-<script src="js/app.min.js?_v=20231109175715"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=e1d17623-ee55-4c9d-8251-85ab8eb1263e&lang=ru_RU&_v=20231109184258"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js?_v=20231109184258"></script>
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery-all.min.js?_v=20231109184258"></script>
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lg-thumbnail.min.js?_v=20231109184258"></script>
+<script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js?_v=20231109184258"></script>
+<script src="js/app.min.js?_v=20231109184258"></script>
 
   </body>
 </html>

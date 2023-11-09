@@ -4,7 +4,7 @@
   border-radius: 3rem;
   position: relative;
   overflow: hidden;
-  transition: $transition;
+  // transition: $transition;
 
   @media screen and (min-width: 48em) {
     &:hover {
@@ -30,7 +30,11 @@
 
   &-slider {
     position: relative;
-    z-index: -1;
+    z-index: 0;
+
+    .swiper-wrapper {
+      z-index: 0;
+    }
   }
 
   &__slider-slide {
@@ -144,7 +148,7 @@
     column-gap: 0.8rem;
     opacity: 0;
     visibility: hidden;
-    transition: $transition;
+    // transition: $transition;
     z-index: 4;
     position: relative;
 
@@ -679,7 +683,7 @@
       margin-bottom: 3rem;
     }
 
-    transition: $transition;
+    // transition: $transition;
     cursor: pointer;
 
     &:hover {

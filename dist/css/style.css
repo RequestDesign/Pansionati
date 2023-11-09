@@ -1473,8 +1473,6 @@ template {
 .overlay,
 .not-found__img-capas img,
 .catalog-question__container::after,
-.board-rating__like-img,
-.board-rating__like.active .board-rating__like-img,
 .about-questions__arrow svg,
 .blog-card__img img,
 .desc__img-capas img,
@@ -2672,7 +2670,6 @@ fieldset {
   border-radius: 3rem;
   position: relative;
   overflow: hidden;
-  transition: all 0.3s ease-out;
 }
 
 .card .--desc {
@@ -2694,7 +2691,11 @@ fieldset {
 
 .card-slider {
   position: relative;
-  z-index: -1;
+  z-index: 0;
+}
+
+.card-slider .swiper-wrapper {
+  z-index: 0;
 }
 
 .card__slider-slide {
@@ -2800,7 +2801,6 @@ fieldset {
        column-gap: 0.8rem;
   opacity: 0;
   visibility: hidden;
-  transition: all 0.3s ease-out;
   z-index: 4;
   position: relative;
 }
@@ -5487,15 +5487,20 @@ input[type=file] {
   z-index: 2;
 }
 
-.board-rating__like.active .board-rating__like-img {
-  background: url("@img/icons/icons.svg#like-active") no-repeat center;
-  background-size: cover;
+.board-rating__like img:first-child {
+  display: block;
 }
 
-.board-rating__like-img {
+.board-rating__like img:last-child {
+  display: none;
+}
+
+.board-rating__like.active img:first-child {
+  display: none;
+}
+
+.board-rating__like.active img:last-child {
   display: block;
-  background: url("@img/icons/icons.svg#like") no-repeat center;
-  background-size: cover;
 }
 
 .ideal-board {
@@ -6075,7 +6080,6 @@ fieldset {
   }
 
   .card-hor {
-    transition: all 0.3s ease-out;
     cursor: pointer;
     display: flex;
     width: 126.5rem;
