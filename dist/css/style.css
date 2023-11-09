@@ -7209,9 +7209,14 @@ fieldset {
     justify-content: flex-start;
   }
 
-  .input img {
+  .input__icon {
     width: 4.8rem;
     height: 4.8rem;
+  }
+
+  .input__icon img {
+    width: 100%;
+    height: 100%;
   }
 
   .input input {
@@ -8789,7 +8794,7 @@ fieldset {
   .add__wrapper {
     width: 100%;
     height: 100%;
-    background: none;
+    background-image: none;
     border-radius: 0;
     margin-top: 5.8rem;
     padding: 0;
@@ -9841,10 +9846,12 @@ fieldset {
     justify-content: flex-start;
     transition: all 0.3s ease-out;
     transform: translateX(100%);
+    -webkit-transform: translateX(100%);
   }
 
   .catalog__form.active {
     transform: translateX(0);
+    -webkit-transform: translateX(0);
   }
 
   .catalog__form-header {
@@ -10048,6 +10055,7 @@ fieldset {
 
   .catalog .select-sort.active .select__content {
     transform: translateY(0);
+    -webkit-transform: translateY(0);
     display: flex;
     opacity: 1;
   }
@@ -10066,10 +10074,12 @@ fieldset {
             backdrop-filter: blur(1rem);
     transition: all 0.3s ease-out;
     transform: translateY(-200%);
+    -webkit-transform: translateY(-200%);
   }
 
   .catalog .select-sort .select__content.active {
     transform: translateY(0);
+    -webkit-transform: translateY(0);
     display: flex;
     opacity: 1;
   }

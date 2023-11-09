@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=`, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.min.css?_v=20231108232108" />
+    <link rel="stylesheet" href="./css/style.min.css?_v=20231109083944" />
     <title>Пансионаты</title>
   </head>
 
@@ -107,17 +107,11 @@
       <li class="item">
         <div data-modal-el="check-availability">Узнать о наличии мест</div>
       </li>
-      <div class="item">
-        <div data-modal-el="will-contact-soon">Связь в ближайшее время</div>
-      </div>
       <li class="item">
         <div data-modal-el="contacts-data">Контактные данные</div>
       </li>
       <li class="item">
         <div data-modal-el="thanks-application">Спасибо за Заявку</div>
-      </li>
-      <li class="item">
-        <div data-modal-el="will-select-suitable">Подобрать пансионат</div>
       </li>
     </ul>
   </body>
@@ -170,42 +164,38 @@
   <div class="modal close-x" data-modal="check-availability">
     <div class="modal__inner">
       <div class="modal__content">
-        <div class="modal__content-close close-x">
-          <img class="close-x" src="img/icons/icons.svg#close-modal" alt="" />
-        </div>
-        <div class="title modal__content-title">Узнать о наличии мест</div>
-        <div class="modal__content-text">Оставьте ваш номер телефона, наш специалист перезвонит вам.</div>
-        <form class="modal__content-form">
-          <div class="input">
-            <div class="icon">
-              <img src="img/icons/icons.svg#phone-orange" alt="" />
-            </div>
-            <input type="tel" name="phone" placeholder="Введите номер телефона" autocomplete="off" />
+        <div class="modal__content-block">
+          <div class="modal__content-close close-x">
+            <img class="close-x" src="img/icons/icons.svg#close-modal" alt="" />
           </div>
-          <button type="submit" form="baner-form-phone" class="btn btn-primary">
-            <span>Заказать звонок</span>
-          </button>
-        </form>
-      </div>
-    </div>
-  </div>
-
-  <!--Модалка связь в ближайшее время (Наш специалист свяжется с вами в ближайшее время.)-->
-  <div class="modal close-x" data-modal="will-contact-soon">
-    <div class="modal__inner">
-      <div class="modal__content">
-        <div class="modal__content-close close-x">
-          <img class="close-x" src="img/icons/icons.svg#close-modal" alt="" />
+          <div class="title modal__content-title">Узнать о наличии мест</div>
+          <div class="modal__content-text">Оставьте ваш номер телефона, наш специалист перезвонит вам.</div>
+          <form class="modal__content-form">
+            <div class="input">
+              <div class="icon">
+                <img src="img/icons/icons.svg#phone-orange" alt="" />
+              </div>
+              <input type="tel" name="phone" placeholder="Введите номер телефона" autocomplete="off" />
+            </div>
+            <button type="submit" form="baner-form-phone" class="btn btn-primary">
+              <span>Заказать звонок</span>
+            </button>
+          </form>
         </div>
-        <div class="title modal__content-title">
-          Спасибо <br />
-          за обращение
-        </div>
-        <div class="modal__content-text">Наш специалист свяжется с вами в ближайшее время.</div>
-        <div class="modal__content-btns">
-          <a href="./main.html" class="btn btn-primary">
-            <span>Вернуться на главную</span>
-          </a>
+        <div class="modal__content-block" style="display: none">
+          <div class="modal__content-close close-x">
+            <img class="close-x" src="img/icons/icons.svg#close-modal" alt="" />
+          </div>
+          <div class="title modal__content-title">
+            Спасибо <br />
+            за обращение
+          </div>
+          <div class="modal__content-text">Наш специалист свяжется с вами в ближайшее время.</div>
+          <div class="modal__content-btns">
+            <a href="./main.html" class="btn btn-primary">
+              <span>Вернуться на главную</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -215,24 +205,41 @@
   <div class="modal close-x" data-modal="contacts-data">
     <div class="modal__inner">
       <div class="modal__content">
-        <div class="modal__content-close close-x">
-          <img class="close-x" src="img/icons/icons.svg#close-modal" alt="" />
-        </div>
-        <div class="title modal__content-title">Контактные данные</div>
-        <div class="modal__content-text">
-          Оставьте ваш номер телефона, наш специалист подберет подходящие варианты и перезвонит вам.
-        </div>
-        <form class="modal__content-form">
-          <div class="input">
-            <div class="icon">
-              <img src="img/icons/icons.svg#phone-orange" alt="" />
-            </div>
-            <input type="tel" name="phone" placeholder="Введите номер телефона" autocomplete="off" />
+        <div class="modal__content-block">
+          <div class="modal__content-close close-x">
+            <img class="close-x" src="img/icons/icons.svg#close-modal" alt="" />
           </div>
-          <button type="submit" form="baner-form-phone" class="btn btn-primary">
-            <span>Заказать звонок</span>
-          </button>
-        </form>
+          <div class="title modal__content-title">Контактные данные</div>
+          <div class="modal__content-text">
+            Оставьте ваш номер телефона, наш специалист подберет подходящие варианты и перезвонит вам.
+          </div>
+          <form class="modal__content-form">
+            <div class="input">
+              <div class="icon">
+                <img src="img/icons/icons.svg#phone-orange" alt="" />
+              </div>
+              <input type="tel" name="phone" placeholder="Введите номер телефона" autocomplete="off" />
+            </div>
+            <button type="submit" form="baner-form-phone" class="btn btn-primary">
+              <span>Заказать звонок</span>
+            </button>
+          </form>
+        </div>
+        <div class="modal__content-block" style="display: none">
+          <div class="modal__content-close close-x">
+            <img class="close-x" src="img/icons/icons.svg#close-modal" alt="" />
+          </div>
+          <div class="title modal__content-title">
+            Спасибо <br />
+            за обращение
+          </div>
+          <div class="modal__content-text">Наш специалист свяжется с вами как только подберет подходящие варианты</div>
+          <div class="modal__content-btns">
+            <a href="./main.html" class="btn btn-primary">
+              <span>Вернуться на главную</span>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -258,26 +265,5 @@
     </div>
   </div>
 
-  <!--Модалка подобрать пансионат-->
-  <div class="modal close-x" data-modal="will-select-suitable">
-    <div class="modal__inner">
-      <div class="modal__content">
-        <div class="modal__content-close close-x">
-          <img class="close-x" src="img/icons/icons.svg#close-modal" alt="" />
-        </div>
-        <div class="title modal__content-title">
-          Спасибо <br />
-          за обращение
-        </div>
-        <div class="modal__content-text">Наш специалист свяжется с вами как только подберет подходящие варианты</div>
-        <div class="modal__content-btns">
-          <a href="./main.html" class="btn btn-primary">
-            <span>Вернуться на главную</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <script src="./js/app.min.js?_v=20231108232108"></script>
+  <script src="./js/app.min.js?_v=20231109083944"></script>
 </html>

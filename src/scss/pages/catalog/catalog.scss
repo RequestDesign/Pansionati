@@ -446,8 +446,10 @@
       justify-content: flex-start;
       transition: $transition;
       transform: translateX(100%);
+      -webkit-transform: translateX(100%);
       &.active {
         transform: translateX(0);
+        -webkit-transform: translateX(0);
       }
     }
 
@@ -634,6 +636,7 @@
     .select-sort {
       &.active .select__content {
         transform: translateY(0);
+        -webkit-transform: translateY(0);
         display: flex;
         opacity: 1;
       }
@@ -651,9 +654,11 @@
         backdrop-filter: blur(1rem);
         transition: $transition;
         transform: translateY(-200%);
+        -webkit-transform: translateY(-200%);
 
         &.active {
           transform: translateY(0);
+          -webkit-transform: translateY(0);
           display: flex;
           opacity: 1;
         }
