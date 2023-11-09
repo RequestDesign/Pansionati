@@ -2670,6 +2670,7 @@ fieldset {
   border-radius: 3rem;
   position: relative;
   overflow: hidden;
+  transition: all 0.3s ease-out;
 }
 
 .card .--desc {
@@ -2691,10 +2692,6 @@ fieldset {
 
 .card-slider {
   position: relative;
-  z-index: 0;
-}
-
-.card-slider .swiper-wrapper {
   z-index: 0;
 }
 
@@ -2801,6 +2798,7 @@ fieldset {
        column-gap: 0.8rem;
   opacity: 0;
   visibility: hidden;
+  transition: all 0.3s ease-out;
   z-index: 4;
   position: relative;
 }
@@ -6080,6 +6078,7 @@ fieldset {
   }
 
   .card-hor {
+    transition: all 0.3s ease-out;
     cursor: pointer;
     display: flex;
     width: 126.5rem;
