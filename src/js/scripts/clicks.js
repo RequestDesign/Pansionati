@@ -23,13 +23,21 @@ function clickFullText() {
         btnTextFull.textContent = 'Свернуть';
         btnTextFull.classList.remove('__full');
       } else {
-        if (window.innerWidth < 768) {
-          txt.style.height = '36rem';
-        } else {
-          txt.style.height = '21.6rem';
-        }
-        btnTextFull.textContent = 'Развернуть';
-        btnTextFull.classList.add('__full');
+        $('html, body').animate(
+          {
+            scrollTop: $('.js-about-txt').offset().top - 140,
+          },
+          500,
+          () => {
+            if (window.innerWidth < 768) {
+              txt.style.height = '36rem';
+            } else {
+              txt.style.height = '21.6rem';
+            }
+            btnTextFull.textContent = 'Развернуть';
+            btnTextFull.classList.add('__full');
+          }
+        );
       }
     });
   }

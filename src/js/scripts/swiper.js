@@ -106,7 +106,6 @@ function initSliders() {
     document.querySelectorAll('.js-cards').forEach((cards) => {
       cards.querySelectorAll('.js-card__slider').forEach((card) => {
         const slider = card.querySelector('.js-card__swiper');
-        console.log(card.parentElement.querySelector('.js-card__bullets'));
         const pagination = card.parentElement.querySelector('.js-card__bullets');
 
         new Swiper(slider, {
