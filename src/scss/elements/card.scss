@@ -240,13 +240,33 @@
   }
 
   &__substract {
+    // @include sizes(100%, 37.2rem);
+    // // background: url('@img/cards/card-substract.svg') no-repeat center;
+    // background-size: cover;
+    // position: absolute;
+    // bottom: 0;
+    // left: 0;
+    // z-index: 2;
+    position: absolute;
+    z-index: 4;
+    bottom: 0;
     @include sizes(100%, 37.2rem);
-    background: url('@img/cards/card-substract.svg') no-repeat center;
+  }
+
+  &__substract-bg {
+    position: absolute;
+    width: 100%;
+
+    height: 100%;
     background-size: cover;
     position: absolute;
     bottom: 0;
     left: 0;
     z-index: 2;
+  }
+
+  &__desc {
+    z-index: 4;
   }
 
   &__icon {
