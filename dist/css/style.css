@@ -1483,9 +1483,7 @@ template {
 .baner-form__container::after,
 .question__container::after,
 .modal__content-close img,
-.modal,
-.card__like-img,
-.card__like.active .card__like-img {
+.modal {
   width: 100%;
   height: 100%;
 }
@@ -2721,15 +2719,36 @@ fieldset {
   z-index: 2;
 }
 
-.card__like.active .card__like-img {
-  background-image: url("@img/icons/icons.svg#like-active");
-  background-size: cover;
+.card__like img:first-child {
+  display: block;
 }
 
-.card__like-img {
+.card__like img:last-child {
+  display: none;
+}
+
+.card__like.active img:first-child {
+  display: none;
+}
+
+.card__like.active img:last-child {
   display: block;
-  background-image: url("@img/icons/icons.svg#like");
-  background-size: cover;
+}
+
+.card__slider-plushs {
+  padding: 0 2.4rem;
+}
+
+.card__slider-plushs .card__items {
+  -moz-column-gap: 0;
+       column-gap: 0;
+}
+
+.card__slider-plushs .card__item,
+.card__slider-plushs .card__icon-item {
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: default;
 }
 
 .card__desc {
@@ -2923,7 +2942,6 @@ fieldset {
   scrollbar-width: none;
   overflow-x: scroll;
   margin-bottom: 1.6rem;
-  padding: 0 2.4rem;
 }
 
 .card__items-services::-webkit-scrollbar {
@@ -2939,6 +2957,7 @@ fieldset {
 .card__items-shadow {
   position: absolute;
   right: 0;
+  z-index: 2;
 }
 
 .card__items-shadow img {
@@ -2970,7 +2989,6 @@ fieldset {
   -moz-column-gap: 2.8rem;
        column-gap: 2.8rem;
   overflow-x: scroll;
-  padding: 0 2.4rem;
 }
 
 .card__icon-items::-webkit-scrollbar {

@@ -122,6 +122,38 @@ function initSliders() {
       });
     });
 
+    if (document.querySelector('.js-plush-slider')) {
+      document.querySelectorAll('.js-plush-slider').forEach((slider) => {
+        console.log(slider);
+
+        new Swiper(slider, {
+          slidesPerView: 'auto',
+          allowTouchMove: true,
+          watchSlidesProgress: true,
+          touchStart: true,
+          spaceBetween: 8,
+          nested: true,
+          speed: 1000,
+        });
+      });
+    }
+
+    if (document.querySelector('.js-icons-slider')) {
+      document.querySelectorAll('.js-icons-slider').forEach((slider) => {
+        console.log(slider);
+
+        new Swiper(slider, {
+          slidesPerView: 'auto',
+          allowTouchMove: true,
+          watchSlidesProgress: true,
+          touchStart: true,
+          spaceBetween: 28,
+          nested: true,
+          speed: 1000,
+        });
+      });
+    }
+
     // Свайпер карточек
     document.querySelectorAll('.js-cards').forEach((cards, index) => {
       if (document.body.offsetWidth > 768) {
@@ -135,6 +167,8 @@ function initSliders() {
           slidesPerView: 3,
           allowTouchMove: true,
           watchSlidesProgress: true,
+          nested: true,
+          direction: 'horizontal',
           spaceBetween: 30,
           navigation: {
             nextEl: btnNext,
