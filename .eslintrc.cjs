@@ -15,5 +15,8 @@ module.exports = {
     'import/extensions': 'off',
     'no-undef': 'off',
     'no-underscore-dangle': 'off',
+    'import/no-extraneous-dependencies': 'off',
+    'no-new': 'off',
+    'no-unused-expressions': 'off',
   },
 };

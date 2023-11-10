@@ -10,7 +10,8 @@
   }
 
   &__txt {
-    @extend %hover;
+    cursor: pointer;
+    transition: overflow 0.3s ease-in-out;
     margin-bottom: 1.2rem;
     overflow: hidden;
     height: 21.6rem;
@@ -26,7 +27,7 @@
 
     @media screen and (min-width: 48em) {
       &:hover {
-        transition: $transition;
+        transition: opacity 0.3s ease-in-out;
         opacity: 0.5;
       }
     }

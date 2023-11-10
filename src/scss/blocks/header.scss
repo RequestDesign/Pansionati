@@ -26,7 +26,7 @@
     @extend %textBold18;
 
     &:hover {
-      @extend %hover;
+      transition: color 0.3s ease-in-out;
       color: $blue;
     }
   }
@@ -76,7 +76,7 @@
     width: 100%;
     top: 0;
     z-index: 4;
-    transition: $transition;
+    transition: background-color 0.3s easy-in-out;
 
     &.scroll {
       background-color: $white;
@@ -94,7 +94,7 @@
       position: fixed;
       left: 0;
       bottom: 0;
-      transition: $transition;
+      transition: translateX 0.3s ease-in-out;
       transform: translateX(-100%);
       z-index: -1;
       flex-direction: column;

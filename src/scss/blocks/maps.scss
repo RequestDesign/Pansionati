@@ -283,7 +283,7 @@
       flex-direction: column;
       justify-content: flex-start;
       transform: translateX(100%);
-      transition: $transition;
+      transition: translateX 0.3s ease-in-out;
 
       &.active {
         z-index: 4;

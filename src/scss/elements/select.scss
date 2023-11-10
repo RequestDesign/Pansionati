@@ -191,7 +191,7 @@
         display: inline-block;
         position: relative;
         left: 0;
-        transition: $transition;
+        transition: background 0.3s ease-in-out;
         background-size: cover;
         background: $lightGrey;
       }
@@ -206,7 +206,7 @@
         &::before {
           background-size: cover;
           background: $white;
-          transition: $transition;
+          transition: background 0.3s ease-in-out;
         }
       }
     }
@@ -322,7 +322,7 @@
           display: inline-block;
           position: relative;
           left: 0;
-          transition: $transition;
+          transition: background 0.3s ease-in-out;
           background: $lightGrey;
         }
       }
@@ -334,7 +334,7 @@
       &:hover {
         label {
           &::before {
-            transition: $transition;
+            transition: background 0.3s ease-in-out;
             background-size: cover;
             background: $white;
           }

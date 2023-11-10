@@ -17,7 +17,7 @@
       &:hover,
       &.active {
         background: $blue;
-        transition: $transition;
+        transition: background 0.3s ease-in-out;
         span {
           color: $white;
         }

@@ -4,7 +4,6 @@
   position: relative;
   display: flex;
   justify-content: center;
-  $transition: $transition;
 
   &-descs {
     position: absolute;
@@ -181,7 +180,7 @@
 [class*='controls__toolbar'],
 [class*='controls__bottom'] {
   opacity: 0;
-  transition: $transition;
+  transition: opacity 0.3s ease-in-out;
 }
 
 @media screen and (min-width: 48em) {

@@ -5,7 +5,9 @@
   border-radius: 3rem;
   background: rgba(156, 171, 189, 0.15);
   backdrop-filter: blur(1.9rem);
-  transition: $transition;
+  transition:
+    box-shadow 0.3s ease-in,
+    backdrop-filter 0.3s ease-in-out;
   cursor: pointer;
 
   &:hover {

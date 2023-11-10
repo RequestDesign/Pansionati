@@ -4,7 +4,7 @@
   border-radius: 3rem;
   position: relative;
   overflow: hidden;
-  transition: $transition;
+  transition: box-shadow 0.3s ease-in-out;
 
   @media screen and (min-width: 48em) {
     &:hover {
@@ -146,7 +146,9 @@
     column-gap: 0.8rem;
     opacity: 0;
     visibility: hidden;
-    transition: $transition;
+    transition:
+      opacity 0.3s ease-in-out,
+      visibility 0.3s ease-in-out;
     z-index: 4;
     position: relative;
 
@@ -681,7 +683,7 @@
       margin-bottom: 3rem;
     }
 
-    transition: $transition;
+    transition: box-shadow 0.3s ease-in-out;
     cursor: pointer;
 
     &:hover {

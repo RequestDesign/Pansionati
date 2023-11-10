@@ -35,14 +35,20 @@
   &__arrow {
     @include sizes(2.4rem, 2.4rem);
     flex-shrink: 0;
-    transition: $transition;
+    transition:
+      fill 0.3s ease-in-out,
+      stroke 0.3s ease-in-out,
+      transform 0.3s ease-in-out;
 
     svg {
       @extend %fullSize;
     }
 
     svg path {
-      transition: $transition;
+      transition:
+        fill 0.3s ease-in-out,
+        stroke 0.3s ease-in-out,
+        transform 0.3s ease-in-out;
     }
   }
 

@@ -6,3 +6,7 @@ src/js/scripts/modal.js
 src/js/libs/inputmask.min.js
 src/js/libs/swiper-bundle.js
 src/js/libs/nouislider.min.js
+_cacache
+_locks
+_logs
+anonymous-cli-metrics.json

@@ -107,7 +107,9 @@
       position: sticky;
       top: 0;
       z-index: 3;
-      transition: $transition;
+      transition:
+        background 0.3s ease-in-out,
+        box-shadow 0.3s ease-in-out;
 
       &.scroll {
         width: 108.5%;
@@ -182,7 +184,7 @@
       display: block;
       position: absolute;
       z-index: 2;
-      transition: $transition;
+      transition: opacity 0.3s ease-in-out;
     }
 
     &:last-child {
@@ -443,7 +445,7 @@
       padding: 3.4rem 0 5.6rem;
       flex-direction: column;
       justify-content: flex-start;
-      transition: $transition;
+      transition: translateX 0.3s ease-in-out;
       transform: translateX(100%);
       -webkit-transform: translateX(100%);
       &.active {
@@ -557,7 +559,9 @@
       width: 100%;
       top: 0;
       flex-direction: column;
-      transition: $transition;
+      transition:
+        opacity 0.3s ease-in-out,
+        visibility 0.3s ease-in-out;
       opacity: 0;
       visibility: hidden;
 
@@ -603,7 +607,7 @@
         display: block;
         position: absolute;
         z-index: 2;
-        transition: $transition;
+        transition: opacity 0.3s ease-in-out;
       }
 
       &:last-child {
@@ -652,7 +656,7 @@
         visibility: visible;
         background: rgba(194, 199, 200, 0.79);
         backdrop-filter: blur(1rem);
-        transition: $transition;
+        transition: translateY 0.3s ease-in-out;
         transform: translateY(-200%);
         -webkit-transform: translateY(-200%);
 

@@ -31,7 +31,9 @@
 
   &:not(:disabled):hover {
     background: $blue;
-    transition: $transition;
+    transition:
+      background 0.3s ease-in-out,
+      color 0.3s ease-in-out;
   }
 }
 
@@ -123,7 +125,7 @@
 
     &:not(:disabled):hover {
       background: $blue;
-      transition: $transition;
+      transition: background 0.3s ease-in-out;
     }
   }
 

@@ -240,7 +240,7 @@
         }
 
         img {
-          transition: $transition;
+          transition: transform 0.3s ease-in-out;
         }
 
         &:nth-child(1) {
@@ -287,7 +287,7 @@
       border-radius: 3rem 0 0 3rem;
 
       img {
-        transition: $transition;
+        transition: transform 0.3s ease-in-out;
       }
 
       &:hover img {

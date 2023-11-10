@@ -5,7 +5,9 @@
   &-arrow-hover-orange,
   &-arrow-hover-white,
   &-arrow-slider {
-    @extend %hover;
+    transition:
+      fill 0.3s ease-in-out,
+      stroke 0.3s ease-in-out;
     fill: none;
     stroke-width: 2px;
     stroke-linecap: round;

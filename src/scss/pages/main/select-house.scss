@@ -28,18 +28,20 @@
 
     &:hover,
     &:active {
-      @extend %hover;
+      transition: background 0.3s ease-in-out;
       background: $blue;
 
       .select-house__item-text {
         color: $white;
-        transition: $transition;
+        transition: color 0.3s ease-in-out;
       }
 
       .select-house__item-circle {
         color: $blue;
         background: $white;
-        transition: $transition;
+        transition:
+          color 0.3s ease-in-out,
+          background 0.3s ease-in-out;
       }
     }
   }

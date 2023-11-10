@@ -11,3 +11,7 @@ node_modules/
 npm-debug.*
 Thumbs.db
 app/sass/blocks/!!!.scss
+__cacache
+_locks
+_logs
+anonymous-cli-metrics.json
