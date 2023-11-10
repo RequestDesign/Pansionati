@@ -30,7 +30,9 @@
 
   &__header {
     @extend %flexCenter;
-    @extend %hover;
+    transition:
+      border 0.3s ease-in-out,
+      transform 0.3s ease-in-out;
     position: relative;
     border: 1px solid transparent;
 
@@ -47,12 +49,21 @@
 
   &__btn {
     @include sizes(2.4rem, 2.4rem);
-    @extend %hover;
+    transition:
+      background 0.3s ease-in-out,
+      transform 0.3s ease-in-out;
   }
 
   &__content {
     @extend %flexColumn;
-    @extend %hover;
+    transition:
+      height 0.3s ease-in-out,
+      opacity 0.3s ease-in-out,
+      visibility 0.3s ease-in-out,
+      max-height 0.3s ease-in-out,
+      box-shadow 0.3s ease-in-out,
+      z-index 0.3s ease-in-out,
+      overflow 0.3s ease-in-out;
     width: 100%;
     position: absolute;
     z-index: -1;
@@ -85,12 +96,14 @@
     }
 
     &:hover {
-      @extend %hover;
+      transition: background-color 0.3s ease-in-out;
       background-color: $lightGrey;
     }
 
     label {
-      @extend %hover;
+      transition:
+        background-color 0.3s ease-in-out,
+        color 0.3s ease-in-out;
       @extend %textBold18;
       padding: 1rem;
       display: flex;

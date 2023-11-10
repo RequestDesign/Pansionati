@@ -14,7 +14,8 @@
   }
 
   &:not(:disabled):hover {
-    @extend %hover;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
   }
 }
 
@@ -66,7 +67,8 @@
   backdrop-filter: none;
 
   span {
-    @extend %hover;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
   }
 
   &:not(:disabled):hover {
