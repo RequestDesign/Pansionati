@@ -1,31 +1,33 @@
 @media screen and (max-width: 48em) {
   .catalog-page {
     .select-sort {
-      &.active .select__content {
+      display: flex;
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: -110%;
+      width: 100%;
+      height: 100vh;
+      border-radius: 0;
+      // background: $white;
+      z-index: 6;
+      opacity: 1;
+      visibility: visible;
+      transition: top 0.3s ease-in-out;
+
+      &.active {
         top: 0;
       }
 
       .select__content {
-        display: flex;
-        position: fixed;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        top: -110%;
-        width: 100%;
-        height: 100vh;
-        border-radius: 0;
-        background: $white;
-        z-index: 6;
         opacity: 1;
         visibility: visible;
         background: rgba(194, 199, 200, 0.79);
         backdrop-filter: blur(1rem);
-        transition: top 0.3s ease-in-out;
-
-        &.active {
-          top: 0;
-        }
+        height: 100%;
+        width: 100%;
+        top: 0;
       }
 
       .select__items {
