@@ -5940,6 +5940,97 @@ input[type=file] {
   justify-content: space-between;
 }
 
+.sort.active .sort__content {
+  top: 0;
+}
+
+.sort .sort__content {
+  display: flex;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 110%;
+  width: 100%;
+  height: 100vh;
+  border-radius: 0;
+  background: #ffffff;
+  z-index: 6;
+  opacity: 1;
+  visibility: visible;
+  background: rgba(194, 199, 200, 0.79);
+  -webkit-backdrop-filter: blur(1rem);
+          backdrop-filter: blur(1rem);
+  transition: top 0.3s ease-in-out;
+}
+
+.sort .sort__content.active {
+  top: 0;
+}
+
+.sort .sort__items {
+  border-radius: 4rem 4rem 0 0;
+  background: #ffffff;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 6rem;
+}
+
+.sort .sort__item:hover {
+  background-color: transparent;
+}
+
+.sort .sort__item label {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 2.4rem;
+       column-gap: 2.4rem;
+  position: relative;
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 120%;
+  padding: 2rem 2rem 2rem 0;
+  color: #1a1a1a !important;
+}
+
+.sort .sort__item label::before {
+  width: 4.8rem;
+  height: 4.8rem;
+  flex-shrink: 0;
+  content: "";
+  border-radius: 1rem;
+  display: inline-block;
+  position: relative;
+  left: 0;
+  background-size: cover;
+  background: url("@img/icons/icons.svg#checkbox") no-repeat center;
+}
+
+.sort .sort__item input[type=radio] {
+  width: 0;
+  height: 0;
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  display: block;
+}
+
+.sort .sort__item input[type=radio]:checked + label:before {
+  background-position: 50% 50%;
+  background-size: 2.4rem 2.4rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("@img/icons/icons.svg#checkbox-active");
+}
+
+.sort .select-sort input:checked + label {
+  color: #1a1a1a;
+}
+
 .not-found {
   margin: 1rem 0 28rem 0;
 }
@@ -10092,44 +10183,35 @@ fieldset {
     height: 4.8rem;
   }
 
-  .catalog__header-bottom-txt {
-    font-size: 2.8rem;
-    font-weight: 700;
-    line-height: 130%;
+  .catalog .select-sort.active .select__content {
+    top: 0;
   }
 
-  .catalog-page .select-sort {
+  .catalog .select-sort .select__content {
     display: flex;
     position: fixed;
     left: 0;
     right: 0;
     bottom: 0;
-    top: -110%;
+    top: 110%;
     width: 100%;
     height: 100vh;
     border-radius: 0;
+    background: #ffffff;
     z-index: 6;
-    opacity: 1;
-    visibility: visible;
-    transition: top 0.3s ease-in-out;
-  }
-
-  .catalog-page .select-sort.active {
-    top: 0;
-  }
-
-  .catalog-page .select-sort .select__content {
     opacity: 1;
     visibility: visible;
     background: rgba(194, 199, 200, 0.79);
     -webkit-backdrop-filter: blur(1rem);
             backdrop-filter: blur(1rem);
-    height: 100%;
-    width: 100%;
+    transition: top 0.3s ease-in-out;
+  }
+
+  .catalog .select-sort .select__content.active {
     top: 0;
   }
 
-  .catalog-page .select-sort .select__items {
+  .catalog .select-sort .select__items {
     border-radius: 4rem 4rem 0 0;
     background: #ffffff;
     height: -moz-fit-content;
@@ -10140,11 +10222,11 @@ fieldset {
     padding: 6rem;
   }
 
-  .catalog-page .select-sort .select__item:hover {
+  .catalog .select-sort .select__item:hover {
     background-color: transparent;
   }
 
-  .catalog-page .select-sort .select__item label {
+  .catalog .select-sort .select__item label {
     display: flex;
     align-items: center;
     -moz-column-gap: 2.4rem;
@@ -10157,7 +10239,7 @@ fieldset {
     color: #1a1a1a !important;
   }
 
-  .catalog-page .select-sort .select__item label::before {
+  .catalog .select-sort .select__item label::before {
     width: 4.8rem;
     height: 4.8rem;
     flex-shrink: 0;
@@ -10170,7 +10252,7 @@ fieldset {
     background: url("@img/icons/icons.svg#checkbox") no-repeat center;
   }
 
-  .catalog-page .select-sort .select__item input[type=radio] {
+  .catalog .select-sort .select__item input[type=radio] {
     width: 0;
     height: 0;
     position: absolute;
@@ -10179,7 +10261,7 @@ fieldset {
     display: block;
   }
 
-  .catalog-page .select-sort .select__item input[type=radio]:checked + label:before {
+  .catalog .select-sort .select__item input[type=radio]:checked + label:before {
     background-position: 50% 50%;
     background-size: 2.4rem 2.4rem;
     background-repeat: no-repeat;
@@ -10187,8 +10269,14 @@ fieldset {
     background-image: url("@img/icons/icons.svg#checkbox-active");
   }
 
-  .catalog-page .select-sort .select-sort input:checked + label {
+  .catalog .select-sort .select-sort input:checked + label {
     color: #1a1a1a;
+  }
+
+  .catalog__header-bottom-txt {
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 130%;
   }
 
   .not-found {
