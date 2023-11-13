@@ -100,7 +100,7 @@ function clickSort() {
 
   if (btnSortOpen) {
     btnSortOpen.addEventListener('click', () => {
-      const content = document.querySelector('.select-sort .select__content');
+      const content = document.querySelector('.select-sort');
       content.classList.add('active');
     });
   }
