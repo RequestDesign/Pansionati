@@ -10014,9 +10014,11 @@ fieldset {
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
     opacity: 0;
     visibility: hidden;
+    display: none;
   }
 
   .catalog__header.scroll {
+    display: none;
     opacity: 1;
     z-index: 4;
     visibility: visible;
@@ -10048,15 +10050,18 @@ fieldset {
     width: 44rem;
   }
 
+  .catalog__header-top-icons {
+    width: 4rem;
+    height: 4rem;
+  }
+
   .catalog__header-top-icon {
     width: 4rem;
     height: 4rem;
-    margin: 0;
-    padding: 0;
   }
 
   .catalog__header-top-icon:first-child {
-    opacity: 1px;
+    opacity: 1;
     display: block;
     position: absolute;
     z-index: 2;

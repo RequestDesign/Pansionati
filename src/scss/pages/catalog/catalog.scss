@@ -564,8 +564,10 @@
         visibility 0.3s ease-in-out;
       opacity: 0;
       visibility: hidden;
+      display: none;
 
       &.scroll {
+        display: none;
         opacity: 1;
         z-index: 4;
         visibility: visible;
@@ -596,14 +598,16 @@
       }
     }
 
-    &__header-top-icon {
+    &__header-top-icons {
       @include sizes(4rem, 4rem);
+    }
 
-      margin: 0;
-      padding: 0;
+    &__header-top-icon {
+      width: 4rem;
+      height: 4rem;
 
       &:first-child {
-        opacity: 1px;
+        opacity: 1;
         display: block;
         position: absolute;
         z-index: 2;
