@@ -1,5 +1,3 @@
-// import { scroolMapList } from './scroll.js';
-
 function changeContentAboutBoard() {
   const btns = document.querySelectorAll('.js-open-content');
   const contents = document.querySelectorAll('.js-about-content');
@@ -48,15 +46,6 @@ function changeContentMap() {
   });
 }
 
-// function scroolListWithBoard() {
-//   const boardsContainer = document.querySelector('.maps__list-items');
-//   const boardListActive = document.querySelector('.maps__list-item.active');
-
-//   if (boardsContainer && boardListActive) {
-//     scroolMapList(boardsContainer, boardListActive);
-//   }
-// }
-
 document.addEventListener('DOMContentLoaded', () => {
   changeContentAboutBoard();
   changeContentMap();
@@ -76,12 +65,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const item = button.getAttribute('data-open-content');
         changeHideClass(item, contentBtn, button);
       });
-
-      // scroolListWithBoard();
     });
   });
-});
-
-window.addEventListener('resize', () => {
-  // changeContentMap();
 });

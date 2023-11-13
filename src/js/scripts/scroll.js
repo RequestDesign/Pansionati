@@ -1,11 +1,6 @@
-export function scroolMapList(container, el) {
-  const distance = el.offsetTop - container.offsetTop;
-
-  container.scroll({
-    top: distance,
-    behavior: 'smooth',
-  });
-}
+// Scrollbat для списка пансионатов в карте
+const outerBlock = document.querySelector('.maps__list-items');
+export const scrollbar = new SimpleBar(outerBlock);
 
 function scrollPage() {
   const btnScroll = document.querySelector('.js-btn-scroll');

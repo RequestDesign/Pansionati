@@ -1,4 +1,4 @@
-import { scroolMapList } from './scroll.js';
+import { scrollbar } from './scroll.js';
 
 // Метки для карты со всеми пансионатами
 const PLACEMARKS = [
@@ -123,7 +123,6 @@ function init() {
     const boardsMap = document.querySelectorAll('[data-board-map]');
     const boardsDescContainer = document.querySelector('.map-descs');
     const mapDescs = document.querySelectorAll('.map-desc');
-    const boardsContainer = document.querySelector('.maps__list-items');
 
     const mainMap = new ymaps.Map('map', {
       center: [55.520003, 38.089062],
@@ -163,7 +162,11 @@ function init() {
         boardsList.forEach((boardList) => {
           if (boardList.getAttribute('data-board-list') === newPlacemark.properties.get('myDataAttr')) {
             boardList.classList.add('active');
-            scroolMapList(boardsContainer, boardList);
+            const distance = boardList.offsetTop;
+            scrollbar.getScrollElement().scrollTo({
+              top: distance,
+              behavior: 'smooth',
+            });
           } else {
             boardList.classList.remove('active');
           }
