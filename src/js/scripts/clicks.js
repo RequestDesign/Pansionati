@@ -106,6 +106,10 @@ function clickSort() {
   }
 }
 
+document.querySelector('.title').addEventListener('click', function() {
+	document.querySelector('.q').classList.toggle('active')
+})
+
 document.addEventListener('DOMContentLoaded', () => {
   clickToogle();
   clickToogleBlockCards();
