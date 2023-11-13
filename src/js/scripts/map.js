@@ -1,6 +1,6 @@
 // Scrollbat для списка пансионатов в карте
 
-let scrollbar;
+export let scrollbar;
 
 if (document.querySelector('.maps__list-items')) {
   const outerBlock = document.querySelector('.maps__list-items');

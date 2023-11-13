@@ -95,16 +95,16 @@ function clickFilt() {
   }
 }
 
-function clickSort() {
-  const btnSortOpen = document.querySelector('.js-sort-open');
+// function clickSort() {
+//   const btnSortOpen = document.querySelector('.js-sort-open');
 
-  if (btnSortOpen) {
-    btnSortOpen.addEventListener('click', () => {
-      const content = document.querySelector('.sort');
-      content.classList.add('active');
-    });
-  }
-}
+//   if (btnSortOpen) {
+//     btnSortOpen.addEventListener('click', () => {
+//       const content = document.querySelector('.sort');
+//       content.classList.add('active');
+//     });
+//   }
+// }
 
 document.addEventListener('DOMContentLoaded', () => {
   clickToogle();
@@ -112,5 +112,5 @@ document.addEventListener('DOMContentLoaded', () => {
   clickFullText();
   clickFilter();
   clickFilt();
-  clickSort();
+  // clickSort();
 });

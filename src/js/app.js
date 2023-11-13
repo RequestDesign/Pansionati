@@ -16,5 +16,6 @@ import './scripts/range.js';
 import './scripts/search.js';
 import './scripts/scroll.js';
 import './scripts/clicks.js';
+import './scripts/sort.js';
 
 flsFunctions.isWebp();

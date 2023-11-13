@@ -27,7 +27,7 @@
             <div class="catalog__header-bottom-icon">
               <img src="@img/icons/icons.svg#sort" alt="" />
             </div>
-            <span class="catalog__header-bottom-txt js-select-value">Сначала дешевые</span>
+            <span class="catalog__header-bottom-txt js-sort-value">Сначала дешевые</span>
           </button>
           <button type="button" class="catalog__header-bottom-btn js-filt-open">
             <div class="catalog__header-bottom-icon">
@@ -224,7 +224,7 @@
           </fieldset>
           <fieldset class="catalog__fieldset">
             <div class="catalog__fieldset-top">
-              <div class="catalog__fieldset-title">Физическое состояние</div>
+              <div class="catalog__fieldset-title">Условия</div>
               <button type="button" class="catalog__fieldset-reset --desc">Сбросить</button>
             </div>
             <div class="catalog__fieldset-select select-catalog js-select">
@@ -414,14 +414,14 @@
               </div>
             </div>
             <div class="catalog__top-right">
-              <div class="select select-sort js-select">
+              <div class="select select-sort js-select js-sort-open">
                 <div class="select__header js-select-inner">
-                  <div class="select__value js-select-value">Сначала дешевые</div>
+                  <div class="select__value js-select-value js-sort-value">Сначала дешевые</div>
                   <button type="button" class="select__btn">
                     <img src="@img/icons/icons.svg#arrow-down" alt="arrow" />
                   </button>
                 </div>
-                <div class="select__content js-sort">
+                <div class="select__content">
                   <div class="select__items">
                     <div class="select__item js-select-item">
                       <input id="sort-1" type="radio" name="sort" value="Сначала дешевые" checked />

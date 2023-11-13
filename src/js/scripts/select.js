@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       document.addEventListener('click', (event) => {
-        if (!event.target.closest('.js-select') && event.target.closest('.js-open-sort')) {
+        if (!event.target.closest('.js-select')) {
           select.classList.remove('active');
           deleteValueSearch(search);
           showAllItems(items, empty);

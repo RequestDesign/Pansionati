@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Каталог</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css?_v=20231113212701" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lg-thumbnail.min.css?_v=20231113212701" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css?_v=20231113212701" />
-  <link rel="stylesheet" href="css/style.min.css?_v=20231113212701" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css?_v=20231113233636" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lg-thumbnail.min.css?_v=20231113233636" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css?_v=20231113233636" />
+  <link rel="stylesheet" href="css/style.min.css?_v=20231113233636" />
 </head>
 
 
@@ -127,7 +127,7 @@
   </div>
 </header>
  <main class="catalog-page">
-	<section class="breadcrumbs">
+  <section class="breadcrumbs">
   <div class="container">
     <div class="breadcrumbs__container">
       <a href="./main.html">Главная</a>
@@ -164,7 +164,7 @@
             <div class="catalog__header-bottom-icon">
               <img src="img/icons/icons.svg#sort" alt="" />
             </div>
-            <span class="catalog__header-bottom-txt js-select-value">Сначала дешевые</span>
+            <span class="catalog__header-bottom-txt js-sort-value">Сначала дешевые</span>
           </button>
           <button type="button" class="catalog__header-bottom-btn js-filt-open">
             <div class="catalog__header-bottom-icon">
@@ -361,7 +361,7 @@
           </fieldset>
           <fieldset class="catalog__fieldset">
             <div class="catalog__fieldset-top">
-              <div class="catalog__fieldset-title">Физическое состояние</div>
+              <div class="catalog__fieldset-title">Условия</div>
               <button type="button" class="catalog__fieldset-reset --desc">Сбросить</button>
             </div>
             <div class="catalog__fieldset-select select-catalog js-select">
@@ -551,14 +551,14 @@
               </div>
             </div>
             <div class="catalog__top-right">
-              <div class="select select-sort js-select">
+              <div class="select select-sort js-select js-sort-open">
                 <div class="select__header js-select-inner">
-                  <div class="select__value js-select-value">Сначала дешевые</div>
+                  <div class="select__value js-select-value js-sort-value">Сначала дешевые</div>
                   <button type="button" class="select__btn">
                     <img src="img/icons/icons.svg#arrow-down" alt="arrow" />
                   </button>
                 </div>
-                <div class="select__content js-sort">
+                <div class="select__content">
                   <div class="select__items">
                     <div class="select__item js-select-item">
                       <input id="sort-1" type="radio" name="sort" value="Сначала дешевые" checked />
@@ -2273,7 +2273,7 @@
   </div>
 </section>
 
-	<section class="advantages">
+  <section class="advantages">
   <div class="container">
     <div class="advantages__container">
       <div class="title --mob">
@@ -2764,7 +2764,7 @@
   </div>
 </section>
 
-	<section class="boards-swipers">
+  <section class="boards-swipers">
   <div class="container">
     <div class="boards-swipers__container">
       <div class="boards-swipers__titles">
@@ -4072,29 +4072,31 @@
     </div>
   </div>
 </section>
- <section class="sort qwe --mob">
-	<div class="sort__content ">
-		<div class="sort__items">
-			<div class="sort__item js-select-item">
-				<input id="sort-11" type="radio" name="sort-2" value="Сначала дешевые" checked />
-				<label for="sort-11">Сначала дешевые</label>
-			</div>
-			<div class="sort__item js-select-item">
-				<input id="sort-21" type="radio" name="sort-2" value="Сначала дорогие" />
-				<label for="sort-21">Сначала дорогие</label>
-			</div>
-			<div class="sort__item js-select-item">
-				<input id="sort-31" type="radio" name="sort-2" value="По популярности" />
-				<label for="sort-31">По популярности</label>
-			</div>
-			<div class="sort__item js-select-item">
-				<input id="sort-41" type="radio" name="sort-2" value="Новинки" />
-				<label for="sort-41">Новинки</label>
-			</div>
-		</div>
-	</div>
+ <section class="sort js-sort --mob">
+  <div class="sort__content js-sort-content">
+    <div class="sort__items">
+      <div class="sort__item js-sort-item">
+        <input id="sort-2-1" type="radio" name="sort-2" value="Сначала дешевые" checked />
+        <label for="sort-2-1">Сначала дешевые</label>
+      </div>
+      <div class="sort__item js-sort-item">
+        <input id="sort-2-2" type="radio" name="sort-2" value="Сначала дорогие" />
+        <label for="sort-2-2">Сначала дорогие</label>
+      </div>
+      <div class="sort__item js-sort-item">
+        <input id="sort-2-3" type="radio" name="sort-2" value="По популярности" />
+        <label for="sort-2-3">По популярности</label>
+      </div>
+      <div class="sort__item js-sort-item">
+        <input id="sort-2-4" type="radio" name="sort-2" value="Новинки" />
+        <label for="sort-2-4">Новинки</label>
+      </div>
+    </div>
+  </div>
 </section>
+
 </main>
+
     <footer class="footer">
   <div class="container">
     <div class="footer__container">
@@ -4387,12 +4389,12 @@
   </div>
 </div>
 
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=e1d17623-ee55-4c9d-8251-85ab8eb1263e&lang=ru_RU&_v=20231113212701"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js?_v=20231113212701"></script>
-<script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery-all.min.js?_v=20231113212701"></script>
-<script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lg-thumbnail.min.js?_v=20231113212701"></script>
-<script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js?_v=20231113212701"></script>
-<script src="js/app.min.js?_v=20231113212701"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=e1d17623-ee55-4c9d-8251-85ab8eb1263e&lang=ru_RU&_v=20231113233636"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js?_v=20231113233636"></script>
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery-all.min.js?_v=20231113233636"></script>
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lg-thumbnail.min.js?_v=20231113233636"></script>
+<script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js?_v=20231113233636"></script>
+<script src="js/app.min.js?_v=20231113233636"></script>
 
   </body>
 </html>

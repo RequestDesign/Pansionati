@@ -1,3 +1,5 @@
+import { scrollbar } from './map.js';
+
 function changeContentAboutBoard() {
   const btns = document.querySelectorAll('.js-open-content');
   const contents = document.querySelectorAll('.js-about-content');
@@ -27,12 +29,21 @@ function changeHideClass(item, attr, el) {
   }
 }
 
+function scroolMapList(container, el) {
+  const distance = el.offsetTop;
+
+  container.getScrollElement().scrollTo({
+    top: distance,
+    behavior: 'smooth',
+  });
+}
+
 function scroolListWithBoard() {
   const boardsContainer = document.querySelector('.maps__list-items');
   const boardListActive = document.querySelector('.maps__list-item.active');
 
   if (boardsContainer && boardListActive) {
-    scroolMapList(boardsContainer, boardListActive);
+    scroolMapList(scrollbar, boardListActive);
   }
 }
 

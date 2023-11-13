@@ -2287,6 +2287,7 @@ fieldset {
 
 .select {
   position: relative;
+  cursor: pointer;
 }
 
 .select .--desc {
@@ -2352,7 +2353,7 @@ fieldset {
   padding: 3rem 1rem 3rem 3rem;
   border-radius: 3rem;
   background: #ffffff;
-  box-shadow: 0.5rem 1.5rem 7rem 0 rgba(143, 155, 205, 0.25);
+  box-shadow: 0.5rem 1.5rem 2rem 0 rgba(143, 155, 205, 0.25);
   overflow: hidden;
   height: 26.4rem;
   max-height: 0;
@@ -2374,6 +2375,7 @@ fieldset {
 
 .select__item {
   border-radius: 1rem;
+  cursor: pointer;
 }
 
 .select__item:not(:last-child) {
@@ -2387,6 +2389,7 @@ fieldset {
 
 .select__item label {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  cursor: pointer;
   padding: 1rem;
   display: flex;
   align-items: center;
@@ -5152,7 +5155,7 @@ input[type=file] {
 
 .about-info__txt {
   cursor: pointer;
-  transition: overflow 0.3s ease-in-out;
+  transition: height 0.3s ease-in-out;
   margin-bottom: 1.2rem;
   overflow: hidden;
   height: 21.6rem;
@@ -5936,6 +5939,10 @@ input[type=file] {
   width: 25.7rem;
 }
 
+.catalog .select__content {
+  width: 100%;
+}
+
 .catalog .select__header {
   justify-content: space-between;
 }
@@ -5950,7 +5957,7 @@ input[type=file] {
   left: 0;
   right: 0;
   bottom: 0;
-  top: 110%;
+  top: 0;
   width: 100%;
   height: 100vh;
   border-radius: 0;
@@ -5961,11 +5968,12 @@ input[type=file] {
   background: rgba(194, 199, 200, 0.79);
   -webkit-backdrop-filter: blur(1rem);
           backdrop-filter: blur(1rem);
-  transition: top 0.3s ease-in-out;
+  transform: translateY(-110%);
+  transition: transform 0.3s ease-in-out;
 }
 
 .sort .sort__content.active {
-  top: 0;
+  transform: translateY(0);
 }
 
 .sort .sort__items {
@@ -10184,93 +10192,7 @@ fieldset {
   }
 
   .catalog .select-sort.active .select__content {
-    top: 0;
-  }
-
-  .catalog .select-sort .select__content {
-    display: flex;
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 110%;
-    width: 100%;
-    height: 100vh;
-    border-radius: 0;
-    background: #ffffff;
-    z-index: 6;
-    opacity: 1;
-    visibility: visible;
-    background: rgba(194, 199, 200, 0.79);
-    -webkit-backdrop-filter: blur(1rem);
-            backdrop-filter: blur(1rem);
-    transition: top 0.3s ease-in-out;
-  }
-
-  .catalog .select-sort .select__content.active {
-    top: 0;
-  }
-
-  .catalog .select-sort .select__items {
-    border-radius: 4rem 4rem 0 0;
-    background: #ffffff;
-    height: -moz-fit-content;
-    height: fit-content;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    padding: 6rem;
-  }
-
-  .catalog .select-sort .select__item:hover {
-    background-color: transparent;
-  }
-
-  .catalog .select-sort .select__item label {
-    display: flex;
-    align-items: center;
-    -moz-column-gap: 2.4rem;
-         column-gap: 2.4rem;
-    position: relative;
-    font-size: 3rem;
-    font-weight: 400;
-    line-height: 120%;
-    padding: 2rem 2rem 2rem 0;
-    color: #1a1a1a !important;
-  }
-
-  .catalog .select-sort .select__item label::before {
-    width: 4.8rem;
-    height: 4.8rem;
-    flex-shrink: 0;
-    content: "";
-    border-radius: 1rem;
-    display: inline-block;
-    position: relative;
-    left: 0;
-    background-size: cover;
-    background: url("@img/icons/icons.svg#checkbox") no-repeat center;
-  }
-
-  .catalog .select-sort .select__item input[type=radio] {
-    width: 0;
-    height: 0;
-    position: absolute;
-    z-index: -1;
-    opacity: 0;
-    display: block;
-  }
-
-  .catalog .select-sort .select__item input[type=radio]:checked + label:before {
-    background-position: 50% 50%;
-    background-size: 2.4rem 2.4rem;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url("@img/icons/icons.svg#checkbox-active");
-  }
-
-  .catalog .select-sort .select-sort input:checked + label {
-    color: #1a1a1a;
+    display: none;
   }
 
   .catalog__header-bottom-txt {
