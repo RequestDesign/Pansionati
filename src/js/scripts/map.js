@@ -280,7 +280,10 @@ function initBoard() {
     );
 
     boardMap.geoObjects.add(boardPlacemark);
-    boardPlacemark.balloon.open();
+
+    if (window.innerWidth > 1330) {
+      boardPlacemark.balloon.open();
+    }
 
     removeContent(boardMap);
   }
