@@ -10014,11 +10014,9 @@ fieldset {
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
     opacity: 0;
     visibility: hidden;
-    display: none;
   }
 
   .catalog__header.scroll {
-    display: none;
     opacity: 1;
     z-index: 4;
     visibility: visible;

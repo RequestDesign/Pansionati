@@ -1,87 +1,87 @@
-import { scroolMapList } from './scroll.js';
+// import { scroolMapList } from './scroll.js';
 
-function changeHideClass(item, attr, el) {
-  if (item === attr) {
-    el.classList.add('hide');
-  } else {
-    el.classList.remove('hide');
-  }
-}
+// function changeHideClass(item, attr, el) {
+//   if (item === attr) {
+//     el.classList.add('hide');
+//   } else {
+//     el.classList.remove('hide');
+//   }
+// }
 
-function changeContentMap() {
-  const contents = document.querySelectorAll('[data-content]');
-  contents.forEach((content) => {
-    if (document.body.clientWidth < 769) {
-      content.classList.add('hide');
-    } else {
-      content.classList.remove('hide');
-    }
+// function changeContentMap() {
+//   const contents = document.querySelectorAll('[data-content]');
+//   contents.forEach((content) => {
+//     if (document.body.clientWidth < 769) {
+//       content.classList.add('hide');
+//     } else {
+//       content.classList.remove('hide');
+//     }
 
-    if (content.getAttribute('data-content') === 'list') {
-      content.classList.remove('hide');
-    }
+//     if (content.getAttribute('data-content') === 'list') {
+//       content.classList.remove('hide');
+//     }
 
-    if (document.querySelector('.js-maps-maps')) {
-      document.querySelector('.js-maps-maps').classList.add('hide');
-    }
-  });
-}
+//     if (document.querySelector('.js-maps-maps')) {
+//       document.querySelector('.js-maps-maps').classList.add('hide');
+//     }
+//   });
+// }
 
-function scroolListWithBoard() {
-  const boardsContainer = document.querySelector('.maps__list-items');
-  const boardListActive = document.querySelector('.maps__list-item.active');
+// function scroolListWithBoard() {
+//   const boardsContainer = document.querySelector('.maps__list-items');
+//   const boardListActive = document.querySelector('.maps__list-item.active');
 
-  if (boardsContainer && boardListActive) {
-    scroolMapList(boardsContainer, boardListActive);
-  }
-}
+//   if (boardsContainer && boardListActive) {
+//     scroolMapList(boardsContainer, boardListActive);
+//   }
+// }
 
-function changeContentAboutBoard() {
-  const btns = document.querySelectorAll('.js-open-content');
-  const contents = document.querySelectorAll('.js-about-content');
+// function changeContentAboutBoard() {
+//   const btns = document.querySelectorAll('.js-open-content');
+//   const contents = document.querySelectorAll('.js-about-content');
 
-  btns.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      btns.forEach((bt) => bt.classList.remove('active'));
-      contents.forEach((content) => content.classList.remove('active'));
-      btn.classList.add('active');
+//   btns.forEach((btn) => {
+//     btn.addEventListener('click', () => {
+//       btns.forEach((bt) => bt.classList.remove('active'));
+//       contents.forEach((content) => content.classList.remove('active'));
+//       btn.classList.add('active');
 
-      const attr = btn.getAttribute('data-open-content');
+//       const attr = btn.getAttribute('data-open-content');
 
-      contents.forEach((content) => {
-        if (content.getAttribute('data-about-content') === attr) {
-          content.classList.add('active');
-        }
-      });
-    });
-  });
-}
+//       contents.forEach((content) => {
+//         if (content.getAttribute('data-about-content') === attr) {
+//           content.classList.add('active');
+//         }
+//       });
+//     });
+//   });
+// }
 
-document.addEventListener('DOMContentLoaded', () => {
-  changeContentMap();
-  changeContentAboutBoard();
+// // document.addEventListener('DOMContentLoaded', () => {
+// //   // changeContentMap();
+// //   // changeContentAboutBoard();
 
-  const btns = document.querySelectorAll('.js-btn');
+// //   const btns = document.querySelectorAll('.js-btn');
 
-  btns.forEach((btn) => {
-    btn.addEventListener('click', (event) => {
-      const contentBtn = event.currentTarget.getAttribute('data-open-content');
-      const contents = document.querySelectorAll('[data-content]');
-      const activeContent = document.querySelectorAll(`[data-content=${contentBtn}]`);
+// //   btns.forEach((btn) => {
+// //     btn.addEventListener('click', (event) => {
+// //       const contentBtn = event.currentTarget.getAttribute('data-open-content');
+// //       const contents = document.querySelectorAll('[data-content]');
+// //       const activeContent = document.querySelectorAll(`[data-content=${contentBtn}]`);
 
-      contents.forEach((cont) => cont.classList.add('hide'));
-      activeContent.forEach((content) => content.classList.remove('hide'));
+// //       contents.forEach((cont) => cont.classList.add('hide'));
+// //       activeContent.forEach((content) => content.classList.remove('hide'));
 
-      btns.forEach((button) => {
-        const item = button.getAttribute('data-open-content');
-        changeHideClass(item, contentBtn, button);
-      });
+// //       btns.forEach((button) => {
+// //         const item = button.getAttribute('data-open-content');
+// //         changeHideClass(item, contentBtn, button);
+// //       });
 
-      scroolListWithBoard();
-    });
-  });
-});
+// //       scroolListWithBoard();
+// //     });
+// //   });
+// // });
 
-window.addEventListener('resize', () => {
-  changeContentMap();
-});
+// window.addEventListener('resize', () => {
+//   // changeContentMap();
+// });
