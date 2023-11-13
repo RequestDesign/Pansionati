@@ -100,15 +100,12 @@ function clickSort() {
 
   if (btnSortOpen) {
     btnSortOpen.addEventListener('click', () => {
-      const content = document.querySelector('.select-sort');
+      const content = document.querySelector('.js-sort');
+      console.log(content);
       content.classList.add('active');
     });
   }
 }
-
-document.querySelector('.title').addEventListener('click', function() {
-	document.querySelector('.q').classList.toggle('active')
-})
 
 document.addEventListener('DOMContentLoaded', () => {
   clickToogle();

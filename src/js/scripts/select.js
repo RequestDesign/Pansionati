@@ -47,7 +47,11 @@ document.addEventListener('DOMContentLoaded', () => {
       const empty = select.querySelector('.js-select-empty');
 
       inner.addEventListener('click', (event) => {
-        if (event.target.closest('.js-select-search') && select.closest('.js-select.active')) {
+        if (window.innerWidth < 768 && event.target.closest('.select-sort')) {
+          document.querySelector('.js-sort').classList.add('active');
+          focusSearch(search);
+          select.classList.add('active');
+        } else if (event.target.closest('.js-select-search') && select.closest('.js-select.active')) {
           focusSearch(search);
         } else {
           deleteValueSearch(search);
@@ -99,8 +103,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (document.querySelector('.select-sort') && window.innerWidth < 768) {
         document.addEventListener('click', (event) => {
-          if (event.target.closest('.select__content')) {
-            document.querySelector('.select-sort .select__content').classList.remove('active');
+          if (event.target.closest('.js-sort')) {
+            document.querySelector('.js-sort').classList.remove('active');
             document.querySelector('.select-sort').classList.remove('active');
           }
         });

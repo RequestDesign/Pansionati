@@ -31,8 +31,20 @@ function changeQuestions() {
   });
 }
 
+function sortAppend() {
+  if (window.innerWidth < 768) {
+    const main = document.querySelector('main');
+    const sort = document.querySelector('.js-sort');
+    const container = document.createElement('div');
+    container.classList.add('select-sort', 'js-sort');
+    container.appendChild(sort);
+    main.appendChild(container);
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   focusInput();
   setPhoneMask();
   changeQuestions();
+  sortAppend();
 });
