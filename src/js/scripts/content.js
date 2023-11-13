@@ -27,6 +27,15 @@ function changeHideClass(item, attr, el) {
   }
 }
 
+function scroolListWithBoard() {
+  const boardsContainer = document.querySelector('.maps__list-items');
+  const boardListActive = document.querySelector('.maps__list-item.active');
+
+  if (boardsContainer && boardListActive) {
+    scroolMapList(boardsContainer, boardListActive);
+  }
+}
+
 function changeContentMap() {
   const contents = document.querySelectorAll('[data-content]');
   contents.forEach((content) => {
@@ -64,6 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
       btns.forEach((button) => {
         const item = button.getAttribute('data-open-content');
         changeHideClass(item, contentBtn, button);
+				scroolListWithBoard();
       });
     });
   });

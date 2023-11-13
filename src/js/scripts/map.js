@@ -1,4 +1,4 @@
-import { scrollbar } from './scroll.js';
+// import { scrollbar } from './scroll.js';
 
 // Метки для карты со всеми пансионатами
 const PLACEMARKS = [
@@ -162,11 +162,11 @@ function init() {
         boardsList.forEach((boardList) => {
           if (boardList.getAttribute('data-board-list') === newPlacemark.properties.get('myDataAttr')) {
             boardList.classList.add('active');
-            const distance = boardList.offsetTop;
-            scrollbar.getScrollElement().scrollTo({
-              top: distance,
-              behavior: 'smooth',
-            });
+            // const distance = boardList.offsetTop;
+            // scrollbar.getScrollElement().scrollTo({
+            //   top: distance,
+            //   behavior: 'smooth',
+            // });
           } else {
             boardList.classList.remove('active');
           }
