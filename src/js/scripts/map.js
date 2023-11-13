@@ -185,8 +185,6 @@ function init() {
           const maps = document.querySelectorAll('.js-maps-maps');
 
           lists.forEach((list) => list.classList.add('hide'));
-
-          console.log(lists);
           maps.forEach((map) => map.classList.remove('hide'));
         }
 

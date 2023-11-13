@@ -1,4 +1,25 @@
-import { scroolMapList } from './scroll.js';
+// import { scroolMapList } from './scroll.js';
+
+function changeContentAboutBoard() {
+  const btns = document.querySelectorAll('.js-open-content');
+  const contents = document.querySelectorAll('.js-about-content');
+
+  btns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      btns.forEach((bt) => bt.classList.remove('active'));
+      contents.forEach((content) => content.classList.remove('active'));
+      btn.classList.add('active');
+
+      const attr = btn.getAttribute('data-open-content');
+
+      contents.forEach((content) => {
+        if (content.getAttribute('data-about-content') === attr) {
+          content.classList.add('active');
+        }
+      });
+    });
+  });
+}
 
 function changeHideClass(item, attr, el) {
   if (item === attr) {
@@ -27,39 +48,18 @@ function changeContentMap() {
   });
 }
 
-function scroolListWithBoard() {
-  const boardsContainer = document.querySelector('.maps__list-items');
-  const boardListActive = document.querySelector('.maps__list-item.active');
+// function scroolListWithBoard() {
+//   const boardsContainer = document.querySelector('.maps__list-items');
+//   const boardListActive = document.querySelector('.maps__list-item.active');
 
-  if (boardsContainer && boardListActive) {
-    scroolMapList(boardsContainer, boardListActive);
-  }
-}
-
-function changeContentAboutBoard() {
-  const btns = document.querySelectorAll('.js-open-content');
-  const contents = document.querySelectorAll('.js-about-content');
-
-  btns.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      btns.forEach((bt) => bt.classList.remove('active'));
-      contents.forEach((content) => content.classList.remove('active'));
-      btn.classList.add('active');
-
-      const attr = btn.getAttribute('data-open-content');
-
-      contents.forEach((content) => {
-        if (content.getAttribute('data-about-content') === attr) {
-          content.classList.add('active');
-        }
-      });
-    });
-  });
-}
+//   if (boardsContainer && boardListActive) {
+//     scroolMapList(boardsContainer, boardListActive);
+//   }
+// }
 
 document.addEventListener('DOMContentLoaded', () => {
-  changeContentMap();
   changeContentAboutBoard();
+  changeContentMap();
 
   const btns = document.querySelectorAll('.js-btn');
 
@@ -77,11 +77,11 @@ document.addEventListener('DOMContentLoaded', () => {
         changeHideClass(item, contentBtn, button);
       });
 
-      scroolListWithBoard();
+      // scroolListWithBoard();
     });
   });
 });
 
 window.addEventListener('resize', () => {
-  changeContentMap();
+  // changeContentMap();
 });
