@@ -146,53 +146,7 @@ function init() {
         }
       );
 
-      boardsList.forEach((boardItem) => {
-        boardItem.addEventListener('click', () => {
-          const attr = boardItem.getAttribute('data-board-list');
-          boardsDescContainer.classList.add('active');
-
-          if (window.innerWidth < 768) {
-            const lists = document.querySelectorAll('.js-maps-list');
-            const maps = document.querySelectorAll('.js-maps-maps');
-
-            lists.forEach((list) => list.classList.add('hide'));
-            maps.forEach((map) => map.classList.remove('hide'));
-          }
-
-          mapDescs.forEach((mapDesc) => changeActiveClass(mapDesc.getAttribute('data-board-map'), attr, mapDesc));
-          boardsList.forEach((boardList) =>
-            changeActiveClass(boardList.getAttribute('data-board-list'), attr, boardList)
-          );
-
-          if (newPlacemark.properties.get('myDataAttr') === attr) {
-            mainMap.geoObjects.each((geoObject) => {
-              if (geoObject.properties.get('myDataAttr') === attr) {
-                geoObject.options.set('iconImageHref', './img/icons/location-pin-active.svg');
-                geoObject.balloon.open();
-                animationMap(geoObject.geometry._coordinates, mainMap);
-              } else {
-                geoObject.options.set('iconImageHref', './img/icons/location-pin-default.svg');
-              }
-            });
-          }
-        });
-      });
-
       mainMap.geoObjects.add(newPlacemark);
-
-      boardsMap.forEach((boardMap) => {
-        boardMap.addEventListener('click', (event) => {
-          // Если клик на кнопку закрытия
-          if (event.target.parentNode.classList.contains('js-balloon-close')) {
-            boardsDescContainer.classList.remove('active');
-            mapDescs.forEach((desc) => desc.classList.remove('active'));
-            mainMap.geoObjects.each((geoObject) =>
-              geoObject.options.set('iconImageHref', './img/icons/location-pin-default.svg')
-            );
-            boardsList.forEach((board) => board.classList.remove('active'));
-          }
-        });
-      });
 
       newPlacemark.events.add('click', () => {
         mainMap.geoObjects.each((geoObject) =>
@@ -218,6 +172,56 @@ function init() {
         animationMap([placemark.lalitude, placemark.longitude], mainMap);
 
         newPlacemark.options.set('iconImageHref', './img/icons/location-pin-active.svg');
+      });
+    });
+
+    boardsList.forEach((boardItem) => {
+      boardItem.addEventListener('click', () => {
+        const attr = boardItem.getAttribute('data-board-list');
+        boardsDescContainer.classList.add('active');
+
+        if (window.innerWidth < 768) {
+          const lists = document.querySelectorAll('.js-maps-list');
+          const maps = document.querySelectorAll('.js-maps-maps');
+
+          lists.forEach((list) => list.classList.add('hide'));
+
+          console.log(lists);
+          maps.forEach((map) => map.classList.remove('hide'));
+        }
+
+        mapDescs.forEach((mapDesc) => changeActiveClass(mapDesc.getAttribute('data-board-map'), attr, mapDesc));
+        boardsList.forEach((boardList) =>
+          changeActiveClass(boardList.getAttribute('data-board-list'), attr, boardList)
+        );
+
+        mainMap.geoObjects.each((placemark) => {
+          if (placemark.properties.get('myDataAttr') === attr) {
+            mainMap.geoObjects.each((geoObject) => {
+              if (geoObject.properties.get('myDataAttr') === attr) {
+                geoObject.options.set('iconImageHref', './img/icons/location-pin-active.svg');
+                geoObject.balloon.open();
+                animationMap(geoObject.geometry._coordinates, mainMap);
+              } else {
+                geoObject.options.set('iconImageHref', './img/icons/location-pin-default.svg');
+              }
+            });
+          }
+        });
+      });
+    });
+
+    boardsMap.forEach((boardMap) => {
+      boardMap.addEventListener('click', (event) => {
+        // Если клик на кнопку закрытия
+        if (event.target.parentNode.classList.contains('js-balloon-close')) {
+          boardsDescContainer.classList.remove('active');
+          mapDescs.forEach((desc) => desc.classList.remove('active'));
+          mainMap.geoObjects.each((geoObject) =>
+            geoObject.options.set('iconImageHref', './img/icons/location-pin-default.svg')
+          );
+          boardsList.forEach((board) => board.classList.remove('active'));
+        }
       });
     });
 

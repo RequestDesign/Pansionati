@@ -94,8 +94,8 @@
       position: fixed;
       left: 0;
       bottom: 0;
-      transition: translateX 0.3s ease-in-out;
       transform: translateX(-100%);
+      transition: transform 0.3s ease-in-out;
       z-index: -1;
       flex-direction: column;
       padding: 4rem 3.2rem;

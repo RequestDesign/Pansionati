@@ -445,7 +445,7 @@
       padding: 3.4rem 0 5.6rem;
       flex-direction: column;
       justify-content: flex-start;
-      transition: translateX 0.3s ease-in-out;
+      transition: transform 0.3s ease-in-out;
       transform: translateX(100%);
       -webkit-transform: translateX(100%);
       &.active {

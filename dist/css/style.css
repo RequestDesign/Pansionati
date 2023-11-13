@@ -7626,8 +7626,8 @@ fieldset {
     position: fixed;
     left: 0;
     bottom: 0;
-    transition: translateX 0.3s ease-in-out;
     transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
     z-index: -1;
     flex-direction: column;
     padding: 4rem 3.2rem;
@@ -8096,7 +8096,7 @@ fieldset {
     flex-direction: column;
     justify-content: flex-start;
     transform: translateX(100%);
-    transition: translateX 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
   }
 
   .maps__filter.active {
@@ -9880,7 +9880,7 @@ fieldset {
     padding: 3.4rem 0 5.6rem;
     flex-direction: column;
     justify-content: flex-start;
-    transition: translateX 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
     transform: translateX(100%);
     -webkit-transform: translateX(100%);
   }
