@@ -1,11 +1,3 @@
-// Scrollbat для списка пансионатов в карте
-
-// if( document.querySelector('.maps__list-items')) {
-// const outerBlock = document.querySelector('.maps__list-items');
-// const scrollbar = new SimpleBar(outerBlock);
-// }
-
-
 function scrollPage() {
   const btnScroll = document.querySelector('.js-btn-scroll');
 

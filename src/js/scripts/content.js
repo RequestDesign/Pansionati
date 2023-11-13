@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
       btns.forEach((button) => {
         const item = button.getAttribute('data-open-content');
         changeHideClass(item, contentBtn, button);
-				scroolListWithBoard();
+        scroolListWithBoard();
       });
     });
   });
