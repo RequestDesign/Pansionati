@@ -1,1 +1,1 @@
-Deploy: https://dimonio04.github.io/boarding-houses/dist/
+Deploy: [https://requestdesign.github.io/Pansionati/dist/](https://requestdesign.github.io/Pansionati/dist/)
