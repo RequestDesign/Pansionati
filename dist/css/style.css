@@ -1560,6 +1560,7 @@ body,
 .catalog__search,
 .catalog__top-right,
 .catalog__top,
+.catalog__item,
 .catalog__items,
 .proven-boards__titles,
 .board-rating,
@@ -1712,7 +1713,7 @@ body,
 }
 
 .not-found__desc p,
-.catalog__item,
+.catalog__item span,
 .catalog-question__txt,
 .ind__txt,
 .board-rating__rec-txt,
@@ -5818,9 +5819,8 @@ input[type=file] {
 }
 
 .catalog__item {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  -moz-column-gap: 1.6rem;
+       column-gap: 1.6rem;
   border-radius: 7.8rem;
   background: #f0f3f7;
   -webkit-backdrop-filter: blur(2.3rem);
@@ -5829,6 +5829,17 @@ input[type=file] {
   width: -moz-fit-content;
   width: fit-content;
   padding: 0.8rem 1.6rem;
+}
+
+.catalog__item span {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.catalog__item button {
+  width: 1.6rem;
+  height: 1.6rem;
 }
 
 .catalog__item-shadow {
@@ -6552,7 +6563,7 @@ fieldset {
   }
 
   .not-found__desc p,
-  .catalog__item,
+  .catalog__item span,
   .catalog-question__txt,
   .ind__txt,
   .board-rating__rec-txt,
@@ -9946,6 +9957,13 @@ fieldset {
     padding: 1.6rem 3.2rem;
     border-radius: 15.6rem;
     font-size: 2.4rem;
+    -moz-column-gap: 2.4rem;
+         column-gap: 2.4rem;
+  }
+
+  .catalog__item button {
+    width: 2.4rem;
+    height: 2.4rem;
   }
 
   .catalog .select-sort {

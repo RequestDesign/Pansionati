@@ -14,8 +14,8 @@
   typeof exports === 'object' && typeof module !== 'undefined'
     ? (module.exports = factory())
     : typeof define === 'function' && define.amd
-    ? define(factory)
-    : ((global = typeof globalThis !== 'undefined' ? globalThis : global || self), (global.Swiper = factory()));
+      ? define(factory)
+      : ((global = typeof globalThis !== 'undefined' ? globalThis : global || self), (global.Swiper = factory()));
 })(this, () => {
   /**
    * SSR Window 4.0.2
