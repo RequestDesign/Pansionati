@@ -1,0 +1,35 @@
+.boards-read-also{
+    margin-top: 7rem;
+
+    @media screen and (max-width: 48em) {
+        margin-top: 16rem;
+        margin-bottom: 16rem;
+    }
+    
+    .btn-primary{
+        display: none;
+
+        @media screen and (max-width: 48em) {
+            display: block;
+        }
+    }
+
+    .swiper-slide{
+        width: 54.7rem;
+        height: 44.9rem;
+
+        @media screen and (max-width: 48em) {
+            width: 100%;
+            height: 58.6rem;
+        }
+    }
+
+    .blog-card__img{
+        width: 100%;
+        height: 25.1rem;
+
+        @media screen and (max-width: 48em) {
+            height: 31.6rem;
+        }
+    }
+}
