@@ -96,23 +96,23 @@ function animationMap(placemark, map) {
 
 function createBalloon(placemark) {
   return `
-                <div class="map__balloon">
-                  <div class="map__balloon-img --desc">
-                    <img class="map__balloon-img" src="${placemark.balloonContent.img}" alt="">
-                  </div>
-                  <div class="map__balloon-img --mob">
-                    <img class="map__balloon-img" src="${placemark.balloonContent.imgMob}" alt="">
-                  </div>
-                  <div class="map__balloon-content">
-                    <div class="map__balloon-title">
-                      ${placemark.balloonContent.title}
-                    </div>
-                    <div class="map__balloon-address">
-                      ${placemark.balloonContent.address}
-                    </div>
-                  </div>
-                </div>
-              `;
+    <div class="map__balloon" data-board-map="${placemark.attr}">
+      <div class="map__balloon-img --desc">
+        <img class="map__balloon-img" src="${placemark.balloonContent.img}" alt="">
+      </div>
+      <div class="map__balloon-img --mob">
+        <img class="map__balloon-img" src="${placemark.balloonContent.imgMob}" alt="">
+      </div>
+      <div class="map__balloon-content">
+        <div class="map__balloon-title">
+          ${placemark.balloonContent.title}
+        </div>
+        <div class="map__balloon-address">
+          ${placemark.balloonContent.address}
+        </div>
+      </div>
+    </div>
+  `;
 }
 
 function changeActiveClass(attrEl, attr, el) {
@@ -130,6 +130,7 @@ function init() {
     const boardsMap = document.querySelectorAll('[data-board-map]');
     const boardsDescContainer = document.querySelector('.map-descs');
     const mapDescs = document.querySelectorAll('.map-desc');
+    let activeBalloon = null;
 
     const mainMap = new ymaps.Map('map', {
       center: [55.520003, 38.089062],
@@ -183,6 +184,7 @@ function init() {
 
         newPlacemark.options.set('iconImageHref', './img/icons/location-pin-active.svg');
       });
+
     });
 
     boardsList.forEach((boardItem) => {
@@ -305,4 +307,26 @@ document.addEventListener('DOMContentLoaded', () => {
   ymaps.ready(initContacts);
   ymaps.ready(init);
   ymaps.ready(initBoard);
+});
+
+// Закрыть балун по клику на крестик в описании
+document.addEventListener('DOMContentLoaded', function () {
+  const closeButtons = document.querySelectorAll('.btn-close-desc');
+
+  closeButtons.forEach(function (closeButton) {
+    closeButton.addEventListener('click', function () {
+
+      let mapDesc = closeButton.closest('.map-desc');
+      if (mapDesc) {
+        mapDesc.classList.contains('active') ? mapDesc.classList.remove('active') : mapDesc.classList.add('active');
+
+      }
+      let attr = mapDesc.getAttribute('data-board-map');
+      let mapBalloon = document.querySelector('.map__balloon[data-board-map="' + attr + '"]');
+      let mapBalloonYmaps = mapBalloon.parentElement.parentElement.parentElement;
+      if (mapBalloon) {
+        mapBalloonYmaps.style.display = 'none';
+      }
+    });
+  });
 });

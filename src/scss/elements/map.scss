@@ -21,7 +21,7 @@
     }
   }
 
-  &-desc {
+  &-desc { 
     display: none;
     padding: 2.5rem;
     width: 100%;
@@ -68,6 +68,17 @@
         top: calc(50% - 2.4rem / 2);
         right: 2.5rem;
       }
+    }
+  }
+
+  .btn-close-desc{
+    position: absolute;
+    top: 2rem;
+    right: 3rem;
+
+    svg{
+      width: 1.6rem;
+      height: 1.6rem;
     }
   }
 

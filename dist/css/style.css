@@ -3337,6 +3337,17 @@ input[type=file] {
   right: 2.5rem;
 }
 
+.map .btn-close-desc {
+  position: absolute;
+  top: 2rem;
+  right: 3rem;
+}
+
+.map .btn-close-desc svg {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
 .map-desc__desc-text {
   color: #8b8d95;
 }
