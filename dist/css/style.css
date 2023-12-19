@@ -2704,6 +2704,9 @@ fieldset {
 
 .card__slider-slide img {
   width: 99.8%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
 }
 
 .card__like {
@@ -6583,7 +6586,7 @@ fieldset {
   .card-hor .card-slider,
   .card-hor .card__swiper {
     overflow: hidden;
-    width: 70.7rem;
+    width: 50.7rem;
     height: 35.2rem;
   }
 

@@ -38,6 +38,8 @@
 
     img {
       width: 99.8%;
+      object-fit: cover;
+      height: 100%;
     }
   }
 
@@ -728,7 +730,7 @@
       &-slider,
       &__swiper {
         overflow: hidden;
-        width: 70.7rem;
+        width: 50.7rem;
         height: 35.2rem;
 
         img {
