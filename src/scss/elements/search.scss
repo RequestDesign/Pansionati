@@ -89,11 +89,13 @@
 
   &__block-icon {
     border-radius: 2rem;
+    overflow: hidden;
     @include sizes(8.1rem, 6.7rem);
     flex-shrink: 0;
 
     img {
       height: 100%;
+      object-fit: cover;
     }
   }
 
