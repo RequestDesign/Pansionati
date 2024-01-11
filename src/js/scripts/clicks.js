@@ -15,6 +15,9 @@ function clickFullText() {
   const btnTextFull = document.querySelector('.js-about-full');
   const txt = document.querySelector('.js-about-txt');
 
+  const btnTextFullCatalogue = document.querySelector('.js-catalogue-desc-full');
+  const txtCatalogueDesc = document.querySelector('.description__text');
+
   if (btnTextFull) {
     const contentHeight = txt.scrollHeight;
     btnTextFull.addEventListener('click', () => {
@@ -38,6 +41,18 @@ function clickFullText() {
             btnTextFull.classList.add('__full');
           }
         );
+      }
+    });
+  }
+
+  if(btnTextFullCatalogue){
+    btnTextFullCatalogue.addEventListener('click', () => {
+      if(txtCatalogueDesc.classList.contains('full')){
+        txtCatalogueDesc.classList.remove('full')
+        btnTextFullCatalogue.textContent = 'Развернуть';
+      } else{
+        txtCatalogueDesc.classList.add('full')
+        btnTextFullCatalogue.textContent = 'Свернуть';
       }
     });
   }

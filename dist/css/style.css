@@ -5742,6 +5742,30 @@ input[type=file] {
   margin-bottom: 5rem;
 }
 
+.catalog .description {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+  margin-bottom: 5rem;
+}
+
+.catalog .description__text {
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  max-width: 130rem;
+}
+
+.catalog .description__text p + p {
+  margin-top: 1rem;
+}
+
+.catalog .description__text.full {
+  -webkit-line-clamp: unset;
+}
+
 .catalog .card-slider {
   z-index: 0;
 }
@@ -10837,6 +10861,12 @@ fieldset {
   .container {
     padding: 0 4.27vw;
     width: 100%;
+  }
+
+  .catalog .description {
+    font-size: 2.8rem;
+    line-height: 130%;
+    padding: 0 3.2rem;
   }
 }
 
