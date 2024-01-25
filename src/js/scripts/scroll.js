@@ -31,12 +31,12 @@ function changeShowPanelCatalogHeader() {
   const mapsCatalog = document.querySelector('.maps-catalog');
 
   if (mapsCatalog) {
-    const { top } = mapsCatalog.getBoundingClientRect();
+    // const { top } = mapsCatalog.getBoundingClientRect();
     const catalogHeader = document.querySelector('.js-catalog-header');
     const header = document.querySelector('.header');
     const catalogPage = document.querySelector('.catalog-page');
 
-    if (top < 100) {
+    if (window.scrollY < 300) {
       catalogHeader.classList.remove('scroll');
       header.style.position = '';
       catalogPage.style.marginTop = '';
