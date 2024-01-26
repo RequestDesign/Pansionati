@@ -17,6 +17,10 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
+    if ((search && search.closest('.numbers')) || (search && search.classList.contains('numbers'))) {
+      return;
+    }
+
     if (search) {
       search.value = '';
     }
