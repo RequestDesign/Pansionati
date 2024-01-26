@@ -177,6 +177,7 @@
     border: 0;
     background: transparent;
     width: 29.5rem;
+    text-overflow: ellipsis;
 
     &::placeholder {
       color: $black;

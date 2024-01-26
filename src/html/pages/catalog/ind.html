@@ -5,13 +5,14 @@
         <div class="title">Получите индивидуальное предложение</div>
         <div class="ind__txt">Задайте интересующие вас параметры и мы подберем 3 подходящих для вас варианта.</div>
         <form id="ind-form" class="ind__form">
-          <div class="select select-mult js-select">
+          <div class="select select-mult select-tags js-select">
             <div class="select__header js-select-inner">
               <input
                 name="search"
                 type="text"
                 class="select__input js-select-search"
                 autocomplete="off"
+                readonly
                 placeholder="Удобное местоположение"
               />
               <button type="button" class="select__btn">
@@ -66,13 +67,14 @@
               </div>
             </div>
           </div>
-          <div class="select select-mult js-select">
+          <div class="select select-mult select-tags js-select">
             <div class="select__header js-select-inner">
               <input
                 name="search"
                 type="text"
                 class="select__input js-select-search"
                 autocomplete="off"
+                readonly
                 placeholder="Физическое состояние"
               />
               <button type="button" class="select__btn">
@@ -124,16 +126,16 @@
             <div class="select__header js-select-inner">
               <input
                 name="search"
-                type="text"
+                type="number"
                 class="select__input js-select-search"
                 autocomplete="off"
                 placeholder="Желаемая цена"
               />
-              <button type="button" class="select__btn">
+              <!-- <button type="button" class="select__btn">
                 <img src="@img/icons/icons.svg#arrow-down" alt="arrow" />
-              </button>
+              </button> -->
             </div>
-            <div class="select__content">
+            <!-- <div class="select__content">
               <div class="select__items" data-simplebar>
                 <div class="select__empty js-select-empty">Ничего не найдено</div>
                 <div class="select__item js-select-item">
@@ -179,7 +181,7 @@
                   </label>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
           <button type="button" class="ind__form-btn btn btn-primary">
             <span>Получить индивидуальное предложение</span>

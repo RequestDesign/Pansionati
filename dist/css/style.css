@@ -2326,6 +2326,7 @@ fieldset {
   border: 0;
   background: transparent;
   width: 29.5rem;
+  text-overflow: ellipsis;
 }
 .select-mult .select__input::placeholder {
   color: #1a1a1a;

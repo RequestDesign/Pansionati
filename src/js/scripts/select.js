@@ -13,6 +13,10 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const deleteValueSearch = (search) => {
+    if ((search && search.closest('.select-tags')) || (search && search.classList.contains('select-tags'))) {
+      return;
+    }
+
     if (search) {
       search.value = '';
     }
@@ -46,18 +50,42 @@ document.addEventListener('DOMContentLoaded', () => {
       const search = select.querySelector('.js-select-search');
       const empty = select.querySelector('.js-select-empty');
 
+      if (select.classList.contains('select-mult')) {
+        const mainInput = select.querySelector('.js-select-search'),
+          items = select.querySelectorAll('.js-select-item label');
+
+        let valuesArray = [];
+
+        items.forEach((item) => {
+          item.addEventListener('click', () => {
+            item.classList.toggle('active');
+
+            item.classList.contains('active')
+              ? (valuesArray = [...valuesArray, item.textContent.replaceAll(' ', '')])
+              : (valuesArray = valuesArray.filter((value) => value !== item.textContent.replaceAll(' ', '')));
+
+            mainInput.value = `${valuesArray.join(', ')}`;
+          });
+        });
+      }
+
       inner.addEventListener('click', (event) => {
         if (event.target.closest('.js-select-search') && select.closest('.js-select.active')) {
           focusSearch(search);
         } else {
           deleteValueSearch(search);
-          if (select.classList.contains('active')) {
-            select.classList.remove('active');
-            showAllItems(items, empty);
-          } else {
-            select.classList.add('active');
-            focusSearch(search);
-          }
+        }
+
+        if (select.classList.contains('active')) {
+          select.classList.remove('active');
+          showAllItems(items, empty);
+        } else {
+          selects.forEach((select) => {
+            select.classList.contains('select-mult') && select.classList.remove('active');
+          });
+
+          select.classList.add('active');
+          focusSearch(search);
         }
       });
 
