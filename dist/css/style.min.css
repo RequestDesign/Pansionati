@@ -5138,15 +5138,15 @@ input[type=file] {
 .seo__item::before {
   content: "";
   position: absolute;
-  top: 1.25rem;
+  top: 1rem;
   left: 0;
-  width: 1rem;
-  height: 1rem;
+  width: 0.5rem;
+  height: 0.5rem;
   border-radius: 50%;
   background-color: #8b8d95;
 }
 .seo__item, .seo__text {
-  font-size: 2.8rem;
+  font-size: 2rem;
 }
 .seo__list:not(:last-child), .seo__text:not(:last-child) {
   margin-bottom: 2rem;
@@ -5154,6 +5154,11 @@ input[type=file] {
 @media (max-width: 48em) {
   .seo__item, .seo__text {
     font-size: 3.2rem;
+  }
+  .seo__item::before {
+    top: 1.25rem;
+    width: 1rem;
+    height: 1rem;
   }
 }
 
