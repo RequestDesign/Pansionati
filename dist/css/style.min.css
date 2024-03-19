@@ -5112,6 +5112,51 @@ input[type=file] {
     display: none;
   }
 }
+.seo {
+  margin-top: 17rem;
+  color: #8b8d95;
+}
+.seo__container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4rem;
+}
+.seo__heading {
+  font-size: 5rem;
+  margin-bottom: 2rem;
+  word-wrap: break-word;
+}
+.seo__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+.seo__item {
+  position: relative;
+  padding-left: 2rem;
+}
+.seo__item::before {
+  content: "";
+  position: absolute;
+  top: 1.25rem;
+  left: 0;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: #8b8d95;
+}
+.seo__item, .seo__text {
+  font-size: 2.8rem;
+}
+.seo__list:not(:last-child), .seo__text:not(:last-child) {
+  margin-bottom: 2rem;
+}
+@media (max-width: 48em) {
+  .seo__item, .seo__text {
+    font-size: 3.2rem;
+  }
+}
+
 .webp .baner-bg {
   background-size: contain;
 }
@@ -7539,6 +7584,11 @@ input[type=file] {
   bottom: -2.5rem;
   left: 37%;
   z-index: 4;
+}
+@media (min-width: 48em) {
+  .proven-boards .swiper.reviews {
+    height: min-content;
+  }
 }
 
 @media screen and (max-width: 48em) {

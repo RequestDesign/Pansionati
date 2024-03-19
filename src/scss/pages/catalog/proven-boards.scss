@@ -34,6 +34,12 @@
     left: 37%;
     z-index: 4;
   }
+
+  @media (min-width: 48em) {
+    .swiper.reviews {
+      height: min-content;
+    }
+  }
 }
 
 @media screen and (max-width: 48em) {
