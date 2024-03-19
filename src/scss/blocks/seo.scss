@@ -1,5 +1,5 @@
 .seo {
-  margin-top: 17rem;
+  margin-top: 5rem;
   color: $grey;
 
   &__container {
@@ -9,7 +9,7 @@
   }
 
   &__heading {
-    font-size: 5rem;
+    font-size: 4.2rem;
     margin-bottom: 2rem;
     word-wrap: break-word;
   }
@@ -17,7 +17,7 @@
   &__list {
     display: flex;
     flex-direction: column;
-    row-gap: 1rem;
+    row-gap: 0.8rem;
   }
 
   &__item {
@@ -44,7 +44,7 @@
   &__list,
   &__text {
     &:not(:last-child) {
-      margin-bottom: 2rem;
+      margin-bottom: 1.2rem;
     }
   }
 
