@@ -39,6 +39,10 @@
   &__item,
   &__text {
     font-size: 2rem;
+
+    &.bold {
+      font-weight: 600;
+    }
   }
 
   &__list,

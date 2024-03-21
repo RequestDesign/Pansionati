@@ -5148,6 +5148,9 @@ input[type=file] {
 .seo__item, .seo__text {
   font-size: 2rem;
 }
+.seo__item.bold, .seo__text.bold {
+  font-weight: 600;
+}
 .seo__list:not(:last-child), .seo__text:not(:last-child) {
   margin-bottom: 1.2rem;
 }
