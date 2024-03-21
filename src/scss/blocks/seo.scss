@@ -1,6 +1,6 @@
 .seo {
   margin-top: 5rem;
-  color: $grey;
+  color: $black;
 
   &__container {
     display: flex;
@@ -9,7 +9,7 @@
   }
 
   &__heading {
-    font-size: 4.2rem;
+    font-size: 1.8rem;
     margin-bottom: 2rem;
     word-wrap: break-word;
   }
@@ -38,7 +38,7 @@
 
   &__item,
   &__text {
-    font-size: 2rem;
+    font-size: 1.4rem;
   }
 
   &__list,

@@ -5114,7 +5114,7 @@ input[type=file] {
 }
 .seo {
   margin-top: 5rem;
-  color: #8b8d95;
+  color: #1a1a1a;
 }
 .seo__container {
   display: flex;
@@ -5122,7 +5122,7 @@ input[type=file] {
   row-gap: 4rem;
 }
 .seo__heading {
-  font-size: 4.2rem;
+  font-size: 1.8rem;
   margin-bottom: 2rem;
   word-wrap: break-word;
 }
@@ -5146,7 +5146,7 @@ input[type=file] {
   background-color: #8b8d95;
 }
 .seo__item, .seo__text {
-  font-size: 2rem;
+  font-size: 1.4rem;
 }
 .seo__list:not(:last-child), .seo__text:not(:last-child) {
   margin-bottom: 1.2rem;
