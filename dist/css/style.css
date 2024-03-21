@@ -5155,6 +5155,9 @@ input[type=file] {
   .seo__item, .seo__text {
     font-size: 3.2rem;
   }
+  .seo__heading {
+    font-size: 3.8rem;
+  }
   .seo__item::before {
     top: 1.25rem;
     width: 1rem;
