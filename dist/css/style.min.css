@@ -5122,7 +5122,7 @@ input[type=file] {
   row-gap: 4rem;
 }
 .seo__heading {
-  font-size: 1.8rem;
+  font-size: 2.8rem;
   margin-bottom: 2rem;
   word-wrap: break-word;
 }
@@ -5138,15 +5138,15 @@ input[type=file] {
 .seo__item::before {
   content: "";
   position: absolute;
-  top: 1rem;
+  top: 0.8rem;
   left: 0;
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 50%;
-  background-color: #8b8d95;
+  background-color: #1a1a1a;
 }
 .seo__item, .seo__text {
-  font-size: 1.4rem;
+  font-size: 2rem;
 }
 .seo__list:not(:last-child), .seo__text:not(:last-child) {
   margin-bottom: 1.2rem;

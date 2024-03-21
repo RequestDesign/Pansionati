@@ -9,7 +9,7 @@
   }
 
   &__heading {
-    font-size: 1.8rem;
+    font-size: 2.8rem;
     margin-bottom: 2rem;
     word-wrap: break-word;
   }
@@ -27,18 +27,18 @@
     &::before {
       content: '';
       position: absolute;
-      top: 1rem;
+      top: 0.8rem;
       left: 0;
       width: 0.5rem;
       height: 0.5rem;
       border-radius: 50%;
-      background-color: $grey;
+      background-color: $black;
     }
   }
 
   &__item,
   &__text {
-    font-size: 1.4rem;
+    font-size: 2rem;
   }
 
   &__list,
